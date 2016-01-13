@@ -13,8 +13,8 @@ permalink:        /blog/:year/:month/:day/:title
 title:            'Why Not Change the World'
 tagline:          'Karls Blog'
 description:      'Karls Blog'
-url:              'http://mrkarl.github.io/'
-baseurl:          ''
+url:              'http://mrkarl.github.io'
+baseurl:          '/about'
 
 # Navigation
 navigation:

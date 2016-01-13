@@ -1,7 +1,7 @@
 ---
 layout: master
 title: Home
-description: Home Page for Jekyll Metro Theme
+description: Home Page for Karl Park
 ---
 
 <div class="container">
@@ -16,34 +16,23 @@ description: Home Page for Jekyll Metro Theme
 				<a href="about/" title="About Me">
 					<div class="tile purple profile">
 						<h2 class="title">About Me</h2>
-						<p>Hello World, I am {{site.author}}.</p>
+						<p>Hello Guys, I am {{site.author}}.</p>
 					</div>
 				</a>
 		    </div>
-			<div class="col-md-2 col-sm-3 col-xs-6">
-				<a href="resume/" title="Resume" class="tile red">
-					<i class="icon-rems" style="font-size:8em"></i>
-				</a>
-			</div>
 			<div class="col-md-2 col-sm-3 col-xs-6">
 				<a href="blog/" title="Blog"  class="tile orange">
 					<i class="icon-blog" style="font-size:8em"></i>
 				</a>
 			</div>
-			<div class="col-md-2 col-sm-3 col-xs-6">
-				<a href="feed.xml" title="RSS Feed" class="tile orange">
-					<i class="icon-rss" style="font-size:8em"></i>
-				</a>
-			</div>
 		</div>
 
 		<div class="row">
-
 			<div class="col-md-4 col-sm-6 col-xs-12">
 				{% for post in site.posts offset:1 limit:1 %}
 				<a href="{{post.url}}" title="Recent Article">
 					<div class="tile green">
-						<h3 class="title">Recent Article</h3>
+						<h3 class="title">Recent Post</h3>
 						<h4 class="title">{{ post.title }}</h4>
 						<p> {{ post.content | strip_html | truncatewords: 10 }}</p>
 					</div>
@@ -62,12 +51,6 @@ description: Home Page for Jekyll Metro Theme
 					</div>
 				</a>
 				{% endfor %}
-			</div>
-
-			<div class="col-md-2 col-sm-3 col-xs-6">
-				<a href="{{site.stackoverflow}}" title="StackOverflow" class="tile darken" >
-					<i class="icon-skow" style="font-size:8em;color:white"></i>
-				</a>
 			</div>
 
 			<div class="col-md-4 col-sm-6 col-xs-12">
