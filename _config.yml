@@ -10,47 +10,40 @@ gems: [jekyll-paginate]
 permalink:        /blog/:year/:month/:day/:title
 
 # Setup
-title:            'Jekyll Metro'
-tagline:          'A Metro theme for Jekyll'
-description:      'A Sample blog using Jekyll Metro'
-url:              'http://192.168.1.11:4000'
+title:            'Why Not Change the World'
+tagline:          'Karls Blog'
+description:      'Karls Blog'
+url:              'http://mrkarl.github.io/'
 baseurl:          ''
 
 # Navigation
 navigation:
-- text: About
-  url: /about/
-- text: Resume
-  url: /resume/
+- text : About
+  url : /about/
 - text: Blog
   url: /blog/
-- text: Tags
-  url: /tags/
-- text: Archive
-  url : /archive/
-- text: Search
-  url: /search/
-
+- text: Portpolio
+  url: /portpolio
 
 # Author Details
-author:         'Abdel Raoof Olakara'
+author:         'Panki Park'
 
 #Social Media links (Use complete URL except for email)
 dribbble:
-email:
-facebook:       'https://www.facebook.com/olakara'
+email:          'winnerofsky@gmail.com'
+facebook:       'https://www.facebook.com/panki.park.0'
 flickr:
-github:         'https://github.com/olakara'
-gplus:          'https://plus.google.com/100425464897246255887/'
+github:         'https://github.com/mrkarl'
+gplus:          
 instagram:
 pinterest:
-linkedin:       'https://ae.linkedin.com/in/olakara/'
+linkedin:       
 rss:
-stackoverflow:  'http://stackoverflow.com/users/185655/abdel-raoof'
-twitter:        'https://twitter.com/olakara'
+stackoverflow:  
+twitter:        
 
 # Google Analytics
-gahandler: 'UA-52149651-1'
+gahandler: 
 
 #if footersvg is 'true' the social media links will be shown top on the copy right in the footer
 footersvg: 'true'
