@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Landing Page"
+title:  "NHN Ent. 첫인상"
 date:   2016-01-13 14:30:00
 categories: landing page
 tags: 1stWeek, Hello NHN Ent, 첫인상 

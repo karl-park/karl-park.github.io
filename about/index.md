@@ -2,6 +2,7 @@
 layout: page
 title: ABOUT ME
 description: About Karl Park
+permalink: /about/
 theme: purple
 ---
 
