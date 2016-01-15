@@ -22,8 +22,8 @@ navigation:
   url : /about/
 - text: Blog
   url: /blog/
-- text: Portpolio
-  url: /portpolio
+- text: Technology
+  url: /technology
 
 # Author Details
 author:         'Panki Park'
