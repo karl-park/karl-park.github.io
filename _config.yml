@@ -23,7 +23,7 @@ navigation:
 - text: Blog
   url: /blog/
 - text: Technology
-  url: /technology
+  url: /technology/
 
 # Author Details
 author:         'Panki Park'
