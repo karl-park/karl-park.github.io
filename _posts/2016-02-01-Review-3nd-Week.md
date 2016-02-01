@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "NHN Ent. 실제 개발 진행"
-date:   2016-01-13 14:30:00
+date:   2016-02-01 22:00:00
 categories: landing page
 tags: 3ndWeek, Hello NHN Ent, 기술교육
 ---

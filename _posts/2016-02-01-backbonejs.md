@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "BackboneJS"
-date:   2016-01-15 18:00:00
+date:   2016-02-01 21:00:00
 tags: BackboneJS, Javascript, Technology
 ---
 #### BackBoneJS
