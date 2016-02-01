@@ -11,7 +11,7 @@ tags: 3ndWeek, Hello NHN Ent, 기술교육
 </head>
 <body>
 <hr/>
-<h3>NHN Ent. 기술교육 첫주에 대한 인상</h3>
+<h3>NHN Ent. 개발의 시작</h3>
 <hr/>
 <div>
 <h4>실제 개발을 하였던 한 주</h4>
