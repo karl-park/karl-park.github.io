@@ -2,7 +2,10 @@
 layout: post
 title:  "BackboneJS"
 date:   2016-02-01 21:00:00
-tags: BackboneJS Javascript Technology
+tag:
+- BackboneJS
+- Javascript
+- Technology
 technology: true
 ---
 #### BackBoneJS

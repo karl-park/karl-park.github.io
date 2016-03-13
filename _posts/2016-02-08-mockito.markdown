@@ -3,7 +3,10 @@ layout: post
 title:  "Mockito"
 date:   2016-02-08 22:00:00
 categories: landing page
-tags: Mockito Test JUnit
+tag:
+- Mockito
+- Test
+- JUnit
 technology: true
 ---
 ### Java Test
