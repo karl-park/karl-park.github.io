@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "NHN Ent. 실제 개발 진행"
+title:  "리팩토링과 읽기 좋은 코드"
 date:   2016-02-12 22:00:00
 tag:
 - 4ndWeek

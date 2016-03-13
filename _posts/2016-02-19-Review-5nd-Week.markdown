@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "NHN Ent. 실제 개발 진행"
+title:  "샤딩 적용"
 date:   2016-02-19 22:00:00
 tag:
 - 5ndWeek
