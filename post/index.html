@@ -46,7 +46,7 @@ bloghome: true
               <div class="col-sm-6 col-xs-6 text-right">
                   {% if paginator.previous_page %}
                     {% if paginator.page == 2 %}
-                    <a class="btn btn-orange" href="/blog/">Newer →</a>
+                    <a class="btn btn-orange" href="/post/">Newer →</a>
                     {% else %}
                     <a class="btn btn-orange" href="{{paginator.previous_page_path}}">Newer →</a>
                     {% endif %}
