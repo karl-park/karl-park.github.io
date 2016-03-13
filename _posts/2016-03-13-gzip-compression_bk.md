@@ -4,7 +4,6 @@ title:  "gzip"
 date:   2016-03-13 12:00:00
 tags: gzip apache compression
 ---
-
 안녕하세요 ?!
 오늘은 웹서비스 최적화 기법인 gzip 압축전송에 대한 것을 나누고자 합니다 !
 

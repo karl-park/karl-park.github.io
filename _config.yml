@@ -20,10 +20,8 @@ baseurl:          '/about'
 navigation:
 - text : About
   url : /about/
-- text: Post
+- text: Blog
   url: /post/
-- text: Technology
-  url: /technology/
 
 # Author Details
 author:         'Panki Park'
