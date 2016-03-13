@@ -7,7 +7,7 @@ highlighter: pygments
 gems: [jekyll-paginate]
 
 # Permalinks
-permalink:        /blog/:year/:month/:day/:title
+permalink:        /post/:year/:month/:day/:title
 
 # Setup
 title:            'Why Not Change the World'
@@ -53,7 +53,7 @@ disqushandler: 'testingblogo'
 
 # Blog Configurations
 paginate: 10 # Posts per page on the blog index
-paginate_path: '/blog/page:num'
+paginate_path: '/post/page:num'
 destination: ./_site
 
 # Custom vars
