@@ -3,6 +3,7 @@ layout: post
 title:  "gzip"
 date:   2016-03-13 12:00:00
 tags: gzip apache compression
+technology: true
 ---
 
 안녕하세요 ?!

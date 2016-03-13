@@ -4,6 +4,7 @@ title:  "Mockito"
 date:   2016-02-08 22:00:00
 categories: landing page
 tags: Mockito Test JUnit
+technology: true
 ---
 ### Java Test
 Java, 특히 Spring에서의 테스트는

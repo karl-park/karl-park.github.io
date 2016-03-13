@@ -3,6 +3,7 @@ layout: post
 title:  "BackboneJS"
 date:   2016-02-01 21:00:00
 tags: BackboneJS Javascript Technology
+technology: true
 ---
 #### BackBoneJS
 - BackBoneJS는 우선, OneQ라는 투표 서비스를 개발하며 사용하게된 프론트엔드 프레임워크이다. 우리 서비스는 주로 싱글 페이지에서 렌더링 되기에 BackBoneJS를 택하게 되었다.(물론 상대적으로 능숙하게 잘 사용할 줄 아는 개발자 동료가 있었기에 더 힘이 되었다.)
