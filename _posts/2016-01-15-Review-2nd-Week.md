@@ -3,7 +3,7 @@ layout: post
 title:  "NHN Ent. 기술교육 첫주에 대한 인상"
 date:   2016-01-13 14:30:00
 categories: landing page
-tags: 2ndWeek, Hello NHN Ent, 기술교육
+tags: 2ndWeek Hello_NHN_Ent 기술교육
 ---
 <html>
 <head>

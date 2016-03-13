@@ -1,8 +1,8 @@
 ---
-layout: post
+layout: technology
 title:  "ConEmu"
 date:   2016-02-10 21:00:00
-tags: ConEmu, Putty, Console, Server
+tags: ConEmu Putty Console Server
 ---
 #### ConEmu
 Putty 한개 켜놓고, 서버 접속해서
