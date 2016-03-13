@@ -20,8 +20,8 @@ baseurl:          '/about'
 navigation:
 - text : About
   url : /about/
-- text: Blog
-  url: /blog/
+- text: Post
+  url: /post/
 - text: Technology
   url: /technology/
 
@@ -37,10 +37,10 @@ github:         'https://github.com/mrkarl'
 gplus:          
 instagram:
 pinterest:
-linkedin:       
+linkedin:       'https://www.linkedin.com/in/panki-park-300243b8?trk=nav_responsive_tab_profile'
 rss:
 stackoverflow:  
-twitter:        
+twitter:        'https://twitter.com/PangGu_'
 
 # Google Analytics
 gahandler: 
