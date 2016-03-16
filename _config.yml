@@ -22,16 +22,16 @@ disqus: mydisqus
 # if you don't have any of social below, comment the line
 dribbble:
 email:          'winnerofsky@gmail.com'
-facebook:       'https://www.facebook.com/panki.park.0'
+facebook:       'panki.park.0'
 flickr:
-github:         'https://github.com/mrkarl'
+github:         'mrkarl'
 gplus:          
 instagram:
 pinterest:
-linkedin:       'https://www.linkedin.com/in/panki-park-300243b8?trk=nav_responsive_tab_profile'
+linkedin:       'in/panki-park-300243b8?trk=nav_responsive_tab_profile'
 rss:
 stackoverflow:  
-twitter:        'https://twitter.com/PangGu_'
+twitter:        'PangGu_'
 
 # do you want a larger site? change the option below
 # options: [normal, large] | default: normal
