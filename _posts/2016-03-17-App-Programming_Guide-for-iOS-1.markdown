@@ -7,7 +7,7 @@ tag:
 - Translation
 - Application
 - Apple
-iOS: true
+ios: true
 ---
 
 # About iOS App Architecture
