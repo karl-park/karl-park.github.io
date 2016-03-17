@@ -457,11 +457,13 @@ pre {
 }
 .home,
 .blog,
+.posting
 .projects {
   margin-top: 125px;
 }
 .home > .list,
 .blog > .list,
+.posting > .list,
 .projects > .list {
   border-top: 1px solid #ededed;
   margin-top: 30px;

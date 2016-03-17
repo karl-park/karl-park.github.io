@@ -43,7 +43,6 @@ width: normal
 # paginate_path: "blog/:num/"
 
 # if you don't need projects, comment the *projects* configs below
-projects: true
 ios: true
 technology: true
 
