@@ -7,7 +7,7 @@ tag:
 - Translation
 - Application
 - Apple
-technology: true
+ios: true
 ---
 
 # Expected App Behaviors
