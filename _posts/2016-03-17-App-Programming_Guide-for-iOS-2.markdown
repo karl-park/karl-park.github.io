@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "02. Expected App Behaviors"
-date:   2016-03-17 12:00:00
+date:   2016-03-17 09:00:00
 tag:
 - iOS
 - Translation
@@ -34,30 +34,12 @@ Table 1-1  A typical app bundle
 |The information property list file|Info.plist|The Info.plist file contains configuration data for the app. The system uses this data to determine how to interact with the app. This file is required and must be called Info.plist. For more information, see The Information Property List File.|
 |App icons|Icon.png Icon@2x.png Icon-Small.png Icon-Small@2x.png | Your app icon is used to represent your app on the device’s Home screen. Other icons are used by the system in appropriate places. Icons with @2x in their filename are intended for devices with Retina displays. An app icon is required. For information about specifying icon image files, see App Icons.|
 |Launch images|Default.png Default-Portrait.png Default-Landscape.png | The system uses this file as a temporary background while your app is launching. It is removed as soon as your app is ready to display its user interface. At least one launch image is required. For information about specifying launch images, see App Launch (Default) Images.|
-Storyboard files (or nib files)
-MainBoard.storyboard
-Storyboards contain the views and view controllers that the app presents on screen. Views in a storyboard are organized according to the view controller that presents them. Storyboards also identify the transitions (called segues) that take the user from one set of views to another.
-The name of the main storyboard file is set by Xcode when you create your project. You can change the name by assigning a different value to the UIMainStoryboardFile key in the Info.plist file.) Apps that use nib files instead of storyboards can replace the UIMainStoryboardFile key with the NSMainNibFile key and use that key to specify their main nib file.
-The use of storyboards (or nib files) is optional but recommended.
-Ad hoc distribution icon
-iTunesArtwork
-If you are distributing your app ad hoc, include a 512 x 512 pixel version of your app icon. This icon is normally provided by the App Store from the materials you submit to iTunes Connect. However, because apps distributed ad hoc do not go through the App Store, your icon must be present in your app bundle instead. iTunes uses this icon to represent your app. (The file you specify should be the same one you would have submitted to the App Store, if you were distributing your app that way.)
-The filename of this icon must be iTunesArtwork and must not include a filename extension. This file is required for ad hoc distribution but is optional otherwise.
-Settings bundle
-Settings.bundle
-If you want to expose custom app preferences through the Settings app, you must include a settings bundle. This bundle contains the property list data and other resource files that define your app preferences. The Settings app uses the information in this bundle to assemble the interface elements required by your app.
-This bundle is optional. For more information about preferences and specifying a settings bundle, see Preferences and Settings Programming Guide.
-Nonlocalized resource files
-sun.png
-mydata.plist
-Nonlocalized resources include things like images, sound files, movies, and custom data files that your app uses. All of these files should be placed at the top level of your app bundle.
-Subdirectories for localized resources
-en.lproj
-fr.lproj
-es.lproj
-Localized resources must be placed in language-specific project directories, the names for which consist of an ISO 639-1 language abbreviation plus the .lproj suffix. (For example, the en.lproj, fr.lproj, and es.lproj directories contain resources localized for English, French, and Spanish.)
-An iOS app should be internationalized and have a language.lproj directory for each language it supports. In addition to providing localized versions of your app’s custom resources, you can also localize your app icon, launch images, and Settings icon by placing files with the same name in your language-specific project directories.
-For more information, see Internationalizing Your App.
+|Storyboard files (or nib files)|MainBoard.storyboard|Storyboards contain the views and view controllers that the app presents on screen. Views in a storyboard are organized according to the view controller that presents them. Storyboards also identify the transitions (called segues) that take the user from one set of views to another. The name of the main storyboard file is set by Xcode when you create your project. You can change the name by assigning a different value to the UIMainStoryboardFile key in the Info.plist file.) Apps that use nib files instead of storyboards can replace the UIMainStoryboardFile key with the NSMainNibFile key and use that key to specify their main nib file. The use of storyboards (or nib files) is optional but recommended.|
+|Ad hoc distribution icon| iTunesArtwork | If you are distributing your app ad hoc, include a 512 x 512 pixel version of your app icon. This icon is normally provided by the App Store from the materials you submit to iTunes Connect. However, because apps distributed ad hoc do not go through the App Store, your icon must be present in your app bundle instead. iTunes uses this icon to represent your app. (The file you specify should be the same one you would have submitted to the App Store, if you were distributing your app that way.) The filename of this icon must be iTunesArtwork and must not include a filename extension. This file is required for ad hoc distribution but is optional otherwise. |
+|Settings bundle|Settings.bundle|If you want to expose custom app preferences through the Settings app, you must include a settings bundle. This bundle contains the property list data and other resource files that define your app preferences. The Settings app uses the information in this bundle to assemble the interface elements required by your app. This bundle is optional. For more information about preferences and specifying a settings bundle, see Preferences and Settings Programming Guide.|
+|Nonlocalized resource files|sun.png mydata.plist|Nonlocalized resources include things like images, sound files, movies, and custom data files that your app uses. All of these files should be placed at the top level of your app bundle.|
+|Subdirectories for localized resources|en.lproj fr.lproj es.lproj| Localized resources must be placed in language-specific project directories, the names for which consist of an ISO 639-1 language abbreviation plus the .lproj suffix. (For example, the en.lproj, fr.lproj, and es.lproj directories contain resources localized for English, French, and Spanish.) An iOS app should be internationalized and have a language.lproj directory for each language it supports. In addition to providing localized versions of your app’s custom resources, you can also localize your app icon, launch images, and Settings icon by placing files with the same name in your language-specific project directories. For more information, see Internationalizing Your App.|
+
 For more information about the structure of an iOS app bundle, see Bundle Programming Guide. For information about how to load resource files from your bundle, see Resource Programming Guide.
 
 ### The Information Property List File
