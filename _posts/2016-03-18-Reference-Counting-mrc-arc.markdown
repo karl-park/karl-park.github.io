@@ -96,6 +96,8 @@ ios: true
 
 - 실제 Apple에서는 GNUstep의 경우와 같이 수명관리를 단순하게하는 것이 아니라, 레퍼런스 카운트 해쉬 테이블을 사용해서 레퍼런스 카우늩를 관리하고 있고, 그것을 이용해 각 메모리 블록에 접근할 수 있도록 구현하고 있다.
 
+![](https://raw.githubusercontent.com/MrKarl/MrKarl.github.io/master/assets/images/referececounting/mrc.jpg)
+
 ### ARC (Automatic Reference Counting)
 - ARC는 자바의 가비지 컬렉터와 비슷한 기능이라고 생각하면 된다. 컴파일 시에 retain, release, autorelease와 같은 메모리 관련 메소드를 자동적으로 추가해주기 때문이다.
 - 지원 버전 : 
