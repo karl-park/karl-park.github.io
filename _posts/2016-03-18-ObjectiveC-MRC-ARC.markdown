@@ -1,9 +1,10 @@
 ---
 layout: post
-title:  "[Referece Counting] ARC vs MRC"
+title:  "[Objective-C] ARC vs MRC"
 date:   2016-03-18 02:00:00
 tag:
 - iOS
+- Objective-C
 - RefereceCounting
 - ARC
 - MRC
