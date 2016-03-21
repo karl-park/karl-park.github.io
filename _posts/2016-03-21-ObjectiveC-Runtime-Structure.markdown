@@ -35,7 +35,7 @@ typedef struct objc_object {
 
 
 ## Objective-C 오브젝트 구조
-- Objective C 에서의 Method Call을 흔히 Message Sending 이라고 한다. 이렇게 `메시지 전달` 이라는 조금은 독특한 개념으로 접근하는 것은 여러 의미가 있는데, 그 중, 오늘은 오브젝트 구조와 그 메시지 디스패칭(디스패칭 테이블)에 대해서 살펴보고자 한다.
+- Objective C 에서의 Method Call을 흔히 Message Sending 이라고 한다. 이렇게 `메시지 전달` 이라는 조금은 독특한 개념으로 접근하는 것은 여러 의미가 있는데, 그 중, 오늘은 오브젝트 구조에 대해서 살펴보고자 한다.
 
 - Java와 비교해서 Objective C의 오브젝트 구조는 조금은 특이하다. 흔히 Java는 클래스와 인스턴스라는 크게 2가지 개념으로 접근 할 수 있는데, Objective C는 인스턴스 오브젝트, 클래스 오브젝트, 그리고 메타 클래스 오브젝트로 나뉜다.
 
@@ -51,4 +51,4 @@ NovelBook *myNovelBook = [[NovelBook alloc] init];
 
 
 
-- 참고 URL : http://www.letmecompile.com/objective-c-%EB%9F%B0%ED%83%80%EC%9E%84runtime-%EB%82%B4%EB%B6%80-%EB%8F%99%EC%9E%91-%EB%B6%84%EC%84%9D/#fn:2
+- 참고 URL : http://www.letmecompile.com/objective-c-런타임runtime-내부-동작-분석/#fn:2
