@@ -10,10 +10,12 @@ tag:
 ios: true
 ---
 
-![](https://raw.githubusercontent.com/MrKarl/MrKarl.github.io/master/assets/images/objectivec2.0/objectivec2.0.png)
+![](https://raw.githubusercontent.com/MrKarl/MrKarl.github.io/4b664436fed33ae28727acb212ff6127092a3b82/assets/images/objectivec2.0/objectivec2.0.PNG)
 
 # 책 요약 본
+
 ## Table of Index
+
 - 01장 Hello Objective C
 - 02장 C의 확장
 - 03장 객체지향프로그래밍의 소개
