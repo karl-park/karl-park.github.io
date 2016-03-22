@@ -126,7 +126,7 @@ Car *car = [Car alloc]				// DO NOT !!
 ### Syntax
 - @synthesize name;
 
-## @danamic
+## @dynamic
 ### @implementation 에서 사용
 - @synthesize대신에 사용할 수 있으며 getter와 setter메서드가 클래스 자신에 의해서 구현되지 않고 (슈퍼클래스같은) 다른 어딘가에 구현되어 있다고 알려주어 getter/setter가 구현되어 있지 않아도 컴파일러 경고를 받지 않도록 해줌.
 ### Syntax

@@ -108,3 +108,52 @@ ios: true
 - 저렇게 하는 이유는 !!!! 저렇게 하지않으면 *서브클래스*에서는 저 코드가 동작하지 않기 때문이다.
 
 ## @opitional, @required 를 통해서, 좀더 명확히 !
+
+# 14장 AppKit 소개
+- Java Swing 과 비슷하다
+
+# 15장 FileIO
+## 객체 인코딩하기
+- Encoding, Decoding, Serialization, Deserialization
+
+## FileIO 2가지 방법
+1. Property List Data Type - 흔히 plist 라고 불리움 : NSArray, NSDictionary, NSString, NSNumber, NSDate, NSData, etc.
+2. NSCoding 프로토콜을 채택하고, 메소드를 구현.
+
+
+# 16장 키-밸류 코딩 KVC
+## KVC 소개
+- \-valueForKey:
+- \-setValue:forKey:
+- \-valueForKeyPath:
+- \-dictionaryWithValuesForKeys:
+- \-setValuesForKeysWithDictionary:
+
+# 17장 NSPredicate
+- 비교 조건 필터 클래스
+
+```objectivec
+Car *car = makeCar (@"Herbie", @"Honda", @"CRX", 1984, 2, 110000, 58);
+[ garage addCar: car ];
+
+NSPredicate *predicate;
+predicate = [ NSPredicate predicateWithFormat: @"name == 'Herbie'" ];
+
+BOOL match = [ predicate evaluateWithObject: car ];
+NSLog (@"%s", (match) ? @"YES" : @"NO" );
+
+predicate = [ NSPredicate predicateWithFormat: @"engine.horseposer > 150" ];
+match = [ predicate evaluateWithObject: car ];
+NSLog (@"%s", (match) ? @"YES" : @"NO" );
+
+NSArray *cars = [ garbage cars ];
+for( Car *car in [ garage cars ] ){
+	if(predicate = [ predicate evaluateWithObject: car ]){
+		NSLog (@"%@", car.name );		
+    }
+}
+
+// next predicate is also possible
+predicate = [ NSPredicate predicateWithFormat: @"engine.horseposer BETWEEN { 50, 150}" ];
+```
+
