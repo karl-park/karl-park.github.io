@@ -81,11 +81,15 @@ int main(int argc, const char* argv[]){
 
 
 # 04장 상속
+
 ## Shape를 상속받는 Circle/Triangle/Rectangle 을 구현해보자.
+
 - 각 클래스는 x/y/width/height를 가지는 구조체 ShapeRect와 색상을 가지는 ShapeColor 구조체를 멤버로 가진 후, 각각에 대한 setter/getter, 그리고 그릴 수 있는 draw 메소드를 가진다
+
 > Do it !
 
 ## 상속 문법
+
 ```objectivec
 @interface BaseClass : NSObject
 ...
