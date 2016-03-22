@@ -9,7 +9,7 @@ tag:
 technology: true
 ---
 
-#GZIP
+# GZIP
 안녕하세요 ?!
 오늘은 웹서비스 최적화 기법인 gzip 압축전송에 대한 것을 나누고자 합니다 !
 
@@ -25,8 +25,11 @@ technology: true
 - 그래서 서버의 출력을 네트워크로 클라이언트에 보내기 전에 ! 압축을 해서 보내는 필터를 생각해내게 됩니다. 그것이 바로 gzip compression이라고 생각하시면 됩니다 !
 
 ## gzip compression 적용 (엄청 간단해요!)
+
 ### gzip 적용전 조건
+
 - gzip compression 을 적용하기 위해서는 우선, 몇가지 조건사항이 필요한데요, 그것은 다음과 같습니다.
+
 	- 클라이언트의 브라우저에서 gzip을 지원하여야합니다. 아래 캡쳐된 사진과 같이, Request Headers의 Accept-Encoding에 gzip이 있으면 됩니다 !
 	![](https://raw.githubusercontent.com/MrKarl/MrKarl.github.io/master/assets/images/gzip/gzip%20browser.png)
 	
