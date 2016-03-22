@@ -373,9 +373,9 @@ tt {
   font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
   font-size: 12px;
   line-height: 20px;
-  background: #fff;
   border-radius: 2px;
-  border-radius: 2px;
+  color: #c7254e;
+  background-color: #f9f2f4;
 }
 pre {
   box-sizing: border-box;
@@ -1189,10 +1189,4 @@ pre {
 .social-links > .icon {
   -webkit-transition: all ease-in-out 0.2s;
           transition: all ease-in-out 0.2s;
-}
-
-.highlighter-rouge{
-  color: #c7254e;
-  background-color: #f9f2f4;
-  border-radius: 4px;
 }
