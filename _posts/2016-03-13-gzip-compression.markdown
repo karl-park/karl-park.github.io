@@ -9,6 +9,7 @@ tag:
 technology: true
 ---
 
+#GZIP
 안녕하세요 ?!
 오늘은 웹서비스 최적화 기법인 gzip 압축전송에 대한 것을 나누고자 합니다 !
 
@@ -24,13 +25,17 @@ technology: true
 - 그래서 서버의 출력을 네트워크로 클라이언트에 보내기 전에 ! 압축을 해서 보내는 필터를 생각해내게 됩니다. 그것이 바로 gzip compression이라고 생각하시면 됩니다 !
 
 ## gzip compression 적용 (엄청 간단해요!)
+### gzip 적용전 조건
 - gzip compression 을 적용하기 위해서는 우선, 몇가지 조건사항이 필요한데요, 그것은 다음과 같습니다.
-클라이언트의 브라우저에서 gzip을 지원하여야합니다. 아래 캡쳐된 사진과 같이, Request Headers의 Accept-Encoding에 gzip이 있으면 됩니다 !
-![](https://raw.githubusercontent.com/MrKarl/MrKarl.github.io/master/assets/images/gzip/gzip%20browser.png)
-서버단에서 클라이언트에게로 gzip으로 압축하여 보내는 모듈이 필요합니다.
+	- 클라이언트의 브라우저에서 gzip을 지원하여야합니다. 아래 캡쳐된 사진과 같이, Request Headers의 Accept-Encoding에 gzip이 있으면 됩니다 !
+	![](https://raw.githubusercontent.com/MrKarl/MrKarl.github.io/master/assets/images/gzip/gzip%20browser.png)
+	
+	- 서버단에서 클라이언트에게로 gzip으로 압축하여 보내는 모듈이 필요합니다.
 
----
+### gzip 적용
+
 - 그렇다면, gzip 적용방법을 알아볼까요? 이번 기술공유에서는 apache에 mod_delflate 모듈을 얹어서 gzip을 적용해보도록 할게요 !
+
 1. 서버에 접속하여 apache의 설정파일을 편집합니다. 저는 다음과 같은 경로의 httpd.conf 를 열었네요.
 ![](https://raw.githubusercontent.com/MrKarl/MrKarl.github.io/master/assets/images/gzip/vi%20%EC%97%B4%EA%B8%B0.PNG)
 
@@ -47,11 +52,16 @@ technology: true
 ( compression을 적용하기 전/후 를 비교해보시면 더 좋겠습니다. 만약 비교를 놓치신 분들을 위해 !! 밑에 before/after를 준비했어요 !)
 
 ## gzip compression 적용 Before/After
+
 ### Before
+
 ![](https://raw.githubusercontent.com/MrKarl/MrKarl.github.io/master/assets/images/gzip/before_gzip.png)
+
 ### After
-![](https://github.com/MrKarl/MrKarl.github.io/blob/master/assets/images/gzip/after_gzip1.png)
-![](https://github.com/MrKarl/MrKarl.github.io/blob/master/assets/images/gzip/after_gzip.png)
+
+![](https://raw.githubusercontent.com/MrKarl/MrKarl.github.io/master/assets/images/gzip/after_gzip1.png)
+
+![](https://raw.githubusercontent.com/MrKarl/MrKarl.github.io/master/assets/images/gzip/after_gzip.png)
 
 ## Reference URL
 - Apache Module mod_deflate : https://httpd.apache.org/docs/2.2/ko/mod/mod_deflate.html
