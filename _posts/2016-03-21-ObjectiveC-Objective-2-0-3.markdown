@@ -118,7 +118,46 @@ ios: true
 
 ## FileIO 2가지 방법
 1. Property List Data Type - 흔히 plist 라고 불리움 : NSArray, NSDictionary, NSString, NSNumber, NSDate, NSData, etc.
+```objectivec
+	NSArray *phrase;
+	phrase = [ NSArray arrayWithObjects: @"I", @"seem", @"to",
+								@"be", @"a", @"verb", nil ];
+	[ phrase writeToFile: @"/tmp/verbiage.txt" atomically: YES ];
+```
 2. NSCoding 프로토콜을 채택하고, 메소드를 구현.
+
+```objectivec
+-(void) encodeWithCoder: (NSCoder *) coder {
+	[ coder encodeObject: name
+    			forKey: @"name"];
+	[ coder encodeInt: age
+    			forKey: @"age"];                
+    ......
+} // encodeWithCoder
+
+-(void) initWithCoder: (NSCoder *) decoder {
+	if ( self = [ super init ] ){
+    	self.name = [ decoder decodeObjectForKey: @"name" ];
+        self.age = [ decoder decodeIntForKey: @"age" ];
+        ...        
+    }
+    
+    return (self);
+} // initWithCoder
+
+...
+NSData *freezeDried;
+freezeDried = [ NSKeyedArchiver archivedDataWithRootObject: myObject ];
+// archivedDataWithRootObject가 NSKeyedArchiver 인스턴스를 생성한 후,
+// myObject:encodeWithCoder 인자로 보낸다. myObject 객체 전체가 키와 값으로
+// 인코딩되고 난 후, 아카이버는 모든 것을 NSData로 만들어서 반환한다.
+
+[ freezeDried writeToFile: @"/tmp/myObject.txt" atomically: YES ]; // 를 통해서 파일저장도 가능하다.
+
+[ myObject release ];
+myObject = [ NSKeyedUnarchiver unarchiveObjectWithData: freezeDried ];
+// 위으 메소드를 통해서 아카이빙한 데이터에서 객체를 재생성한다.
+```
 
 
 # 16장 키-밸류 코딩 KVC
@@ -157,4 +196,3 @@ for( Car *car in [ garage cars ] ){
 // next predicate is also possible
 predicate = [ NSPredicate predicateWithFormat: @"engine.horseposer BETWEEN { 50, 150}" ];
 ```
-
