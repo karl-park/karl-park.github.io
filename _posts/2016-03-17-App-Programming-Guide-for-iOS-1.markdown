@@ -58,4 +58,4 @@ iOS 어플리케이션은 좋은 UX를 제공하는 것을 보장하여야 합�
 ## See Also
 만약 당신이 iOS에 대해서 배우고 있다면 "iOS Technology Overview"를 읽고 기술들과 특징들을 당신의 iOS 앱에 포함시켜 보세요.
 
-원문 : https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40007072-CH1-SW1
+원문 : [링크](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40007072-CH1-SW1)

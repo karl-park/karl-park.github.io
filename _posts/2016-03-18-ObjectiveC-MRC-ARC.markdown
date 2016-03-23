@@ -13,14 +13,18 @@ ios: true
 ---
 
 ## ARC / MRC
+
 > iOS 어플리케이션 개발을 위해서는 반드시 ARC나 MRC 중 한개를 골라서 진행해야 한다.
 
 - Objective C 에서는 ARC와 MRC를 이용해서 메모리를 관리하고 있다. 
+
 ### Reference Counting
+
 - 레퍼런스 카운팅은 메모리에 할당된 객체에 대하여 해당 객체를 참조중인 개수를 Counting 하여서 메모리를 관리하는 기법이다. 즉, `특정 객체에 몇개의 참조가 걸려있는지`를 카운팅하는 기법이라고 말할 수 있다.
 
 
 ### MRC (Manual Reference Counting)
+
 - 지원 메소드( Objective-C : More Specifically Speaking, Cocoa Framework > Foundation Framework > NSObject )
 	- alloc, new, copy, mutableCopy : 생성 + 소유권 획득
 	- retain : 소유권 획득(참조중인 객체의 소유권 획득)
