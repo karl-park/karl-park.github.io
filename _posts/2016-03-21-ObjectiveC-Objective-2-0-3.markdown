@@ -96,9 +96,7 @@ ios: true
 - (id) copyWithZone: (NSZone *) zone
   {
 	Engine *engineCopy;
-    engineCopy = [[self class]
-    							allocWithZone: zone]
-                                init];
+    engineCopy = [[self class] allocWithZone: zone] init];
 	return (engineCopy);
   }
 @end	
@@ -120,21 +118,24 @@ ios: true
 
 ## FileIO 2가지 방법
 
-1. Property List Data Type - 흔히 plist 라고 불리움 : NSArray, NSDictionary, NSString, NSNumber, NSDate, NSData, etc.
+1. Property List Data Type - 흔히 plist 라고 불리움
+    - NSArray, NSDictionary, NSString, NSNumber, NSDate, NSData, etc.
+
 ```objectivec
 	NSArray *phrase;
 	phrase = [ NSArray arrayWithObjects: @"I", @"seem", @"to",
 								@"be", @"a", @"verb", nil ];
 	[ phrase writeToFile: @"/tmp/verbiage.txt" atomically: YES ];
 ```
+
 2. NSCoding 프로토콜을 채택하고, 메소드를 구현.
 
 ```objectivec
 -(void) encodeWithCoder: (NSCoder *) coder {
 	[ coder encodeObject: name
-    			forKey: @"name"];
+    		forKey: @"name"];
 	[ coder encodeInt: age
-    			forKey: @"age"];                
+    		forKey: @"age"];                
     ......
 } // encodeWithCoder
 
@@ -155,7 +156,8 @@ freezeDried = [ NSKeyedArchiver archivedDataWithRootObject: myObject ];
 // myObject:encodeWithCoder 인자로 보낸다. myObject 객체 전체가 키와 값으로
 // 인코딩되고 난 후, 아카이버는 모든 것을 NSData로 만들어서 반환한다.
 
-[ freezeDried writeToFile: @"/tmp/myObject.txt" atomically: YES ]; // 를 통해서 파일저장도 가능하다.
+[ freezeDried writeToFile: @"/tmp/myObject.txt" atomically: YES ];
+// 를 통해서 파일저장도 가능하다.
 
 [ myObject release ];
 myObject = [ NSKeyedUnarchiver unarchiveObjectWithData: freezeDried ];
