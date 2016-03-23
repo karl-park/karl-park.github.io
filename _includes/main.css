@@ -371,8 +371,7 @@ figure.highlight {
   margin: 0;
 }
 code,
-tt {
-  background-color: #f5f7f8;
+tt {  
   padding: 1px 3px;
   font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
   font-size: 12px;
@@ -380,6 +379,7 @@ tt {
   border-radius: 2px;  
 }
 pre {
+  background-color: #f5f7f8;
   box-sizing: border-box;
   margin: 0 0 1.75em 0;
   width: 100%;

@@ -71,6 +71,7 @@ ios: true
 - 위와 같이, @protocol 지시자를 붙여준 후, 프로토콜을 정의한다.
 
 ## 프로토콜 채택
+
 ```objectivec
 @interface Car : NSObject <NSCopying(, NSCoding, ...)>
 {
@@ -79,12 +80,14 @@ ios: true
 ... //methods
 @end	// Car
 ```
+
 - 위와 같이, @interface 뒤, 클래스 선언의 괄호안에 나열하면 된다.
 
 ## 사본 만들기
+
 - shallow copy : 참조하는 객체를 복사하지는 안혹, 그저 이미 존재하는 참조된 객체를 가리키기만 한다.
 - deep copy : 참조하는 모든 객체의 사본을 만든다.
-- 
+
 ### Engine 복사(deeply)
 
 ```objectivec
@@ -105,7 +108,7 @@ ios: true
 - 으응 ? 저 `[self class]` 는 왜하는거지? 그냥 `[Engine allocWithZone]`을 하면 안되나? 라는 질문을 할 수도 있겠다.
 - 저렇게 하는 이유는 !!!! 저렇게 하지않으면 *서브클래스*에서는 저 코드가 동작하지 않기 때문이다.
 
-## @opitional, @required 를 통해서, 좀더 명확히 !
+## @ opitional, @ required 를 통해서, 좀더 명확히 !
 
 # 14장 AppKit 소개
 - Java Swing 과 비슷하다
