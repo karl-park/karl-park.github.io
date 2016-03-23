@@ -15,6 +15,19 @@ blog: true
   NHN Ent. 또한 이와 별반 다르지 않았다. 아니, 오히려, 다른 곳보다 더욱 진일보되어서 local/dev/alpha/beta/real 용 서버를 엄격하게(?!) 구분해놓고 사용하는 것에서 나름 신선함과 규모를 느끼었달까. 이를 경제학적으로 보면, 규모가 크니까... 할 수 있는 규모의 경제학이랄까? 
   작은 스타트업을 운영했을 당시 기억으로는 개발/서비스용 서버는 커녕, 로컬/서비스 만 해도 벅찼다.(비용도, 노력도...) 나름 큰 회사이다보니, 이러한 step과 sequence를 만들어놓고 사용할 수 있도록 해놓은 것 같다.
 ---
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- mrkarl ad 001 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5338438534915104"
+     data-ad-slot="1277261876"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
 #### "읽기좋은 코드" 를 듣고서...
 > 6개월 후의 나는, 지금 코드를 짜고있는 내가 아니다.
 
