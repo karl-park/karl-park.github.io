@@ -285,7 +285,7 @@ h4 {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
-.post h1{
+.post h1:not(.title){
   padding-bottom: 10px;
   padding-top: 20px;
   border-bottom: 5px dashed grey;
