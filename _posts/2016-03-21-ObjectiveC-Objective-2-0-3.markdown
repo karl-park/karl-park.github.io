@@ -113,10 +113,13 @@ ios: true
 - Java Swing 과 비슷하다
 
 # 15장 FileIO
+
 ## 객체 인코딩하기
+
 - Encoding, Decoding, Serialization, Deserialization
 
 ## FileIO 2가지 방법
+
 1. Property List Data Type - 흔히 plist 라고 불리움 : NSArray, NSDictionary, NSString, NSNumber, NSDate, NSData, etc.
 ```objectivec
 	NSArray *phrase;
@@ -161,7 +164,9 @@ myObject = [ NSKeyedUnarchiver unarchiveObjectWithData: freezeDried ];
 
 
 # 16장 키-밸류 코딩 KVC
+
 ## KVC 소개
+
 - \-valueForKey:
 - \-setValue:forKey:
 - \-valueForKeyPath:
