@@ -413,7 +413,10 @@ pre {
   }
 }
 .wrapper-normal {
-  max-width: 560px;
+  max-width: 860px;
+  padding-left: 50px;
+  padding-right: 50px;
+  /*max-width: 560px;*/
 }
 .wrapper-large {
   max-width: 810px;
