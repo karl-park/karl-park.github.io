@@ -290,6 +290,8 @@ h1 {
   letter-spacing: -1px;
   color: #222;
   font-weight: 700;
+  padding-bottom: 10px;
+  padding-top: 20px;
 }
 h2 {
   font-size: 2.2rem;
@@ -373,9 +375,9 @@ tt {
   font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
   font-size: 12px;
   line-height: 20px;
-  background: #fff;
   border-radius: 2px;
-  border-radius: 2px;
+  color: #c7254e;
+  background-color: #f9f2f4;
 }
 pre {
   box-sizing: border-box;
@@ -457,11 +459,13 @@ pre {
 }
 .home,
 .blog,
+.posting
 .projects {
   margin-top: 125px;
 }
 .home > .list,
 .blog > .list,
+.posting > .list,
 .projects > .list {
   border-top: 1px solid #ededed;
   margin-top: 30px;
@@ -586,6 +590,8 @@ pre {
   letter-spacing: 1px;
   margin: 0 0.5rem;
   text-decoration: none;
+  display: inline-block;
+  margin-bottom: 5px;
 }
 .post > h2,
 .post > h3,
