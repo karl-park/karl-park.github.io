@@ -285,14 +285,16 @@ h4 {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
+.post h1{
+  padding-bottom: 10px;
+  padding-top: 20px;
+  border-bottom: 5px dashed grey;
+}
 h1 {
   font-size: 3rem;
   letter-spacing: -1px;
   color: #222;
   font-weight: 700;
-  padding-bottom: 10px;
-  padding-top: 20px;
-  border-bottom: 5px dashed grey;
 }
 h2 {
   font-size: 2.2rem;
