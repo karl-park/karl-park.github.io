@@ -23,6 +23,7 @@ ios: true
 ## Apple 인증서 (= 개발자 등록)
 
 &nbsp;&nbsp;그럼 어떻게 그 권한을 부여받을 수 있을까? 다음과 같은 순서를 따르면 된다.
+
 1. KeyChain 접근 앱에서 `Certificate Signing Request(CSR)를 생성`한다.
 	- KeyChain 접근 앱은 공개키/개인키를 자동으로 생성한다. (잃어버리게 되면, 본인을 인증 할 수 없어서, 앱스토어에 배포를 할수도, 아무것도 할수가 없다 !!)
 	-  공개키/개인키를 통해서 CSR 파일을 생성한다. CSR은 개발자의 이름, 이메일, 공개키를 포함하고 있고, 개인키를 이용하여 사인이 된다.
@@ -34,15 +35,20 @@ ios: true
   - 해당 인증서는 이 인증서가 애플을 통해서 발급되었고, 애플이 등록한 개발자를 신뢰한다는 정보를 담고있다.
   - 이 인증서는 App을 Signing 할 때 사용된다.
 
+
 [참고] 키체인(Keychain)앱과 내인증서(My Certificate)
+
 \- 키체인(Keychain)앱 : 맥 > 파인더 > 응용프로그램 > 유틸리티 > “키체인접근” 열기
+
 \- 열린 창의 왼쪽 하단 카테고리에서 “내 인증서(My Certificate)”
 
 
 ## Provisioning Profile (= 신뢰하는 개발자와 설치 허락 Device의 매칭)
 
 &nbsp;&nbsp;인증서까지 받았다면, 이제 끝난 것 같겠지만, 아직 끝이 아니다.
+
 &nbsp;&nbsp;`개발자`와 `애플`사이의 신뢰 관계(?!)는 인증서로 커버가 되었지만, `개발자`와 `디바이스`사이의 신뢰 관계는 아직이다.
+
 &nbsp;&nbsp;이 때, **`프로비저닝 프로파일`**이 그 역할을 맡아서 처리해준다.
 
 - Provisioning Profile 역시 Apple Developer 사이트에서, "인증서"와 "AppID", 그리고 "Device"를 선택하여 다운로드 받을 수 있다.
@@ -53,14 +59,17 @@ ios: true
 ### Team Provisioning Profile
 
 - Team Provisioning Profile
+
 	\- AppID
 		- Name
 		- Search String
 		- Services
+		
 	\- Certificates
 		- Development Certificate
 			- Public Key	
 		- ...
+		
 	\- Devices
 		- Device
             - Name
@@ -68,9 +77,13 @@ ios: true
 		- ...
 
 [참고] Team Member Group
+
 \- Team Agent : 최초 Team Admin, 애플과의 계약서에 사인한 Admin, 모든 법적인 책임. 배포용 프로비저닝 프로파일 관리
-\- Team Admin : 다른 Admin/Member 추가/관리, 멤버로부터의 인증서 발급신청 승인, 디바이스 등록(배포용 인증서를 
+
+\- Team Admin : 다른 Admin/Member 추가/관리, 멤버로부터의 인증서 발급신청 승인, 디바이스 등록
+
 \- Team Member : 개발용 인증서 신청, 프로비저닝 파일을 이용해 개발장치에 앱을 인스톨 가능
+
 \- 개인개발자 : All Position
 
 ## Build -> Install to the Device
@@ -82,7 +95,9 @@ ios: true
 - 실행
 
 [참고] Team Member Group
+
 \- 실제프로비저닝 프로파일 : 컴파일 때 사용한 프로비저닝 프로파일의 복사본
+
 \- CodeResources : _CodeResources라는 폴더에 들어있으며, 단순한 plist파일이지만, 모든 파일의 암호화된 해쉬정보를 가지고 있다.
 
 
