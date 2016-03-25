@@ -32,7 +32,7 @@ technology: true
 - Windows : explorer.exe, cmd.exe
 - 어릴적했던, 천리안/나우누리/새롬데이타맨프로 등도 쉘인 것이다 !!(이쯤이면 친숙한 이미지 !!)
 
-![새롬데이타맨프로](https://file1.namu.wiki/4e/4ea789bb486b301f00d36cb25e0c85fc3420323b793fd9e94c817b56acbe184a.jpg)
+![새롬데이타맨프로](https://raw.githubusercontent.com/MrKarl/MrKarl.github.io/7cf7cf1939370529e6c885a934ac0776ebbff70b/assets/images/shell/seromdatamanpro.jpg)
 
 [참고]
 - bash(Bourne Again SHell, BASH)
@@ -69,7 +69,7 @@ $
 
 ## Shell 의 환경변수
 
-![env](http://linux-bible.com/wp-content/uploads/2014/05/env_command.jpg)
+![env](https://raw.githubusercontent.com/MrKarl/MrKarl.github.io/7cf7cf1939370529e6c885a934ac0776ebbff70b/assets/images/shell/env.PNG)
 
 **PATH** : Shell의 실행파일들이 있는 디렉토리 리스트(콜론으로 구분)
 **CLASSPATH** : JRE(Java Runtime Environment)를 사용하는 Jar, Java Class파일들이 저장되어있는 환경변수
