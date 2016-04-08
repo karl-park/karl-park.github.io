@@ -1,0 +1,112 @@
+---
+layout: post
+title:  "[svn to git] svn to git"
+date:   2016-04-07 04:00:00
+tag:
+- git
+- svn
+- exporting
+- VCS
+technology: true
+---
+
+
+# SVN to Git
+이 업무를 맡구나서 탁 ! 드는 생각은
+
+<div style="width:500px; height:500px; background-color:black; color:white; vertical-align: middle; text-align: center;">
+MY FUTURE...
+</div>
+
+이와같았다. 그냥 깜깜했다.
+
+svn의 수많은 브랜치들과, 배포버전들... 태그...
+이걸 어떻게 git으로 옮길까? 아니 그게 가능은 한걸까?
+
+각 커밋메시지와, 커밋한 사람, 그리고 각 브랜치들을 어떻게 git 이력에 남길까?
+
+물론 그냥, 썡으로 파일 받아서, 썡으로 이력 무시하고 올려버리면 그만이지만 !!
+그간 작업한 이력을 남기고자하는 욕심이 매우 컸기에 !! 한번 시도를 해보자고 다짐했다.
+
+그리고 구글링을 한지 5분.
+...
+방법을 찾았다.
+그리고 그 방법이. 매우 쉬웠다.
+
+## git svn clone **저장소**
+에? 뭐이렇게 쉬운거야? 이게 끝이야?
+끝이었다.
+
+물론 부가적인 옵션이 몇있긴하였다.
+
+```git
+$ git svn clone http://mysvnrepository/myproject_root/ --no-metadata -T trunk -b branches -t tags
+```
+
+`--no-metadata` 를 통해서, 다음의 커밋 메시지를 그 밑에 있는 메시지처럼 바꾸었다 !! 즉 git 스럽게 바꿨달까?
+
+```
+commit 37efa680e8473b615de980fa935944215428a35a
+Author: 박판기 <winnerofsky@4c93b258-373f-11de-be05-5f7a86268029>
+Date:   Sun May 3 00:12:22 2009 +0000
+
+    fixed install - go to trunk
+
+    git-svn-id: https://my-project.googlecode.com/svn/trunk@94 4c93b258-373f-11de-
+    be05-5f7a86268029
+```
+
+(위와같은 메시지를 밑과 같은 git스러운 메시지로 !)
+
+```
+commit 03a8785f44c8ea5cdb0e8834b7c8e6c469be2ff2
+Author: 박판기 <winnerofsky@gmail.com>
+Date:   Sun May 3 00:12:22 2009 +0000
+
+    fixed install - go to trunk
+```
+
+해당 명령을 때리고 나니...
+어머? 슝슝슝 지나가는 메시지들...
+
+물론 !
+물~~~론 !
+브랜치가 많아서 시간이 꽤나 걸렸던건 사실이다.
+하지만, 내가 저 한줄...!
+
+저 한줄을 치니, svn 의 모든 이력이 git 처럼 이뿌게이뿌게 보였던 것이었던 것이다.
+
+
+## svn tag to git tag
+
+그다음은, 다음을 입력해서, `svn 태그를 git 태그로 변환`
+
+```git
+$ git for-each-ref refs/remotes/tags | cut -d / -f 4- | grep -v @ | while read tagname; do git tag "$tagname" "tags/$tagname"; git branch -r -d "tags/$tagname"; done
+```
+
+## svn refs to git local branch
+
+그리고 나서, `refs/remotes` 밑에있는 레퍼런스를 모두 로컬 브랜치로 만든다.
+
+```git
+$ git for-each-ref refs/remotes | cut -d / -f 3- | grep -v @ | while read branchname; do git branch "$branchname" "refs/remotes/$branchname"; git branch -r -d "$branchname"; done
+```
+
+## git remote add origin
+
+```git
+$ git remote add origin http://mygitrepository/myproject_root/
+```
+
+오호, 이제 대망의 PUSH
+Push Push Baby ~ !
+
+## git push origin -all
+
+```git
+$ git push origin -all
+```
+
+
+깔끔하다 !
