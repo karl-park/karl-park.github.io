@@ -33,18 +33,21 @@ Linux, Windows, Mac OSX, 쟁쟁한 OS 들이 모두 LLVM을 선택하여 사용�
 LLVM은 Low Level Virtual Machine의 약자로써, 쉽게 말하자면 컴파일러입니다. 컴퓨터를 처음 배우는 학부생들이 많이 다뤘던 컴파일러는 주로 gcc 일텐데요, 이 gcc를 대체하고 있는 컴파일러계의 강자가 바로 LLVM입니다.
 
 ![image](http://image.toast.com/aaaadh/alpha/2016/techblog/002%281%29.png)
-<그림1. LLVM 구조>
+
+(그림1. LLVM 구조)
 
 LLVM은 gcc가 가지고 있는 한계들을 극복한, C++기반의 새로운 컴파일러를 만들자는 프로젝트로 부터 시작되었습니다. 이러한 프로젝트를 애플은 적극 지원하고 있구요.
 
 Apple은  Xcode3 이전까지는 gcc를 이용해왔습니다. 이후 부터는 LLVM으로 옮기면서, 많은 성능 및 기능 향상을 만들었는데요, 그것들은 다음과 같습니다.
+
 - 컴파일 속도의 향상
 - 실행파일 크기 감소
 - 실행 속도 증가
 - 이번 포스트의 핵심 주제인 GCD, Block
 - 편리해진 Xcode의 편집기능, 실시간 에러
 ![image](http://image.toast.com/aaaadh/alpha/2016/techblog/003.png)
-<그림2. GCD로 인해 편리해진 Xcode>
+
+(그림2. GCD로 인해 편리해진 Xcode)
 
 다음 절에서는 LLVM을 기반으로, 태어난 우리의 Hero. GCD에 대해 알아보도록 합시다.
 
