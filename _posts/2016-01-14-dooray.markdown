@@ -82,4 +82,4 @@ Markdown | Less | Pretty
 - https://dooray.com
 
 
-![Dooray](assets/img/dooray.png)
+![Dooray](/assets/images/dooray.png)

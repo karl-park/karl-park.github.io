@@ -27,9 +27,7 @@ What ?!!!
 
 일단, non-public API 가 무엇인지부터 살펴보자
 
-### non-public API ### : The non-public API refers to Apple API methods that are not documented and offered to the programmer.
-Apple does not guarantee that this part of the API will work in future upgrades. They can freely change this part.
-
+`non-public API` : The non-public API refers to Apple API methods that are not documented and offered to the programmer. Apple does not guarantee that this part of the API will work in future upgrades. They can freely change this part.
 
 정리하자면 !
 
@@ -38,6 +36,7 @@ Apple does not guarantee that this part of the API will work in future upgrades.
 
 
 문제가 된 selector는 다음과 같았다.
+
 ```
 Your app uses or references the following non-public APIs:
 
@@ -73,7 +72,7 @@ The use of non-public APIs is not permitted on the App Store because it can lead
 ## 남은 사항들
 조금은 이상하다. 수년전부터 사용중인(문제없이 !!) 라이브러리파일을 이제야와서 필터링한다는 것은,
 Apple의 검수툴이 바뀌었거나, 검수 요건에 해당 메소드가 블랙리스트로 추가가 되었거나...
-이상한건 `didClose:` `didOpen`등과 같이 non-public API 처럼 보이는 많은 메소드들은 리젝사유가 아니라는 사실.
+이상한건 `didClose:`, `didOpen`등과 같이 non-public API 처럼 보이는 많은 메소드들은 리젝사유가 아니라는 사실.
 언젠가 얘네들도 리젝사유가 되면, 또 바꿔야할텐데...
 
 
