@@ -1,0 +1,133 @@
+---
+layout: post
+title:  "Swift"
+date:   2016-09-19 03:00:00
+tag:
+- Apple
+- Swift
+- iOS
+- Objective-C
+ios: true
+---
+
+# Swift
+
+## Hello World
+모든 프로그래밍 언어는 "Hello World" 부터 배워야하는 법!
+Swift는 과연 어떨까?
+
+```swift
+println("Hello, world")
+```
+엄청나게 간단하군.
+Global scope에 해당하는 코드는 entry point 로 사용되기 때문에, main 함수 따위는 필요치않아 !
+
+## 변수/상수 선언
+`var` : 변수 선언
+`let` : 상수 선언
+
+## Conversion
+암묵적인 변환이란 있을 수 없다 !
+스크립트 언어처럼, 막 합치고 대입하고 하면 아니되오 !
+
+```swift
+let testString = "Test String"
+let testInteger = 84
+let testStringPlustInteger = testString + String(testInteger)
+let testMoreEasy = testString + "\(testInteger)"
+```
+
+## Array / Dictionary
+가장 기본이 되는 자료형이랄까?
+Array ! Dictionary ! 한번 살펴보자
+
+```swift
+var testArray = ["testing", "element", "item"]
+var testDictionary = [
+    "first name" : "Panki",
+    "last name" : "Park",
+    "bday" : "1989. 07. 25"
+]
+
+var emptyArray1 = []
+var emptyDictionary2 = [:]
+
+var emptyArray2 = String[]()
+var emptyDictionary2 = Dictionary<String, Float>()
+```
+
+## Conditional Statement
+조건문은 여타 조건문과 별반 다르지 않다.(거의 모든 언어가 이러니 뭐..)
+
+### if-else
+```swift
+let iterationArray = [1, 4, 5, 8, 9, 12]
+var sum = 0
+
+for item in iterationArray {
+    if (item % 2) == 0 {
+        sum += item
+    } else {
+        sum += 1
+    }
+}
+```
+
+
+### Optional
+옵션값은 값을 가지거나 nil을 가질 수 있는 값.
+다음과 같이 쓸 수 있다.
+
+```
+var optionalString: String? = "exist"
+optionalString = nil
+
+var optionalTestString: String? = "it exist"
+optionalTestString = nil
+
+if let isNotNull = optionalTestString {
+    println("optionalTestString is nil !!!!")
+} else {
+    println("optionalTestString is \(optionalTestString)")
+}
+```
+
+
+
+
+### Switch
+
+```
+let vegetable = "red pepper"
+switch vegetable {
+case "celery":
+   let vegetableComment = "Add some raisins and make ants on a log."
+case "cucumber", "watercress":
+   let vegetableComment = "That would make a good tea sandwich."
+case let x where x.hasSuffix("pepper"):
+   let vegetableComment = "Is it a spicy \(x)?"
+default:
+   let vegetableComment = "Everything tastes good in soup."
+}
+```
+`break` 가 없다는건 신기방기(?)
+
+
+### for-in 반복문
+
+```
+let interestingNumbers = [
+  "Prime": [2, 3, 5, 7, 11, 13],
+  "Fibonacci": [1, 1, 2, 3, 5, 8],
+  "Square": [1, 4, 9, 16, 25],
+]
+var largest = 0
+for (kind, numbers) in interestingNumbers {
+  for number in numbers {
+    if number > largest {
+       largest = number
+    }
+  }
+}
+largest
+```
