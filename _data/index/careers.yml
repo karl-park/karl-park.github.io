@@ -14,6 +14,7 @@
     i18n: company_nhnent_job
   icon: fa-plus-square
 
+
 - name:
     detail: Gabia
     i18n: company_gabia
@@ -28,12 +29,13 @@
     i18n: company_gabia_job
   icon: fa-plus-square
 
-  - name:
+
+- name:
     detail: SimpleFit
     i18n: company_simplefit
   desc:
     detail: Developement Team (Front-end(JS)/Server(PHP Codeigniter))
-    i18n: company_simplefit_desc
+    18n: company_simplefit_desc
   date:
     detail: 2014. 07. 01
     i18n: company_simplefit_date
@@ -42,7 +44,8 @@
     i18n: company_simplefit_job
   icon: fa-plus-square
 
-  - name:
+
+- name:
     detail: Podotree
     i18n: company_podotree
   desc:
