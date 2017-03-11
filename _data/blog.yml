@@ -3,23 +3,23 @@
   href: /blog/
 
 # edit following lines to custom your blog page, make sure name is the same as href but capitalized first letter(except HTML)
-- name: Python
-  href: /python/
+- name: iOS
+  href: /iOS/
 
-- name: Linux
-  href: /linux/
+- name: Technology
+  href: /technology/
+
+- name: Life
+  href: /life/
 
 - name: HTML
   href: /html/
 
+- name: Linux
+  href: /linux/
+
 - name: Database
   href: /database/
-
-- name: Mac
-  href: /mac/
-
-- name: Life
-  href: /life/
 
 # Don't display donation page: change donation to off at file '_config.yml'
 - name: Donate
