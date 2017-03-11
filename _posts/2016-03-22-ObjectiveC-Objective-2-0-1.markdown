@@ -2,7 +2,7 @@
 layout: post
 title:  "[Objective-C-2.0] 책요약 01"
 date:   2016-03-22 01:00:00
-categories: [iOS]
+categories: [Ios]
 tags: [iOS,Objective-C,책요약,Summary]
 ---
 

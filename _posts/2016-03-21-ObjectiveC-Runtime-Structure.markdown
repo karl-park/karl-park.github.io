@@ -2,7 +2,7 @@
 layout: post
 title:  "[Objective-C] Runtime, Structure"
 date:   2016-03-21 00:00:00
-categories: [iOS]
+categories: [Ios]
 tags: [Runtime,Structure,Objective-C,iOS]
 ---
 

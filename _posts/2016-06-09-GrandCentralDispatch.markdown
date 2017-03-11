@@ -2,7 +2,7 @@
 layout: post
 title:  "Grand Central Dispatch"
 date:   2016-06-10 03:00:00
-categories: [iOS]
+categories: [Ios]
 tags: [iOS,Objective-C,책요약,Summary,LLVM,Block,GCD]
 ---
 

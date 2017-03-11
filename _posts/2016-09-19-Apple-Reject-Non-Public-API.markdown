@@ -2,7 +2,7 @@
 layout: post
 title:  "Apple Reject"
 date:   2016-09-19 03:00:00
-categories: [iOS]
+categories: [Ios]
 tags: [iOS,Apple,Reject,otool,strings,nm]
 ---
 

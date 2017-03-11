@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "[iOS] iOS Architecture, LLVM, Fat Type, lipo"
+title:  "[Ios] iOS Architecture, LLVM, Fat Type, lipo"
 date:   2016-03-23 06:00:00
-categories: [iOS]
+categories: [Ios]
 tags: [Architecture,LLVM,FAT,lipo,Build,iOS]
 ---
 

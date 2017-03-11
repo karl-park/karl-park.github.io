@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "[iOS] Life Cycle"
+title:  "[Ios] Life Cycle"
 date:   2016-03-25 03:00:00
-categories: [iOS]
+categories: [Ios]
 tags: [Life Cycle,AppDelegate,Application,View Controller,Build Setting,iOS]
 ---
 

@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "[iOS] Code Signing, KeyChain, Provisioning Profile"
+title:  "[Ios] Code Signing, KeyChain, Provisioning Profile"
 date:   2016-03-23 05:00:00
-categories: [iOS]
+categories: [Ios]
 tags: [Apple Development,Provisioning Profile,KeyChain,Certificate,iOS]
 ---
 

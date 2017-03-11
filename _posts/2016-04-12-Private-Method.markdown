@@ -2,7 +2,7 @@
 layout: post
 title:  "[Objective-C] Private Method"
 date:   2016-04-12 03:00:00
-categories: [iOS]
+categories: [Ios]
 tags: [iOS,Objective-C,Private Method,OODP,Class Continuation]
 ---
 

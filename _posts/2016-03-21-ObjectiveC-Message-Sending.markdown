@@ -2,7 +2,7 @@
 layout: post
 title:  "[Objective-C] Message Sending"
 date:   2016-03-21 00:00:00
-categories: [iOS]
+categories: [Ios]
 tags: [Message Sending,Method Call,Objective-C,SEL,IMP,iOS]
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title:  "[Objective-C] ARC vs MRC"
 date:   2016-03-18 02:00:00
-categories: [iOS]
+categories: [Ios]
 tags: [RefereceCounting,iOS,Objective-C,ARC,MRC,Memory]
 ---
 
