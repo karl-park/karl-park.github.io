@@ -2,15 +2,8 @@
 layout: post
 title:  "[iOS] iOS Architecture, LLVM, Fat Type, lipo"
 date:   2016-03-23 06:00:00
-tag:
-- iOS
-- Architecture
-- LLVM
-- Fat
-- lipo
-- Build
-- Build Setting
-ios: true
+categories: [iOS]
+tags: [Architecture,LLVM,FAT,lipo,Build,iOS]
 ---
 
 # Architecture in XCode Build Setting

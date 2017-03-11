@@ -2,12 +2,8 @@
 layout: post
 title:  "[Library] 동적라이브러리 VS 정적라이브러리"
 date:   2016-04-07 02:00:00
-tag:
-- DDL
-- Library
-- Static
-- Dynamic
-technology: true
+categories: [Technology]
+tags: [DDL,Library,Static,Dynamic]
 ---
 
 

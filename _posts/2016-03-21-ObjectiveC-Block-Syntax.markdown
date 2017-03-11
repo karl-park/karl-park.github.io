@@ -2,13 +2,8 @@
 layout: post
 title:  "[Objective-C] Block Syntax"
 date:   2016-03-21 03:00:00
-tag:
-- iOS
-- Objective-C
-- Block Syntax
-- Block
-- Closure
-ios: true
+categories: [iOS]
+tags: [Block Syntax,Block,Objective-C,Closure,iOS]
 ---
 
 # Objective-C Block Syntax

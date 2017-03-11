@@ -2,11 +2,8 @@
 layout: post
 title:  "NHN Ent. 기술교육 첫주에 대한 인상"
 date:   2016-01-13 14:30:00
-tag:
-- 2ndWeek
-- Hello_NHN_Ent
-- 기술교육
-blog: true
+categories: [Life]
+tags: [2ndWeek,Hello_NHN_Ent,기술교육]
 ---
 ### NHN Ent. 기술교육 첫주에 대한 인상
 #### 기술교육을 지나며

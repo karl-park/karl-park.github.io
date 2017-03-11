@@ -2,12 +2,8 @@
 layout: post
 title:  "[Objective-C] Runtime, Structure"
 date:   2016-03-21 00:00:00
-tag:
-- iOS
-- Objective-C
-- Runtime
-- Structure
-ios: true
+categories: [iOS]
+tags: [Runtime,Structure,Objective-C,iOS]
 ---
 
 # Objective-C 런타임 & 오브젝트 구조

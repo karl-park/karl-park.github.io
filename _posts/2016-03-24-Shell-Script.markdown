@@ -2,15 +2,9 @@
 layout: post
 title:  "[Shell] ABOUT Shell"
 date:   2016-03-24 03:00:00
-tag:
-- Shell
-- Linux
-- Bash
-- sh
-- Script
-technology: true
+categories: [Linux]
+tags: [Shell,Linux,Bash,sh,Script]
 ---
-
 
 # 쉘 Shell 
 

@@ -2,14 +2,8 @@
 layout: post
 title:  "[Objective-C] Message Sending"
 date:   2016-03-21 00:00:00
-tag:
-- iOS
-- Objective-C
-- Message Sending
-- Method Call
-- SEL
-- IMP
-ios: true
+categories: [iOS]
+tags: [Message Sending,Method Call,Objective-C,SEL,IMP,iOS]
 ---
 
 ## 메시지 전송

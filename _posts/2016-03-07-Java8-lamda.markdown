@@ -2,10 +2,8 @@
 layout: post
 title:  "Java8 Lambda"
 date:   2016-03-07 12:00:00
-tag:
-- java8
-- lambda
-technology: true
+categories: [Technology]
+tags: [java8,lambda]
 ---
 # Java8 Lamda
 

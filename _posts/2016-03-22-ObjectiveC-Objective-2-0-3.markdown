@@ -2,12 +2,8 @@
 layout: post
 title:  "[Objective-C-2.0] 책요약 03"
 date:   2016-03-22 03:00:00
-tag:
-- iOS
-- Objective-C
-- Objective-C 2.0
-- 책요약
-ios: true
+categories: [iOS]
+tags: [Objective-C,책요약,Summary,iOS]
 ---
 
 ![](https://raw.githubusercontent.com/MrKarl/MrKarl.github.io/4b664436fed33ae28727acb212ff6127092a3b82/assets/images/objectivec2.0/objectivec2.0.PNG)
