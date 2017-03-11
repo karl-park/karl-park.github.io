@@ -1,15 +1,10 @@
-<div class="pagination">
-    {% if paginator.previous_page %}
-        <a href="{{ site.url }}{{ paginator.previous_page_path }}" class="previous">«</a>
-    {% else %}
-        <span class="previous hidden">«</span>
-    {% endif %}
-
-    <span class="page_number ">page {{ paginator.page }} of {{ paginator.total_pages }}</span>
-
-    {% if paginator.next_page %}
-        <a href="{{ site.url }}{{ paginator.next_page_path }}" class="next">»</a>
-    {% else %}
-        <span class="next hidden">»</span>
-    {% endif %}
-</div>
+{% if counter > 5 %}
+    <div class="col-lg-6 col-lg-offset-6">
+		<div class="pag-holder"></div>
+	</div>
+{% endif %}
+{% if counter == 0 %}
+    <div class="col-lg-8 col-lg-offset-2">
+		<p>Sorry,no blog！</p>
+    </div>
+{% endif %}

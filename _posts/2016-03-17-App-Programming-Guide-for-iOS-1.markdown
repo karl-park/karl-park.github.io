@@ -2,12 +2,8 @@
 layout: post
 title:  "[Apple Dev]01.About iOS App Architecture"
 date:   2016-03-17 09:00:00
-tag:
-- iOS
-- Translation
-- Application
-- Apple
-ios: true
+categories: [iOS]
+tags: [Translation,iOS,Application,Architecture,Apple]
 ---
 
 # About iOS App Architecture

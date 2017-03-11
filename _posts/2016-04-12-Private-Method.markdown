@@ -2,13 +2,8 @@
 layout: post
 title:  "[Objective-C] Private Method"
 date:   2016-04-12 03:00:00
-tag:
-- iOS
-- Objective-C
-- Private Method
-- OODP
-- Class Continuation
-ios: true
+categories: [iOS]
+tags: [iOS,Objective-C,Private Method,OODP,Class Continuation]
 ---
 
 # Objective C 에는 Private Method가 없다?

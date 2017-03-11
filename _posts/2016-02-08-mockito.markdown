@@ -2,12 +2,8 @@
 layout: post
 title:  "Mockito"
 date:   2016-02-08 22:00:00
-categories: landing page
-tag:
-- Mockito
-- Test
-- JUnit
-technology: true
+categories: [Technology]
+tags: [Mockito,Test,TDD,UnitTest,SpringFramework,Java,JUnit]
 ---
 ### Java Test
 Java, 특히 Spring에서의 테스트는

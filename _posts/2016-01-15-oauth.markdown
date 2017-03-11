@@ -2,14 +2,8 @@
 layout: post
 title:  "OAuth"
 date:   2016-01-15 18:00:00
-tag:
-- OAuth
-- Payco
-- OneQ
-- Technology
-- Authentication
-- Authorization
-technology: true
+categories: [Technology]
+tags: [OAuth,Authentication,Authorization,Cooperation]
 ---
 <html>
 <head>

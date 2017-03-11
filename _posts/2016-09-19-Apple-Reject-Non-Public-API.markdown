@@ -2,15 +2,8 @@
 layout: post
 title:  "Apple Reject"
 date:   2016-09-19 03:00:00
-tag:
-- Apple
-- Reject
-- otool
-- strings
-- nm
-- iOS
-- Objective-C
-ios: true
+categories: [iOS]
+tags: [iOS,Apple,Reject,otool,strings,nm]
 ---
 
 # Apple Reject

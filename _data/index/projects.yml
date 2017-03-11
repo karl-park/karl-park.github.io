@@ -1,0 +1,16 @@
+# projects section data
+# If you don't have language feature(language.yml is empty), ignore "i18n" items
+# Suggest projects' img be located at '/static/assets/img/landing', and edit following img items.
+- name: Showindow
+  i18n: showindow
+  gh_user: mrkarl
+  repo: Showindow
+  img: /static/assets/img/landing/jekyll.png
+  desc: Fashion Recommendation Service. Using Apache Mahout, PHP Codeigniter.
+
+- name: HandongStory
+  i18n: handongstory
+  gh_user: mrkarl
+  repo: HandongStory
+  img: /static/assets/img/landing/leetcode.png
+  desc: Handong Global University Enclosed Type SNS

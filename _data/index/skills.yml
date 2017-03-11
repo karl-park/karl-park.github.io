@@ -1,0 +1,6 @@
+# skills section data
+
+label: Ability
+id : cs
+aspects: iOS(ObjC), iOS(Swift), PHP(Codeigniter), Java(Spring Framework), Python, HTML5, Javascript
+percentage: 75, 30, 60, 60, 60, 50, 75, 75

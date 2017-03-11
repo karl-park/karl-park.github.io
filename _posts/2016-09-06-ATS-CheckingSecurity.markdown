@@ -2,11 +2,8 @@
 layout: post
 title:  "ATS - Checking Security"
 date:   2016-09-06 03:00:00
-tag:
-- ATS
-- iOS
-- Objective-C
-ios: true
+categories: [iOS]
+tags: [iOS,ATS,Security]
 ---
 
 # Checking Security : ATS

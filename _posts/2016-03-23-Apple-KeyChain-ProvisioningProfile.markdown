@@ -2,13 +2,8 @@
 layout: post
 title:  "[iOS] Code Signing, KeyChain, Provisioning Profile"
 date:   2016-03-23 05:00:00
-tag:
-- iOS
-- Apple Development
-- Provisioning Profile
-- KeyChain
-- Certificate
-ios: true
+categories: [iOS]
+tags: [Apple Development,Provisioning Profile,KeyChain,Certificate,iOS]
 ---
 
 # 이 모든 것은 APPLE 의 손아귀 안에

@@ -2,11 +2,8 @@
 title:  "NHN Ent. 첫인상"
 layout: post
 date:   2016-01-13 14:30:00
-tag:
-- 1stWeek
-- Hello_NHN_Ent
-- 첫인상 
-blog: true
+tags: [1stWeek,Hello_NHN_Ent,첫인상]
+categories: [Life]
 ---
 ### NHN Ent. 첫인상
 #### 루키입문교육기간  : 2016-01-04 ~ 2016-01-08

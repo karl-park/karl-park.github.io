@@ -2,12 +2,8 @@
 layout: post
 title:  "Swift"
 date:   2016-09-19 03:00:00
-tag:
-- Apple
-- Swift
-- iOS
-- Objective-C
-ios: true
+categories: [iOS]
+tags: [iOS,Apple,Swift,Swift3,Objective-C]
 ---
 
 # Swift
