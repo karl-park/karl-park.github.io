@@ -2,7 +2,7 @@
 layout: post
 title:  "[iOS] Location"
 date:   2016-05-24 03:00:00
-categories: [iOS]
+categories: [Ios]
 tags: [iOS,Objective-C,CoreLocation,Location]
 ---
 
