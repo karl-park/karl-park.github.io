@@ -25,7 +25,7 @@ tags: [WWDC2017,WWDC,2017,iOS,iOS11,iPhone8]
 - 바코드 지원 ! (AVFoundation, CoreImage, SiriKit)
 - MusicKit 추가됨
 
-### <상세 내용>
+### < 상세 내용 >
 1. Binary Barcodes 지원 (Non-text)
     - Detection/ Decoding / Creation of barcodes with binary context
     - 다음 프레임워크들에 API 추가
@@ -52,7 +52,7 @@ tags: [WWDC2017,WWDC,2017,iOS,iOS11,iPhone8]
 
 
 
-### <상세 내용>
+### < 상세 내용 >
 1. IPad Drag and Drop / 멀티태스킹 스크린 지원
 2. Local/iCloud Document 를 Browsing 하는 것 지원 (파일 탐색기)
 3. Dynamic Type 지원 기능 개선
@@ -81,7 +81,7 @@ tags: [WWDC2017,WWDC,2017,iOS,iOS11,iPhone8]
 
 
 
-### <상세 내용>
+### < 상세 내용 >
 1. 기계 학습 모델 지원
     - Core ML framework 추가
         - 앱에 머신 러닝 구현을 쉽게 해주는 프레임워크
@@ -118,12 +118,12 @@ tags: [WWDC2017,WWDC,2017,iOS,iOS11,iPhone8]
 
 
 ## 4. Media and Web
-### <주요 내용>
+### < 주요 내용 >
 - 사진(HEIF) 영상(HEVC->4K UHD) 음악(FLAC) 고압축 포맷 지원 !
     - 미디어로 인한 용량관리 측면에서 큰 이득 !!
 
 
-### <상세 내용>
+### < 상세 내용 >
 1. High Efficiency의 Video Coding 지원 (HEVC)
     - HEVC 는 새로운 비디오 인코딩의 표준. H.264와 비교해서 같은 비디오 퀄리티를 제공함과 동시에 향상된 압축률을 보임.
 2. High Efficiiency Image Format 지원 (HEIF)
@@ -143,11 +143,11 @@ tags: [WWDC2017,WWDC,2017,iOS,iOS11,iPhone8]
 
 
 ## 5. Metal 2
-### <주요 내용>
+### < 주요 내용 >
 - Metal2가 나왔으니, 사용해보시라.
 
 
-### <상세 내용>
+### < 상세 내용 >
 1. Metal2 : 향상된 3D 렌더링 / GPU 이용한 병렬 데이타 처리 프레임워크
     - Neural Network 지원
     - 크로스플랫폼 Metal Performance Shader 지원
@@ -156,12 +156,12 @@ tags: [WWDC2017,WWDC,2017,iOS,iOS11,iPhone8]
 
 
 ## 6. Graphic and Games
-### <주요 내용>
+### < 주요 내용 >
 - 증강현실 지원 (우리회사의 대응은?)
 - 고성능 이미지 분석 지원 !
 
 
-### <상세 내용>
+### < 상세 내용 >
 1. AR (Augmented Reality) 지원
     - ARKit framework 추가
         - Device motion tracking
@@ -186,11 +186,11 @@ tags: [WWDC2017,WWDC,2017,iOS,iOS11,iPhone8]
 
 
 ## 7. System
-### <주요 내용>
+### < 주요 내용 >
 - NFC 에 접근 할 수 있음 (애플페이에 사용되는 칩에 대한 권한을 써드파티 개발자에게 열어줌. 다만, NFC 개방정책 자체는 불투명) - Core NFC
 
 
-### <상세 내용>
+### < 상세 내용 >
 1. Hotspot configuration
     - Hotspot configuration 을 위한 network extension 추가 
     - @see [NEHotspotConfiguration](https://developer.apple.com/documentation/networkextension/nehotspotconfiguration%29
