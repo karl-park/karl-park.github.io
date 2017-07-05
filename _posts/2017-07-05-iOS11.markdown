@@ -110,7 +110,8 @@ tags: [WWDC2017,WWDC,2017,iOS,iOS11,iPhone8]
     - 고객들은 App Store에서 구매를 시작할 수 있고, 앱에서 Transaction 처리를 마무리 할 수 있음
     - paymentQueue(\_:shouldAddStore:for:) 메소드 추가됨(SKPaymentTransactionObserver 에 추가됨)
     - 여기서 promoted in-app purchases 를 처리
-    - ![Inline-image-2017-07-05 17.59.34.236.png](/files/1987606631586600477)
+    - ![앱스토어에서 IAP](/static/assets/img/blog/appStoreInAppPurchase.png)
+
 10. Live Message
     - MSMessageLiveLayout (game과 같은 dynamic contents를 표시할 수 있는 live message를 위한 new message layout)
     - 각각의 Live message들은 자신의 MSMessagesAppViewController를 가지고 있음.
