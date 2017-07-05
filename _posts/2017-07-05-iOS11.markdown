@@ -53,7 +53,7 @@ tags: [WWDC2017,WWDC,2017,iOS,iOS11,iPhone8]
 
 
 ### <상세 내용>
-1.  IPad Drag and Drop / 멀티태스킹 스크린 지원
+1. IPad Drag and Drop / 멀티태스킹 스크린 지원
 2. Local/iCloud Document 를 Browsing 하는 것 지원 (파일 탐색기)
 3. Dynamic Type 지원 기능 개선
     - Dynamic Type 을 위한 Auto Layout 기능 개선
@@ -72,7 +72,6 @@ tags: [WWDC2017,WWDC,2017,iOS,iOS11,iPhone8]
 - 머신러닝 지원 ! Core ML Framework
 - AppStore에서 미리 인앱결제를 할 수 있음 !!!! (프로모션)
     - paymentQueue(\_:shouldAddStore:for:) 메소드 구현 필요
-    - HSP의 경우 prepare 등의 단계가 스킵되므로, 대응이 필요함
 - SiriKit 지원 강화
     - QR코드
     - ToDo List
