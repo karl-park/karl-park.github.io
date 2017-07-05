@@ -1,0 +1,204 @@
+---
+layout: post
+title:  "iOS11"
+date:   2017-07-05 02:00:00
+categories: [Ios]
+tags: [WWDC2017,WWDC,2017,iOS,iOS11,iPhone8]
+---
+
+
+# What's New in iOS11
+- URL : [참고 URL](https://developer.apple.com/library/content/releasenotes/General/WhatsNewIniOS/Articles/iOS_11_0.html)
+- Swift4 문서 : 
+    - [참고 URL](https://developer.apple.com/library/content/documentation/DeveloperTools/Conceptual/WhatsNewXcode/Chapters/xcode_8_0.html#//apple_ref/doc/uid/TP40004635-SW3)
+    - [참고 URL](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/index.html#//apple_ref/doc/uid/TP40014097)
+
+## 0. Notice
+- 32비트 지원 중단
+    - iOS11 부터 32bit 앱 지원을 중단함에 따라, 출시된 앱들이 64bit인지 확인을 꼭!!! 꼭!!! 해야함
+    - iPhone5, iPhone 5c 이전 제품, iPad 4 이전 제품들은 지원되지 않음
+    - (맥용 32bit 앱 지원은 2018에 종료 할 예정)
+
+
+## 1. General
+### < 주요 내용 >
+- 바코드 지원 ! (AVFoundation, CoreImage, SiriKit)
+- MusicKit 추가됨
+
+### <상세 내용>
+1. Binary Barcodes 지원 (Non-text)
+    - Detection/ Decoding / Creation of barcodes with binary context
+    - 다음 프레임워크들에 API 추가
+        - AV Foundation
+        - Core Image
+        - Siri Kit
+    - [CIBarcodeDesciptor](https://developer.apple.com/documentation/coreimage/cibarcodedescriptor%29 추가
+        - new barcode descriptor object
+        - AV Foundation 과 Vision APIs간의 상호작용을 제공하기위해 Core Image에 추가됨
+2. MusicKit 추가
+    - Apple Music catalog, User Library 에 접근할 수 있음
+    - Client Token/Storefront identifier를 얻기 위해 StoreKit에 기능 추가/업데이트
+    - Station Playback을 가능하게 하기 위해 Media Player에 기능 추가/업데이트
+    - Apple Music 구독 셋업 과정에 custom message를 출력 기능 추가
+
+
+
+
+
+## 2. App Frameworks
+### < 주요 내용 >
+- IPad : Drag & Drop !! 지원함 (SplitView)
+- 파일앱 지원 ! (드디어 공식적인 파일 탐색기를 지원함, 다른 앱(구글 클라우드, iCloud, 드롭박스, TOAST CLOUD!!!!)들과 상호작용 기대)
+
+
+
+### <상세 내용>
+1. IPad Drag and Drop / 멀티태스킹 스크린 지원
+2. Local/iCloud Document 를 Browsing 하는 것 지원 (파일 탐색기)
+3. Dynamic Type 지원 기능 개선
+    - Dynamic Type 을 위한 Auto Layout 기능 개선
+4. App Password autofill 에 대해 text content 를 업데이트
+    - username, password properties 를 **UITextContentType** 에 추가함
+5. Keyboard Extensions 업데이트
+6. 기기 저장공간 API 에 대한 개선
+
+
+
+
+
+
+## 3. App Services
+### < 주요 내용 >
+- 머신러닝 지원 ! Core ML Framework
+- AppStore에서 미리 인앱결제를 할 수 있음 !!!! (프로모션)
+    - paymentQueue(\_:shouldAddStore:for:) 메소드 구현 필요
+- SiriKit 지원 강화
+    - QR코드
+    - ToDo List
+- MPTCP(Multipath TCP) !! 지원
+    - 이제 여러개의 TCP Stream을 하나로 묶어서 데이터를 주고 받을 수 있게 되었음
+    - URLSessionConfiguration
+
+
+
+### <상세 내용>
+1. 기계 학습 모델 지원
+    - Core ML framework 추가
+        - 앱에 머신 러닝 구현을 쉽게 해주는 프레임워크
+2. Visual codes(QR코드)를 SiriKit에서 지원
+    - 지불이나 연락처 정보교환을 위한 Visual code를 표시하도록 SiriKit에서 지원
+3. Note나 todo list 작성을 SiriKit에서 지원
+4. SiriKit 에 추가한 점들
+    - Payment domain에 송금이나 계좌 검색 기능을 추가
+    - Ride Booking domain에 Ride 취소 및 피드백 기능을 추가
+5. 디바이스의 방향(Heading)을 찾는 있는 기능 추가
+    - CMDeviceMotion 에 heading(CMAttitudeReferenceFrame에 대하여 heading 각도를 반환하는 property) 을 추가
+6. Multipath TCP
+    - Wifi/Celluar 와 같이 multiple interfaces를 사용하기 위한 기능 추가
+    - IETF RFC 6824에 정의된 Multipath TCP 를 지원하기 위해서, URLSessionConfiguration 를 확장하여, single data stream 전송을 위한 기능들 추가
+    - @see URLSessionConfiguration.MultipathServiceType
+7. DNS Proxy
+    - DNS Proxy App Extension type 추가
+    - Network Extension framework
+8. Apple Pay에서 User transaction flow 개선
+9. `App Store에서 In-app Purchase 프로모션 기능 추가`
+    - 개발자는 자신들의 App Store 제품 페이지에서, 최대 20개의 In-app Purchase들을 Promote 할 수 있음
+    - 고객들은 App Store에서 구매를 시작할 수 있고, 앱에서 Transaction 처리를 마무리 할 수 있음
+    - paymentQueue(\_:shouldAddStore:for:) 메소드 추가됨(SKPaymentTransactionObserver 에 추가됨)
+    - 여기서 promoted in-app purchases 를 처리
+    - ![Inline-image-2017-07-05 17.59.34.236.png](/files/1987606631586600477)
+10. Live Message
+    - MSMessageLiveLayout (game과 같은 dynamic contents를 표시할 수 있는 live message를 위한 new message layout)
+    - 각각의 Live message들은 자신의 MSMessagesAppViewController를 가지고 있음.
+    - 한번에 여러개의 active live message가 있을 수 있음
+11. HomeKit을 위한 향상된 triggers
+12. MapKit 업데이트
+    - 개발자 데이터를 명확하게 표시할 수 있도록 개선
+
+
+
+## 4. Media and Web
+### <주요 내용>
+- 사진(HEIF) 영상(HEVC->4K UHD) 음악(FLAC) 고압축 포맷 지원 !
+    - 미디어로 인한 용량관리 측면에서 큰 이득 !!
+
+
+### <상세 내용>
+1. High Efficiency의 Video Coding 지원 (HEVC)
+    - HEVC 는 새로운 비디오 인코딩의 표준. H.264와 비교해서 같은 비디오 퀄리티를 제공함과 동시에 향상된 압축률을 보임.
+2. High Efficiiency Image Format 지원 (HEIF)
+    - HEIF 는 새로운 이미지 압축의 표준. 동일한 이미지 퀄리티를 제공하며 2배에 가까운 데이터 압축률을 제공
+3. Depth Data에 대한 캡쳐 및 조작, 향상된 photo 캡쳐를 지원
+4. Automatic Storage Management
+    - HTTP Live Streaming Assets의 자동 스토리지 관리가 AVAssetDownloadTask에 추가되었습니다.
+    - 공간이 필요할 때, 시스템에서 만료되었거나 불필요한 다운로드를 자동으로 제거할 수 있습니다.
+    - 우선순위를 사용하여 삭제하는 정책에 영향을 줄 수 있습니다.
+5. AirPlay 2
+    - AV Foundation의 일부 오디오 재생 인터페이스에 대한 향상.
+    - 향상된 기능을 위해서는 AVPlayer의 AVSampleBufferAudioRenderer 객체를 사용해 오디오를 재생
+6. FairPlay 스트리밍 키 관리
+7. Live Photo 조절 기능 추가
+
+
+
+
+## 5. Metal 2
+### <주요 내용>
+- Metal2가 나왔으니, 사용해보시라.
+
+
+### <상세 내용>
+1. Metal2 : 향상된 3D 렌더링 / GPU 이용한 병렬 데이타 처리 프레임워크
+    - Neural Network 지원
+    - 크로스플랫폼 Metal Performance Shader 지원
+
+
+
+
+## 6. Graphic and Games
+### <주요 내용>
+- 증강현실 지원 (우리회사의 대응은?)
+- 고성능 이미지 분석 지원 !
+
+
+### <상세 내용>
+1. AR (Augmented Reality) 지원
+    - ARKit framework 추가
+        - Device motion tracking
+        - camera scene capture
+        - 향상된 scene processing
+        - 증강현실 구현을 단순화하는 편리한 display
+2. 이미지 분석 성능 개선
+    - Vision framework 추가
+        - Detecting faces, barcodes, text, image horizon, rectangular regions
+        - 이미지에 대하여 custom models을 구현하기 위해 Core ML(Machine Learning)
+        - Video에서 Object 트래킹
+        - Image registration에 대한 지원 포함
+3. Write custom image blending kernels for Core Image.
+    - Added CIBlendKernel, a special type of CIColorKernel to blend two images (supported by CIRenderDestination and CIImageAccumulator).
+    - Added init(functionName:fromMetalLibraryData:) to CIKernel for writing kernels using Metal to benefit from the modern language features and the reduced compile time.
+4.  Lightweight render destination.
+    - Added CIRenderDestination, an object for creating renderers that return to the caller after the work has been issued. Functionality includes specifying all the destination attributes of the renderer for different destinations including IOSurface, CVPixelBuffer, GL textures, Metal textures, and memory.
+5. Extended ReplayKit framework.
+    - Updated RPScreenRecorder for screen capture and back camera support.
+6. Added new Core Image filters CITextImageGenerator, CIColorCurves, CILabDeltaE, CIBokehBlur, CIMinMaxRed, and CIBicubicScaleTransform.
+
+
+
+## 7. System
+### <주요 내용>
+- NFC 에 접근 할 수 있음 (애플페이에 사용되는 칩에 대한 권한을 써드파티 개발자에게 열어줌. 다만, NFC 개방정책 자체는 불투명) - Core NFC
+
+
+### <상세 내용>
+1. Hotspot configuration
+    - Hotspot configuration 을 위한 network extension 추가 
+    - @see [NEHotspotConfiguration](https://developer.apple.com/documentation/networkextension/nehotspotconfiguration%29
+2. Core Bluetooth framework 업데이트
+    - L2CAP Channels 지원
+    - session Restoration 확대 (Blutooth resets / device reboots 에 동작)
+3. NFC 태그 Detect / NDEF 데이터가 포함된 메시지 Read
+    - Core NFC 추가
+        - reading Near Field Communications (NFC) tags, data in NFC Data Exchange Format (NDEF.)
+4. APFS(Apple File System) is now the default filesystem.
+    -  참고 : http://macnews.tistory.com/4603#31
