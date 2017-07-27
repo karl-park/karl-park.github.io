@@ -20,6 +20,23 @@ tags: [WWDC2017,WWDC,2017,iOS,iOS11,iPhone8]
     - iOS11 부터 32bit 앱 지원을 중단함에 따라, 출시된 앱들이 64bit인지 확인을 꼭!!! 꼭!!! 해야함
     - iPhone5, iPhone 5c 이전 제품, iPad 4 이전 제품들은 지원되지 않음
     - (맥용 32bit 앱 지원은 2018에 종료 할 예정)
+    - iOS11 지원 iPhone/iPad/iPod touch 모델
+    - ![앱스토어에서 IAP](/static/assets/img/blog/ios11device.png)
+
+- 앱스토어 변경사항
+    - 앱이름 길이 제한이 50자에서 30자로 축소
+    - Sub Title이 추가됨 (30자 제한)
+        - 검색도 가능하다고 하니 요긴하게 사용해야함
+    - 앱스토어 내에서 인앱결제를 할 수 있음(프로모션)
+        - 아래 "3. App Services" 란에서 상세 설명함
+    - 로컬라이징이 가능한 동영상 개수 증가
+        - 다국어가 적용된 동영상으로 다양한 국가에 동영상 제공 가능
+    - 언제든지 수정할 수 있는 Promotional Text란 추가 (170자)
+        - 앱설명위에 표시됨.
+    -   앱, 이벤트 등을 알릴 수 있음
+
+
+
 
 
 * * * 
@@ -32,7 +49,7 @@ tags: [WWDC2017,WWDC,2017,iOS,iOS11,iPhone8]
 
 ### 상세 내용
 1. Binary Barcodes 지원 (Non-text)
-    - Detection/ Decoding / Creation of barcodes with binary context
+    - Detection / Decoding / Creation of barcodes with binary context
     - 다음 프레임워크들에 API 추가
         - AV Foundation
         - Core Image
@@ -79,8 +96,11 @@ tags: [WWDC2017,WWDC,2017,iOS,iOS11,iPhone8]
 - SiriKit 지원 강화
     - QR코드
     - ToDo List
-- MPTCP(Multipath TCP) !! 지원
-    - 이제 여러개의 TCP Stream을 하나로 묶어서 데이터를 주고 받을 수 있게 되었음
+- `MPTCP`(Multipath TCP) !! 지원
+    - 이제 여러개의 TCP Stream을 하나로 묶어서 데이터를 주고 받을 수 있게 되었음 (2013년 이미 표준화되었음)
+    - https://support.apple.com/en-gb/HT201373
+    - `TCP Option 30` 을 서버측에서 켜놔야함 !!
+    - VoIP, IPTV, 게임 등과 같이 신뢰성(Reliability)가 중요한 서비스들에 적합한 프로토콜 !
     - URLSessionConfiguration
 
 
@@ -205,5 +225,7 @@ tags: [WWDC2017,WWDC,2017,iOS,iOS11,iPhone8]
 3. NFC 태그 Detect / NDEF 데이터가 포함된 메시지 Read
     - Core NFC 추가
         - reading Near Field Communications (NFC) tags, data in NFC Data Exchange Format (NDEF.)
-4. APFS(Apple File System) is now the default filesystem.
-    -  참고 : http://macnews.tistory.com/4603#31
+4. APFS(Apple File System) is now the `default filesystem`
+    - 기존은 HFS+ (mac)
+    - iOS 10.3 beta 부터 점차 적용됨
+    - 참고 : http://macnews.tistory.com/4603#31
