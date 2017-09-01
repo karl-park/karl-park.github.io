@@ -7,225 +7,188 @@ tags: [WWDC2017,WWDC,2017,iOS,iOS11,iPhone8]
 ---
 
 
-# What's New in iOS11
-- URL : [참고 URL](https://developer.apple.com/library/content/releasenotes/General/WhatsNewIniOS/Articles/iOS_11_0.html)
-- Swift4 문서 : 
-    - [참고 URL](https://developer.apple.com/library/content/documentation/DeveloperTools/Conceptual/WhatsNewXcode/Chapters/xcode_8_0.html#//apple_ref/doc/uid/TP40004635-SW3)
-    - [참고 URL](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/index.html#//apple_ref/doc/uid/TP40014097)
+# What's new in iOS11
 
-* * * 
+안녕하세요. 플랫폼SDK개발팀 박판기입니다.
 
-## 0. Notice
-- 32비트 지원 중단
-    - iOS11 부터 32bit 앱 지원을 중단함에 따라, 출시된 앱들이 64bit인지 확인을 꼭!!! 꼭!!! 해야함
-    - iPhone5, iPhone 5c 이전 제품, iPad 4 이전 제품들은 지원되지 않음
-    - (맥용 32bit 앱 지원은 2018에 종료 할 예정)
-    - iOS11 지원 iPhone/iPad/iPod touch 모델
-    - ![앱스토어에서 IAP](/static/assets/img/blog/ios11device.png)
+해당 포스트에서는 곧 출시될 iOS11의 새로운 피쳐들과 향상된 기능들,
+그리고 변경된 점들을 다뤄보겠습니다.
 
-- 앱스토어 변경사항
-    - 앱이름 길이 제한이 50자에서 30자로 축소
-    - Sub Title이 추가됨 (30자 제한)
-        - 검색도 가능하다고 하니 요긴하게 사용해야함
-    - 앱스토어 내에서 인앱결제를 할 수 있음(프로모션)
-        - 아래 "3. App Services" 란에서 상세 설명함
-    - 로컬라이징이 가능한 동영상 개수 증가
-        - 다국어가 적용된 동영상으로 다양한 국가에 동영상 제공 가능
-    - 언제든지 수정할 수 있는 Promotional Text란 추가 (170자)
-        - 앱설명위에 표시됨.
-    -   앱, 이벤트 등을 알릴 수 있음
+# WWDC2017 + iOS11 Beta
+
+지난 WWDC2017 에서 iOS11에 대한 많은 정보가 공유되었습니다.
+iOS11은 이번 `가을 출시 예정`인데요, 새로운 iPhone8과 함께 출시될 예정입니다.
+
+iOS11 에 대한 `베타버전`은 다음의 링크에서 다운로드를 하실 수 있습니다.
+링크 : https://beta.apple.com/sp/ko/betaprogram
 
 
 
 
+# Goodbye 32-Bit
 
-* * * 
+### 1\. 64\-Bit Only
 
-## 1. General
-### 주요 내용
-- 바코드 지원 ! (AVFoundation, CoreImage, SiriKit)
-- MusicKit 추가됨
+* iOS11은 64-Bit 기기에만 호환이 됩니다.
+* 그러므로 iOS11 부터는 32-Bit 앱의 실행이 불가능합니다. 이에, 혹여 32-Bit앱으로 배포하는 앱이 있다면, 64-Bit앱으로 변환을 해야합니다.
+    * [애플 64-Bit앱으로의 변환 가이드](https://developer.apple.com/library/content/documentation/General/Conceptual/CocoaTouch64BitGuide/ConvertingYourAppto64-Bit/ConvertingYourAppto64-Bit.html)
 
+### 2\. Compatible Devices
 
-### 상세 내용
-1. Binary Barcodes 지원 (Non-text)
-    - Detection / Decoding / Creation of barcodes with binary context
-    - 다음 프레임워크들에 API 추가
-        - AV Foundation
-        - Core Image
-        - Siri Kit
-    - [CIBarcodeDesciptor](https://developer.apple.com/documentation/coreimage/cibarcodedescriptor%29 추가
-        - new barcode descriptor object
-        - AV Foundation 과 Vision APIs간의 상호작용을 제공하기위해 Core Image에 추가됨
-2. MusicKit 추가
-    - Apple Music catalog, User Library 에 접근할 수 있음
-    - Client Token/Storefront identifier를 얻기 위해 StoreKit에 기능 추가/업데이트
-    - Station Playback을 가능하게 하기 위해 Media Player에 기능 추가/업데이트
-    - Apple Music 구독 셋업 과정에 custom message를 출력 기능 추가
+* iOS11을 지원하는 기기는 같이 출시될 예정인 `iPhone8`을 포함하여 다음과 같습니다.
+
+| iPhone | iPad | iPod touch |
+| ------ | ---- | ---------- |
+| iPhone8<br>iPhone7 (+)<br>iPhone6s (+)<br>iPhone6 (+)<br>iPhone SE<br>iPhone5s | 12.9-inch iPad Pro (2세대)<br>12.9-inch iPad Pro (1세대)<br>10.5-inch iPad Pro<br>9.7-inch iPad Pro<br>iPad Air2<br>iPad Air<br>iPad (5세대)<br>iPad mini4<br>iPad mini3<br>iPad mini2 | iPod touch (6세[대) |
+
+### 참고
+
+맥용 32-bit 앱지원은 2018년에 종료할 예정이라고 합니다.
 
 
-* * * 
+# AppStore 변경점
+### 1\. Promotion
 
-## 2. App Frameworks
-### 주요 내용
-- IPad : Drag & Drop !! 지원함 (SplitView)
-- 파일앱 지원 ! (드디어 공식적인 파일 탐색기를 지원함, 다른 앱(구글 클라우드, iCloud, 드롭박스, TOAST CLOUD!!!!)들과 상호작용 기대)
+* AppStore에서 앱실행/다운로드 전, 미리 "인앱결제"(이하 ```프로모션```)를 할 수 있습니다.
+    * AppStore에서 각 인앱결제 상품의 메타데이터를 이용해 프로모션이 가능합니다.
+    * 이에, StoreKit의 PaymentQueue(_:shouldAddStore:for:) 메소드를 구현하여, 영수증 정보 등 결제 정보를 처리해야합니다.
+    * ex) AppStore내 프로모션 화면 예시 
+    ![1.png](/static/assets/img/blog/ios11/1.png)
 
+### 2\. AppStore
 
-
-### 상세 내용
-1. IPad Drag and Drop / 멀티태스킹 스크린 지원
-2. Local/iCloud Document 를 Browsing 하는 것 지원 (파일 탐색기)
-3. Dynamic Type 지원 기능 개선
-    - Dynamic Type 을 위한 Auto Layout 기능 개선
-4. App Password autofill 에 대해 text content 를 업데이트
-    - username, password properties 를 **UITextContentType** 에 추가함
-5. Keyboard Extensions 업데이트
-6. 기기 저장공간 API 에 대한 개선
+* 앱등록시 Title 제한길이가 50자에서 30자로 축소되었습니다.
+* 대신, Subtitle 필드가 추가되어 검색 등에 사용할 수 있습니다.(30자 제한)
+* Localization 이 가능한 동영상 개수가 늘어났습니다. 이에 App Preview 동영상을 3개까지 올릴 수 있게 되었습니다.
+* 언제든지 수정할 수 있는 Promotional Text 필드가 추가되었습니다.(170자) 앱 설명위에 표시되며 이벤트 등을 알릴 수 있습니다.
 
 
 
-* * * 
 
+# App Frameworks
 
-## 3. App Services
-### 주요 내용
-- 머신러닝 지원 ! Core ML Framework
-- AppStore에서 미리 인앱결제를 할 수 있음 !!!! (프로모션)
-    - paymentQueue(\_:shouldAddStore:for:) 메소드 구현 필요
-- SiriKit 지원 강화
-    - QR코드
-    - ToDo List
-- `MPTCP`(Multipath TCP) !! 지원
-    - 이제 여러개의 TCP Stream을 하나로 묶어서 데이터를 주고 받을 수 있게 되었음 (2013년 이미 표준화되었음)
-    - https://support.apple.com/en-gb/HT201373
-    - `TCP Option 30` 을 서버측에서 켜놔야함 !!
-    - VoIP, IPTV, 게임 등과 같이 신뢰성(Reliability)가 중요한 서비스들에 적합한 프로토콜 !
-    - URLSessionConfiguration
+### 1\. Drag & Drop \(SplitView\)
+
+* iOS에서 드래그앤 드랍기능을 제공합니다.
+* iPad에서는 `앱 간`에 드래그 앤 드랍이 지원되어 보다 향상된 경험을 할 수 있습니다.
+* iPhone에서는 `앱 내부`에서만 동작합니다.
+* 아래의 File Explorer 등에서 그 진가를 발휘합니다.
+
+### 2\. File Explorer
+
+* 드디어, 오랜시간 iOS 유저들의 요구사항인 공식적인 파일 탐색기를 지원하게 되었습니다.
+* 다른 앱들(GoogleCloud, iCloud, Dropbox, TOAST Cloud 등)과의 상호작용을 할 수 있습니다.
 
 
 
-### 상세 내용
-1. 기계 학습 모델 지원
-    - Core ML framework 추가
-        - 앱에 머신 러닝 구현을 쉽게 해주는 프레임워크
-2. Visual codes(QR코드)를 SiriKit에서 지원
-    - 지불이나 연락처 정보교환을 위한 Visual code를 표시하도록 SiriKit에서 지원
-3. Note나 todo list 작성을 SiriKit에서 지원
-4. SiriKit 에 추가한 점들
-    - Payment domain에 송금이나 계좌 검색 기능을 추가
-    - Ride Booking domain에 Ride 취소 및 피드백 기능을 추가
-5. 디바이스의 방향(Heading)을 찾는 있는 기능 추가
-    - CMDeviceMotion 에 heading(CMAttitudeReferenceFrame에 대하여 heading 각도를 반환하는 property) 을 추가
-6. Multipath TCP
-    - Wifi/Celluar 와 같이 multiple interfaces를 사용하기 위한 기능 추가
-    - IETF RFC 6824에 정의된 Multipath TCP 를 지원하기 위해서, URLSessionConfiguration 를 확장하여, single data stream 전송을 위한 기능들 추가
-    - @see URLSessionConfiguration.MultipathServiceType
-7. DNS Proxy
-    - DNS Proxy App Extension type 추가
-    - Network Extension framework
-8. Apple Pay에서 User transaction flow 개선
-9. `App Store에서 In-app Purchase 프로모션 기능 추가`
-    - 개발자는 자신들의 App Store 제품 페이지에서, 최대 20개의 In-app Purchase들을 Promote 할 수 있음
-    - 고객들은 App Store에서 구매를 시작할 수 있고, 앱에서 Transaction 처리를 마무리 할 수 있음
-    - paymentQueue(\_:shouldAddStore:for:) 메소드 추가됨(SKPaymentTransactionObserver 에 추가됨)
-    - 여기서 promoted in-app purchases 를 처리
-    - ![앱스토어에서 IAP](/static/assets/img/blog/appStoreInAppPurchase.png)
-
-10. Live Message
-    - MSMessageLiveLayout (game과 같은 dynamic contents를 표시할 수 있는 live message를 위한 new message layout)
-    - 각각의 Live message들은 자신의 MSMessagesAppViewController를 가지고 있음.
-    - 한번에 여러개의 active live message가 있을 수 있음
-11. HomeKit을 위한 향상된 triggers
-12. MapKit 업데이트
-    - 개발자 데이터를 명확하게 표시할 수 있도록 개선
-
-* * * 
-
-## 4. Media and Web
-### 주요 내용
-- 사진(HEIF) 영상(HEVC->4K UHD) 음악(FLAC) 고압축 포맷 지원 !
-    - 미디어로 인한 용량관리 측면에서 큰 이득 !!
 
 
-### 상세 내용
-1. High Efficiency의 Video Coding 지원 (HEVC)
-    - HEVC 는 새로운 비디오 인코딩의 표준. H.264와 비교해서 같은 비디오 퀄리티를 제공함과 동시에 향상된 압축률을 보임.
-2. High Efficiiency Image Format 지원 (HEIF)
-    - HEIF 는 새로운 이미지 압축의 표준. 동일한 이미지 퀄리티를 제공하며 2배에 가까운 데이터 압축률을 제공
-3. Depth Data에 대한 캡쳐 및 조작, 향상된 photo 캡쳐를 지원
-4. Automatic Storage Management
-    - HTTP Live Streaming Assets의 자동 스토리지 관리가 AVAssetDownloadTask에 추가되었습니다.
-    - 공간이 필요할 때, 시스템에서 만료되었거나 불필요한 다운로드를 자동으로 제거할 수 있습니다.
-    - 우선순위를 사용하여 삭제하는 정책에 영향을 줄 수 있습니다.
-5. AirPlay 2
-    - AV Foundation의 일부 오디오 재생 인터페이스에 대한 향상.
-    - 향상된 기능을 위해서는 AVPlayer의 AVSampleBufferAudioRenderer 객체를 사용해 오디오를 재생
-6. FairPlay 스트리밍 키 관리
-7. Live Photo 조절 기능 추가
+# Media Format 변경
+
+각각의 미디에어 대해 고압축 포멧을 지원합니다.
+
+* 사진(HEIF), 영상(HEVC), 음악(FLAC)
+* 미디어로 인한 용량관리 측면에서 큰 향상이 있습니다.
+* 새로운 압축 포멧을 위해서는 A9 프로세서 이상이 필요합니다(`iPhone6S 이상`)
+
+### 1\. 사진
+
+* iOS11에서는 High Efficiiency Image Format을 지원합니다.(HEIF)
+* HEIF 는 새로운 이미지 압축의 표준으로 동일한 이미지 퀄리티를 제공하며 2배에 가까운 데이터 압축률을 제공합니다.
+
+### 2\. 영상
+
+* High Efficiency의 Video Coding을 지원합니다.(HEVC)
+* HEVC 는 새로운 비디오 인코딩의 표준으로 H.264와 비교해서 같은 비디오 퀄리티를 제공함과 동시에 향상된 압축률을 보입니다.
+
+### 3\. 음악
+
+* 현재까지 애플은 iTunes와 iOS에서 FLAC 포멧 파일 재생을 지원하지 않았습니다. 그래서 많은 서드파티 앱들로 해당 파일 재생을 했었는데요, iOS11부터는 음악 파일에 대한 재생이 가능합니다.
 
 
-* * * 
-
-## 5. Metal 2
-### 주요 내용
-- Metal2가 나왔으니, 사용해보시라.
 
 
-### 상세 내용
-1. Metal2 : 향상된 3D 렌더링 / GPU 이용한 병렬 데이타 처리 프레임워크
-    - Neural Network 지원
-    - 크로스플랫폼 Metal Performance Shader 지원
-
-* * * 
 
 
-## 6. Graphic and Games
-### 주요 내용
-- 증강현실 지원 (우리회사의 대응은?)
-- 고성능 이미지 분석 지원 !
+# Graphics and Games
+
+iOS11에서는 그래픽에 관련한 많은 업데이트가 있었는데요, 고성능 영상인식 처리나 GPU Computing등을 위한 기반 프레임워크들이 개선/추가 되었습니다.
+
+### 1\. Metal2
+
+* 기존 Metal 은 디바이스의 GPU를 사용해 3D 그래픽을 렌더링하거나, 데이터 병렬 컴퓨팅을 하는데 사용된 framework입니다.
+* Metal2가 나오며, 그 기능이 확대되었습니다. Metal2 framework의 출시는 후에 설명할 Core ML framework와의 연동을 통해 보다 강력한 기계학습모델 등을 지원합니다.
+* Neural Network를 지원하며 크로스 플랫폼 Metal Performance Shader를 지원합니다.
+
+### 2\. ARKit framework 추가
+![2.png](/static/assets/img/blog/ios11/2.png)
+* Device Motion Tracking, Camera Scene Capture, 증강현실 구현을 단순화시키는 등의 많은 증강현실 관련 기능들을 가지고 있는 프레임워크입니다.
+* 언리얼, 유니티, 스팀VR을 이제는 MacOS/iOS에서 사용할 수 있습니다.
+
+### 3\. Vision framework 추가
+
+* 얼굴 인식, 바코드, 텍스트, Image Horizon, Rectangular regions등을 Detect 하거나 Video에서 Object를 트래킹 할 수 있는 영상인식 관련 프레임워크입니다.
+* 이미지에 대하여 custom model을 구현하기 위해서 Core ML Framework와 연동하여 사용합니다.
+
+### 4\. Core ML framework 추가
+![3.png](/static/assets/img/blog/ios11/3.png)
+* Core ML framework 는 어플리케이션에서 머신러닝 구현을 쉽게 도와주는 framework입니다. 고성능을 유지하며 베터리 효율을 높인 머신러닝 기능을 구현할 수 있다고 합니다.
+* 얼굴인식, 고유명사 인식, 객체 추적, 언어 인식 등의 기능들은 상위 프레임워크인 Vision(영상처리), NLP(자연어처리) 프레임워크에 포함되어 있습니다.
 
 
-### 상세 내용
-1. AR (Augmented Reality) 지원
-    - ARKit framework 추가
-        - Device motion tracking
-        - camera scene capture
-        - 향상된 scene processing
-        - 증강현실 구현을 단순화하는 편리한 display
-2. 이미지 분석 성능 개선
-    - Vision framework 추가
-        - Detecting faces, barcodes, text, image horizon, rectangular regions
-        - 이미지에 대하여 custom models을 구현하기 위해 Core ML(Machine Learning)
-        - Video에서 Object 트래킹
-        - Image registration에 대한 지원 포함
-3. Write custom image blending kernels for Core Image.
-    - Added CIBlendKernel, a special type of CIColorKernel to blend two images (supported by CIRenderDestination and CIImageAccumulator).
-    - Added init(functionName:fromMetalLibraryData:) to CIKernel for writing kernels using Metal to benefit from the modern language features and the reduced compile time.
-4.  Lightweight render destination.
-    - Added CIRenderDestination, an object for creating renderers that return to the caller after the work has been issued. Functionality includes specifying all the destination attributes of the renderer for different destinations including IOSurface, CVPixelBuffer, GL textures, Metal textures, and memory.
-5. Extended ReplayKit framework.
-    - Updated RPScreenRecorder for screen capture and back camera support.
-6. Added new Core Image filters CITextImageGenerator, CIColorCurves, CILabDeltaE, CIBokehBlur, CIMinMaxRed, and CIBicubicScaleTransform.
-
-* * * 
-
-## 7. System
-### 주요 내용
-- NFC 에 접근 할 수 있음 (애플페이에 사용되는 칩에 대한 권한을 써드파티 개발자에게 열어줌. 다만, NFC 개방정책 자체는 불투명) - Core NFC
 
 
-### 상세 내용
-1. Hotspot configuration
-    - Hotspot configuration 을 위한 network extension 추가 
-    - @see [NEHotspotConfiguration](https://developer.apple.com/documentation/networkextension/nehotspotconfiguration%29
-2. Core Bluetooth framework 업데이트
-    - L2CAP Channels 지원
-    - session Restoration 확대 (Blutooth resets / device reboots 에 동작)
-3. NFC 태그 Detect / NDEF 데이터가 포함된 메시지 Read
-    - Core NFC 추가
-        - reading Near Field Communications (NFC) tags, data in NFC Data Exchange Format (NDEF.)
-4. APFS(Apple File System) is now the `default filesystem`
-    - 기존은 HFS+ (mac)
-    - iOS 10.3 beta 부터 점차 적용됨
-    - 참고 : http://macnews.tistory.com/4603#31
+
+
+# Multipath TCP
+
+iOS9 에서 지원한 Wi-Fi Assist 기능은 Wifi신호가 약할 때, Cellular 망에 붙을 수 있는 기능이었는데요, 해당 기능을 확장한 것이 Multipath TCP(MPTCP) 입니다. MPTCP는
+
+* MPTCP에서는 primary TCP connection으로 Wi-Fi를 설정하고, cellular 데이터를 이용하여 backup connection을 맺습니다.
+* 만약, Wi-Fi 응답이 없거나 사용불가 상태일 때는 celluar data 커넥션을 사용합니다.
+* iOS MPTCP 흐름도
+    * ![4.png](/static/assets/img/blog/ios11/4.png)
+* 해당 기능의 사용을 위해서는 서버 / 클라이언트 작업이 둘다 필요합니다.
+    * 서버 : MPTCP는 TCP Option field 30을 사용합니다. 서버와 iOS기기 사이에 MPTCP를 지원하지 않는 미들웨어가 있다면, MPTCP는 정상적으로 동작하지 않고, standard TCP Connection 처럼 동작합니다. 이에 서버 관리자는 미들웨어에 대한 확인과 함께 방화벽 정책을 확인하여야합니다.
+    * 클라이언트 : MPTCP 사용을 위해서는 `URLSessionConfiguration` 클래스의 `MultipathServiceType` 설정을 해주어야합니다.
+
+
+
+
+
+
+# System
+
+### 1\. Hotspot Extension
+
+* Hotspot 설정을 위한 Network Extension Framework 가 추가되었습니다.
+* Xcode Project Capability의 Hotspot Configuration 을 활성화 한후, NEHotspotConfigurationManager 를 이용하여 설정된 SSID등에 접속할 수 있습니다.
+
+### 2\. Core NFC Framework
+
+* 이제 iPhone에서 NFC 데이터를 읽을 수 있습니다.(`읽기`만 가능합니다, `쓰기`는 불가능합니다.) 근처에 있는 NFC Tag를 읽을 수 있으며, NDEF 데이터가 포함된 메시지를 읽을 수 있습니다.
+
+### 3\. APFS \(Apple File System\)
+
+* 기존 HFS+ 파일시스템에서 APFS 시스템으로 기본 파일 시스템을 변경하였습니다.
+* 사실, HFS 파일시스템에 컴퓨터 보안, 개인정보 보호등을 하기위해 여러 기능들을 붙여가며 Apple이 HFS+를 유지보수 해왔는데요, 이번에 이러한 요구를 모두 충족시키는 APFS로 변경을 하게 되었습니다.
+
+
+
+
+
+
+# 마치며
+
+iOS11에서는 주로 ARKit, CoreML Framework가 뜨거운 이슈가 되었고, 서비스 개발 측면에서는 AppStore Promotion 기능이나, MPTCP, 32-Bit fadeout 등의 이슈가 중요한 점이었습니다.
+
+위에 설명한 피쳐들 외에도, 많은 다양한 기능들이 iOS11에 추가 및 개선되었는데요,(예를들어 Swift4, HomeKit, SiriKit 등) 아래 Reference 링크들에서 필요한 정보들을 얻으실 수 있습니다.
+
+# Reference
+
+* Apple iOS 11 : https://www.apple.com/ios/ios-11-preview/
+* Apple iOS 11 개발자 : https://developer\.apple\.com/library/content/releasenotes/General/WhatsNewIniOS/Articles/iOS\_11\_0\.html
+* Apple Xcode9 : https://developer\.apple\.com/library/content/documentation/DeveloperTools/Conceptual/WhatsNewXcode/xcode\_9/xcode\_9\.html\#//apple\_ref/doc/uid/TP40004626\-CH8\-SW1
+* Apple Swift4 : https://developer\.apple\.com/library/content/documentation/Swift/Conceptual/Swift\_Programming\_Language/index\.html\#//apple\_ref/doc/uid/TP40014097
+
+감사합니다 : )
