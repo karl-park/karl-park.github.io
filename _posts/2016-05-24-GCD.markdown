@@ -23,51 +23,57 @@ tags: [iOS,Objective-C,GCD]
 종류의 Queue로 구현하고 있다.
 
 1. 직렬큐(Serial Dispatch Queue)
-	간단히, Task들을 추가한 순으로 실행시킨다. 우리가 흔히아는 Queue라고 말하면 되겠다.
-	First In First Out, FIFO 랄까?(당연히 Stack은 FILO 겠지?)
+간단히, Task들을 추가한 순으로 실행시킨다. 우리가 흔히아는 Queue라고 말하면 되겠다.
+First In First Out, FIFO 랄까?(당연히 Stack은 FILO 겠지?)
+
 > dispatch_queue_create("com.ddstudio.dispatchtest.TESTING", NULL);
 > dispatch_queue_t serialQueue = dispatch_queue_create("com.ddstudio.dispatchtest.TESTING", `DISPATCH_QUEUE_SERIAL`);
-```
-	dispatch_queue_t queue = dispatch_queue_create("com.davin.queue", NULL);
-	dispatch_async(queue, ^{ NSLog(@"Call 1"); });
-	dispatch_async(queue, ^{ NSLog(@"Call 2"); });
-	dispatch_async(queue, ^{ NSLog(@"Call 3"); });
-	dispatch_async(queue, ^{ NSLog(@"Call 4"); });
-	dispatch_async(queue, ^{ NSLog(@"Call 5"); });
 
-	// 실행값
-	Call1
-	Call2
-	Call3
-	Call4
-	Call5
+```
+dispatch_queue_t queue = dispatch_queue_create("com.davin.queue", NULL);
+dispatch_async(queue, ^{ NSLog(@"Call 1"); });
+dispatch_async(queue, ^{ NSLog(@"Call 2"); });
+dispatch_async(queue, ^{ NSLog(@"Call 3"); });
+dispatch_async(queue, ^{ NSLog(@"Call 4"); });
+dispatch_async(queue, ^{ NSLog(@"Call 5"); });
+
+// 실행값
+Call1
+Call2
+Call3
+Call4
+Call5
 ```
 
 2. 병렬큐(Concurrent Dispatch Queue)
-	추가되는 Task들을 병렬적으로 실행하는 Queue이다. 4개의 Global Parallel Queue가 준비되어 있다.
+추가되는 Task들을 병렬적으로 실행하는 Queue이다. 4개의 Global Parallel Queue가 준비되어 있다.
+
 > dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
 > dispatch_queue_t concurrentQueue = dispatch_queue_create("com.ddstudio.dispatchtest.TESTING", `DISPATCH_QUEUE_CONCURRENT`);
 > dispatch_queue_t globalQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-- Priority : High/Default/Low/Background
-```
-	dispatch_queue_t queue = dispatch_queue_create("com.davin.queue", DISPATCH_QUEUE_CONCURRENT);
-	dispatch_async(queue, ^{ NSLog(@"Call 1"); });
-	dispatch_async(queue, ^{ NSLog(@"Call 2"); });
-	dispatch_async(queue, ^{ NSLog(@"Call 3"); });
-	dispatch_async(queue, ^{ NSLog(@"Call 4"); });
-	dispatch_async(queue, ^{ NSLog(@"Call 5"); });
 
-	// 실행값
-	Call2
-	Call4
-	Call3
-	Call1
-	Call5
+- Priority : High/Default/Low/Background
+
+```
+dispatch_queue_t queue = dispatch_queue_create("com.davin.queue", DISPATCH_QUEUE_CONCURRENT);
+dispatch_async(queue, ^{ NSLog(@"Call 1"); });
+dispatch_async(queue, ^{ NSLog(@"Call 2"); });
+dispatch_async(queue, ^{ NSLog(@"Call 3"); });
+dispatch_async(queue, ^{ NSLog(@"Call 4"); });
+dispatch_async(queue, ^{ NSLog(@"Call 5"); });
+
+// 실행값
+Call2
+Call4
+Call3
+Call1
+Call5
 ```
 
 3. 메인큐(Main Dispatch Queue)
-	추가된 Task가 메인 Thread에서 실행되는 Queue이다. 예를 들어서 UI작업은 해당 메인큐에서만 실행되어야한다.
-	큐의 획득은 다음과 같다.
+추가된 Task가 메인 Thread에서 실행되는 Queue이다. 예를 들어서 UI작업은 해당 메인큐에서만 실행되어야한다.
+큐의 획득은 다음과 같다.
+
 > dispaych_get_main_queue()
 > dispatch_queue_t mainQueue = dispatch_get_main_queue();
 
@@ -80,61 +86,65 @@ tags: [iOS,Objective-C,GCD]
 1. dispatch_sync
 2. dispatch_async
 
-```
-	// 비동기로 작업을 추가 및 수행한다
-	void dispatch_async(dispatch_queue_t queue, dispatch_block_t block);
-
-	// 동기로 작업을 추가 및 수행한다
-	void dispatch_sync(dispatch_queue_t queue, dispatch_block_t block);
-```
 
 ```
-	// 병렬큐를 만들었으나, 동기적으로 Task를 등록함에 따라, Serial하게 실행됨
-	dispatch_queue_t queue = dispatch_queue_create("com.davin.queue", DISPATCH_QUEUE_CONCURRENT);
-	dispatch_sync(queue, ^{ NSLog(@"Call 1"); });
-	dispatch_sync(queue, ^{ NSLog(@"Call 2"); });
-	dispatch_sync(queue, ^{ NSLog(@"Call 3"); });
-	dispatch_sync(queue, ^{ NSLog(@"Call 4"); });
-	dispatch_sync(queue, ^{ NSLog(@"Call 5"); });
+// 비동기로 작업을 추가 및 수행한다
+void dispatch_async(dispatch_queue_t queue, dispatch_block_t block);
 
-	// 실행값
-	Call1
-	Call2
-	Call3
-	Call4
-	Call5
+// 동기로 작업을 추가 및 수행한다
+void dispatch_sync(dispatch_queue_t queue, dispatch_block_t block);
+
+
+// 병렬큐를 만들었으나, 동기적으로 Task를 등록함에 따라, Serial하게 실행됨
+dispatch_queue_t queue = dispatch_queue_create("com.davin.queue", DISPATCH_QUEUE_CONCURRENT);
+dispatch_sync(queue, ^{ NSLog(@"Call 1"); });
+dispatch_sync(queue, ^{ NSLog(@"Call 2"); });
+dispatch_sync(queue, ^{ NSLog(@"Call 3"); });
+dispatch_sync(queue, ^{ NSLog(@"Call 4"); });
+dispatch_sync(queue, ^{ NSLog(@"Call 5"); });
+
+// 실행값
+Call1
+Call2
+Call3
+Call4
+Call5
 ```
 
 ## Memory 관리
 - MRC 환경에서는 Dispatch Queue도 메모리 관리를 해주어야한다.
 
-dispatch_release, dispatch_retain
+### dispatch_release, dispatch_retain
+
 ```
-	#define dispatch_release(object) ({ dispatch_object_t _o = (object); _dispatch_object_validate(_o); [_o release]; })
-	#define dispatch_retain(object) ({ dispatch_object_t _o = (object); _dispatch_object_validate(_o); (void)[_o retain]; })
+#define dispatch_release(object) ({ dispatch_object_t _o = (object); _dispatch_object_validate(_o); [_o release]; })
+#define dispatch_retain(object) ({ dispatch_object_t _o = (object); _dispatch_object_validate(_o); (void)[_o retain]; })
 ```
 
 
 ## JavaScript에서의 setInterval/setTimeout 과 같은 기법
 
-dispatch_after
-```
-	dispatch_queue_t queue = dispatch_queue_create("com.davin.queue", DISPATCH_QUEUE_SERIAL);
-
-	double delayInSeconds = 2.0;
-	dispatch_time_t time = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
-	dispatch_after(time, queue, ^{  NSLog(@"Call 1"); });
-	dispatch_async(queue, ^{ NSLog(@"Call 2"); });
-	dispatch_async(queue, ^{ NSLog(@"Call 3"); });
-	dispatch_async(queue, ^{ NSLog(@"Call 4"); });
-	dispatch_async(queue, ^{ NSLog(@"Call 5"); });
+### dispatch_after
 
 ```
+dispatch_queue_t queue = dispatch_queue_create("com.davin.queue", DISPATCH_QUEUE_SERIAL);
 
-물론 GCD를 이용하지 않고 저것을 해내는 방법도 있다~
+double delayInSeconds = 2.0;
+dispatch_time_t time = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+dispatch_after(time, queue, ^{  NSLog(@"Call 1"); });
+dispatch_async(queue, ^{ NSLog(@"Call 2"); });
+dispatch_async(queue, ^{ NSLog(@"Call 3"); });
+dispatch_async(queue, ^{ NSLog(@"Call 4"); });
+dispatch_async(queue, ^{ NSLog(@"Call 5"); });
 ```
-	[self performSelector:@selector(runningMethodsAfter5Sec) withObject:nil afterDeley:5.0];
 
-	[NSTimer scheduledTimerWithTimeInterval:5.0 target:selft selctror:@selector(runningMethodsAfter5Sec) repeats:NO];
+
+
+### 물론 GCD를 이용하지 않고 저것을 해내는 방법도 있다~
+
+```
+[self performSelector:@selector(runningMethodsAfter5Sec) withObject:nil afterDeley:5.0];
+
+[NSTimer scheduledTimerWithTimeInterval:5.0 target:selft selctror:@selector(runningMethodsAfter5Sec) repeats:NO];
 ```
 

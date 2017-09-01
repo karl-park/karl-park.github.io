@@ -1,0 +1,132 @@
+---
+layout: post
+title:  "[MWDC2017] 1st Day"
+date:   2017-04-08 03:00:00
+categories: [Technology]
+tags: [MWDC2017,MWDC,SanFrancisco,Seminar,Conference,Developer]
+---
+
+
+# 1. Lazy loading JS modules in the Browser
+
+## Single Page Application
+- 예전에는 서버에서 HTML 페이지들을 쫙~~ 만들어서 똭! 보여줬었음
+- 현재는 ? -> SPA (Single Page Application : ex) Dooray Project)
+    - HTML 문서로 통신을 하는 것이 아니라, json 등을 이용해 async request(ajax) 통신
+    - HTML Page Reload 가 아니라, Rerendering a new view !
+    - 클라이언트에서 상태를 관리 !
+- 문제는 !! SPA 에서는 너무많은 Stuff(css, js, image 등)를 로딩해놓아야한다.
+    - 필요할 때만, 로딩하게 할 수는 없을까?
+
+## SPA와 Server-side Rendered 비교
+- 예시 상황 : 5개의 페이지 -> 홈, 어바웃, 상품, 카트, 프로필
+
+
+### Server-side Rendered
+- 각 페이지는 300 Kbyte .html, 100 Kbyte .js = 400 Kbyte
+- Total = 300Kb*5 + 100Kb*5 = 2 Mbyte
+
+
+### SPA
+- 실제페이지는 1개(홈), + 4개의 뷰(어바웃, 상품, 카트, 프로필)
+- 홈 : 300 Kbyte .html + 100 Kbyte .js = 400 Kbyte
+- 각 뷰 : 50 Kbyte JSON + 150 Kbyte .js = 200 Kbyte
+    - 200 Kbyte * 4 = 800 Kbyte
+- Total = 400 Kbyte + 800 Kbyte = 1.2 Mbyte
+
+
+### 비교
+```
+Server : SPA = 2Mb : 1.2Mb
+```
+
+그러나,
+`홈` 페이지만 비교해봤을 때,
+```
+- SPA Home = 400 Kbyte(300 .html + 100 .js) + 150 Kbyte(.js) * 4 (views) = 1 Mbyte
+
+- Server = 400 Kbyte
+```
+
+
+### Lazy Loading을 쓰면 !!
+- Home : 400 Kbyte
+- Each View : 200 KByte(js + json)
+
+
+
+## Lazy Loading 이 뭘까요?
+- 리소스의 초기화(Loading, Fetching, Allocation)를 그것이 필요하기 전까지 지연시키는 것.
+
+
+## How to Lazy Load ?
+- AMD, CommonJS, ES2015, Webpack 2 등의 많은 방법들.
+- 프레임워크마다 제각각 스펙(동기/비동기 기능에 대한 스펙등), 성능 이슈가 있으니 잘 알아보고 맞춤형 프레임워크를 고를 것. 혹은 손수제작
+
+```javascript
+//example
+// dog.js
+var Dog = function(name, breed) {
+    this.name = name;
+    this.bark = breed
+};
+    
+Dog.prototype.bark = function() {
+    return this.name + ': ' + getBarkStyle(this.breed);
+};
+    
+function getBarkStyle(breed) {
+    return breed === 'huskey' ? 'woooow!' : 'woof, woof!';
+}
+module.exports = Dog;
+
+
+////
+// main.js
+document.getElementById('loadDogButton').addEventListener('click', function(e) {
+    require.ensure([], function(require) {
+        var Dog = require('./dog'), 
+            dogContainer = document.getElementById('dogContainer');
+
+        var sherlock = new Dog('Sherlock', 'beagle');
+        dogContainer.innerHTML += sherlock.bark();
+
+        var whisky = new Dog('Whisky', 'husky');
+        dogContainer.innerHTML += '<br/>' + whisky.bark();
+    });
+});
+```
+
+
+
+
+# 2. iOS Testing & Debugging
+- Quality
+    - PAR
+        - Performance : Fast | as fast as possible
+        - Accurate Information presented is valid
+        - Reliable : Behaves in ways that are expected
+- Defect
+    - Error
+    - Fault
+    - Failure
+
+## Defect Management
+1. Prevention -> 코드리뷰, 코드 정적분석, ...
+2. Reduction -> 디버깅, 프로파일링, Conformance testing (기능과 관련된 표준 준수 테스트), 유닛 테스트, 통합 테스트, UI 유닛 테스트 정적 코드 분석 등
+3. Containment -> Robust error/exception handling ...
+
+
+
+## 테스팅/디버깅에 대한 철학들
+- 설명 주저리주저리
+- 결론은 ! Unit Testing 해라 !!!!!!!!! Please !!!!
+
+```
+New code is guilty until proven innocent !!
+```
+
+
+
+# 3. Building an Android UI
+- iOS Testing/Debugging 세션과 시간이 겹쳐 ~~(안타깝게도)~~ 미수강 !!
