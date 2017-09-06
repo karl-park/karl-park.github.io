@@ -4,6 +4,23 @@
     detail: NHN Entertainment
     i18n: company_nhnent
   desc:
+    detail: Game Platform Client Team (AOS+iOS)
+    i18n: company_nhnent_desc
+  date:
+    detail: 2017. 08. 01
+    i18n: company_nhnent_date
+  job:
+    detail: Staff
+    i18n: company_nhnent_job
+  icon: fa-plus-square
+
+
+
+
+- name:
+    detail: NHN Entertainment
+    i18n: company_nhnent
+  desc:
     detail: PlatformSDK Developement Team (iOS)
     i18n: company_nhnent_desc
   date:
