@@ -2,7 +2,7 @@
 layout: post
 title:  "How to debug TypeScript in VS Code"
 date:   2017-08-22 14:30:00
-categories: [JavaScript]
+categories: [Javascript]
 tags: [TypeScript,JavaScript,Debug,VS Code]
 ---
 
