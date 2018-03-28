@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Android P, Developer Preview1"
-date:   2017-08-22 14:30:00
+date:   2018-03-28 14:30:00
 categories: [Android]
 tags: [Android,Android P,Android 9,DP1,Preview]
 ---
