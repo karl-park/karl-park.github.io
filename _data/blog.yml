@@ -6,13 +6,19 @@
 - name: Ios
   href: /ios/
 
+- name: Android
+  href: /android/
+
 - name: Technology
   href: /technology/
 
 - name: Life
   href: /life/
 
-- name: HTML
+- name: JavaScript
+  href: /javascript/
+
+- name: HTML5
   href: /html/
 
 - name: Linux
