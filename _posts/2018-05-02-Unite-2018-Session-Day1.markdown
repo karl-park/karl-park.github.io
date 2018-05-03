@@ -542,3 +542,60 @@ Server->Database: Log
 - `Gamication` 항상 관심을 가지던 단어. Serious game과 일맥상통할 것 같다
 - 오늘 들은 세션중, 가장 마음이 먹먹한 세션.
 
+
+
+
+
+# 유니티 서비스로 수익화 하기 : Unity Ads, Unity IAP, IAP Promo
+- Time : 5/3, 17:00 ~ 17:50
+- Presenter : 이아린 / Unity / Services Support Engineer
+
+
+- Unity Revenue Provided Service
+    - IAP, Ads
+    - IAP Promo.
+
+
+## Unity Ads
+- Why Mobile Ads?
+    - 97% of users do not spend money on games.
+    - earning money !!
+    - 인도/미국/영국 같은 경우는 60% 이상의 매출이 광고임. 나머지가 IAP.
+    - 우리나라는 1/3 정도 매출을 광고가 담당하고 있음.
+- Why Video ads?
+    - Game developers prefer video ads!
+        - 이유 : 동영상 광고는 배너 광고 풀스크린 이미지 광고와는 다르게 게임 시나리오 속에 넣을 수 있기 때문
+    - 광고 종류별 비율
+        - 11% : 풀스크린 이미지 광고
+        - 66% : 보상형 동영상 광과
+        - 9% : 배너 이미지 광고
+        - 14% 삽입형 동영상 광고
+- Why Unity ads?
+    - integrate 쉬움 (Unity 게임이라면 just on!)
+    - 그냥 video 광고 뿐만 아니라 playable 광고, 브랜드 광고가 가능함
+    - IAP Promo와 더불어서 높은 수익 창출 가능
+
+
+## Unity IAP
+- 여러가지 IAP Store를 한번에 처리 할 수 있음.
+    - 많은 사용자가 이미 사용중
+
+
+## Unity IAP Promo
+- Unity Ads 위에 올라와있음. 손쉽게 Integration 할 수 있음.
+- 유저가 아이템이 필요한 시점에, 아이템 구매를 유도하는 Ads !
+- Requirements
+    - Unity 5.4+
+    - Unity Analytics + Unity IAP 1.17+
+    - Unity Ads 2.2+
+
+
+## 느낀점
+- 유니티에서는 사용하기 쉬울 듯도 함.
+
+
+
+
+
+
+
