@@ -10,6 +10,12 @@ tags: [Unite,Unity,VR,Seoul]
 차마 듣지 못한 세션들에 대한 정보는 아래 uniteseoul 링크에서 확인하실 수 있습니다.
 (추후 발표 자료가 올라온다고 합니다.)
 
+#### 참고
+실제 Unite 2018 첫번째날에는 교육세션/트레이닝데이가 열렸습니다.
+본인은 해당일에는 참석하지 않았으므로, 공식 아젠다가 있었던 두번째 날을 Day1이라 표기하고 진행하겠습니다.
+
+
+
 # Unite 2018 Sessions Day1
 - Date : 5/3, 목요일
 - Session Info : https://www.uniteseoul.com/2018/agenda.aspx#agenda2
@@ -31,6 +37,7 @@ But, VR 왜 안해? ->> "쓰기 귀찮아서"
 움직이는 공간에 장애물을 모두 치워놔야한다.
 
 ### VR 및 다른 기기들의 접근성 비교
+
 | Device | Access |
 | ------ | ------ |
 | Mobile | 잡고->조작 |
