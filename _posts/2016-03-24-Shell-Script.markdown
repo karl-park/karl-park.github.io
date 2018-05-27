@@ -1,39 +1,38 @@
 ---
 layout: post
-title:  "[Shell] ABOUT Shell"
+title:  "[Linux] About Shell"
 date:   2016-03-24 03:00:00
-categories: [Linux]
-tags: [Shell,Linux,Bash,sh,Script]
+tags: linux shell bash sh script
+categories: devstory
 ---
 
-# 쉘 Shell 
+나는 shell을 좋아한다. 뭔가 있어보이는 듯한 허세가 너무 좋다. 그렇다고 쉘이나 vi를 자주 애용은 하지 않지만... 무튼 쉘에서 작업을 할 땐 뭔가 행복하다.
+
+이번 시간에는 이런 "허세감", "관종"감(?)을 이끌어내는 shell을 다뤄보자 !
+
+
+# 쉘 Shell
 
 ## What the Shell?
-
-* Shell : In computing, a **shell** is a user interface for access to an OS's services.
+- Shell : In computing, a **shell** is a user interface for access to an OS's services.
 
 즉, OS의 서비스에 접근하기 위한 유저 인터페이스이다 ! (명령어 해석기, 커맨드 인터프리터)
 그렇다면, Unix/Linux/Windows 등 `모든 OS에서 필수적`이겠네 !!?
 
-<br/>
-
-* **`Shell`** 이 부릅니다. ♪♪ <연결고리>
-너와 나의 연결 고리 ! `커널과 사용자의 연결 고리` !!
+**`Shell`** 이 부릅니다. ♪♪ <연결고리> 너와 나의 연결 고리 ! `커널과 사용자의 연결 고리` !!
 
 ## Shell의 종류
-
 - Mac/Unix/Linux : bash, sh, ksh, csh, tcsh, zsh ...
 - Windows : explorer.exe, cmd.exe
 - 어릴적했던, 천리안/나우누리/새롬데이타맨프로 등도 쉘인 것이다 !!(이쯤이면 친숙한 이미지 !!)
 
 ![새롬데이타맨프로](https://raw.githubusercontent.com/MrKarl/MrKarl.github.io/7cf7cf1939370529e6c885a934ac0776ebbff70b/assets/images/shell/seromdatamanpro.jpg)
 
-[참고]
-- bash(Bourne Again SHell, BASH)
-- sh(Bourne SHell, SH)
+#### [참고]
+> bash : Bourne Again SHell, BASH
+> sh : Bourne SHell, SH
 
 ##  Shell 확인/수정
-
 ### 확인
 
 아래와 같이 명령을 날려서 알 수 있다.
@@ -119,9 +118,9 @@ Script : `interpret 방식`으로 동작하는 컴파일되지 않은 프로그�
 
 - Shell Script, Perl Script, JavaScript, ...
 - 위의 Shell, Perl, Javascript 들이 의미하는 것은 바로, 스크립트를 읽어 실행해주는 엔진 !
-	-  Shell Script -> OS의 bash, sh 등이 엔진
-	-  Perl Script -> Perl이 인터프리트 엔진
-	-  JavaScript -> 웹브라우저가 인트프리트 엔진
+    -  Shell Script -> OS의 bash, sh 등이 엔진
+    -  Perl Script -> Perl이 인터프리트 엔진
+    -  JavaScript -> 웹브라우저가 인트프리트 엔진
 
 ### 컴파일 언어와의 차이
 
@@ -130,8 +129,8 @@ Script : `interpret 방식`으로 동작하는 컴파일되지 않은 프로그�
 // hello.c
 #include <stdio.h>
 int main(){
-	printf("helloworld");
-	return 0;
+    printf("helloworld");
+    return 0;
 }
 
 // Shell Script
@@ -160,20 +159,20 @@ echo "your input : $input"
 ```bash
 if [ $num -gt $compare ]
 then
-	echo "$num은 $compare 보다 큽니다."
+    echo "$num은 $compare 보다 큽니다."
     exit
 elif [ $num -lt $compare ]
 then
-	echo "$num은 $compare 보다 작습니다."
+    echo "$num은 $compare 보다 작습니다."
     exit
 else
-	if [ $num -eq $compare]
+    if [ $num -eq $compare]
     then
-    	echo "$num은 $compare 과 같습니다."
-    	exit
+        echo "$num은 $compare 과 같습니다."
+        exit
     else
-    	echo "$num은 $compare 과 같습니다."
-    	exit
+        echo "$num은 $compare 과 같습니다."
+        exit
     fi
 fi
 
@@ -183,14 +182,14 @@ fi
 echo -n "Y or N :"
 read input
 case $input in
-	y|Y)
-    	echo "YES !"
+    y|Y)
+        echo "YES !"
         echo "YES YES !";;
     n|N)
-    	echo "NO !"
+        echo "NO !"
         echo "NO NO !";;
     *)
-    	echo "Wrong !"
+        echo "Wrong !"
         break;;
 ```
 
@@ -205,14 +204,14 @@ done
 list = `ls ~/data/images`
 for file in `echo $list`
 do
-	echo $file
+    echo $file
 done
 
 echo -n "Please type the number: "
 read num
 while [ $num -gt 0 ]
 do
-	echo $num
+    echo $num
     num = `expr $num - 1`
 done
 ```
@@ -222,7 +221,7 @@ done
 ```bash
 two_sum_fun()
 {
-	echo "1st arg : $1"
+    echo "1st arg : $1"
     echo "2nd arg : $2"
     
     sum= `expr $1 + $2`
@@ -232,7 +231,7 @@ two_sum_fun()
 
 function helloworld()
 {
-	echo "helloworld"
+    echo "helloworld"
 }
 
 two_sum_fun 1 2

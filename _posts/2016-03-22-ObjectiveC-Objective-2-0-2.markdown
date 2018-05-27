@@ -1,10 +1,16 @@
 ---
 layout: post
-title:  "[Objective-C-2.0] 책요약 02"
+title:  "[Objective-C] Objective-C-2.0 책요약 02"
 date:   2016-03-22 02:00:00
-categories: [iOS]
-tags: [iOS,Objective-C,책요약,Summary]
+tags: objc ios Summary 책요약
+categories: devstory
 ---
+
+이전 편에 이쳐서 책(Objective-C 2.0)을 요약하는 포스팅을 올리려고한다.
+
+- 1편 : [Objective-C-2.0 책요약 01](../ObjectiveC-Objective-2-0-1/)
+- 2편 : [Objective-C-2.0 책요약 02](../ObjectiveC-Objective-2-0-2/)
+- 3편 : [Objective-C-2.0 책요약 03](../ObjectiveC-Objective-2-0-3/)
 
 ![](https://raw.githubusercontent.com/MrKarl/MrKarl.github.io/4b664436fed33ae28727acb212ff6127092a3b82/assets/images/objectivec2.0/objectivec2.0.PNG)
 
@@ -34,25 +40,25 @@ tags: [iOS,Objective-C,책요약,Summary]
 
 - 범위를 나타내는 구조체 : NSRange
 
-```objectivec
+```objc
 typedef struct _NSRange{
-	unsigned int location; unsigned int lenght;
+    unsigned int location; unsigned int lenght;
 } NSRange;
 ```
 
 - 기하학 관련 타입구조체 : NSPoint, NSSize, NSRect
 
-```objectivec
+```objc
 typedef struct _NSPoint{
-	float x; float y;
+    float x; float y;
 } NSPoint;
 
 typedef struct _NSSize{
-	float width; float height;
+    float width; float height;
 } NSSize;
 
 typedef struct _NSRect{
-	NSPoint origin; NSSize size;
+    NSPoint origin; NSSize size;
 } NSRect;
 ```
 
@@ -81,24 +87,24 @@ typedef struct _NSRect{
 # 10장 객체 초기화
 
 - 객체 할당 방법
-	- new
-	- alloc / init
+    - new
+    - alloc / init
 
 ## 객체 할당
 - 할당(allocation) : OS로부터 일정 메모리를 *할당*받은 후, 객체의 인스턴스변수들을 가지고 있는 위치가 그 메모리에 덧씌워져서, 실제로 그 객체가 메모리 주소를 갖게 되는 것.
 - alloc 메시지와 초기화
-	- BOOL : NO
-	- int : 0
-	- float : 0.0
-	- *(pointer variable) : nil
+    - BOOL : NO
+    - int : 0
+    - float : 0.0
+    - *(pointer variable) : nil
 
 ## 객체 초기화
 - 초기화(initialization) : 일정 메모리를 얻어와 객체 단체에 있어서 생산적인 멤버로 준비시킨다.
 
-```objectivec
-Car *car = [[Car alloc] init];		// OK
+```objc
+Car *car = [[Car alloc] init];        // OK
 
-Car *car = [Car alloc]				// DO NOT !!
+Car *car = [Car alloc]                // DO NOT !!
 [car init]
 ```
 
@@ -106,7 +112,7 @@ Car *car = [Car alloc]				// DO NOT !!
 
 # 11장 프로퍼티
 - @property/@synthesize : 전처리기
-	-> Build and Run 을 하였을 때, prewritten/preformatted 코드 블락으로 대체 !!
+    -> Build and Run 을 하였을 때, prewritten/preformatted 코드 블락으로 대체 !!
 - 즉, getter / setter 를 자동적으로 생성해준다.
 
 ## @property

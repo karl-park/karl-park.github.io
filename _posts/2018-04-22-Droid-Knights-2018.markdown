@@ -1,0 +1,276 @@
+---
+layout: post
+title:  "[Droid Knights] Seoul 2018 후기"
+date:   2018-04-22 09:30:00
+tags: seminar android java DroidKnights DroidKnightsSeoul DroidKnights2018
+categories: devstory
+---
+
+
+오늘은 4월 22일에 열렸던 Droid Knights 에 대한 참가 후기를 공유를 해볼까 합니다.
+
+
+# Droid Knights
+
+- Date : 4/22. Sun.
+- Location : Coex Conference Hall 4F
+- Url : [Droid Knights 2018](https://droidknights.github.io/2018/)
+- Sessions
+    - ![1.png](/static/assets/img/posts/droidknights2018/1.png)
+
+
+# 1. 지금은 ConstanintLayout 시대
+Guide, Chain 등에서 부터 최신 업데이트된 기능까지! 혼자 알기 아까운 ConstraintLayout, 복잡한 구조도 한방에 멋지게!
+
+- 발표자 : 안세원, 카카오 모빌리티 개발자
+
+### layout_height/weight = 0
+- `match_constraints` 를 뜻함
+- match_parent XX -> match_constraints
+- layout_height:0 == match_constraints
+
+### ConstraintLayout
+- 모든 Layout을 Flat하게 처리할 수 있음
+- RelativeLayout / LinearLayout 등에서 계층 구조를 가지는 뷰들을 Group 프로퍼티를 이용하여 핸들링 할 수 있음.
+- 프로퍼티를 사용함에 있어서 유의해야함
+    - 순서나 속성을 자칫 잘못하면 정 반대의 결과를 불러일으킴.
+
+
+### 느낀점
+- UI 핸들링을 평소에 하지 않아서, 잘 익숙치 않는 레이아웃 개념들
+- 공부를 깊이 해나가야겠다는 생각
+- 레이아웃 관련해서 많은 쓰레드들이 있고, 다양한 방법들이 있다!
+- 그만큼 정석 자체가 있지는 않지만, 경험적으로 베스트 프랙티스들이 있는 듯.
+    - 이건 역시 경험을 해봐야 알 수 있는 부분.
+- 해당 세션에서는 ConstraintLayout 이 대세라고 하는데, 꼭 그렇지만은 않다.
+    - 각기 쓰임새가 있다.
+    - 하지만 ConstraintLayout 자체가 엄청 편해보이긴한다.
+
+
+# 2. Google Mobile Vision과 OpenCV로 card.io를 확장한 범용 카드번호인식 개발
+널리 알려져 있고 LINE에서도 사용중인 신용카드 인식 오픈소스로 card.io가 있습니다. 다만 card.io는 숫자가 양각되어 있는 신용카드만을 인식하고 최근 유행하는 캐릭터 신용카드처럼 숫자가 인쇄된 신용카드를 인식하지 못하는 한계가 있습니다. Google Mobile Vision과 OpenCV를 활용하여 이런 숫자가 인쇄된 신용카드는 물론, 멤버쉽 카드와 같은 범용 카드에서 카드 번호와 바코드를 인식하는 라이브러리를 개발한 경험을 나누고자 합니다.
+
+- 발표자 : 장혁재
+
+- [card.io](https://www.card.io/) 사용
+    - 내부적으로 fully connected nerual network 를 사용함
+- 문제를 쪼개보자
+    - 카드 영역 추출
+        - 카드 외각선 찾기/ISO 표준 비율로 변환
+        - 수직 분할/수평 분할
+    - 카드 번호 인식
+        - 전처리
+        - 카드 번호 인식
+- 어려웠던 점들
+    - 바코드 인식
+        - 해상도 자체가 너무 작아서, 기본 preview 사양(640x480) 조차 맞추지 못함
+            - 해상도 자체를 높여보자 !!
+            - 카메라 preview 를 받아서 처리하도록 확장 수정함
+    - 문자 인식
+        - 너무 크기가 작은 이미지는 문자 인식 불가능
+        - 투명색은 이미지로 인식 안함
+        - 입력 이미지의 외곽 부분은 인식못함
+        - 뒤집어진 글자는 인식 불가능 (card.io는 가능함)
+            - Google Mobile Vision은 안됨...
+        - 선명한 이미지 1장이 흐릿한 10장보다 좋다 !!!
+- 작업
+    - Google Mobile Vision
+        - AndroidManifest.xml에 등록하면 앱 설치시 자동으로 학습 데이터 `외부에`설치함
+    - card.io
+        - jar 배포를 염두에 둔 오래된 코드. 엄청 레거시...
+        - 리소스도 없고, 벡터 이미지를 byte string으로 넣어놓음.
+        - ndk build 기반
+        - 리펙토링 까지는 하지 않고, 약간의 수정을 거쳐서 사용함
+
+
+
+### 느낀점
+- 재밋다 !
+- card.io 같은 부분을 다뤄보면 재밋을 것 같다.
+    - payco 에 이미 있지 않을까? 없다면 필요할수도?
+    - OCR을 이용한 카드번호 인식!
+- 역시 여기서도 머신러닝이 사용되고 있다.
+    - 사용되지 않는 곳이 어딜까? Gamebase ?
+    - 붙일 수 있는 곳엔 붙이고 싶은게 개발자라면, Gamebase/HSP에는 어디에 붙일 수 있을까?
+
+
+# 3. Travis-ci 를 이용한 CI/CD 와 도커를 이용한 Jenkins for Android 구성하기
+Travis CI 를 이용해서 Github 에 소스에 변경사항이 생기면 Buiild & Test 를 통해서 결과를 slack 에 알림을 주는 방법을 설명합니다. 많은 회사에서 이미 사용중인 Jenkins를 Docker로 이용해서 Android CI/CD를 하는 방법을 소개하고자 합니다.
+
+- 발표자 : 장인수
+
+
+## CI/CD란?
+- CI : Continuous Integration
+    - Build/Test를 상시 실행해주는 통합 환경 툴
+    - 통합을 지속적으로 실행하는 것
+    - 준비물
+        - 형상관리시스템(git, svn, ...)
+        - 빌드 툴(Gradle, ant, make, ...)
+        - CI 툴(Jenkins, Travis CI, ...)
+- CI  가 없다면, 로컬에서는 잘됐는데, 리모트 빌드 서버에서는 정상 동작이 되지 않는(심지어 빌드도 실패하는) 상황이 발생 할 수 있다.
+    - 매 커밋마다 CI 서버에서 Polling을 해서 작업 !
+- CD : Continuous Delivery/Deploy
+    - 더 빠르게 더 주기적으로 빌드, 테스트하여 출시하는 것이 목표
+    - 더 많은 증분 업데이트.
+    - 지속적 배포 !! (짧은 주기로 개발중인 소프트웨어를 배포하고 자동화하겠다.)
+
+
+## Travis CI를 이용한 CI/CD
+- Travis CI : Github에서 진행되는 오픈소스 프로젝트를 위한 CI 서비스이다.
+    - 오픈소스라면 공짜 ! : https://travis-ci.org/
+    - 아니라면 지불하고 사용할 수 있음. : https://travis-ci.com/
+    - OS 에 구애받지 않는 테스트
+    - 다양한 환경을 제공
+
+
+
+
+## Jenkins for Android using Docker
+- Docker를 이용하여 환경 구축 후, Jenkins 이용하여 빌드
+    - https://www.docker.com/
+
+
+### 느낀점
+- 예전 고민을 한 것이, Browser Stack 등을 이용한 Device Test(Gamebase/HSP/게임제작지원)이었는데, Browser Stack 자체가 너무 느린게 이슈가 됐었다.
+    - Browser Stack 을 Travis CI 와 연동을 하면, 그나마 !! 속도 이슈를 개선 할 수 있다 !!
+- Travis CI 를 도입해야하는 필요성을 요새 느끼고 있다.(Gamebase)
+    - 만약 비용 등 지원(혹은 Gamebase오픈소스화)가 어렵다면 Jenkins를 이용한 구축을 서둘러야한다. : Gamebase JavaScript SDK
+
+
+
+
+
+# 4. Android Studio에서 Vim 사용과 IdeaVim 커스터마이징 (code refactoring, adb, git)
+안드로이드 앱을 개발할 때 사용하는 IDE(Android Studio) 장점과 Vim의 장점을 섞어 개발하면 코드 생산성을 높이는데 도움을 줍니다. 오픈소스 JetBrains Plugin ideaVim을 커스터마이징한 경험을 공유합니다.
+
+- 발표자 : 김용준, 카카오뱅크
+
+
+## IdeaVim
+- 과거로 회귀한 느낌?
+- 이렇게까지 해야할까? 싶기도 하지만, 참 재밋고 끌리는 느낌적인 느낌.
+- 러닝커브가 수직상승
+    - ![Inline-image-2018-04-23 10.23.49.992.png](/static/assets/img/posts/droidknights2018/image.png)
+
+
+
+
+
+
+
+
+### 느낀점
+- 너드같다.
+- 재밋다.
+- 배워보고 싶으나, 생산성이 크게 올라갈것같진않고, 그냥 `개발자` 같아보인다.
+- 그래도 멋있다.
+
+# 5. Practical FP in Kotlin
+안드로이드 앱을 개발할 경우 프레임워크의 한계 또는 작업의 특성상 FP 구현에 어려움을 겪게 된다. 본 발표는 경험을 바탕으로 최대한 프로젝트의 코드베이스를 FP 형태로 작성할 수 있는 실질적인 조언과 생각을 공유하고자 한다. 이 발표를 통해 안드로이드 개발 과정에서 FP 스타일 코드 작성의 어려움이 해소되었으면 한다.
+
+- 발표자 : 황성현
+    - kotlin, swift, scala 사용중인 스타트업
+- When FP is told
+    - Language Features
+        - Immutable Data
+        - First Class Function
+        - Tail Call Optimization
+    - Programming Tech. (아래 테크틱을 쓴다고 FP는 아니다.)
+        - Map
+        - Reduce
+        - Recursion
+        - Currying
+        - Closure
+
+- `Functional code` is characterized by one thing: the absence of side effects.
+- FP란 Pure Function으로 개발하려는 노력...
+    - 마냥 패러다임만 따른다고 FP가 아니다.
+
+- Funtion?
+    - 같은 Input에 대해서 동일한 Output
+- Programming
+    - Imperative Programming
+        ```kotlin
+        fun fibonacci(n : Int) : Int {
+            var t1 = 0
+            var t2 = 1
+
+            var sum = 0;
+            for (i in 1..n) {
+                sum = t1 + t2
+                t1 = t2
+                t2 = sum
+            }
+            
+            return sum;
+        }
+        ```
+    - Declarative Programming (FP... side)
+        ```kotlin
+        fun fibonacci(f: (Int)->Int) : Int {
+            
+        }
+        ```
+
+### TIPS
+- Writing pure funtions is easy, but combining them into a complete application is where things get hard.
+- Because you can't mutate 
+
+- Pure/Inpure Layer를 잘 구분하자.
+- Interface를 최대한 많이 쓰자.
+    - class보다 더욱 느슨한 결합으로 연결하자.
+
+### 느낀점
+- FP는 이제는 개발자로서 살아가는데 시대적 사명
+- FP를 녹이고 싶으나 Java7 환경에서는 무리 !!
+- Kotlin, Swift나 RxJava를 써야하겠다.
+- 사실 JavaScript(TypeScript)에서 잘 쓰려고 노력중이긴 하다.
+- 패러다임 전환이 중요한데, 그런점에서 인터페이스화 되어있지 않은 JavaScript보다 Kotlin을 사용해보는 경험이 필요하겠다.
+
+
+
+# 총평
+1. 역시나 Kotlin의 시대
+    - 시간내서 공부하고 적용해보자.
+2. 역시나 FP의 시대
+    - JavaScript 개발 하면서 느끼는 FP 패러다임을 이젠 여기저기서 사용중이다. (모든 곳에 적용하지는 못하지만, 가능한한 최대로 적용을 하려는 무브먼트!)
+3. 너드같은 일들을 해라.
+    - 자기 자신의 색깔을 가지는 것은 매우매우 중요하다.
+    - 예를 들면, android 개발에 vim(터미널)을 사용한다던지... 
+4. 클린 아키텍쳐는 이젠 당연히 따라야하는 바이블이다.
+    - 안따르면, 미래에는 ~~돈 못범~~ 일 못함 !!
+5. 공유하라
+    - 좁게는 팀공유, 블로그 부터, 회사 공유 컨퍼런스 세션 발표까지. 공유공유 !!
+6. Trend를 모두 알 필요는 없다.
+    - 하지만 모르면 의사소통이 되지 않는다.
+    - RxJava, Kotlin, FP 등 모르면 대화가 안된다. 공부하고 쓰자.
+7. 서버-클라 경계가 없어지는 시대
+    - 굳이 경계를 나누는 시대는 이제 저물고 있다.
+    - "다" 할 줄 알아야하고, 그 "앎"에 대한 코스트가 예전에 비해서는 매우 적어지고 있다.
+8. Google의 20% policy 등을 지원하는 곳에서 일해야한다.
+    - 회사에서 지원하지 않는다면, 삶에서 시간을 할애해야한다.
+    - 창조성은 그런 곳에서 나온다.
+
+
+
+## 인증샷 & 후기
+- ![3.png](/static/assets/img/posts/droidknights2018/3.png)
+- 사실 많은 세션이 있었으나, 트랙이 나뉘어져있어 다 듣지 못한 것이 아쉬움
+    - 심지어 오전 세션은 개인 사유로 인해 듣지 못함
+    - 심하게 기술적인 부분은 잘 알아듣지 못해서 더 아쉬움
+- LINE / 배달의 민족 / 드라마앤컴퍼니 등등 스폰서들이 많은데 왜 우리 회사는 없을까?
+    - 후원좀하면 좋은 사람들 많이 모집할 수 있을텐데 왜안할까.
+
+
+
+
+
+
+# 발표자료 링크
+
+| 세션 | 링크 | 비고 |
+| ----- | ----- | ----- | 
+| 드로이드 나이츠 2018: RxJava 적용 팁 및 트러블 슈팅 | [https://www.slideshare.net/suribada/2108-rxjava](https://www.slideshare.net/suribada/2108-rxjava) | |
+| Travis-ci를 이용한 CI/CD와 도커를 이용한 Jenkins for Android 구성하기 | [https://www.slideshare.net/isjang98/travisci-cicd-jenkins-for-android-94750798](https://www.slideshare.net/isjang98/travisci-cicd-jenkins-for-android-94750798) | |
+| 지금은 ConstanintLayout 시대 | [https://steemit.com/android/@kingori2/2018](https://steemit.com/android/@kingori2/2018) | |

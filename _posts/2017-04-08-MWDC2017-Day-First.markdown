@@ -1,0 +1,217 @@
+---
+layout: post
+title:  "[MWDC2017] 1st Day"
+date:   2017-04-08 03:00:00
+tags: seminar mwdc2017 MWDC MobileWebDevCon Conference
+categories: devstory
+---
+
+2017.3.1~3 까지, 3일간 San Francisco에 다녀왔습니다 :)
+
+그 이유는 바로, MWDC (Mobile Web Developer Conference)에 참가하기 위해서였는데요! 그곳에서 듣고 느꼈던 세션을 2개의 포스팅에 걸쳐서 공유하고자 합니다.
+
+- [MWDC Day1](../MWDC2017-Day-First/)
+- [MWDC Day2](../MWDC2017-Day-Second/)
+
+
+## TOC
+```
+- `0 MWDC란?`
+- `1 Lazy loading JS modules in the Browser`
+- `2 iOS Testing & Debugging`
+- 3 KeyNote: Optimizing ur app for profitability
+- 4 Delivering a better UX with in-app support
+- 5 Be offensive: Proactively Assessing Your iOS 
+- 6 Scaratch that: Building an app in Swift
+- 7 iOS Tools Overview
+- 8 Building Successful apps for Africa
+```
+
+
+---
+
+# 0. MWDC
+MWDC는 위에서 언급한것과 같이 Mobile Web Developer Conference 의 약자로, 수년간의 전통이 있는 컨퍼런스입니다. 규모는 크지는 않지만, 쟁쟁한 분들이 오셔서 발표도 하고, 네트워킹도 하는 자리인데요 ~
+
+저는 회사에서 지원해주어서, 출장을 겸해 다녀왔습니다!
+
+
+더 자세한 MWDC 정보는 다음 홈페이지에서 보실 수 있습니다.
+[MWDC Homepage](http://mobilewebdevconference.com/)
+
+
+
+
+
+---
+# 1. Lazy loading JS modules in the Browser
+
+## Single Page Application
+- 예전에는 서버에서 HTML 페이지들을 쫙~~ 만들어서 똭! 보여줬었음
+- 현재는 ? -> SPA (Single Page Application : ex) Dooray Project)
+    - HTML 문서로 통신을 하는 것이 아니라, json 등을 이용해 async request(ajax) 통신
+    - HTML Page Reload 가 아니라, Rerendering a new view !
+    - 클라이언트에서 상태를 관리 !
+- 문제는 !! SPA 에서는 너무많은 Stuff(css, js, image 등)를 로딩해놓아야한다.
+    - 필요할 때만, 로딩하게 할 수는 없을까?
+
+## SPA와 Server-side Rendered 비교
+- 예시 상황 : 5개의 페이지 -> 홈, 어바웃, 상품, 카트, 프로필
+
+
+### Server-side Rendered
+- 각 페이지는 300 Kbyte .html, 100 Kbyte .js = 400 Kbyte
+- Total = 300Kb*5 + 100Kb*5 = 2 Mbyte
+
+
+### SPA
+- 실제페이지는 1개(홈), + 4개의 뷰(어바웃, 상품, 카트, 프로필)
+- 홈 : 300 Kbyte .html + 100 Kbyte .js = 400 Kbyte
+- 각 뷰 : 50 Kbyte JSON + 150 Kbyte .js = 200 Kbyte
+    - 200 Kbyte * 4 = 800 Kbyte
+- Total = 400 Kbyte + 800 Kbyte = 1.2 Mbyte
+
+
+### 비교
+```
+Server : SPA = 2Mb : 1.2Mb
+```
+
+그러나,
+`홈` 페이지만 비교해봤을 때,
+```
+- SPA Home = 400 Kbyte(300 .html + 100 .js) + 150 Kbyte(.js) * 4 (views) = 1 Mbyte
+
+- Server = 400 Kbyte
+```
+
+
+### Lazy Loading을 쓰면 !!
+- Home : 400 Kbyte
+- Each View : 200 KByte(js + json)
+
+
+
+## Lazy Loading 이 뭘까요?
+- 리소스의 초기화(Loading, Fetching, Allocation)를 그것이 필요하기 전까지 지연시키는 것.
+
+
+## How to Lazy Load ?
+- AMD, CommonJS, ES2015, Webpack 2 등의 많은 방법들.
+- 프레임워크마다 제각각 스펙(동기/비동기 기능에 대한 스펙등), 성능 이슈가 있으니 잘 알아보고 맞춤형 프레임워크를 고를 것. 혹은 손수제작
+
+```javascript
+//example
+// dog.js
+var Dog = function(name, breed) {
+    this.name = name;
+    this.bark = breed
+};
+    
+Dog.prototype.bark = function() {
+    return this.name + ': ' + getBarkStyle(this.breed);
+};
+    
+function getBarkStyle(breed) {
+    return breed === 'huskey' ? 'woooow!' : 'woof, woof!';
+}
+module.exports = Dog;
+
+
+////
+// main.js
+document.getElementById('loadDogButton').addEventListener('click', function(e) {
+    require.ensure([], function(require) {
+        var Dog = require('./dog'), 
+            dogContainer = document.getElementById('dogContainer');
+
+        var sherlock = new Dog('Sherlock', 'beagle');
+        dogContainer.innerHTML += sherlock.bark();
+
+        var whisky = new Dog('Whisky', 'husky');
+        dogContainer.innerHTML += '<br/>' + whisky.bark();
+    });
+});
+```
+
+
+
+---
+# 2. iOS Testing & Debugging
+- Quality
+    - PAR
+        - Performance : Fast | as fast as possible
+        - Accurate Information presented is valid
+        - Reliable : Behaves in ways that are expected
+- Defect
+    - Error
+    - Fault
+    - Failure
+
+## Defect Management
+1. Prevention -> 코드리뷰, 코드 정적분석, ...
+2. Reduction -> 디버깅, 프로파일링, Conformance testing (기능과 관련된 표준 준수 테스트), 유닛 테스트, 통합 테스트, UI 유닛 테스트 정적 코드 분석 등
+3. Containment -> Robust error/exception handling ...
+
+
+## Activities
+코드리뷰, 피어 코딩, 유닛테스트 등등으로 보완하자.
+이것으로 충분하다고 말할 수 있는 근거가 있을까? 항상 고민하면서 진행해야한다.
+
+
+
+## Unit Testing
+- Testing of individual units (methods, classes, modules, etc.) as they are constructed.
+- Code that exercises a unit through its interface w/ an expected behavior ...
+
+
+## Wht Use U.T.
+- Can confirm general perfomance expectations
+- Can confirm general behavior expectations
+- Enale more reliable change management
+
+
+## Benefits of U.T.
+- Small, tractable domain of inquiry
+- Generated from specifications
+- Relatively simple to write and debug
+- Partition domain into relevant areas
+
+
+## Methodologies of U.T.
+- No Unit Testing
+- Code First, Test Second
+- TDD
+- BDD
+- 3D
+    - Write documentation for class, method, et., first.
+
+
+## Quality Factors
+- Functionality
+    - External
+- Engineering
+    - Internal
+- Adaptability
+    - Future
+
+
+## Common Methods & Levels of Testing
+- Structural Tesing (White-box / Clearbox)
+    - Unit Testing
+    - Integration Testing
+    - Component / Module Testing
+    - System Testing(Internal Focus)
+- Functional Testing (Black-box)
+    - User Testing
+    - Usablility Tesinng
+    - User Scenario Testing
+    - System Tesintg(External Focus)
+
+
+## Successful Testing == Satisfying Defined Requirements
+
+
+> 뭔가 느낌에, 테스팅이 있기 전까지는, 코드는 유죄이다.
+> ***유죄추정*** 의 원칙!
+> New code is guilty until proven innocent !!

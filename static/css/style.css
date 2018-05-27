@@ -8191,3 +8191,12 @@ body.rtls.top-navigation .footer.fixed {
 .rtls #right-sidebar.sidebar-open {
     left: 0
 }
+
+
+
+
+
+
+.wrapper-content img { 
+    max-width: 100%;
+}

@@ -1,10 +1,13 @@
 ---
 layout: post
-title:  "iOS11"
+title:  "[iOS] iOS 11"
 date:   2017-07-05 02:00:00
-categories: [Ios]
-tags: [WWDC2017,WWDC,2017,iOS,iOS11,iPhone8]
+tags: objc ios WWDC2017 ios11 iPhone8
+categories: devstory
 ---
+
+이번 포스트에서는 iOS11에 대해서 전반저긍로 다뤄보자!
+대응점이 생각보다 많다.
 
 
 # What's New in iOS11
@@ -13,26 +16,28 @@ tags: [WWDC2017,WWDC,2017,iOS,iOS11,iPhone8]
     - [참고 URL](https://developer.apple.com/library/content/documentation/DeveloperTools/Conceptual/WhatsNewXcode/Chapters/xcode_8_0.html#//apple_ref/doc/uid/TP40004635-SW3)
     - [참고 URL](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/index.html#//apple_ref/doc/uid/TP40014097)
 
-## 0. Notice
-- 32비트 지원 중단
-    - iOS11 부터 32bit 앱 지원을 중단함에 따라, 출시된 앱들이 64bit인지 확인을 꼭!!! 꼭!!! 해야함
-    - iPhone5, iPhone 5c 이전 제품, iPad 4 이전 제품들은 지원되지 않음
-    - (맥용 32bit 앱 지원은 2018에 종료 할 예정)
+--- 
 
+## 0. Notice
+32비트 지원이 중단된다. iOS11 부터 32bit 앱 지원을 중단함에 따라, 출시된 앱들이 64bit인지 확인을 꼭!!! 꼭!!! 해야한다.
+
+iPhone5, iPhone 5c 이전 제품, iPad 4 이전 제품들은 iOS11이 지원되지 않는다. 확인해보자.(맥용 32bit 앱 지원은 2018에 종료 할 예정이다)
+
+--- 
 
 ## 1. General
-### < 주요 내용 >
-- 바코드 지원 ! (AVFoundation, CoreImage, SiriKit)
-- MusicKit 추가됨
+### 주요 내용
+바코드를 지원한다. (AVFoundation, CoreImage, SiriKit)
+MusicKit이 추가되었다.
 
-### <상세 내용>
+### 상세 내용
 1. Binary Barcodes 지원 (Non-text)
     - Detection/ Decoding / Creation of barcodes with binary context
     - 다음 프레임워크들에 API 추가
         - AV Foundation
         - Core Image
         - Siri Kit
-    - [CIBarcodeDesciptor](https://developer.apple.com/documentation/coreimage/cibarcodedescriptor%29 추가
+    - [CIBarcodeDesciptor](https://developer.apple.com/documentation/coreimage/cibarcodedescriptor%29) 추가
         - new barcode descriptor object
         - AV Foundation 과 Vision APIs간의 상호작용을 제공하기위해 Core Image에 추가됨
 2. MusicKit 추가
@@ -41,18 +46,16 @@ tags: [WWDC2017,WWDC,2017,iOS,iOS11,iPhone8]
     - Station Playback을 가능하게 하기 위해 Media Player에 기능 추가/업데이트
     - Apple Music 구독 셋업 과정에 custom message를 출력 기능 추가
 
-
-
+--- 
 
 
 ## 2. App Frameworks
-### < 주요 내용 >
-- IPad : Drag & Drop !! 지원함 (SplitView)
-- 파일앱 지원 ! (드디어 공식적인 파일 탐색기를 지원함, 다른 앱(구글 클라우드, iCloud, 드롭박스, TOAST CLOUD!!!!)들과 상호작용 기대)
+### 주요 내용
+iPad에서 Drag & Drop을 지원한다. (SplitView에서 동작)
+공식적인 파일 탐색기를 지원한다. 다른 앱(구글 클라우드, iCloud, 드롭박스 등)들과 상호작용이 기대된다.
 
 
-
-### <상세 내용>
+### 상세 내용
 1. IPad Drag and Drop / 멀티태스킹 스크린 지원
 2. Local/iCloud Document 를 Browsing 하는 것 지원 (파일 탐색기)
 3. Dynamic Type 지원 기능 개선
@@ -63,25 +66,21 @@ tags: [WWDC2017,WWDC,2017,iOS,iOS11,iPhone8]
 6. 기기 저장공간 API 에 대한 개선
 
 
-
-
-
+--- 
 
 ## 3. App Services
-### < 주요 내용 >
-- 머신러닝 지원 ! Core ML Framework
-- AppStore에서 미리 인앱결제를 할 수 있음 !!!! (프로모션)
-    - paymentQueue(\_:shouldAddStore:for:) 메소드 구현 필요
-- SiriKit 지원 강화
-    - QR코드
-    - ToDo List
-- MPTCP(Multipath TCP) !! 지원
-    - 이제 여러개의 TCP Stream을 하나로 묶어서 데이터를 주고 받을 수 있게 되었음
-    - URLSessionConfiguration
+
+### 주요 내용
+Core ML Framework를 지원함에 따라, 머신러닝을 구현 할 수 있게 되었다.
+
+AppStore에서 미리 인앱결제(프로모션)을 할 수 있다. (paymentQueue(\_:shouldAddStore:for:) 메소드 구현 필요)
+
+SiriKit에 대한 지원이 강화된다. QR코드 및 TODO List 등의 기능이 추가되었다.
+
+MPTCP(Multipath TC)를 지원한다.(여러개의 TCP Stream을 하나로 묶어서 데이터를 주고 받을 수 있다. URLSessionConfiguration 을 이용하여 설정한다)
 
 
-
-### <상세 내용>
+### 상세 내용
 1. 기계 학습 모델 지원
     - Core ML framework 추가
         - 앱에 머신 러닝 구현을 쉽게 해주는 프레임워크
@@ -115,15 +114,13 @@ tags: [WWDC2017,WWDC,2017,iOS,iOS11,iPhone8]
 12. MapKit 업데이트
     - 개발자 데이터를 명확하게 표시할 수 있도록 개선
 
-
+--- 
 
 ## 4. Media and Web
-### <주요 내용>
-- 사진(HEIF) 영상(HEVC->4K UHD) 음악(FLAC) 고압축 포맷 지원 !
-    - 미디어로 인한 용량관리 측면에서 큰 이득 !!
+### 주요 내용
+사진(HEIF) 영상(HEVC->4K UHD) 음악(FLAC) 고압축 포맷을 지원한다.(미디어로 인한 용량관리 측면에서 큰 개선이다)
 
-
-### <상세 내용>
+### 상세 내용
 1. High Efficiency의 Video Coding 지원 (HEVC)
     - HEVC 는 새로운 비디오 인코딩의 표준. H.264와 비교해서 같은 비디오 퀄리티를 제공함과 동시에 향상된 압축률을 보임.
 2. High Efficiiency Image Format 지원 (HEIF)
@@ -140,28 +137,26 @@ tags: [WWDC2017,WWDC,2017,iOS,iOS11,iPhone8]
 7. Live Photo 조절 기능 추가
 
 
-
+--- 
 
 ## 5. Metal 2
-### <주요 내용>
-- Metal2가 나왔으니, 사용해보시라.
+### 주요 내용
+기존의 Metal Framework는 병렬 데이터 처리 프레임워크였다. 이를 크게 개선한 Metal2가 출시되었으니 사용을 해보자.
 
-
-### <상세 내용>
+### 상세 내용
 1. Metal2 : 향상된 3D 렌더링 / GPU 이용한 병렬 데이타 처리 프레임워크
     - Neural Network 지원
     - 크로스플랫폼 Metal Performance Shader 지원
 
 
-
+--- 
 
 ## 6. Graphic and Games
-### <주요 내용>
-- 증강현실 지원 (우리회사의 대응은?)
-- 고성능 이미지 분석 지원 !
+### 주요 내용
+증강현실(AR)을 지원한다. 그리고 고성능 이미지 분석을 지원한다. 하드웨어의 급격한 발전 덕분이다.
 
 
-### <상세 내용>
+### 상세 내용
 1. AR (Augmented Reality) 지원
     - ARKit framework 추가
         - Device motion tracking
@@ -184,16 +179,17 @@ tags: [WWDC2017,WWDC,2017,iOS,iOS11,iPhone8]
 6. Added new Core Image filters CITextImageGenerator, CIColorCurves, CILabDeltaE, CIBokehBlur, CIMinMaxRed, and CIBicubicScaleTransform.
 
 
+--- 
 
 ## 7. System
-### <주요 내용>
-- NFC 에 접근 할 수 있음 (애플페이에 사용되는 칩에 대한 권한을 써드파티 개발자에게 열어줌. 다만, NFC 개방정책 자체는 불투명) - Core NFC
+### 주요 내용
+iOS에서도 이제 NFC에 접근할 수 있다(애플페이에 사용되는 칩에 대한 권한을 써드파티 개발자에게 열어주었다. 다만, NFC 개방정책 자체는 불투명). Core NFC를 사용하면 된다.
 
 
-### <상세 내용>
+### 상세 내용
 1. Hotspot configuration
     - Hotspot configuration 을 위한 network extension 추가 
-    - @see [NEHotspotConfiguration](https://developer.apple.com/documentation/networkextension/nehotspotconfiguration%29
+    - @see [NEHotspotConfiguration](https://developer.apple.com/documentation/networkextension/nehotspotconfiguration%29)
 2. Core Bluetooth framework 업데이트
     - L2CAP Channels 지원
     - session Restoration 확대 (Blutooth resets / device reboots 에 동작)

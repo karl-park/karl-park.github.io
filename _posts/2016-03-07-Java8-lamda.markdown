@@ -1,29 +1,36 @@
 ---
 layout: post
-title:  "Java8 Lambda"
+title:  "[Java] Java8 Lambda"
 date:   2016-03-07 12:00:00
-categories: [Technology]
-tags: [java8,lambda]
+tags: java java8 modernJava lambda
+categories: devstory
+
 ---
+
+Java8이 나온지 꽤 되었는데도, 실상 Java8을 도입한 서비스는 의외로 많지않다. 레거시 시스템 때문인데... 
+
+거두절미하고 !! 이번 글에서는 Java8의 주요 feature들을 살펴보자 !
+(더 중요한건 ! 배워서 써먹자 !)
+
 # Java8 Lamda
 
-## 기존의 Java를 모던Java로 불리우게 한. 그 이름 "Lambda"
+## 기존의 Java를 모던 Java로 불리우게 한. 그 이름 "Lambda"
 
-&nbsp;&nbsp;람다에 대해서는 수많은 할 말이 있지만, Java가 `Lambda` 를 도입함으로써,
-Java는 모던 Java라고 까지 불리우게 된다. 요즘 시대는 바야흐로 춘추 전국 시대라 불리울만큼,
-깊고 넓은 제각기의 철학을 가지는 언어들이 쏟아지고 있다. 여러 괄목할만한 언어들이 나오고 있는 와중,
-"함수형 언어"들의 발전은 더욱 눈길을 끄는 것이 사실이다.<br/>
-&nbsp;&nbsp;이러한 시대적인 흐름과 관련이 있어서일까. Java 또한 Lamda식을 도입함으로써, 그 함수형 인터페이스를 적극 차용하는 모습을 보여준다. 기존의 자바 개발자들에게는 어쩌면 생소하겠지만, 폭넓은 경험을 가지려는 개발자들에게는 도움이 될 수도(아니 반드시 도움이 되리라) 있다고 생각한다.
+람다에 대해서는 수많은 할 말이 있지만, Java가 `Lambda` 를 도입함으로써, Java는 모던 Java라고 까지 불리우게 된다. 
+
+요즘 시대는 바야흐로 춘추 전국 시대라 불리울만큼, 깊고 넓은 제각기의 철학을 가지는 언어들이 쏟아지고 있다. 여러 괄목할만한 언어들이 나오고 있는 와중, "함수형 언어"들의 발전은 더욱 눈길을 끄는 것이 사실이다.
+
+이러한 시대적인 흐름과 관련이 있어서일까. Java 또한 Lamda식을 도입함으로써, 그 함수형 인터페이스를 적극 차용하는 모습을 보여준다. 기존의 자바 개발자들에게는 어쩌면 생소하겠지만, 폭넓은 경험을 가지려는 개발자들에게는 도움이 될 수도(아니 반드시 도움이 되리라) 있다고 생각한다.
 
 ## Before / After
 우선 다음의 예를 보면서, 람다의 효용을 살펴보고자 한다.
 
 ### Before
-```
-	List<Integer> myIntArr = Arrays.asList(1, 2, 3, 4, 5, 6); 
-	for (int number : myIntArr) {
-		System.out.println(number);
-	}
+```java
+    List<Integer> myIntArr = Arrays.asList(1, 2, 3, 4, 5, 6); 
+    for (int number : myIntArr) {
+        System.out.println(number);
+    }
 ```
 
 myIntArr를 순회하면서, 내부 엘리먼트들을 출력해주는 간단한 로직이다.
@@ -31,42 +38,60 @@ myIntArr를 순회하면서, 내부 엘리먼트들을 출력해주는 간단한
 
 ### After
 ```java
-	myIntArr.forEach(number ->{
-		System.out.println(number);	
-	});
-	// 혹은 myIntArr.forEach(System.out::println);
+    myIntArr.forEach(number ->{
+        System.out.println(number);    
+    });
+    // 혹은 myIntArr.forEach(System.out::println);
 ```
 
 for 문을 forEach/람다 식으로 변경함으로써, 무언가 더욱 간결해진 모습을 보이지 않은가?
 더욱이 이러한 람다식을 이용하면, 다음의 Consumer 인터페이스를 이용하여 처리할 수도 있다.
 
-```
-	myIntArr.forEach(new Consumer<Integer>() {
-		public void accept(Integer value) {
-			System.out.println(value);
-		}
-	});
+```java
+    myIntArr.forEach(new Consumer<Integer>() {
+        public void accept(Integer value) {
+            System.out.println(value);
+        }
+    });
 ```
 
 무언가 다채로워진 모습이 보이지 않은가??
 
 > 작업들을 더욱 간략하고 읽기 쉽게 만들어준다 !
 
+
 ## Lambda 특징
 
 - Anonymity 익명성
- 보통의 메서드와는 달리 이름이 없다. javascript의 익명함수와 비슷한 개념이라 생각해도 무방할 듯 하다.
+    - 보통의 메서드와는 달리 이름이 없다. javascript의 익명함수와 비슷한 개념이라 생각해도 무방할 듯 하다.
 - Method 함수
- 람다식은 함수의 형태를 띈다. 하지만 자바의 기존 메소드들 처럼 특정 클래스에 종속적이지는 않다. 그러나 파라미터를 받고, 바디를 가지며 반환값도 설정이 가능하다. 물론 예외들도 마찬가지다.
+    - 람다식은 함수의 형태를 띈다. 하지만 자바의 기존 메소드들 처럼 특정 클래스에 종속적이지는 않다. 그러나 파라미터를 받고, 바디를 가지며 반환값도 설정이 가능하다. 물론 예외들도 마찬가지다.
 - Delivery 전달
- 람다식은 메소드 파라미터로 전달하거나 변수로 저장할 수 없다. 이것은 javascript 익명함수와의 차이점이다.
-	
-	
+    - 람다식은 메소드 파라미터로 전달하거나 변수로 저장할 수 없다. 이것은 javascript 익명함수와의 차이점이다.
+    
+    
 ## Lambda 예제
-
-- 불린 표현식 : (List<String> list) -> list.isEmpty()
-- 객체 생성 : () -> new Apple(10)
-- 객체에서 소비 : (Apple a) -> { System.out.println(a.getWeight()); }
-- 객체에서 선택/추출 : (String s) -> s.length()
-- 두 값을 조합 : (int a, int b) -> a * b
-- 두 객체 비교 : (Apple a1, Apple a2) -> a1.getWeight().compareTo(a2.getWeight())
+- 불린 표현식
+    ```java
+    (List<String> list) -> list.isEmpty()
+    ```
+- 객체 생성
+    ```java
+    () -> new Apple(10)
+    ```
+- 객체에서 소비
+    ```java
+    (Apple a) -> { System.out.println(a.getWeight()); }
+    ```
+- 객체에서 선택/추출
+    ```java
+    (String s) -> s.length()
+    ```
+- 두 값을 조합
+    ```java
+    (int a, int b) -> a * b
+    ```
+- 두 객체 비교 
+    ```java
+    (Apple a1, Apple a2) -> a1.getWeight().compareTo(a2.getWeight())
+    ```

@@ -1,14 +1,17 @@
 ---
 layout: post
-title:  "Grand Central Dispatch"
+title:  "[Objective-C] Grand Central Dispatch 02"
 date:   2016-06-10 03:00:00
-categories: [iOS]
-tags: [iOS,Objective-C,책요약,Summary,LLVM,Block,GCD]
+tags: objc ios GCD GrandCentralDispatch
+categories: devstory
 ---
 
+이전 [Grand Central Dispatch 01](/devstory/2016/05/24/GCD/) 글을 바탕으로, TOAST Meetup에 글을 기고했는데요, 그대로 옮겨놓습니다.
+
+- 원글 링크 : [TOAST Meetup: GCD](http://meetup.toast.com/posts/88)
+
+
 # Objective C 에서의 GCD
-
-
 ### Overview
 
 ![image](http://image.toast.com/aaaadh/alpha/2016/techblog/001%281%29.png)
@@ -69,14 +72,14 @@ Block은 다른 언어의 Lambda나 Closure의 개념과 흡사한 부분이 많
 ---
 블록은 다음과 같이 만들 수 있습니다.
 
-```objectivec
+```objc
 ^{
     NSLog(@"This is a Block");
 }
 ```
 
 위와 같은 블록을 변수에 대입할 수도 있습니다.
-```objectivec
+```objc
 void (^completion)(void) = ^{
     NSLog(@"This is a Block");
 }
@@ -88,7 +91,7 @@ completion();
 ---
 
 매개변수를 받거나, 값을 반환할 수도 있습니다.
-```objectivec
+```objc
 NSString* (^sayHelloBlock)(NSString*, NSString*) = ^(NSString *name, NSString *country) {
     NSString *helloStr = nil;
     if (country caseInsensitiveCompare:@"kr"] == NSOrderedSame) {
@@ -111,7 +114,7 @@ NSLog(@"%@", sayHelloBlock(@"Panki", @"KR"));
 
 다음과 같이 같은 Lexical Scope(Enclosing Scope)에 있는 변수들을 Capturing 할 수도 있습니다.
 
-```objectivec
+```objc
 int testA = 89;
  
 void (^testBlock)(void) = ^{
@@ -129,7 +132,7 @@ testBlock();
 ---
 
 \_\_block 키워드를 써서, Capturng 한 변수를 수정하거나 변경사항을 공유할 수도 있습니다.
-```objectivec
+```objc
 __block int testA = 89;
 __block int testB = 91;
 
@@ -155,7 +158,7 @@ NSLog(@"Value of original A is now: %i", testB);
 ---
 
 이러한 Block을 메소드의 파라미터로 넘길수도 있습니다.
-```objectivec
+```objc
 - (void)doSomethingWithCompletion:(void (^)(int, int)) completion {
     // Do Sth.
     ...
@@ -181,7 +184,7 @@ Block에 대한 설명은 이쯤하고, 본격적으로 Block을 사용하여 GC
 
 #### 1. Dispatch Queue 얻거나 생성하거나
 
-```objectivec
+```objc
 // 1) Dispatch Queue를 생성합니다.
 // 1-1) serial dispatch queue를 생성합니다.
 dispatch_queue_t serialQueue = dispatch_queue_create("test", DISPATCH_QUEUE_SERIAL);
@@ -212,7 +215,7 @@ Dispatch Queue가 Serial/Concurrent의 2가지(Main은 serial, Global은 concurr
 예제를 보면서 각 상황에 대해서 설명하겠습니다.
 
 -1. Serial Dispatch Queue에 Sync하게 Task 추가
-```objectivec
+```objc
 dispatch_queue_t queue = dispatch_queue_create("test", DISPATCH_QUEUE_SERIAL);
 dispatch_sync(queue, ^{ NSLog(@"1"); });
 dispatch_sync(queue, ^{ NSLog(@"2"); });
@@ -276,7 +279,7 @@ Dispatch Queue에 특정 시간 이후에 Task를 추가하는 방법에 대해�
 특정 시간 후, Dispatch Queue에 Task를 추가하기 위해서는 `disaptch_after`를 사용합니다.
 사용 예는 다음과 같습니다.
 
-```objectivec
+```objc
 dispatch_queue_t queue = dispatch_queue_create("test",  DISPATCH_QUEUE_SERIAL);
 
 double delayAfter = 3.0;
@@ -299,7 +302,7 @@ dispatch_async(queue, ^{ NSLog(@"3"); });
 #### 4. Dispatch Queue의 우선순위
 Global Queue나 Main Queue를 제외한, 사용자 생성큐(dispatch_queue_create(...))의 우선순위는 Global Queue의 Default Queue와 그 우선순위가 같습니다. 이러한 우선순위를 바꾸기 위해서 우리는 `dispatch_set_target_queue`를 사용할 수 있습니다.
 
-```objectivec
+```objc
 dispatch_queue_t queueHigh = dispatch_queue_create("test1", DISPATCH_QUEUE_SERIAL);
 dispatch_queue_t queueLow = dispatch_queue_create("test2", DISPATCH_QUEUE_SERIAL);
 
@@ -326,7 +329,7 @@ dispatch_async(queueHigh, ^{ NSLog(@"4"); });
 #### 5. Dispatch Group
 만약에, 일련의 Tasks 들을 같은 그룹으로 묶어서 처리하고 싶을 때는 어떻게 처리하여야할까요? 그리고 그 일련의 Tasks들이 작업을 모두 수행했을 때, 어떻게 Noti를 받을 수 있을까요. 이를 위해 다음과 같은 기능을 제공합니다. `dispatch_group_create, dispatch_group_async, dispatch_group_notify`
 
-```objectivec
+```objc
 dispatch_group_t group = dispatch_group_create();
 dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
 
@@ -350,7 +353,7 @@ dispatch_async(queue, ^{ NSLog(@"5"); });
 #### 6. Dispatch Queue를 이용한 싱글톤 생성
 개발을 하다보면, 싱글톤을 자주 접하게 되고, 구현도 하게 됩니다. GCD 에서는 싱글톤을 생성하기 위한 방법도 제공하는데요, `disipatch_once`가 바로 그것입니다.
 
-```objectivec
+```objc
 - (MyCustomClass *)sharedInstance {
     static dispatch_once_t onceToken;
     static MyCustomClass *instance = nil;
@@ -377,9 +380,9 @@ Dispatch Queue를 사용하는 것만이 정답은 아닙니다. 직접적으로
 
 #### Reference
 - Apple 문서
-	- Block : https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/WorkingwithBlocks/WorkingwithBlocks.html
-	- GCD : https://developer.apple.com/library/ios/documentation/Performance/Reference/GCD_libdispatch_Ref/
-	- LLVM :  https://developer.apple.com/library/watchos/documentation/CompilerTools/Conceptual/LLVMCompilerOverview/index.html
+    - Block : [https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/WorkingwithBlocks/WorkingwithBlocks.html](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/WorkingwithBlocks/WorkingwithBlocks.html)
+    - GCD : [https://developer.apple.com/library/ios/documentation/Performance/Reference/GCD_libdispatch_Ref/](https://developer.apple.com/library/ios/documentation/Performance/Reference/GCD_libdispatch_Ref/)
+    - LLVM :  [https://developer.apple.com/library/watchos/documentation/CompilerTools/Conceptual/LLVMCompilerOverview/index.html](https://developer.apple.com/library/watchos/documentation/CompilerTools/Conceptual/LLVMCompilerOverview/index.html)
 - Blogs
-	- LLVM : http://kyejusung.com/2015/11/llvm%EC%9D%B4%EB%9E%80-clang-%EB%B9%84%ED%8A%B8%EC%BD%94%EB%93%9C-%ED%8F%AC%ED%95%A8/
-    - GCD : http://padgom.tistory.com/entry/iOS-%EA%B8%B0%EB%B3%B8-GCDGrand-Central-Dispatch-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0
+    - LLVM : [http://kyejusung.com/2015/11/llvm%EC%9D%B4%EB%9E%80-clang-%EB%B9%84%ED%8A%B8%EC%BD%94%EB%93%9C-%ED%8F%AC%ED%95%A8/](http://kyejusung.com/2015/11/llvm%EC%9D%B4%EB%9E%80-clang-%EB%B9%84%ED%8A%B8%EC%BD%94%EB%93%9C-%ED%8F%AC%ED%95%A8/)
+    - GCD : [http://padgom.tistory.com/entry/iOS-%EA%B8%B0%EB%B3%B8-GCDGrand-Central-Dispatch-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0](http://padgom.tistory.com/entry/iOS-%EA%B8%B0%EB%B3%B8-GCDGrand-Central-Dispatch-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0)

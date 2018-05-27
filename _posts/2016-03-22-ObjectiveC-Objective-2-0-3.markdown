@@ -1,10 +1,17 @@
 ---
 layout: post
-title:  "[Objective-C-2.0] 책요약 03"
-date:   2016-03-22 03:00:00
-categories: [iOS]
-tags: [Objective-C,책요약,Summary,iOS]
+title:  "[Objective-C] Objective-C-2.0 책요약 03"
+date:   2016-03-22 02:00:00
+tags: objc ios Summary 책요약
+categories: devstory
 ---
+
+이전 편에 걸쳐서 책(Objective-C 2.0)을 요약한 글이다.
+이번편이 마지막이다 ^^
+
+- 1편 : [Objective-C-2.0 책요약 01](../ObjectiveC-Objective-2-0-1/)
+- 2편 : [Objective-C-2.0 책요약 02](../ObjectiveC-Objective-2-0-2/)
+- 3편 : [Objective-C-2.0 책요약 03](../ObjectiveC-Objective-2-0-3/)
 
 ![](https://raw.githubusercontent.com/MrKarl/MrKarl.github.io/4b664436fed33ae28727acb212ff6127092a3b82/assets/images/objectivec2.0/objectivec2.0.PNG)
 
@@ -59,7 +66,7 @@ tags: [Objective-C,책요약,Summary,iOS]
 - 비공식 프로토콜 --> @optional 을 통해 구현
 
 ## 프로토콜 선언
-```objectivec
+```objc
 @protocol NSCoding
 - (void) encodeWithCoder: (NSCoder *) aCoder;
 - (id) initWithCoder: (NSCoder *) aDecoder;
@@ -68,13 +75,13 @@ tags: [Objective-C,책요약,Summary,iOS]
 
 ## 프로토콜 채택
 
-```objectivec
+```objc
 @interface Car : NSObject <NSCopying(, NSCoding, ...)>
 {
-	... // instance variables
+    ... // instance variables
 }
 ... //methods
-@end	// Car
+@end    // Car
 ```
 
 - 위와 같이, @interface 뒤, 클래스 선언의 괄호안에 나열하면 된다.
@@ -86,19 +93,19 @@ tags: [Objective-C,책요약,Summary,iOS]
 
 ### Engine 복사(deeply)
 
-```objectivec
+```objc
 @interface Engine : NSObject <NSCopying>
 @end // Engine
 
 @implementation Engine
-	// ...
+    // ...
 - (id) copyWithZone: (NSZone *) zone
   {
-	Engine *engineCopy;
+    Engine *engineCopy;
     engineCopy = [[self class] allocWithZone: zone] init];
-	return (engineCopy);
+    return (engineCopy);
   }
-@end	
+@end    
 ```
 
 - 으응 ? 저 `[self class]` 는 왜하는거지? 그냥 `[Engine allocWithZone]`을 하면 안되나? 라는 질문을 할 수도 있겠다.
@@ -120,27 +127,27 @@ tags: [Objective-C,책요약,Summary,iOS]
 1. Property List Data Type - 흔히 plist 라고 불리움
     - NSArray, NSDictionary, NSString, NSNumber, NSDate, NSData, etc.
 
-```objectivec
-	NSArray *phrase;
-	phrase = [ NSArray arrayWithObjects: @"I", @"seem", @"to",
-								@"be", @"a", @"verb", nil ];
-	[ phrase writeToFile: @"/tmp/verbiage.txt" atomically: YES ];
+```objc
+    NSArray *phrase;
+    phrase = [ NSArray arrayWithObjects: @"I", @"seem", @"to",
+                                @"be", @"a", @"verb", nil ];
+    [ phrase writeToFile: @"/tmp/verbiage.txt" atomically: YES ];
 ```
 
 2. NSCoding 프로토콜을 채택하고, 메소드를 구현.
 
-```objectivec
+```objc
 -(void) encodeWithCoder: (NSCoder *) coder {
-	[ coder encodeObject: name
-    		forKey: @"name"];
-	[ coder encodeInt: age
-    		forKey: @"age"];                
+    [ coder encodeObject: name
+            forKey: @"name"];
+    [ coder encodeInt: age
+            forKey: @"age"];                
     ......
 } // encodeWithCoder
 
 -(void) initWithCoder: (NSCoder *) decoder {
-	if ( self = [ super init ] ){
-    	self.name = [ decoder decodeObjectForKey: @"name" ];
+    if ( self = [ super init ] ){
+        self.name = [ decoder decodeObjectForKey: @"name" ];
         self.age = [ decoder decodeIntForKey: @"age" ];
         ...        
     }
@@ -178,7 +185,7 @@ myObject = [ NSKeyedUnarchiver unarchiveObjectWithData: freezeDried ];
 
 - 비교 조건 필터 클래스
 
-```objectivec
+```objc
 Car *car = makeCar (@"Herbie", @"Honda", @"CRX", 1984, 2, 110000, 58);
 [ garage addCar: car ];
 
@@ -194,8 +201,8 @@ NSLog (@"%s", (match) ? @"YES" : @"NO" );
 
 NSArray *cars = [ garbage cars ];
 for( Car *car in [ garage cars ] ){
-	if(predicate = [ predicate evaluateWithObject: car ]){
-		NSLog (@"%@", car.name );		
+    if(predicate = [ predicate evaluateWithObject: car ]){
+        NSLog (@"%@", car.name );        
     }
 }
 
