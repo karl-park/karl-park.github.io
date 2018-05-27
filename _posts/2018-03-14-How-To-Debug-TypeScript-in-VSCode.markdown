@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "How to debug TypeScript in VS Code"
+title:  "[TypeScript] How to debug TypeScript in VS Code"
 date:   2018-03-14 14:30:00
-categories: [Javascript]
-tags: [TypeScript,JavaScript,Debug,VS Code]
+tags: javascript typescript debug vscode
+categories: devstory
 ---
 
 
@@ -15,8 +15,7 @@ TypeScript로 작성한 웹앱 및 라이브러리는 결국 JavaScript로 컴�
 
 
 # TypeScript Debugging w/ SourceMap
-- ``````SourceMap``````은 마치 iOS의 debugSymbol 과 같은 느낌이라고 생각하면 된다. 
-즉, sourceMap 파일은 TypeScript코드가 JavaScript로 컴파일 되는 과정에서 심볼들의 상관관계를 가지고 있는 json파일이다.
+``````SourceMap``````은 마치 iOS의 debugSymbol 과 같은 느낌이라고 생각하면 된다. 즉, sourceMap 파일은 TypeScript코드가 JavaScript로 컴파일 되는 과정에서 심볼들의 상관관계를 가지고 있는 json파일이다.
 
 ## 1. 웹서버 이용하여 디버깅 하는 방법
 
@@ -46,6 +45,7 @@ TypeScript의 Compile Option 내용을 포함한 tsconfig.json 파일에 아래�
 
 ### Debugger for Chrome
 VSCode 상에서 TypeScript등을 디버깅하기 위해서는 확장 프로그램인 `Debugger for Chrome`가 필요하다. 다음과 같이 설치해준다.
+
 ![Inline-image-2018-03-27 14.35.21.493.png](/static/assets/img/posts/javascript/how2debugTS/how2debugTS_1.png)
 
 

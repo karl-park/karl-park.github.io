@@ -1,14 +1,17 @@
 ---
 layout: post
-title:  "Unite 2018. Day1"
+title:  "[Unite] 2018. Day1"
 date:   2018-05-02 09:00:00
-categories: [Seminar]
-tags: [Unite,Unity,VR,Seoul]
+tags: seminar unity unite unite2018
+categories: devstory
 ---
 
-안녕하세요. 이번에는 Unite 2018 Seoul을 다녀온 후기를 2부에 걸쳐서 연재하려고 합니다.
-차마 듣지 못한 세션들에 대한 정보는 아래 uniteseoul 링크에서 확인하실 수 있습니다.
+
+안녕하세요. 이번에는 Unite 2018 Seoul을 다녀온 후기를 2부에 걸쳐서 연재하려고 합니다. 차마 듣지 못한 세션들에 대한 정보는 아래 uniteseoul 링크에서 확인하실 수 있습니다.
 (추후 발표 자료가 올라온다고 합니다.)
+
+[[Unite] 2018. Day1](/devstory/2018/05/02/Unite-2018-Session-Day1/)
+[[Unite] 2018. Day2](/devstory/2018/05/03/Unite-2018-Session-Day2/)
 
 #### 참고
 실제 Unite 2018 첫번째날에는 교육세션/트레이닝데이가 열렸습니다.
@@ -21,20 +24,25 @@ tags: [Unite,Unity,VR,Seoul]
 - Session Info : https://www.uniteseoul.com/2018/agenda.aspx#agenda2
 
 
+---
 
-# 컨슈머가 바라보는 가상현실 현주소
+# 1. 컨슈머가 바라보는 가상현실 현주소
 - Time : 5/3, 10:00 ~ 10:50
 - Presenter : 장진기 ([Youtube 멀미왕](https://www.youtube.com/channel/UCZr7BcQMia_aVJtHJk63lGg))
     - 가상현실 컨텐츠/기기를 소개하는 유투브 크리에이터이자 VR다나와/게임메카에서 글을 쓰는 VR필진
 
+
 ## 접근성
-Whenever, Wherever 접근 가능
+VR. 가상현실에 대한 접근성은 날로 발전하고 있다. 즉, Whenever, Wherever 접근이 가능하다.
+하지만, 이렇게 접근성이 날로 좋아지고 있음에도 불구하고, VR 자체를 하는 사람을 찾기는 "쉽지않다".
 
-But, VR 왜 안해? ->> "쓰기 귀찮아서"
+왜일까?
 
+강연자가 답하는 이유는 바로, "쓰기 귀찮아서"라고 한다.
+예를 들어, VR 컨텐츠를 이용하려고 하는데, "공간인식" 기능을 필요로한다면, 움직이는 공간에 장애물을 모두 치워놔야한다.
 
-요새는 공간인식을 위한 기기 등도 있어서,
-움직이는 공간에 장애물을 모두 치워놔야한다.
+이러한 불편함이, 그리고 귀찮음이 오늘날 VR의 한계점이다.
+
 
 ### VR 및 다른 기기들의 접근성 비교
 
@@ -48,65 +56,67 @@ But, VR 왜 안해? ->> "쓰기 귀찮아서"
 
 
 ## VR 미디어 소비 한계
-- 왜곡 현상
-    - 직접 시연하는 사람이 아니라, "미디어"로 송출을 할 때는 왜곡이 생긴다.
+요새는 컨텐츠를 소비하는 방식이 "유투브, 트위치" 처럼
+미디어로 소비하기도 한다. 이런점에서 VR 미디어에도 다음과 같은 한계점들이 존재한다.
+
+- 왜곡 현상 : 직접 시연하는 사람이 아니라, "미디어"로 송출을 할 때는 왜곡이 생긴다.
 - 흔들리는 화면, 낮은 영상 품질
 - 이해하는 시간 필요
-- 공감의 어려움 -> 생각보다 공감이 어렵다고 한다.
-- 시각 디스플레이는 영화 같은 화면, 동시 공감이 가능
-- 자극적인 리액션 요구
+- 공감의 어려움 : 생각보다 공감이 어렵다.(시각 디스플레이는 영화 같은 화면, 동시 공감이 가능)
+- 보다 더 자극적인 리액션을 요구
 
 
 ## 주요 VR 하드웨어/플랫폼 제작사
-- 발표자가 생각하는 rank
-    - oculus    
-        - facebook이 투자를 많이 하는 듯 하다.
-        - 양질의 컨텐츠 수가 압도적이다.
-    - playstation.VR
-        - 컨텐츠 수가 100여개 남짓이다.
-    - steam
-        - VR 품질은 상대적으로 빈약하다.
-    - microsoft
-        - 감감무소식
+아래는 발표자가 생각하는 VR 플랫폼 제작사의 Rank이다.
+1. oculus    
+    - facebook이 투자를 많이 하는 듯 하다.
+    - 양질의 컨텐츠 수가 압도적이다.
+2. play station.VR
+    - 컨텐츠 수가 100여개 남짓이다.
+3. steam
+    - VR 품질은 상대적으로 빈약하다.
+4. microsoft
+    - 감감무소식
 
 ## 미래
-- 앞으로는 가상현실이 어떻게 변화될까?
-    - 가장 HOT한 VR 컨텐츠
-        - VRChat !
-            - 스팀, 소셜 컨텐츠
-            - 4 million downloads
-            - Unity SDK
-            - 일반 PC에서도 다운로드 가능
-        - Facebook Spaces
-        - REC ROOM
-        - Sansar
-        - AltSpace
-            - 최초 VR Chat
-            - 망해가는 것을 Microsoft사가 인수
-        - SKT 옥수수 소셜 VR
-    - VR 멀티플레이
-        - 낯선 세계의 경험을 공유
-        - 배움, 커뮤니케이션 등이 있음
-        - 언어 장벽은 존재함
+앞으로는 가상현실이 어떻게 변화될까?
+
+- 현재 가장 HOT한 VR 컨텐츠
+    - VRChat !
+        - 스팀, 소셜 컨텐츠
+        - 4 million downloads
+        - Unity SDK
+        - 일반 PC에서도 다운로드 가능
+    - Facebook Spaces
+    - REC ROOM
+    - Sansar
+    - AltSpace
+        - 최초 VR Chat
+        - 망해가는 것을 Microsoft사가 인수
+    - SKT 옥수수 소셜 VR
+- VR 멀티플레이
+    - 낯선 세계의 경험을 공유
+    - 배움, 커뮤니케이션 등이 있음
+    - 언어 장벽은 존재함
 
 
 ## 느낀점
 - 영화, **레디 플레이어원**이 생각났다.
-    - ![Readyplayer one](https://img02.rl0.ru/07a6f176f97343c917380366ffff1ac1/c615x400/news.rambler.ru/img/2018/02/16113657.396455.9360.png)
     - 해당 영화에서도 "가상현실" 세계에 접속하기 위해서는 생각보다 까다로운 과정을 거친다.
+    ![Readyplayer one](https://img02.rl0.ru/07a6f176f97343c917380366ffff1ac1/c615x400/news.rambler.ru/img/2018/02/16113657.396455.9360.png)
 - Mobile 기기처럼 언제나, 어디서나, 빠르게 접속할 수 있다는 장점 및 디바이스 자체의 볼륨이 특히나 제약이 된다.
-- 예능, **백년손님**에서, 이만기가 중흥리 할머니들에게 VR을 소개하는 것도 생각났다.
-    - ![백년손님 할머니들 VR 체험](http://img2.sbs.co.kr/img/seditor/VD/2018/04/07/VD40811834_w640.jpg)
+- 예능, **백년손님**에서, 이만기가 중흥리 할머니들에게 VR을 소개하는 것도 생각났다.    
     - 할머님들이 VR을 체험하며, "리액션"을 하는 부분이 컨텐츠를 재미있게 만들었다.
     - 물론, "이만기, 제작진"의 도움없이 할머니들이 VR 컨텐츠를 소비할 수 있을까는 여전히 의문이고, 한계점이다.
+    - ![백년손님 할머니들 VR 체험](http://img2.sbs.co.kr/img/seditor/VD/2018/04/07/VD40811834_w640.jpg)
 - 하드웨어 접근성이 높아지고 소프트웨어 필요성이 대두될 때, VR은 비로소 대중화 될 수 있을 듯
 
 
-
-# Unity ML-Agents Hands-On Demo
+---
+# 2. Unity ML-Agents Hands-On Demo
 - Time : 5/3, 11:00 ~ 11:50
 - Presenter : Marwan Mattar / Unity / Engineering Manager
-- ML-Agents : Open Source\
+- ML-Agents : Open Source
     - github repository : https://github.com/Unity-Technologies/ml-agents
 
 
@@ -130,7 +140,7 @@ But, VR 왜 안해? ->> "쓰기 귀찮아서"
 
 
 ## Hands-On
-위 github에서 예제 샘플 소스를 바당서 running 해봄.
+위 github에서 예제 샘플 소스를 받아서 running 해봄.
 brain/academy와 agent, reward/state 등을 따라가보며 이해할 수 있음
 
 
@@ -147,8 +157,8 @@ brain/academy와 agent, reward/state 등을 따라가보며 이해할 수 있음
 
 
 
-
-# Real-world performance analysis and optimization
+---
+# 3. Real-world performance analysis and optimization
 - Presenter : Kerry Turner / Unity / Developer Relations Engineer
 
 
@@ -237,10 +247,10 @@ Profiling
     - 예를 들어서, Texture accessable 자체를 off 해놓으면 read/write가 안되므로 부하가 줄어들 수도?
 - 압축
     - MP3 !! 만이 답은 아니다. Long Clip은 MP3, Vorbis 포멧, Short Clip은 ADPCM 포멧으로 압축하자
-- 
 
 
-# Introducing Unity A/B Testing and Tutorial Manager
+---
+# 4. Introducing Unity A/B Testing and Tutorial Manager
 - Time : 5/3, 14:00 ~ 14:50
 - Presenters:
     - Jonathan Harper / Unity / Software Engineer
@@ -291,7 +301,7 @@ Profiling
 - Database
 - Process
 
-```sequence
+```uml
 Process->Profiles
 Process->ML : Reinforce
 Profiles->ML
@@ -323,8 +333,8 @@ Server->Database: Log
 
 
 
-
-# 누구나 쉽게 하는 유니티 모바일 빌드 자동화
+---
+# 5. 누구나 쉽게 하는 유니티 모바일 빌드 자동화
 - Time : 5/3, 15:00 ~ 15:50
 - Presenter : 안현석 / 에이스프로젝트 / 디렉터
 
@@ -449,8 +459,8 @@ Server->Database: Log
     - JavaScript 빌드를 잊고 살았는데 Jenkins 빌드 설정을 해놔야겠다. (사실 엄청 쉽다.)
 
 
-
-# be SERIOUS with Unity
+---
+# 6. be SERIOUS with Unity
 - Time : 5/3, 16:00 ~ 16:50
 - Presenter : 김대홍 / 서울예술대학교 / 교수&유니티 마스터
 
@@ -552,8 +562,8 @@ Server->Database: Log
 
 
 
-
-# 유니티 서비스로 수익화 하기 : Unity Ads, Unity IAP, IAP Promo
+---
+# 7. 유니티 서비스로 수익화 하기 : Unity Ads, Unity IAP, IAP Promo
 - Time : 5/3, 17:00 ~ 17:50
 - Presenter : 이아린 / Unity / Services Support Engineer
 
@@ -599,10 +609,3 @@ Server->Database: Log
 
 ## 느낀점
 - 유니티에서는 사용하기 쉬울 듯도 함.
-
-
-
-
-
-
-

@@ -1,22 +1,25 @@
 ---
 layout: post
-title:  "Unite 2018. Day2"
+title:  "[Unite] 2018. Day2"
 date:   2018-05-03 09:00:00
-categories: [Seminar]
-tags: [Unite,Unity,Ebay,Commerce,VR,AR,Seoul]
+tags: seminar unity unite unite2018
+categories: devstory
 ---
 
 안녕하세요. 지난 포스트에 이어서, 이번에는 Unite 2018 Day2 후기를 올리도록 하겠습니다.
 Day2이자, 마지막 아젠다가 열렸던 날이 되겠네요.
 
-지난글 : http://mrkarl.github.io/seminar/2018/05/02/Unite-2018-Session-Day1.html
+[[Unite] 2018. Day1](/devstory/2018/05/02/Unite-2018-Session-Day1/)
+[[Unite] 2018. Day2](/devstory/2018/05/03/Unite-2018-Session-Day2/)
+
 
 # Unite 2018 Sessions Day2
 - Date : 5/4, 금요일
 - Session Info : https://www.uniteseoul.com/2018/agenda.aspx#agenda2
 
 
-#  Low level understanding of iOS memory
+---
+# 1. Low level understanding of iOS memory
 - Time : 5/4, 11:00 ~ 11:50
 - Presenter : Valentin Simonov / Unity / Field Engineer
 
@@ -84,8 +87,8 @@ SCM is a compressed part of the app's Dirty Memory.
 
 
 
-
-# Jump start your Game in JAPAC market with CLOUD
+---
+# 2. Jump start your Game in JAPAC market with CLOUD
 - Presenter : 
     - 조성범 / Alibaba Cloud / 한국대표
     - 고성민 / SB Cloud / 인큐베이션 프로그램 리더 - Softbank cloud
@@ -140,8 +143,8 @@ SCM is a compressed part of the app's Dirty Memory.
 
 
 
-
-# eBay가 바라보는 커머스의 미래 - 온라인을 넘어 AR로
+---
+# 3. eBay가 바라보는 커머스의 미래 - 온라인을 넘어 AR로
 - Presenter : 이진용 / eBay Korea / 부문장
 
 - Commerce 진화
@@ -193,11 +196,68 @@ SCM is a compressed part of the app's Dirty Memory.
         - 물건을 카메라에 비추면, 가장 fittable 한 표준 박스가 뜨고, 가격도 뜬다.
         - 해당 기능을 통해 박싱 및 택배가능
 
+## 느낀점
+- 커머스 시장에도 VR/AR이 조금씩 스며들고 있다 !
+- 언제쯤 상용화되어서 우리 옆으로 다가올 수 있을까?
+
+
+
+---
+# 4. 게임으로 더 밝은 세상을 꿈꾸는 게임 "애프터 데이즈" 제작 후기
+- Presenter : 도민석 / GamBridzy / 대표
+
+## AfterDays
+- 지진을 견뎌낸 네팔 커피농부들의 이야기. (2015.04.25)
+- http://afterdaysgame.com/
+
+## 네팔 지진
+- 2015년 04월 25일에 일어난 네팔 지진
+- 네팔 건물의 70%가 무너졌다고 함.
+
+
+
+## 고민한 점들
+- 처음에 창업을 할 때의 마인드
+    - `게임을 통해 사람들의 이타심을 강화 할 수 있을까?`
+        - 지금와서 돌아보니, 너무 오만한 질문
+    - 다음과 같이 바뀜
+    - `게임이 주는 즐거움이 세상을 밝히는 에너지가 될 수 있지 않을까? & 우리가 더 잘한다면!`
+
+- 여러 사람들의 부정적인 피드백
+    - 왜 네팔인데
+    - 왜 한국 사람은 안돕는건데?
+    - 왜 게임으로 돕겠다는 거야?
+    - 게임은 재미만 있으면 되는거 아니야?
+    - 차라리 개발 비용을 네팔에 기부하는게 더 낫지않아?
+- 실제 "지진"의 상황을 재현하면, "게임성"이 떨어진다. 이 딜레마를 어떻게 할 것인가?
+    - 헬기로 구호품을 전달할 때, 악천후 속에서 전달하는 것 자체가 엄청난 헬이다. 이걸 그대로 유저에게 전달하려면, 난이도 헬의 미션이 됨.
+- 하지만. 게이머들의 응원이 있었기에 버텼다.
+
+## 지속 가능한 소셜 임팩트 게임 생태계 구축
+- 어떻게 지속 가능할 수 있을까?
+- Game <- Contents, Marketing -> Partners(NGO, NPO, Company)
+- Game <- Funding, Play -> Player
+- Game <- Feedbck, Story -> Local
+- Partners <- Growth, Support -> Local
+- Player <- Trust -> Partners
+
+
+## 제작비 확보
+- 약 3400만원 (와디즈 140만원, 텀블벅 320만원, 한국 사회적기업 3,000만원)
+- 160명의 후원자
 
 
 
 
 ## 느낀점
-- 커머스 시장에도 VR/AR이 조금씩 스며들고 있다 !
-- 언제쯤 상용화되어서 우리 옆으로 다가올 수 있을까?
+- Unite 2018의 마지막 세션
+- 보면서 눈물이 났다.
+    - 선한 의도
+    - 부족한 사업력, 혼란스러운 개발 기간들
+    - 취지에는 공감하나, 평가에는 철저한 유저들의 리뷰.
+        - 현실적으로 도저히 어떻게 할 수 없는 한계점과 이 한계를 지적하는 유저들의 목소리를 들었을 때, 얼마나 가슴이 아팠을까.
+    - 그 힘듦으로 번 돈, 전액 300만원을 네팔에 기부했다고 할 때의 감격.
+        - 금액은 얼마 되지 않을 수도 있다... 하지만, 그 "전부"를 기부한다는 것이 얼마나 큰 마음인지 느껴졌다.
+- 한 유저의 혹독한 리뷰후 반년이나 지나서야 업데이트를 할 수 있었던, "현실"
+
 

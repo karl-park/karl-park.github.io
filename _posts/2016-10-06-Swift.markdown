@@ -1,10 +1,16 @@
 ---
 layout: post
-title:  "Swift"
+title:  "[Swift] Hello Swift"
 date:   2016-09-19 03:00:00
-categories: [Ios]
-tags: [iOS,Apple,Swift,Swift3,Objective-C]
+tags: kotlin_swift swift3
+categories: devstory
 ---
+
+날이 지날 수록, Swift의 사용성이 증대되고 있다.(물론 처음부터 좋은 언어..)
+Objective C로 예제를 짜던 시대는 갔고, 온갖 사이트들의 예문들이 Swift로 도배되고 있다.
+
+프로덕션 레벨에서도 이미 널리 사용되고 있으니... 빨리 배워보잣 !!
+(Android에서는 Kotlin이 대세로 자리를 잡으려던데, Kotlin과 비슷한게... 역시 언어는 트렌드를 따르는 것 같다)
 
 # Swift
 
@@ -56,6 +62,7 @@ var emptyDictionary2 = Dictionary<String, Float>()
 조건문은 여타 조건문과 별반 다르지 않다.(거의 모든 언어가 이러니 뭐..)
 
 ### if-else
+
 ```swift
 let iterationArray = [1, 4, 5, 8, 9, 12]
 var sum = 0
@@ -74,7 +81,7 @@ for item in iterationArray {
 옵션값은 값을 가지거나 nil을 가질 수 있는 값.
 다음과 같이 쓸 수 있다.
 
-```
+```swift
 var optionalString: String? = "exist"
 optionalString = nil
 
@@ -93,7 +100,7 @@ if let isNotNull = optionalTestString {
 
 ### Switch
 
-```
+```swift
 let vegetable = "red pepper"
 switch vegetable {
 case "celery":
@@ -109,9 +116,10 @@ default:
 `break` 가 없다는건 신기방기(?)
 
 
+
 ### for-in 반복문
 
-```
+```swift
 let interestingNumbers = [
   "Prime": [2, 3, 5, 7, 11, 13],
   "Fibonacci": [1, 1, 2, 3, 5, 8],

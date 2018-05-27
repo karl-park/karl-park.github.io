@@ -1,10 +1,11 @@
 ---
 layout: post
-title:  "Droid Knights 2018"
+title:  "[Droid Knights] Seoul 2018 후기"
 date:   2018-04-22 09:30:00
-categories: [Seminar]
-tags: [Android,Seminar,Coex]
+tags: seminar android java DroidKnights DroidKnightsSeoul DroidKnights2018
+categories: devstory
 ---
+
 
 오늘은 4월 22일에 열렸던 Droid Knights 에 대한 참가 후기를 공유를 해볼까 합니다.
 
@@ -217,7 +218,7 @@ Travis CI 를 이용해서 Github 에 소스에 변경사항이 생기면 Buiild
 - Because you can't mutate 
 
 - Pure/Inpure Layer를 잘 구분하자.
-- Interface를 최~~~~~~~~~~~~대한 많이 쓰자.
+- Interface를 최대한 많이 쓰자.
     - class보다 더욱 느슨한 결합으로 연결하자.
 
 ### 느낀점
@@ -258,7 +259,6 @@ Travis CI 를 이용해서 Github 에 소스에 변경사항이 생기면 Buiild
 - 사실 많은 세션이 있었으나, 트랙이 나뉘어져있어 다 듣지 못한 것이 아쉬움
     - 심지어 오전 세션은 개인 사유로 인해 듣지 못함
     - 심하게 기술적인 부분은 잘 알아듣지 못해서 더 아쉬움
-- 나중에 발표 자료들이 오픈된다고 하니 ! 그 때 다시 이 두레이를 업데이트 하겠음 !
 - LINE / 배달의 민족 / 드라마앤컴퍼니 등등 스폰서들이 많은데 왜 우리 회사는 없을까?
     - 후원좀하면 좋은 사람들 많이 모집할 수 있을텐데 왜안할까.
 
@@ -271,6 +271,6 @@ Travis CI 를 이용해서 Github 에 소스에 변경사항이 생기면 Buiild
 
 | 세션 | 링크 | 비고 |
 | ----- | ----- | ----- | 
-| 드로이드 나이츠 2018: RxJava 적용 팁 및 트러블 슈팅 | https://www.slideshare.net/suribada/2108-rxjava | |
-| Travis-ci를 이용한 CI/CD와 도커를 이용한 Jenkins for Android 구성하기 | https://www.slideshare.net/isjang98/travisci-cicd-jenkins-for-android-94750798 | |
-| 지금은 ConstanintLayout 시대 | https://steemit.com/android/@kingori2/2018 | |
+| 드로이드 나이츠 2018: RxJava 적용 팁 및 트러블 슈팅 | [https://www.slideshare.net/suribada/2108-rxjava](https://www.slideshare.net/suribada/2108-rxjava) | |
+| Travis-ci를 이용한 CI/CD와 도커를 이용한 Jenkins for Android 구성하기 | [https://www.slideshare.net/isjang98/travisci-cicd-jenkins-for-android-94750798](https://www.slideshare.net/isjang98/travisci-cicd-jenkins-for-android-94750798) | |
+| 지금은 ConstanintLayout 시대 | [https://steemit.com/android/@kingori2/2018](https://steemit.com/android/@kingori2/2018) | |

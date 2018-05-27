@@ -1,24 +1,25 @@
 ---
 layout: post
-title:  "Apple Reject"
+title:  "[iOS] Reject 사유: Non-Public API"
 date:   2016-09-19 03:00:00
-categories: [Ios]
-tags: [iOS,Apple,Reject,otool,strings,nm]
+tags: objc ios AppStore Reject Non-PublicAPI
+categories: devstory
 ---
 
+
+
 # Apple Reject
+iOS10 으로 업데이트되면서 부터, 우리 팀이 개발하는 iOS SDK를 사용하는 게임/앱들이 Apple에서 `리젝`을 당하고 있다는 충격적인 소식을 들었다.
 
-두둥 ... !
-iOS10 으로 업데이트되면서 부터, 우리 팀이 개발하는 iOS SDK를 사용하는 게임/앱들이
-Apple에서 `리젝`을 당하고 있다는 충격적인 소식을 들었다.
-
-문제는 바로
+문제는 바로 이 녀석.
 
 > Apple non-public API
 
-What ?!!!
 
-일단, non-public API 가 무엇인지부터 살펴보자
+Non-public API란 무엇이길래 AppStore 리젝을 당할까?
+하나하나 알아보자.
+
+애플 문서에는 다음과 같이 정의되어있다.
 
 `non-public API` : The non-public API refers to Apple API methods that are not documented and offered to the programmer. Apple does not guarantee that this part of the API will work in future upgrades. They can freely change this part.
 
@@ -28,28 +29,36 @@ What ?!!!
 > deprecated 되었거나, 아직 개발중이거나, 내부적으로 사용하는 API 등이 이에 해당됨.
 
 
-문제가 된 selector는 다음과 같았다.
+
+
+## 리젝 사유
+리젝을 당하게 되면, 리젝에 대한 사유가 메일 등으로 오게된다.
+우리는 역시 Non-Public API로 리젝을 당했기 때문에, 다음과 같은 사유서가 왔다.(고 한다)
+
 
 ```
+...
 Your app uses or references the following non-public APIs:
 
 didReceiveMessage:
 
 The use of non-public APIs is not permitted on the App Store because it can lead to a poor user experience should these APIs change.
+...
 ```
 
-`didReceiveMessage:`... 해당 메소드를 사용하는 것은 sdk 소스에는 없고, 3rd party의 Opensource Websocket 라이브러리에서 사용중이었다.
-물론, 이 사용중인 것을 어떻게 알았냐구?
+위와 같은 메일을 받았으면, `didReceiveMessage:`라는 selector가 문제가 있음을 바로 알 수 있다.
 
-다음을 보자 !!
+
+그렇다면 해당 selector를 어디서 사용했는지 어떻게 알 수 있을까?
+(다 찾아보고나서지만, 내가 만든 SDK에서는 사용하고 있지 않았고! 3rd party library에서 사용중이었다. 정확히는 오픈소스 웹소켓 라이브러리... OTL)
 
 
 
 ## Utility for Checking Symbols
 이번 리젝사태를 겪으면서, 배운 3가지 유틸리티 툴은 다음과 같다.
-1. strings
-2. otool -ov
-3. nm -u
+1. `strings`
+2. `otool -ov`
+3. `nm -u`
 
 처음에는 `nm -u`를 사용해서 메소드를 리스팅했는데, 해당 `didReceiveMessage:`가 검출되지 않았다. 그래서, 클라이언트들과 적잖은 마찰?이 있었다.(그것도 추석연휴전에 들어온 문의...)
 '우리 안사용하고 있는데? nm -u 로 확인해봤다구 !' 라면서....
@@ -73,7 +82,6 @@ Apple의 검수툴이 바뀌었거나, 검수 요건에 해당 메소드가 블�
 이것은 여전히 objective-c 에서 불편한 사항인것 같다.
 
 
-무튼,
-심볼에 대해서, 링킹에 대해서, 검수에 대해서 조금은 발전한 이슈였다.
+아무튼, 심볼에 대해서, 링킹에 대해서 그리고 검수에 대해서 조금은 발전할 수 있었던 '리젝'이었다.
 
-끄읕
+끄읏

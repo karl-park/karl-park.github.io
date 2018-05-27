@@ -1,18 +1,36 @@
 ---
 layout: post
 title:  "[MWDC2017] 2nd Day"
-date:   2017-04-08 16:00:00
-categories: [Technology]
-tags: [MWDC2017,MWDC,SanFrancisco,Seminar,Conference,Developer]
+date:   2017-04-08 03:00:00
+tags: seminar mwdc2017 MWDC MobileWebDevCon Conference
+categories: devstory
 ---
 
+지난 시간에 이어서, MWDC의 2번째 날에 들었던 내용을 정리하는 시간을 가져보겠습니다.
 
-# 1. KeyNote: Optimizing ur app for profitability
+- [MWDC Day1](../MWDC2017-Day-First/)
+- [MWDC Day2](../MWDC2017-Day-Second/)
+
+
+## TOC
+
+- 0 MWDC란?
+- 1 Lazy loading JS modules in the Browser
+- 2 iOS Testing & Debugging
+- `3 KeyNote: Optimizing ur app for profitability`
+- `4 Delivering a better UX with in-app support`
+- `5 Be offensive: Proactively Assessing Your iOS`
+- `6 Scaratch that: Building an app in Swift`
+- `7 iOS Tools Overview`
+- `8 Building Successful apps for Africa`
+
+
+---
+# 3. KeyNote: Optimizing ur app for profitability
 
 
 ## 앱 최적화를 위한 5가지 !!
 ![Inline-image-2017-04-10 14.29.29.181.png](/static/assets/img/posts/mwdc/mwdc-2nd-001.png)
-`(흰색 배경이라, PNG로 만들어야함)`
 
 ### 1. 고객 데이터
 - New VS Returning 유저 분석
@@ -54,8 +72,8 @@ tags: [MWDC2017,MWDC,SanFrancisco,Seminar,Conference,Developer]
 
 
 
-
-# 2. Delivering a better UX with in-app support
+---
+# 4. Delivering a better UX with in-app support
 - In-app support 기능에 대한 세션
 
 ## In App Support에는 어떤것들이 있을까?
@@ -75,8 +93,8 @@ tags: [MWDC2017,MWDC,SanFrancisco,Seminar,Conference,Developer]
 
 
 
-
-# 3. Be offensive: Proactively Assessing Your iOS Applications.
+---
+# 5. Be offensive: Proactively Assessing Your iOS Applications.
 - 보안 보안 보안 !! 대책을 강구하시오 !!
 
 ## What does being offensive mean ?
@@ -116,13 +134,18 @@ tags: [MWDC2017,MWDC,SanFrancisco,Seminar,Conference,Developer]
         - CRYPTO IS REALLY HARD !
     - salt 같은 경우는 코드에 하드코딩하지말고, 서버에서 받거나.. 하는 식으로 하자 !
 7. Client Side Injection
-    - mail title로 <iframe src='file:///proc/self/...' .../> 를 하면 접근이 가능(했었다)
     - SQLite Injection
     - JavaScript Injection(XSS)
+    - mail title로 아래와 같이하면 접근이 가능(했었다)
+    ```html
+    <iframe src='file:///proc/self/...' .../>
+    ```    
 8. Security Decisions via Untrusted Inputs
     - Inter Process Communication(IPC)
-        - <iframe src="skype://14124124124?call"></iframe>
         - openURL 에서 authorization 을 확인하자 !!!!!
+        ```html
+        <iframe src="skype://14124124124?call"></iframe>
+        ```        
 9. Improper Session Handling
     - Logout을 눌렀을 때, 세션을 핸들링하도록하자 !
     = Failure to validate sessions on backend
@@ -175,24 +198,25 @@ tags: [MWDC2017,MWDC,SanFrancisco,Seminar,Conference,Developer]
 
 
 
+---
+# 6. Scaratch that: Building an app in Swift
+원래 회사원이 전부 ObjC 개발자
 
-# 4. Scaratch that: Building an app in Swift
-- 원래 회사원이 전부 ObjC 개발자
+"야 스위프트로 한번 해보자. 우리 빼고 전부 스위프트 하더라"
 
-> 야 스위프트로 한번 해보자. 우리 빼고 전부 스위프트 하더라
+"그래 !! 우리 앱을 싹 갈아엎어보자 !!"
 
-> 그래 !! 우리 앱을 싹 갈아엎어보자 !!
+...
 
-> 확실히 Swift가 좋긴 좋구나 !!
-
+"확실히 Swift가 좋긴 좋구나 !!"
 
 
 ## git
 - git : https://github.com/d2burke/matchup
 
 
-
-# 5. iOS Tools Overview
+---
+# 7. iOS Tools Overview
 
 ## IDE
 - ![Inline-image-2017-04-17 20.55.57.942.png](/static/assets/img/posts/mwdc/mwdc-2nd-006.png)
@@ -206,19 +230,19 @@ tags: [MWDC2017,MWDC,SanFrancisco,Seminar,Conference,Developer]
 - OCLint
     - http://oclint.org/
 
-```
-> $ brew tap oclint/formulae
-> $ brew install oclint
+```shell
+$ brew tap oclint/formulae
+$ brew install oclint
 
-> $ brew update
-> $ brew upgrade oclint
+$ brew update
+$ brew upgrade oclint
 
 (http://docs.oclint.org/en/stable/intro/homebrew.html)
 
 
-> $ gem install xcpretty
+$ gem install xcpretty
 
-~~~Build Phase
+> ~~~ Build Phase
 source ~/.bash_profile
 cd ${SRCROOT}
 xcodebuild clean
@@ -228,14 +252,14 @@ oclint-json-compilation-database -- -report-type xcode
 
 (http://docs.oclint.org/en/stable/guide/xcode.html)
 
-> $ xcodebuild -project Gamebase.xcodeproj/ |xcpretty -r json-compilation-database --output compile_commands.json
+$ xcodebuild -project Gamebase.xcodeproj/ |xcpretty -r json-compilation-database --output compile_commands.json
 
 RUN !
 ```
 
 
 ## Template
-https://developer.apple.com/ios/human-interface-guidelines/resources/
+Template Links: [https://developer.apple.com/ios/human-interface-guidelines/resources/](https://developer.apple.com/ios/human-interface-guidelines/resources/)
 
 ## Source Control
 1. GitHub
@@ -259,8 +283,8 @@ Conceptual/xcode_guide-continuous_integration/ConfigureBots.html#
 
 
 
-
-# 6. Building Successful apps for Africa
+---
+# 8. Building Successful apps for Africa
 ## 4-data saving strategies for Android
 
 ### 1. Image reduction

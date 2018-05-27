@@ -1,10 +1,14 @@
 ---
 layout: post
-title:  "[Apple Dev]02.Expected App Behaviors"
-date:   2016-03-17 09:00:00
-categories: [Ios]
-tags: [Translation,iOS,Application,Architecture,Apple]
+title:  "[iOS] 번역: 2. Expected App Behaviors"
+date:   2016-03-17 16:00:00
+tags: objc ios apple guide application architecture translation Summary
+categories: devstory
 ---
+
+첫번째 번역에 이어서 계속되는 내용이다.
+첫번째 iOS 앱구조를 다루는 내용은 [링크](./App-Programming-Guide-for-iOS-1/)를 참조한다.
+
 
 # Expected App Behaviors
 
@@ -27,6 +31,7 @@ tags: [Translation,iOS,Application,Architecture,Apple]
 iOS 앱을 빌드할 때, Xcode 는 그것을 bundle 로 패키지합니다. bundle 은 서로 관련있는 리소스들을 한 장소에 함께 모아놓은 파일 시스템의 디렉토리입니다. iOS app bundle은 실행가능한 앱의 파일과 앱 아이콘, 이미지 파일, localized content와 같은 supporting 리소스 파일을 가지고 있습니다. Table 1-1은 MyApp이라 불리우는 시연 목적의 전형적인 iOS app bundle을 보여주고 있습니다. 이 예는 단지 설명하기 위한 목적으로 사용됩니다. table 상의 몇몇 파일들은 개발하는 app bundle에 없을 수도 있습니다.
 
 **Table 1-1** *A typical app bundle*
+
 |File|Example|Description|
 |-|-|-|
 |App executable|MyApp|실행가능한 파일은 앱의 컴파일된 코드를 가지고 있습니다. 실행 파일의 이름은 앱 이름에 .app 확장자를 더한 것과 같습니다.<br/>**This file is required.**|

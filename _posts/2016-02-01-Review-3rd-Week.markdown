@@ -1,10 +1,12 @@
 ---
+title:  "[토스트루키] 기술교육-3주차: 실제 개발 진행"
 layout: post
-title:  "NHN Ent. 실제 개발 진행"
-date:   2016-02-01 22:00:00
-categories: [Life]
-tags: [3rdWeek,Hello_NHN_Ent,기술교육]
+date:   2016-02-01 14:30:00
+tags: routine Basecamp NHN_Entertainment 3rdWeek 신입교육 토스트루키
+categories: routine
 ---
+
+
 ### NHN Ent. 개발의 시작
 #### 실제 개발을 하였던 한 주
 #### 소감

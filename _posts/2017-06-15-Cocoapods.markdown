@@ -1,35 +1,41 @@
 ---
 layout: post
-title:  "CocoaPods 적용하기"
-date:   2017-06-15 03:00:00
-categories: [Ios]
-tags: [iOS,Apple,CocoaPods,Objective-C]
+title:  "[iOS] CocoaPods 적용하기"
+date:   2017-04-08 03:00:00
+tags: objc ios cocoapods dependency
+categories: devstory
 ---
 
-
+CocoaPods
 
 # CocoaPods 적용하기
+
 ## TOC
 1. CocoaPods 분석
 2. CocoaPods 특정 라이브러리 연동
 3. CocoaPods에 라이브러리 배포
 4. Appendix
 
+
 # 1. CocoaPods 분석
-## 0. What is ?
+## 0. What is CocoaPods
 - URL : https://cocoapods.org
-- Ruby로 만들어짐. (Mac이니 Ruby가 기본적으로 깔려있음.)
-- gem(Ruby version manager) 필요.(gem을 이용하여, 의존성을 관리하는듯? 확실치않음)
 
-> `CocoaPods` 는 Swift/Objective-C Cocoa 프로젝트를 위한 Library `dependency Manager` 입니다.
+CocoaPods은 Ruby로 만들어진, 의존성 관리툴이다. (Mac이니 Ruby가 기본적으로 깔려있음.)
 
-> `Podfile` 이라는 한 파일안에서 `의존성이 관리`됩니다.
+내부적으로 Ruby의 gem(Ruby version manager)을 이용하기 떄문에, gem이 필요하다.(gem을 이용하여, 의존성을 관리하는듯? 확실치않음)
+
+
+> `CocoaPods` 는 Swift/Objective-C Cocoa 프로젝트를 위한 Library `dependency Manager` 이다.
+
+> `Podfile` 이라는 파일안에서 `의존성이 관리`된다.
 
 
 ## 1. Install
 - 환경 : Xcode 7 + 8
 
 터미널에서 다음을 입력
+
 ```shell
 $ sudo gem install cocoapods
 ```
@@ -42,7 +48,8 @@ $ sudo gem install cocoapods
 
 
 ## 2. CocoaPods 업데이트
-업데이트를 위해서는 다음을 입력(그냥 다시 설치하면 됨)
+업데이트를 위해서는 다음을 입력한다.(그냥 다시 설치하면 됨)
+
 ```shell
 // 다시 설치 !
 $ sudo gem install cocoapods
@@ -56,11 +63,9 @@ $ sudo gem install cocoapods --pre
 
 # 2. CocoaPods 특정 라이브러리 연동
 ## 1. Get Started
-`Podfile` 에서 Cocoa 프로젝트의 모든 의존성을 관리한다고 위에서 설명하였다.
-Cocoapods 도 설치했으니, 이제 의존성을 부여해보자.
+`Podfile` 에서 Cocoa 프로젝트의 모든 의존성을 관리한다고 위에서 설명하였다. Cocoapods 도 설치했으니, 이제 의존성을 부여해보자.
 
-특정 라이브러리를 붙이기 원하는 Cocoa 프로젝트 폴더로 가서, 다음 명령어를
-입력해주자.
+특정 라이브러리를 붙이기 원하는 Cocoa 프로젝트 폴더로 가서, 다음 명령어를 입력해주자.
 
 ```ruby
 $ vi Podfile
@@ -79,12 +84,11 @@ end
 $ pod install
 ```
 
-이렇게 하면, pods 들을 설치한다.
-설치가 완료되면, 다음과 같이 ```workspace```를 열어주자.
-(xcproject 를 열면 안되는 이유는 Pods 가 workspace 자체를 생성하여, 디펜던시를 걸기 때문에, workspace를 열어주어야한다.)
+이렇게 하면, pods 들을 설치한다. 설치가 완료되면, 다음과 같이 ```workspace```를 열어주자. (xcproject를 열면 안되는 이유는 Pods 가 workspace 자체를 생성하여, 디펜던시를 걸기 때문이다)
 
 ### Workspace 가 이미 존재하고 있을 때
 만약 !! workspace가 존재 한다면, 다음의 구문을 "추가"해주자.
+
 ```ruby
 workspace '{MyOwnWorkSpace}'
 ```
@@ -92,7 +96,7 @@ workspace '{MyOwnWorkSpace}'
 
 
 ## 2. `pod install` vs. `pod update`
-차이를 명확하게 알아둡시다 !
+차이를 명확하게 두자 !
 
 |pod install | pod update |
 |-|-|
@@ -103,7 +107,7 @@ workspace '{MyOwnWorkSpace}'
 
 
 # 3. CocoaPods에 라이브러리 배포
-<내용 추가 예정>
+`내용 추가 예정`
 
 ## 1. Pod Lib Create
 ```ruby
@@ -271,6 +275,7 @@ $ pod repo push artsy-specs ~/Desktop/Artsy+OSSUIFonts.podspec
 
 ## 4. Appendix
 ### 1. Pods 를 source control에 추가해야하나요?
+
 | 추가 장점 | 추가 안할때의 장점 |
 | - | - |
 | 1. Repo를 Cloning받자마자, **pod install** 등의 작업없이, 바로 빌드를 해볼 수 있다 !<br/>2. 인터넷이 끊겼을 때나, Pod source(github) 등이 다운되었을 때에도, 사용가능하다.| 1. Source control repo 크기가 작아진다. <br/> 2. 다른 Pod version 등으로 머지를 했을 때, 충돌이 없으니 다루기 쉽다. <br/> 2. Pods Repo가 존재하는 한, 동일한 버전의 Pods를 누구나 공유할 수 있다. |
@@ -469,43 +474,12 @@ vendor_frameworks 등을 이용해서,
 - 질문글 : https://github.com/CocoaPods/swift/issues/26
     - 답변 : https://github.com/CocoaPods/cocoapods-packager
 - 오오오 !
+
 ```shell
-Karl-iMac:gamebase-ios-sdk nhnent$ pod package --help
+$ pod package --help
+>. 
 Usage:
 
     $ pod package NAME [SOURCE]
-
-      Package a podspec into a static library.
-
-Options:
-
-    --force                                                         Overwrite existing
-                                                                    files.
-    --no-mangle                                                     Do not mangle
-                                                                    symbols of
-                                                                    depedendant Pods.
-    --embedded                                                      Generate embedded
-                                                                    frameworks.
-    --library                                                       Generate static
-                                                                    libraries.
-    --dynamic                                                       Generate dynamic
-                                                                    framework.
-    --bundle-identifier                                             Bundle identifier
-                                                                    for dynamic
-                                                                    framework
-    --exclude-deps                                                  Exclude symbols
-                                                                    from dependencies.
-    --configuration                                                 Build the
-                                                                    specified
-                                                                    configuration
-                                                                    (e.g. Debug).
-                                                                    Defaults to
-                                                                    Release
-    --subspecs                                                      Only include the
-                                                                    given subspecs
-    --spec-sources=private,https://github.com/CocoaPods/Specs.git   The sources to
-                                                                    pull dependant
-                                                                    pods from
-                                                                    (defaults to
-                                                                    https://github.com/CocoaPods/Specs.git)
+    ......
 ```

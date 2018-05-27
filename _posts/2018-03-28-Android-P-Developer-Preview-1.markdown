@@ -1,11 +1,16 @@
 ---
 layout: post
-title:  "Android P, Developer Preview1"
-date:   2018-03-28 14:30:00
-categories: [Android]
-tags: [Android,Android P,Android 9,DP1,Preview]
+title:  "[Android] Android P, Preview1"
+date:   2017-03-28 03:00:00
+tags: java Android AndroidP Android9 Preview1
+categories: devstory
 ---
 
+Android O 대응을 한게 엊그제같은데, 벌써 Android P가 나올 준비를 하고 있다. 조금 있으면, GDC가 열릴터이고 Android P 스펙이 픽스될 터이다.
+
+그 전에, Preview1 상태인 Android P를 알아보고, 큰 변화의 맥락을 짚어보는 시간을 가져보자.
+
+모든 내용은 [Android P Preview](https://developer.android.com/preview/index.html) 사이트를 참고하여 의역하였다.
 
 
 # What's new for developers in Android P
@@ -151,4 +156,4 @@ tags: [Android,Android P,Android 9,DP1,Preview]
 
 
 ## Reference
-- android : https://developer.android.com/preview/index.html
+- android preview : [https://developer.android.com/preview/index.html](https://developer.android.com/preview/index.html)

@@ -1,0 +1,12 @@
+@startuml
+
+Process->Profiles
+Process->ML : Reinforce
+Profiles->ML
+ML->Server
+Server->ML
+Server->Devices : Receive recommendation
+Devices->Server : Request recommendation
+Server->Database: Log
+
+@enduml

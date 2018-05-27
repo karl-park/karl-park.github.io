@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "How to Publish a npm Package"
+title:  "[NPM] How to Publish a npm Package"
 date:   2018-03-30 09:00:00
-categories: [Javascript]
-tags: [NodeJS,JavaScript,npm,Publishing,Package]
+tags: javascript nodejs npm publishing package
+categories: devstory
 ---
 
 본 티켓에서는 `npm`에 본인이 만든 `package를 어떻게 배포`하는지에 대해서 다룹니다.
@@ -12,9 +12,12 @@ tags: [NodeJS,JavaScript,npm,Publishing,Package]
 I. Publish Package
 II. Update Package(Versioning)
 
+
 # I. Publish a Package
 
 ## Prerequisite
+본문을 진행하기전에 다음과 같은 준비사항이 필요합니다.
+
 1. npm policy 숙지
     - npm에 패키지를 배포하기 위해서는 site 에티켓, 네이밍룰, 라이센스 등 가이드라인을 준수해야합니다.
     - 자세한 사항은 링크를 참조하세요. [링크](https://www.npmjs.com/policies)
@@ -54,7 +57,7 @@ II. Update Package(Versioning)
 
 
 ## Publish a Package
-1. 다음 명령어를 통해 Version을 Update  해줍니다.
+1. 다음 명령어를 통해 Version을 Update 해줍니다.
     - `$ npm publish`
 2 확인
     - url address : `https://npmjs.com/package/${package}`
@@ -68,14 +71,16 @@ II. Update Package(Versioning)
 아래와 같이 git clone을 하는 과정 및 템플릿을 고를 수 있는 것을 package로 제작할 수도 있습니다.
 
 ### phaser official template (Webpack, JavaScript)
-``` shell
+
+```shell
 $ git clone https://github.com/photonstorm/phaser-ce
 $ cd "phaser-ce/resources/Project%20Templates/Webpack"
 $ npm install
 ```
 
 ### Custom template(TypeScript)
-``` shell
+
+```shell
 $ git clone https://github.com/MrKarl/phaser-tutorial.git
 $ cd phaser-tutorial
 $ npm install
