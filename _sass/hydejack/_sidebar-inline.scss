@@ -41,7 +41,7 @@
 
   @media screen {
     max-width: 38rem;
-    min-height: 100vh;
+//    min-height: 100vh;
 
     .ad-second{
       display: none;
@@ -86,10 +86,10 @@
 #_yDrawer {
   position: relative;
 
-  @media screen {
-    min-height: 640px; // fallback
-    min-height: 100vh;
-  }
+//  @media screen {
+//    min-height: 640px; // fallback
+//    min-height: 100vh;
+//  }
 
   @media screen and (min-width: $break-point-2) {
     width: 18rem; // duplicate!
