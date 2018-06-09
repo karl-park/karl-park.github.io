@@ -251,9 +251,9 @@ $ npm install babel babel-cli --save-dev
 - 요구사항
     - 각 모듈을 모두 사용하는 app.js 개발
     - 전역에서 로딩된 모듈을 호출하여 다음과 같은 화면을 만드는 것이 목표
-    - ![frontend-dev-edu007](/static/assets/img/posts/frontend-lecture/frontend-dev-edu007.png)
-    - ![frontend-dev-edu008](/static/assets/img/posts/frontend-lecture/frontend-dev-edu008.png)
-    - ![frontend-dev-edu009](/static/assets/img/posts/frontend-lecture/frontend-dev-edu009.png)
+    - ![frontend-dev-007](/static/assets/img/posts/frontend-lecture/frontend-dev-007.png)
+    - ![frontend-dev-008](/static/assets/img/posts/frontend-lecture/frontend-dev-008.png)
+    - ![frontend-dev-009](/static/assets/img/posts/frontend-lecture/frontend-dev-009.png)
     
 ### 3rd Iteration
 - 각 모듈들을 bundling 할 것 (webpack 이용)

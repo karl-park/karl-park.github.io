@@ -37,7 +37,7 @@ Web & `Server-Client` 모델에서의 기본이 되는 프로토콜
 HTML 문서 등 Web에 올라가는 `리소스 전송`에 해당되는 프로토콜
 
 
-![frontend-dev-edu001](/static/assets/img/posts/frontend-lecture/frontend-dev-edu001.png)
+![frontend-dev-001](/static/assets/img/posts/frontend-lecture/frontend-dev-001.png)
 
 > HTTP 프로토콜 버전에 따라서, HTML 1.0 과 HTML 1.1을 비교하여 이해하는 것이 중요하다.
 
@@ -70,7 +70,7 @@ HTML 문서 등 Web에 올라가는 `리소스 전송`에 해당되는 프로토
 
 ## Web ?
 HTTP 프로토콜은 애플리케이션 계층에 있다. 그렇기에, HTTP 헤더 등 확장가능한 부분이 많다. (TCP/IP는 전송 계층)
-![frontend-dev-edu002](/static/assets/img/posts/frontend-lecture/frontend-dev-edu002.png)
+![frontend-dev-002](/static/assets/img/posts/frontend-lecture/frontend-dev-002.png)
 [네트워크 계층도](http://hahahoho5915.tistory.com/15)
 
 
@@ -190,7 +190,7 @@ var paragraphs = document.getElementsByTagName('p');
 3. Reflow (= Layout, Render Node(= frame, box)들을 배치, 위치/크기 등을 계산)
 4. Repaint (= Redraw, paint 및 composition을 통해 이미 계산된 위치에 스타일을 입힘.)
 
-![frontend-dev-edu003](/static/assets/img/posts/frontend-lecture/frontend-dev-edu003.png)
+![frontend-dev-003](/static/assets/img/posts/frontend-lecture/frontend-dev-003.png)
 
 
 
@@ -232,7 +232,7 @@ WebBrowser(넷스케이프)에서 동작하기 위해, 즉 웹페이지를 핸�
     ```js
     funciton Person() { }
     ```
-    ![frontend-dev-edu004](/static/assets/img/posts/frontend-lecture/frontend-dev-edu004.png)
+    ![frontend-dev-004](/static/assets/img/posts/frontend-lecture/frontend-dev-004.png)
 2. Instance
     ```javascript
     function Person(){ }
@@ -240,7 +240,7 @@ WebBrowser(넷스케이프)에서 동작하기 위해, 즉 웹페이지를 핸�
     var park = new Person();  
     var jeong = new Person();
     ```
-    ![frontend-dev-edu005](/static/assets/img/posts/frontend-lecture/frontend-dev-edu005.png)
+    ![frontend-dev-005](/static/assets/img/posts/frontend-lecture/frontend-dev-005.png)
 3. Prototype Chaning
     ```javascript
     function Person(name){
@@ -368,7 +368,7 @@ xhr.send();
 <span style="color:white;"> JavaScript Engine만이 단일 쓰레드이다. </span>
 JavaScript는 JavaScript 엔진 뿐만이 아니라, Web APIs, Task Queue, Event Loop와 같은 다양한 영역으로 나눌 수 있다.
 
-![frontend-dev-edu006](/static/assets/img/posts/frontend-lecture/frontend-dev-edu006.png)
+![frontend-dev-006](/static/assets/img/posts/frontend-lecture/frontend-dev-006.png)
 
 
 다음 코드를 보며 원리를 이해해보자. (이해하려 노력해보자)
