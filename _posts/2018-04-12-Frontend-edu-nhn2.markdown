@@ -26,58 +26,62 @@ categories: devstory
 ### IIFE
 저번시간에 다룬 IIFE의 특징을 "호이스팅"이라는 JavaScript 특징을 결합해서 생각해보자.
 
-- Hoisting
-    - Example1 (Variable Hoisting)
-    ```js
-    // Before
-    console.log(myName); // undefined;
-    var myName = 'Panki Park';
-    
-    // After
-    var myName;
-    console.log(myName);
-    myName = 'Panki Park';
-    ```
-    - Example2 (Function Hoisting)
-    ```js
-    // Before
-    console.log(hello()); // hello;
-    function hello() {
-        return 'hello';
-    }
+#### Hoisting
+- Example1 (Variable Hoisting)
 
-    // After
-    funtion hello() {
-        return 'hello';
-    }
+```javascript
+// Before
+console.log(myName); // undefined;
+var myName = 'Panki Park';
 
-    ```
-    - Example3 (It is not Function Hoisting)
-    ```js
-    // Before
-    console.log(sayBye()); // sayBye is not a function
-    var sayBye = function() {
-        return 'bye';
-    }
-    
-    // After
-    var sayBye;
-    console.log(sayBye()); // sayBye is not a function
-    sayBye = function() {
-        return 'bye';
-    }
-    ```
-    - Example4 (It is not Function Hoisting)
-    ```js
-    // Before
-    console.log(sayBye()); // sayBye is not a function
-    var sayBye = new Function('', 'return "bye"');
-    
-    // After
-    var sayBye;
-    console.log(sayBye()); // sayBye is not a function
-    sayBye = new Function('', 'return "bye"');
-    ```
+// After
+var myName;
+console.log(myName);
+myName = 'Panki Park';
+```
+
+- Example2 (Function Hoisting)
+```javascript
+// Before
+console.log(hello()); // hello;
+function hello() {
+    return 'hello';
+}
+
+// After
+funtion hello() {
+    return 'hello';
+}
+
+```
+
+- Example3 (It is not Function Hoisting)
+```javascript
+// Before
+console.log(sayBye()); // sayBye is not a function
+var sayBye = function() {
+    return 'bye';
+}
+
+// After
+var sayBye;
+console.log(sayBye()); // sayBye is not a function
+sayBye = function() {
+    return 'bye';
+}
+```
+
+- Example4 (It is not Function Hoisting)
+```javascript
+// Before
+console.log(sayBye()); // sayBye is not a function
+var sayBye = new Function('', 'return "bye"');
+
+// After
+var sayBye;
+console.log(sayBye()); // sayBye is not a function
+sayBye = new Function('', 'return "bye"');
+```
 
 
 ### 모듈
@@ -85,50 +89,50 @@ JavaScript의 Scope관리는 지난 시간에서 본 것과 같이, `매우 지�
 예를 들어서, 다음의 두 파일은 서로의 변수를 공유한다. 모든 변수가 window 객체(전역) 스코프 위에 생성이 되기 때문이다.
 
 - example 1
-    ```js
-    // scope1.js
-    'use strict';
-    var a = 'hello';
-    var c = 'test';
-    ```
+```javascript
+// scope1.js
+'use strict';
+var a = 'hello';
+var c = 'test';
+```
 
 
-    ```js
-    // scope2.js
-    'use strict';
-    var b = a + ' my friends';
-    var c = 'it is changed';
-    alert(b);
-    alert(c);
-    ```
+```javascript
+// scope2.js
+'use strict';
+var b = a + ' my friends';
+var c = 'it is changed';
+alert(b);
+alert(c);
+```
     
 아래 예시는 nameSpace 패턴을 이용하여 변수를 공유한다.
 - example 2
-    ```js
-    // scope1.js
-    'use strict';
-    var myNameSpace = (function() {
-        var a = 'hello';
-        var c = 'test';
-        
-        var say = function() {
-            console.log(a);
-        };
-        
-        return {
-            a: a,
-            say: say
-        };
-    })();
-    ```
+```javascript
+// scope1.js
+'use strict';
+var myNameSpace = (function() {
+    var a = 'hello';
+    var c = 'test';
+    
+    var say = function() {
+        console.log(a);
+    };
+    
+    return {
+        a: a,
+        say: say
+    };
+})();
+```
 
-    ```js
-    // scope2.js
-    'use strict';
-    var b = myNameSpace.a;
-    alert(b);
-    alert(c); // undefined (Uncaught ReferenceError)
-    ```
+```javascript
+// scope2.js
+'use strict';
+var b = myNameSpace.a;
+alert(b);
+alert(c); // undefined (Uncaught ReferenceError)
+```
 
 위와 같이 "namespace" 패턴을 이용하여 스코프를 제한하였었는데, 이를 근본적으로 해결하기 위해
 es6의 module(import 구문)이 나왔다. (그 이전에는 module.exports-require(commonjs-nodejs), define-require(amd, RequireJS-browser) 등을 이용하여 모듈화를 하였다.)
@@ -247,9 +251,9 @@ $ npm install babel babel-cli --save-dev
 - 요구사항
     - 각 모듈을 모두 사용하는 app.js 개발
     - 전역에서 로딩된 모듈을 호출하여 다음과 같은 화면을 만드는 것이 목표
-    - ![frontend-dev-edu007](/static/assets/img/posts/frontend-lecture/selenium007.png)
-    - ![frontend-dev-edu008](/static/assets/img/posts/frontend-lecture/selenium008.png)
-    - ![frontend-dev-edu009](/static/assets/img/posts/frontend-lecture/selenium009.png)
+    - ![frontend-dev-007](/static/assets/img/posts/frontend-lecture/frontend-dev-007.png)
+    - ![frontend-dev-008](/static/assets/img/posts/frontend-lecture/frontend-dev-008.png)
+    - ![frontend-dev-009](/static/assets/img/posts/frontend-lecture/frontend-dev-009.png)
     
 ### 3rd Iteration
 - 각 모듈들을 bundling 할 것 (webpack 이용)
@@ -259,7 +263,7 @@ $ npm install babel babel-cli --save-dev
 
 
 
-```js
+```javascript
 // webpack.config.js
 module.exports = {
     entry: './public/assets/js/app.js',
@@ -288,7 +292,8 @@ module.exports = {
     - apply, bind, call 모두 this를 첫번째 파라미터로 바꿔줍니다.
     - apply, call은 적용 후, 실행을 해줍니다.
     - bind는 적용만 하고 실행은 하지 않습니다.
-```js
+
+```javascript
 var panki = {
     name : 'panki park',
     say: function() {
