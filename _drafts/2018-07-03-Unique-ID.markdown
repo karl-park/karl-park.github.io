@@ -1,0 +1,14 @@
+https://developer.android.com/training/articles/user-data-ids?hl=ko
+
+http://dktfrmaster.blogspot.com/2016/11/id.html
+
+https://developers.google.com/instance-id/guides/android-implementation?hl=ko
+
+---
+layout: post
+title:  "[Android] Unique Identifier"
+date:   2018-06-01 09:00:00
+tags: java android uuid id identifier
+categories: devstory
+---
+

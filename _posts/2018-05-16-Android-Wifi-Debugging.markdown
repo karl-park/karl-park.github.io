@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[Android] Wifi로 디버깅하기"
-date:   2018-05-03 09:00:00
+date:   2018-05-16 09:00:00
 tags: java android debug wifi
 categories: devstory
 ---
