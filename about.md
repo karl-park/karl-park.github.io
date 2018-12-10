@@ -32,6 +32,6 @@ order: 10
 
 - SimpleFit 공동창업자 및 개발자(PHP, Servlet, JavaScript)
 
-- Podotree에서 iOS 앱개발, Push 서버 개발, 운영툴 개발(PHP, iOS)
+- 카카오페이지에서 iOS 앱개발, Push 서버 개발, 운영툴 개발(PHP, iOS)
 
 - 창원남고등학교 졸업
