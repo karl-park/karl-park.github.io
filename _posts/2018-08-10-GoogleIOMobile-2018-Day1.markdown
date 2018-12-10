@@ -13,10 +13,10 @@ categories: devstory
 이번 글에서는 그 첫시간으로 6월 25일에 열렸던 Google I/O 키노트를 정리해보겠습니다.
 
 ### Posts
-- [Good-Information/103 Google for Mobile I/O Recap_001](dooray://1387695619080878080/tasks/2261715514282102815 "closed")
-- [Good-Information/106 Google for Mobile I/O Recap_002](dooray://1387695619080878080/tasks/2261715727556268900 "closed")
-- [Good-Information/104 Google for Mobile I/O Recap_003](dooray://1387695619080878080/tasks/2281128951586660690 "closed")
-- [Good-Information/105 Google for Mobile I/O Recap_004](dooray://1387695619080878080/tasks/2261715871455186377 "closed")
+- [Google for Mobile I/O Recap_001](/devstory/2018/08/10/GoogleIOMobile-2018-Day1/)
+- [Google for Mobile I/O Recap_002](/devstory/2018/08/10/GoogleIOMobile-2018-Day2/)
+- [Google for Mobile I/O Recap_003](/devstory/2018/08/10/GoogleIOMobile-2018-Day3/)
+- [Google for Mobile I/O Recap_004](/devstory/2018/08/10/GoogleIOMobile-2018-Day4/)
 
 
 # Keynote

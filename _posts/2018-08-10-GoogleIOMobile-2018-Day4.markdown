@@ -10,15 +10,15 @@ categories: devstory
 
 6/25일부터 26일, 양일간 열린 Google for Mobile I/O Recep 2018 Seoul(이하 Google I/O) 참가후기에 대한 글입니다.
 
-이번 글에서는 [지난 시간의 글 - 개발자 세션 및 AI 세션](https://nhnent.dooray.com/project/posts/2281128951586660690)에 이어서, Google Play Instant 앱에 대한 코드랩 내용이 다뤄집니다.
+이번 글에서는 [지난 시간의 글 - 개발자 세션 및 AI 세션](h/devstory/2018/08/10/GoogleIOMobile-2018-Day3/)에 이어서, Google Play Instant 앱에 대한 코드랩 내용이 다뤄집니다.
 
 해당 세션은 6월 26일 코드랩 시간에 진행되었으며, 기존에 가지고 있던 앱을 Instant App으로 바꿔보는 실습시간으로 진행되었습니다.
 
 ### Posts
-- [Good-Information/103 Google for Mobile I/O Recap_001](dooray://1387695619080878080/tasks/2261715514282102815 "closed")
-- [Good-Information/106 Google for Mobile I/O Recap_002](dooray://1387695619080878080/tasks/2261715727556268900 "closed")
-- [Good-Information/104 Google for Mobile I/O Recap_003](dooray://1387695619080878080/tasks/2281128951586660690 "closed")
-- [Good-Information/105 Google for Mobile I/O Recap_004](dooray://1387695619080878080/tasks/2261715871455186377 "closed")
+- [Google for Mobile I/O Recap_001](/devstory/2018/08/10/GoogleIOMobile-2018-Day1/)
+- [Google for Mobile I/O Recap_002](/devstory/2018/08/10/GoogleIOMobile-2018-Day2/)
+- [Google for Mobile I/O Recap_003](/devstory/2018/08/10/GoogleIOMobile-2018-Day3/)
+- [Google for Mobile I/O Recap_004](/devstory/2018/08/10/GoogleIOMobile-2018-Day4/)
 
 
 ## Exhibit A - Analyze the APK deeply

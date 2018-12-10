@@ -10,13 +10,13 @@ categories: devstory
 
 6/25일부터 26일, 양일간 열린 Google for Mobile I/O Recep 2018 Seoul(이하 Google I/O) 참가후기에 대한 글입니다.
 
-이번 글에서는 [지난 시간의 글 - 키노트](https://nhnent.dooray.com/project/posts/2261715514282102815)에 이어서, Android P에 대한 주요 기능 소개가 다뤄집니다.
+이번 글에서는 [지난 시간의 글 - 키노트](/devstory/2018/08/10/GoogleIOMobile-2018-Day1/)에 이어서, Android P에 대한 주요 기능 소개가 다뤄집니다.
 
 ### Posts
-- [Good-Information/103 Google for Mobile I/O Recap_001](dooray://1387695619080878080/tasks/2261715514282102815 "closed")
-- [Good-Information/106 Google for Mobile I/O Recap_002](dooray://1387695619080878080/tasks/2261715727556268900 "closed")
-- [Good-Information/104 Google for Mobile I/O Recap_003](dooray://1387695619080878080/tasks/2281128951586660690 "closed")
-- [Good-Information/105 Google for Mobile I/O Recap_004](dooray://1387695619080878080/tasks/2261715871455186377 "closed")
+- [Google for Mobile I/O Recap_001](/devstory/2018/08/10/GoogleIOMobile-2018-Day1/)
+- [Google for Mobile I/O Recap_002](/devstory/2018/08/10/GoogleIOMobile-2018-Day2/)
+- [Google for Mobile I/O Recap_003](/devstory/2018/08/10/GoogleIOMobile-2018-Day3/)
+- [Google for Mobile I/O Recap_004](/devstory/2018/08/10/GoogleIOMobile-2018-Day4/)
 
 
 
