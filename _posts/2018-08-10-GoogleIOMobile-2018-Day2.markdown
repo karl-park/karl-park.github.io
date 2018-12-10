@@ -13,10 +13,11 @@ categories: devstory
 이번 글에서는 [지난 시간의 글 - 키노트](/devstory/2018/08/10/GoogleIOMobile-2018-Day1/)에 이어서, Android P에 대한 주요 기능 소개가 다뤄집니다.
 
 ### Posts
-- [Google for Mobile I/O Recap_001](/devstory/2018/08/10/GoogleIOMobile-2018-Day1/)
-- [Google for Mobile I/O Recap_002](/devstory/2018/08/10/GoogleIOMobile-2018-Day2/)
-- [Google for Mobile I/O Recap_003](/devstory/2018/08/10/GoogleIOMobile-2018-Day3/)
-- [Google for Mobile I/O Recap_004](/devstory/2018/08/10/GoogleIOMobile-2018-Day4/)
+- [Google for Mobile I/O Recap_001](/devstory/2018/08/10/GoogleIOMobile-2018-Day1/) <br/>
+- [Google for Mobile I/O Recap_002](/devstory/2018/08/10/GoogleIOMobile-2018-Day2/) <br/>
+- [Google for Mobile I/O Recap_003](/devstory/2018/08/10/GoogleIOMobile-2018-Day3/) <br/>
+- [Google for Mobile I/O Recap_004](/devstory/2018/08/10/GoogleIOMobile-2018-Day4/) <br/>
+
 
 
 

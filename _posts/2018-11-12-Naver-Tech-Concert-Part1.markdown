@@ -8,9 +8,10 @@ categories: devstory
 
 
 ##### 다른 세션들
-[Naver Tech Concert 2018 (Day2) - Part1](/devstory/2018/11/12/Naver-Tech-Concert-Part1/)
-[Naver Tech Concert 2018 (Day2) - Part2](/devstory/2018/11/12/Naver-Tech-Concert-Part2/)
-[Naver Tech Concert 2018 (Day2) - Part3](/devstory/2018/11/12/Naver-Tech-Concert-Part3/)
+[Naver Tech Concert 2018 (Day2) - Part1](/devstory/2018/11/12/Naver-Tech-Concert-Part1/) <br/>
+[Naver Tech Concert 2018 (Day2) - Part2](/devstory/2018/11/12/Naver-Tech-Concert-Part2/) <br/>
+[Naver Tech Concert 2018 (Day2) - Part3](/devstory/2018/11/12/Naver-Tech-Concert-Part3/) <br/>
+
 
 # 1. 변화의 시대: 안드로이드 앱 어떻게 개발할 것인가?
 > 신동길(네이버 앱개발)님의 발표내용을 바탕으로 재구성하였습니다.
@@ -27,18 +28,18 @@ Java는 "상속, 오버라이드" 구조와 Listener 표현법1-1이 코드를 �
 
 
 ## 안드로이드 앱의 구조
-![1.png](/static/assets/img/posts/navertachconcert18/1-1.png)
+![1.png](/static/assets/img/posts/navertechconcert18/1-1.png)
 
 안드로이드 앱은 Application위에 Android의 주요 컴포넌트들 및 Web Engine, Shared/Persistant Data, Networking 등의 컴포넌트들이 올라가있는 것으로 설명될 수 있습니다.
 
 
 ### UI 구조 - Activity, Window, Fragment, View
-![2.png](/static/assets/img/posts/navertachconcert18/1-2.png)
+![2.png](/static/assets/img/posts/navertechconcert18/1-2.png)
 안드로이드 프레임워크는 GUI 기반 구조입니다. Activity 구조, Fragment 구조, View 기반의 구조의 장단점은 무엇인가? 어떤 구조를 택할 것인가를 같이 고민해보며 안드로이드 개발을 했으면 합니다.
 
 
 ### Page Navigation
-![3.png](/static/assets/img/posts/navertachconcert18/1-3.png)
+![3.png](/static/assets/img/posts/navertechconcert18/1-3.png)
 요새 Android 진영에 부는 바람이 바로 Single Activity App입니다. 마치 Web Front단에서 SPA(Single Page Application)가 유행인(유행이었던) 것처럼, Android도 하나의 Activity에서 SubView들로 Page Navigation을 구현하는 방식이 실험되고 시도되고 있습니다.
 
 
@@ -118,11 +119,11 @@ MVC, MVP, MVVM 등 패턴은 통일된 인터페이스를 가질 수 있지만, 
 
 #### MVC, MVP, MVVM
 
-![4.png](/static/assets/img/posts/navertachconcert18/1-4.png)
+![4.png](/static/assets/img/posts/navertechconcert18/1-4.png)
 
-![5.png](/static/assets/img/posts/navertachconcert18/1-5.png)
+![5.png](/static/assets/img/posts/navertechconcert18/1-5.png)
 
-![6.png](/static/assets/img/posts/navertachconcert18/1-6.png)
+![6.png](/static/assets/img/posts/navertechconcert18/1-6.png)
 
 <출처: [ream post](https://academy.realm.io/kr/posts/eric-maxwell-mvc-mvp-and-mvvm-on-android/)>
 
@@ -163,7 +164,7 @@ MVVM에서 가장 중요한 것은 바로, "DataBindingUtils" 일 것입니다. 
 
 ## 우선은 Clean Architecture
 
-![7.png](/static/assets/img/posts/navertachconcert18/1-7.png)
+![7.png](/static/assets/img/posts/navertechconcert18/1-7.png)
 
 MVVM 은 Clean Architecture를 지향합니다. [마틴 파울러 형님의 Clean Architecture PDF](http://putregai.com/sbooks/clean_arch.pdf)
 

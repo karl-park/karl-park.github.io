@@ -12,22 +12,22 @@ categories: devstory
 
 ### Part1
 - Contents
-    - 신동길, 네이버앱 | 1. 변화의 시대: 안드로이드 앱 어떻게 개발할 것인가?
-    - 김범준, 뱅크샐러드 | 2. Efficient and Testable MVVM pattern
+    - 신동길, 네이버앱 \| 1. 변화의 시대: 안드로이드 앱 어떻게 개발할 것인가?
+    - 김범준, 뱅크샐러드 \| 2. Efficient and Testable MVVM pattern
 - Link : [Naver Tech Concert 2018 (Day2) - Part1](/devstory/2018/11/12/Naver-Tech-Concert-Part1/)
 
 
 ### Part2
 - Contents
-    - 신동길, 네이버 파파고 | 3. 내가 사랑했던 개발자들
-    - 이형욱, 네이버 웨일브라우저 | 4. 안드로이드 웹뷰의 모든것
+    - 신동길, 네이버 파파고 \| 3. 내가 사랑했던 개발자들
+    - 이형욱, 네이버 웨일브라우저 \| 4. 안드로이드 웹뷰의 모든것
 -  Link : [Naver Tech Concert 2018 (Day2) - Part2](/devstory/2018/11/12/Naver-Tech-Concert-Part2/)
 
 
 ### Part3
 - Contents
-    - 권태환, 요기요 | 5. 안드로이드에서 코루틴은 어떻게 적용할 수 있을까?
-    - 송의초경, NTS | 6. 자동화, 계륵에 살 붙이기
+    - 권태환, 요기요 \| 5. 안드로이드에서 코루틴은 어떻게 적용할 수 있을까?
+    - 송의초경, NTS \| 6. 자동화, 계륵에 살 붙이기
 - Link : [Naver Tech Concert 2018 (Day2) - Part3](/devstory/2018/11/12/Naver-Tech-Concert-Part3/)
 
 
@@ -36,4 +36,4 @@ categories: devstory
 [Go to TECH CONCERT](https://techcon.naver.com/)
 
 #### TOC
-![toc.png](/static/assets/img/posts/navertachconcert18/toc.png)
+![toc.png](/static/assets/img/posts/navertechconcert18/toc.png)

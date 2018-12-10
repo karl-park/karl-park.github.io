@@ -8,10 +8,9 @@ categories: devstory
 
 
 ##### 다른 세션들
-[Naver Tech Concert 2018 (Day2) - Part1](/devstory/2018/11/12/Naver-Tech-Concert-Part1/)
-[Naver Tech Concert 2018 (Day2) - Part2](/devstory/2018/11/12/Naver-Tech-Concert-Part2/)
-[Naver Tech Concert 2018 (Day2) - Part3](/devstory/2018/11/12/Naver-Tech-Concert-Part3/)
-
+[Naver Tech Concert 2018 (Day2) - Part1](/devstory/2018/11/12/Naver-Tech-Concert-Part1/) <br/>
+[Naver Tech Concert 2018 (Day2) - Part2](/devstory/2018/11/12/Naver-Tech-Concert-Part2/) <br/>
+[Naver Tech Concert 2018 (Day2) - Part3](/devstory/2018/11/12/Naver-Tech-Concert-Part3/) <br/>
 
 
 # 5. 안드로이드에서 코루틴은 어떻게 적용할 수 있을까?
@@ -34,8 +33,8 @@ Subroutine은 우리가 자주 쓰이는 function/method 입니다. 즉 **return
 (subroutines : a procedure, a function, routine, a method or a subprogram)
 , ...
 
-![1.png](/static/assets/img/posts/navertachconcert18/3-1.png)
-![1.png](/static/assets/img/posts/navertachconcert18/3-2.png)
+![1.png](/static/assets/img/posts/navertechconcert18/3-1.png)
+![1.png](/static/assets/img/posts/navertechconcert18/3-2.png)
 
 
 Subroutine을 알았다면 Coroutine은 서브루틴을 이용해서 다음과 같이 설명할 수 있습니다. (Subroutine은 Coroutine의 한 종류라고도 볼 수 있습니다. 혹은 Subroutine을 일반화하면 Coroutine이 되는 것이죠)
@@ -91,7 +90,7 @@ Naver Tech Concert 2번째 날의 마지막 세션으로 "자동화, 계륵에 �
 NTS에서는 UI Automation Test를 위해 [appium (Apache License 2.0)](http://appium.io/)을 도입하여 사용중입니다. 
 
 Appium을 선택하기전 고려한 Frameworks들은 다음과 같고 최종적으로 Appium을 선택하였습니다.
-![3.png](/static/assets/img/posts/navertachconcert18/3-3.png)
+![3.png](/static/assets/img/posts/navertechconcert18/3-3.png)
 
 
 ## Daily Jenkins Build

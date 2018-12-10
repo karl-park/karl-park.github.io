@@ -8,9 +8,10 @@ categories: devstory
 
 
 ##### 다른 세션들
-[Naver Tech Concert 2018 (Day2) - Part1](/devstory/2018/11/12/Naver-Tech-Concert-Part1/)
-[Naver Tech Concert 2018 (Day2) - Part2](/devstory/2018/11/12/Naver-Tech-Concert-Part2/)
-[Naver Tech Concert 2018 (Day2) - Part3](/devstory/2018/11/12/Naver-Tech-Concert-Part3/)
+[Naver Tech Concert 2018 (Day2) - Part1](/devstory/2018/11/12/Naver-Tech-Concert-Part1/) <br/>
+[Naver Tech Concert 2018 (Day2) - Part2](/devstory/2018/11/12/Naver-Tech-Concert-Part2/) <br/>
+[Naver Tech Concert 2018 (Day2) - Part3](/devstory/2018/11/12/Naver-Tech-Concert-Part3/) <br/>
+
 
 # 3. 내가 사랑했던 개발자들
 부제: 더 나은 협업을 위한 디자이너, 기획자 이해하기
@@ -26,7 +27,7 @@ categories: devstory
 
 발표에서는 다음과 같은 뭉떵이로 소개를 합니다.
 
-![1.png](/static/assets/img/posts/navertachconcert18/2-1.png)
+![1.png](/static/assets/img/posts/navertechconcert18/2-1.png)
 
 
 이 중, UI, BX, 인터렉션, 그래픽 디자이너들을 살펴봅시다.
@@ -73,15 +74,15 @@ UX 디자이너와 기획자는 많은 비슷한 부분을 공유합니다. 바�
 
 > 다 이유가 있습니다.
 
-![2.png](/static/assets/img/posts/navertachconcert18/2-2.png)
+![2.png](/static/assets/img/posts/navertechconcert18/2-2.png)
 카메라처럼 사람도 광각이 있고, 유효한(편한?) 각도는 `10도 정도`로 적다고 합니다.. 그래서 영화 포스터를 볼 때, 가까이서 보면 되게 읽기가 매우 불편한 것이죠.
 
 
-![3.png](/static/assets/img/posts/navertachconcert18/2-3.png)
+![3.png](/static/assets/img/posts/navertechconcert18/2-3.png)
 위의 글을 읽으면 왼쪽이 오른쪽보다 읽기 힘듦니다. 그 이유는 "시선이 아랫줄로 흘러버리기 쉽기" 때문입니다.
 
 디자이너는 이를 이렇게 멋지게 표현하지요.
-![4.png](/static/assets/img/posts/navertachconcert18/2-4.png)
+![4.png](/static/assets/img/posts/navertechconcert18/2-4.png)
 
 간격은 가독성(사용성)에 큰 영향을 준다고 합니다.
 
@@ -117,7 +118,7 @@ UX 디자이너와 기획자는 많은 비슷한 부분을 공유합니다. 바�
     - 모두가 스케치가 익숙하지는 않음
     - 텍스트 검색 불편
 - 깃헙
-    - ![5.png](/static/assets/img/posts/navertachconcert18/2-5.png)
+    - ![5.png](/static/assets/img/posts/navertechconcert18/2-5.png)
     - 깃헙은 개발자들만의 전유물이 아닙니다.
 
 
@@ -138,7 +139,7 @@ UX 디자이너와 기획자는 많은 비슷한 부분을 공유합니다. 바�
 
 위의 말처럼, "툴"을 배우는 것보다 "안목"을 기르는게 매우매우 더욱더욱 중요합니다.
 아래 이미지가 이뻐보인다면, 이쁜것들, 좋은것들을 많이 보는 시간을 가져야합니다.(비핸스, 드리블, 핀터레스트 많이많이 봅시다 ~)
-![6.png](/static/assets/img/posts/navertachconcert18/2-6.png)
+![6.png](/static/assets/img/posts/navertechconcert18/2-6.png)
 
 앱스토어, 플레이스토어의 추천앱을 받아보는 것도 눈을 높이는데 좋습니다.
 그리고 가장 중요한건 "왜 좋은지"를 생각해보는 것. 어떤 점을 고민했을까를 같이 고민해보면 눈이 높아집니다.
@@ -172,7 +173,7 @@ UX 디자이너와 기획자는 많은 비슷한 부분을 공유합니다. 바�
 - 앱의 거의 대부분 배너 광고에서 사용
 - 웹 기반 앱에서 사용 (하이브리드앱)
 - 안드로이드 네이티브 뷰와 함께 사용
-    - ![7.png](/static/assets/img/posts/navertachconcert18/2-7.png)
+    - ![7.png](/static/assets/img/posts/navertechconcert18/2-7.png)
 
 
 #### 웹뷰 역사
@@ -204,8 +205,8 @@ WebView가 Blink를 채택하게 되면서 크롬 브라우저와의 룩앤필�
 
 
 #### 안드로이드 웹뷰의 구조 (현재)
-![8.png](/static/assets/img/posts/navertachconcert18/2-8.png)
-![9.png](/static/assets/img/posts/navertachconcert18/2-9.png)
+![8.png](/static/assets/img/posts/navertechconcert18/2-8.png)
+![9.png](/static/assets/img/posts/navertechconcert18/2-9.png)
 
 
 
@@ -220,13 +221,13 @@ WebView가 Blink를 채택하게 되면서 크롬 브라우저와의 룩앤필�
 
 ## 3. How chromium powered Webview works
 안드로이드에서 크로미움은 다음과 같이 동작합니다.
-![10.png](/static/assets/img/posts/navertachconcert18/2-10.png)
+![10.png](/static/assets/img/posts/navertechconcert18/2-10.png)
 
 
 
 ### 크로미움 웹뷰의 구조적 차이점
-![11.png](/static/assets/img/posts/navertachconcert18/2-11.png)
-![12.png](/static/assets/img/posts/navertachconcert18/2-12.png)
+![11.png](/static/assets/img/posts/navertechconcert18/2-11.png)
+![12.png](/static/assets/img/posts/navertechconcert18/2-12.png)
 
 웨일/크롬 브라우저는 SurfaceView를 쓰기 때문에 독단적인 lifecycle 및 OpenGL 등과 연동할 수 있습니다. 또한 멀티 프로세스가 가능한 것이 특징입니다. UI 쓰레드와 Compositor 쓰레드, Raster 쓰레드가 분리되어있습니다.
 
@@ -237,14 +238,14 @@ WebView가 Blink를 채택하게 되면서 크롬 브라우저와의 룩앤필�
 
 ### 크로미움 웹뷰 렌더링 파이프라인
 - Kitkat, 4.4 이하
-![13.png](/static/assets/img/posts/navertachconcert18/2-13.png)
-![14.png](/static/assets/img/posts/navertachconcert18/2-14.png)
+![13.png](/static/assets/img/posts/navertechconcert18/2-13.png)
+![14.png](/static/assets/img/posts/navertechconcert18/2-14.png)
 
 MainThread에서 유저의 입력 및 드로우(출력)까지도 모두 담당해서 느렸습니다.
 
 - Lollipop 5.0 이상
-![15.png](/static/assets/img/posts/navertachconcert18/2-15.png)
-![16.png](/static/assets/img/posts/navertachconcert18/2-16.png)
-![17.png](/static/assets/img/posts/navertachconcert18/2-17.png)
+![15.png](/static/assets/img/posts/navertechconcert18/2-15.png)
+![16.png](/static/assets/img/posts/navertechconcert18/2-16.png)
+![17.png](/static/assets/img/posts/navertechconcert18/2-17.png)
 
 메인 쓰레드를 많이 쓰지 않도록 개선되었고, Chromium 코드에 안드로이드 웹뷰 코드가 들어간 unbundled가 적용되었습니다.
