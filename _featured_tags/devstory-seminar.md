@@ -4,5 +4,5 @@ title: Seminar & Conference
 slug: seminar
 category: devstory
 menu: false
-order: 9
+order: 10
 ---

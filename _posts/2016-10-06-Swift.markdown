@@ -2,7 +2,7 @@
 layout: post
 title:  "[Swift] Hello Swift"
 date:   2016-09-19 03:00:00
-tags: kotlin_swift swift3
+tags: swift swift3
 categories: devstory
 ---
 

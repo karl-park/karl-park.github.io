@@ -1,7 +1,7 @@
 ---
 layout: tag-blog
-title: Kotlin & Swift
-slug: kotlin_swift
+title: Kotlin
+slug: kotlin
 category: devstory
 menu: false
 order: 7

@@ -1,8 +1,8 @@
 ---
 layout: tag-blog
-title: Dictionary
-slug: dictionary
+title: Swift
+slug: swift
 category: devstory
 menu: false
-order: 9
+order: 8
 ---
