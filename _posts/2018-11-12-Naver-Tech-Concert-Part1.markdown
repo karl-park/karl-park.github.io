@@ -98,6 +98,7 @@ public class EventActivity extends Activity {
 - 크래시 발생시 해당 모듈에서 전파되기를 원하지 않을 때
 
 멀티프로세스의 사용을 위해서는 다음 작업이 필요합니다.
+
 1) 별도의 Activity, Service 등 컴포넌트에 process 속성 지정 [참고](https://developer.android.com/guide/topics/manifest/application-element#proc)
    ```xml
     <activity android:process="{string}" />
