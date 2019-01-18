@@ -7,15 +7,15 @@ order: 10
 
 ## Hello
 
-반갑습니다. 박판기입니다.
-"함께", "성장", "열정"이라는 단어들을 좋아라하는 개발자입니다.
+안녕하세요! 반갑습니다. 박판기입니다.
+**함께**, **성장**, **열정** 이라는 단어들을 정말 정말 좋아하는 개발자입니다.
 
-원피스의 루피가 "해적왕"이 되고싶다는 꿈처럼, 조금은 오글거리지만
-"FullStack" 개발자가 되는게 우선의 목표입니다.
+아직은 부족하지만 다양한 분야, 다양한 환경에서 일을 해보며 열린 시각을 가지려 노력중인 개발자입니다.
 
-이후에는 세상을 변화시키며, 리드할 수 있는 리더가 되고싶습니다.
+서버도, 클라이언트도, 인공지능이나 블록체인 등도 결국 "logical"을 기본으로한
+다른 도메인이라는 점에서, `joker`, `wildcard` 역할을 하는 개발자가 되는것이 꿈입니다.
 
-그 방법에는 개발도, 사업도, 디자인도 될 수 있다는 열린 생각을 가지려 노력중입니다.
+다양한 것을 경험해보고, 특정 도메인 지식들 보다는, 프로페셔널한 "감각"을 키우고 싶습니다.
 
 찾아주신 모든분들 감사하며, 건강하세요 !
 
@@ -24,14 +24,14 @@ order: 10
 
 ## Careers
 
-- NHN Entertainment에서 Gamebase, HSP 등 게임플랫폼 개발(Android, iOS, JavaScript)
+- NHN에서 Gamebase, HSP 등 Game Client Platform 개발(Android, iOS, JavaScript)
 
-- Gabia Infrastructure 개발팀에서 서버 모니터링 시스템 등 개발(PHP, Python, JavaScript)
+- Gabia Infrastructure 팀에서 Server Monitoring System 등 개발(PHP, Python, JavaScript)
 
 - 한동대학교 컴퓨터공학과 졸업
 
-- SimpleFit 공동창업자 및 개발자(PHP, Servlet, JavaScript)
+- SimpleFit Cofounder, Sole Developer(PHP, Servlet, JavaScript, MySQL)
 
-- 카카오페이지에서 iOS 앱개발, Push 서버 개발, 운영툴 개발(PHP, iOS)
+- KakaoPage에서 iOS, Push Server, Back Office 개발(PHP, iOS)
 
 - 창원남고등학교 졸업
