@@ -7,11 +7,11 @@ categories: devstory
 ---
 
 ##### 다른 세션들
-[[Android] SafetyNet Overview : 기기/앱 위변조 검사](/devstory/2019/01/17/Android-SsafetyNet-Overview/) <br/>
-[[Android] SafetyNet Attestation API : 기기/앱 위변조 검사](/devstory/2019/01/17/Android-SsafetyNet-Attestation/) <br/>
-[[Android] SafetyNet Safe Browsing API : 위험한 URL인지 체크하기](/devstory/2019/01/17/Android-SsafetyNet-SafeBrowsing/) <br/>
-[[Android] SafetyNet reCAPTCHA API : reCAPTCHA 사용하여 봇인지 체크하기](/devstory/2019/01/17/Android-SsafetyNet-reCAPTCHA/)  <br/>
-[[Android] SafetyNet Verify Apps API : 설치된 악성앱들 목록 받기](/devstory/2019/01/17/Android-SsafetyNet-VerifyApps/)
+[[Android] SafetyNet Overview : 기기/앱 위변조 검사](/devstory/2019/01/17/Android-SafetyNet-Overview/) <br/>
+[[Android] SafetyNet Attestation API : 기기/앱 위변조 검사](/devstory/2019/01/17/Android-SafetyNet-Attestation/) <br/>
+[[Android] SafetyNet Safe Browsing API : 위험한 URL인지 체크하기](/devstory/2019/01/17/Android-SafetyNet-SafeBrowsing/) <br/>
+[[Android] SafetyNet reCAPTCHA API : reCAPTCHA 사용하여 봇인지 체크하기](/devstory/2019/01/17/Android-SafetyNet-reCAPTCHA/)  <br/>
+[[Android] SafetyNet Verify Apps API : 설치된 악성앱들 목록 받기](/devstory/2019/01/17/Android-SafetyNet-VerifyApps/)
 
 
 # SafetyNet Safe Browsing API
