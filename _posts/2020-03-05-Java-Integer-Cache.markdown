@@ -118,7 +118,7 @@ public static Integer valueOf(int i) {
 Java는 `-128` 부터 `127` 범위의 정수 객체를 캐싱합니다. 
 왜냐하면, 이 범위의 정수들은 개발할 때 빈번하게 사용되기 때문입니다.
 
-![Integer Cache Source Code](/static/assets/img/integercache/integercache.jpeg)
+![Integer Cache Source Code](/static/assets/img/posts/integercache/integercache.jpeg)
 
 캐시는 static block에 의해 IntegerCache 클래스가 메모리에 로드되는 처음에 초기화됩니다. 
 캐시의 최대값은 JVM 옵션을 통해 다음과 같이 조정할 수 있습니다.
