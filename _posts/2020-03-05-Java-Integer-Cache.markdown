@@ -12,8 +12,18 @@ categories: devstory
 - - -
 
 인터뷰에서, 내 친구가 다음과 같은 질문을 받았습니다.
-만약, `Integer a = 127; Integer b = 127;`이라는 2개의 Integer 객체가 있을 때, 어떻게 **a == b**의 답은 뭘까요?
+```java
+Integer a = 127; 
+Integer b = 127;
+```
+위와 같은 2개의 Integer 객체가 있습니다.
 
+```java
+a == b (true? false?)
+```
+**a == b** 의 답은 뭘까요?
+
+---
 
 본문에서는 이 질문에 대한 답과, 답에 대한 설명을 말하고자 합니다.
 답을 간단히 말하자면, `int` 리터럴을 `Integer` reference로 직접 대입하는 것은 `auth-boxing` 컨셉의 예입니다. 리터럴 값이 객체로 변환되는 코드는 컴파일러에 의해 수행되고, 컴파일 시간동안, 컴파일러는 `Integer a = 127;`을 `Integer a = Integer.valueOf(127);`로 변경합니다.
