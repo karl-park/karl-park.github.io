@@ -26,7 +26,7 @@ a == b (true? false?)
 ---
 
 본문에서는 이 질문에 대한 답과, 답에 대한 설명을 말하고자 합니다.
-답을 간단히 말하자면, `int` 리터럴을 `Integer` reference로 직접 대입하는 것은 `auth-boxing` 컨셉의 예입니다. 리터럴 값이 객체로 변환되는 코드는 컴파일러에 의해 수행되고, 컴파일 시간동안, 컴파일러는 `Integer a = 127;`을 `Integer a = Integer.valueOf(127);`로 변경합니다.
+답을 간단히 말하자면, `int` 리터럴을 `Integer` reference로 직접 대입하는 것은 `auto-boxing` 컨셉의 예입니다. 리터럴 값이 객체로 변환되는 코드는 컴파일러에 의해 수행되고, 컴파일 시간동안, 컴파일러는 `Integer a = 127;`을 `Integer a = Integer.valueOf(127);`로 변경합니다.
 
 
 Integer 클래스는 내부에서 integer 사용을 위해 `IntegerCache`를 관리합니다. 이 캐시의 기본 범위는 `-128 ~ 127`이며, `Integer.valueOf()` 메소드는 캐시 범위에 해당하는 objects를 리턴합니다. 그렇기에, `a`와 `b` 둘다, 같은 object 를 가리키게 되므로, `a == b`가 `true`가 됩니다.
@@ -47,7 +47,7 @@ Integer 클래스는 내부에서 integer 사용을 위해 `IntegerCache`를 관
 
 ---
 
-Java는 모든 primitive types에 대해서 **wrapper classes**를 제공하고있고, **auth-boxing, auto-unboxing**을 지원합니다.
+Java는 모든 primitive types에 대해서 **wrapper classes**를 제공하고있고, **auto-boxing, auto-unboxing**을 지원합니다.
 
 
 ```java
