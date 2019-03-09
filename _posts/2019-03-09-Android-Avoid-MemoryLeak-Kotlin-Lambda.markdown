@@ -53,7 +53,7 @@ public class MyJavaLeakActivity extends AppCompatActivity {
 위의 Java로 쓰여진 MyJavaLeakActivity에 대한 **`Bytecode`**를 살펴봅시다.
 (빌드되어진 apk 파일을 다음과 같이 열어보시면 확인하실 수 있습니다.)
 
-![smali bytecode](/static/assets/img/posts/lambda-memleak/smali.jpeg)
+![smali bytecode](/static/assets/img/posts/lambda-memleak/smali.png)
 
 먼저, **MyJavaLeakActivity** 파일의 Bytecode를 봅시다. 
 (위 스크린샷에서 **MyJavaLeakActivity$1 파일**도 생성되어 있다는 것에 집중하세요! 나중에 살펴볼꺼에요.)
