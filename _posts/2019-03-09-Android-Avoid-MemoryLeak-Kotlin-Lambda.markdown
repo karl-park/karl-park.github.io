@@ -50,14 +50,15 @@ public class MyJavaLeakActivity extends AppCompatActivity {
 
 그래서, MyJavaLeakActivity가 destroyed 되더라도, Runnable 객체가 살아있음으로 인해, ***Garbage Collected*** 되지 못하고,(최대 20초 동안) MyJavaLeakActivity는 memory leak을 유발시킵니다. 물론, 20초 후에는 GC에 의해 메모리에서 제거되겠지요.
 
-위의 Java로 쓰여진 MyJavaLeakActivity에 대한 **`Bytecode`**를 살펴봅시다.
+위의 Java로 쓰여진 MyJavaLeakActivity에 대한 **`Bytecode`** 를 살펴봅시다.
 (빌드되어진 apk 파일을 다음과 같이 열어보시면 확인하실 수 있습니다.)
 
 ![smali bytecode](/static/assets/img/posts/lambda-memleak/smali.png)
 
+
 먼저, **MyJavaLeakActivity** 파일의 Bytecode를 봅시다. 
 (위 스크린샷에서 **MyJavaLeakActivity$1 파일**도 생성되어 있다는 것에 집중하세요! 나중에 살펴볼꺼에요.)
-(+ 본문 내용과 크게 관련이 없는 부분은 의도적으로 생략하였습니다. 전제 풀코드를 보시려면, 
+(+ Bytecode 중, 본문 내용과 크게 관련이 없는 부분은 의도적으로 생략하였습니다.)
 
 ```smali
 .class public Lcom/eungpang/android/memoryleaktest/MyJavaLeakActivity;
@@ -104,15 +105,18 @@ public class MyJavaLeakActivity extends AppCompatActivity {
 
 ```smalltalk
 new-instance v0, Lcom/eungpang/android/memoryleaktest/MyJavaLeakActivity$1;
+
 invoke-direct {v0, p0}, Lcom/eungpang/android/memoryleaktest/MyJavaLeakActivity$1;-><init>(Lcom/eungpang/android/memoryleaktest/MyJavaLeakActivity;)V
 ```
 
 우리는 익명 클래스 객체가 생성될 때, 외부 클래스의 참조를 가지고 있다는 것을 알고 있습니다. 
 여기에서는 `MyJavaLeakActivity$1` 인스턴스를 생성하여 **v0** 변수에 저장하고, 해당 값을 이용하여, MyJavaLeakActivity의 초기화를 진행하는 것을 볼 수 있습니다.
 
-
-> ***마치 Inner Class가 Outer Class의 참조를 가지고 있는 것처럼, 익명 클래스 객체 또한 외부 클래스 객체 레퍼런스를 가지고 있습니다.***
-
+<br/>
+<br/>
+> ***마치 Inner Class가 Outer Class의 참조를 가지고 있는 것처럼, 익명 클래스 인스턴스 또한 외부 클래스 인스턴스의 레퍼런스를 가지고 있습니다.***
+<br/>
+<br/>
 
 ---
 
@@ -162,7 +166,7 @@ MyJavaLeakActivity$1 클래스를 살펴봅시다.
 
 여기서 우리가 주목할 것은, 아래 구문입니다.
 
-```
+```smali
 # interfaces
 .implements Ljava/lang/Runnable;
 
@@ -174,7 +178,7 @@ MyJavaLeakActivity$1 클래스를 살펴봅시다.
 
 이 클래스(`MyJavaLeakActivity$1`)는 Runnable 인터페이스를 구현했군요. MyJavaLeakActivity 타입의 필드를 가지고 있으며, 아래 생성자를 통해 MyJavaLeakActivity 인스턴스를 받고 있습니다.
 
-```
+```smali
 # direct methods
 .method constructor <init>(Lcom/eungpang/android/memoryleaktest/MyJavaLeakActivity;)V
 ```
@@ -184,6 +188,7 @@ MyJavaLeakActivity$1 클래스를 살펴봅시다.
 ---
 
 # Kotlin, Lambda and SAM
+
 위의 MyJavaLeakActivity를 그~대로 Kotlin으로 옮겨봅시다.
 
 ```kotlin
@@ -207,6 +212,8 @@ class MyKotlinLeakActivity : AppCompatActivity() {
 
 단순히, Kotlin의 **Lambda/SAM** (Single Abstract Method)을 이용해 포팅하였습니다.
 코드만 보자면, 위의 Java코드와 동일하게 동작하리라고 생각할 수 있겠는데요 !! Bytecode를 살펴봅시다 !!!
+
+먼저 **MyKotlinLeakActivity** 클래스 **Bytecode** 입니다.
 
 
 ```smali
@@ -249,7 +256,7 @@ class MyKotlinLeakActivity : AppCompatActivity() {
 ...
 ```
 
-코드를 보면, Java가 변환된 Bytecode와 다소 차이점이 있는 것을 바로 알 수 있습니다.
+코드를 보면, Java가 변환된 Bytecode와 다소 차이점이 있는 것을 ~~바로~~ 자세히보면 알 수 있습니다.
 
 바로, 아래 부분인데요 ~ Java에서는 new-instance 를 통해 객체를 생성한 반면(MyJavaLeakActivity$1 객체 생성), Kotlin Bytecode에서는 아래와 같이 **MyKotlinLeakActivity$startAsyncTask$task$1** `static 인스턴스`를 가져와서 **v0** 변수에 저장하는 것을 알 수 있습니다.
 
@@ -344,7 +351,7 @@ sget-object v0, Lcom/eungpang/android/memoryleaktest/MyKotlinLeakActivity$startA
 > 
 > 즉, Java 코드에서도 `Lambda expression/SAM`을 통해 개발을 하면, 동일한 효과를 볼 수 있습니다.
 
-> 아래 **부록** `Java에서 Lambda를 사용한다면?` 에서 Java 코드 및 Smali 코드를 확인하실 수 있습니다.
+> 아래 **부록** `"Java에서 Lambda를 사용한다면?"` 에서 Java 코드 및 Smali 코드를 확인하실 수 있습니다.
 ---
 
 
@@ -434,7 +441,7 @@ public class MyJavaLambdaLeakActivity extends AppCompatActivity {
 ...
 ```
 
-`Kotlin`으로 개발을 했을 때 처럼, static field를 가지고 있으면서, **MyJavaLambdaLeakActivity** 인스턴스를 들고있지않아서, memory leak을 예방하는 것을 볼 수 있습니다.
+`Kotlin`으로 개발을 했을 때 처럼, static field를 가지고 있으면서 **MyJavaLambdaLeakActivity** 인스턴스를 들고있지 않아서, memory leak을 예방하는 것을 볼 수 있습니다.
 
 
 ## Leak 분석툴 : LeakCanary
