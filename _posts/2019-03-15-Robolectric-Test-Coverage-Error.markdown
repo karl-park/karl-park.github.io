@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Android&Kotlin] Prevent Robolectric Error When mesuring Test Coverage"
+title:  "[Android&Kotlin] Prevent Robolectric Error When measuring Test Coverage"
 date:   2019-03-15 09:00:00
 tags: android kotlin java robolectric test coverage testcoverage
 categories: devstory
