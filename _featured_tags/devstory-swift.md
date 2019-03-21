@@ -4,5 +4,5 @@ title: Swift
 slug: swift
 category: devstory
 menu: false
-order: 8
+order: 6
 ---

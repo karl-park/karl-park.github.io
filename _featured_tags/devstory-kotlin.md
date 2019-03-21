@@ -4,5 +4,5 @@ title: Kotlin
 slug: kotlin
 category: devstory
 menu: false
-order: 7
+order: 2
 ---

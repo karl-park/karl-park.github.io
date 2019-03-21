@@ -1,8 +1,8 @@
 ---
 layout: tag-blog
-title: Dictionary
-slug: dictionary
+title: Android
+slug: android
 category: devstory
 menu: false
-order: 11
+order: 3
 ---

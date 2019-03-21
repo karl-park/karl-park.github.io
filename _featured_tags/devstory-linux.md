@@ -4,5 +4,5 @@ title: Linux
 slug: linux
 category: devstory
 menu: false
-order: 5
+order: 9
 ---
