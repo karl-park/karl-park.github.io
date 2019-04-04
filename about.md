@@ -5,7 +5,7 @@ menu: true
 order: 10
 ---
 
-## Hello
+## Hello, I'm,
 
 **Android Platform Engineer** particularly interested in stability, readability and performance, and, most importantly, usability. 
 Obsessed with high-coverage test code. 
