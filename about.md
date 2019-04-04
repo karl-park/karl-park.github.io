@@ -7,31 +7,89 @@ order: 10
 
 ## Hello
 
-안녕하세요! 반갑습니다. 박판기입니다.
-**함께**, **성장**, **열정** 이라는 단어들을 정말 정말 좋아하는 개발자입니다.
-
-아직은 부족하지만 다양한 분야, 다양한 환경에서 일을 해보며 열린 시각을 가지려 노력중인 개발자입니다.
-
-서버도, 클라이언트도, 인공지능이나 블록체인 등도 결국 "logical"을 기본으로한
-다른 도메인이라는 점에서, `joker`, `wildcard` 역할을 하는 개발자가 되는것이 꿈입니다.
-
-다양한 것을 경험해보고, 특정 도메인 지식들 보다는, 프로페셔널한 "감각"을 키우고 싶습니다.
-
-찾아주신 모든분들 감사하며, 건강하세요 !
+**Android Platform Engineer** particularly interested in stability, readability and performance, and, most importantly, usability. 
+Obsessed with high-coverage test code. 
+Very hands-on polyglot developer with experience in mobile OS such as Android and iOS, frontend side such as JavaScript, TypeScript and ReactJs, backend likes nodeJs and Spring framework.
 
 
 ---
 
 ## Careers
 
-- NHN에서 Gamebase, HSP 등 Game Client Platform 개발(Android, iOS, JavaScript)
+1. NHN, Mobile Platform SDK Development Team
+- 2016. 01 ~
+- Software Developer
+```
+[Client SDK - Gamebase]
+    - SDK for Game
+    - Authentication, In App Billing, Push Notification, App Launching, Management
+    - Android, iOS, JavaScript (Java, Kotlin, Objective C, TypeScript, JavaScript)
 
-- Gabia Infrastructure 팀에서 Server Monitoring System 등 개발(PHP, Python, JavaScript)
+[Client SDK - HSP]
+    - SDK for Game
+    - Authentication, In App Billing, Push Notification, App Launching, Management
+    - Android SDK, iOS Framework
 
-- 한동대학교 컴퓨터공학과 졸업
+[Web Service - HSP Guide]
+    - Website
+    - JSP & Servlet, JQuery, Bootstrap
+    - https://hspguide.hangame.com
 
-- SimpleFit Cofounder, Sole Developer(PHP, Servlet, JavaScript, MySQL)
+[Client SDK - PaycoID]
+    - Authentication SDK for Payco Service(Fintech Service)
+    - Authentication, Certification SDK
+    - iOS Framework, ObjectiveC
 
-- KakaoPage에서 iOS, Push Server, Back Office 개발(PHP, iOS)
+[Client SDK - HangameID]
+    - Authentication SDK for HANGAME Service(Game Platform)
+    - Authentication, Certification SDK
+    - iOS Framework, ObjectiveC
+```
 
-- 창원남고등학교 졸업
+
+2. Gabia, Infrastructure Team
+- 2015. 07 ~ 2015. 12
+- Software Developer
+```
+[Monitoring System - XMS]
+    - Server Resource Monitoring System (Server Resource Visualization)
+    - JavaScript, JQuery, Python, PHP(Codeigniter), JSP&Servelt
+```
+
+
+3. SimpleFit
+- 2014. 07 ~ 2015. 06
+- Co-founder, Developer
+- http://www.simplefit.co.kr
+```
+[Website - Simplefit]
+    - SimpleFit Web Site
+    - JQuery, HTML5, PHP(Codeigniter), JSP&Servelt
+
+[Website - Admin Page]
+    - Shipping Management, User Management, Order Management, Admin Website
+    - JQuery, HTML5, PHP(Codeigniter), Python, JSP&Servelt
+```
+
+
+4. Kakao Page
+- 2013. 06 ~ 2013. 09
+- Internship
+```
+[iOS Application - Storybox]
+    - iOS Application
+    - ObjectiveC
+
+[Push Notification Server]
+    - APNS, GCM
+    - JavaScript, Python, PHP
+
+[User Management Tool]
+    - Website
+    - Push, Payment, User Management
+    - JavaScript, Python, PHP
+```
+
+
+5. Handong Global University
+
