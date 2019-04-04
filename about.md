@@ -16,7 +16,7 @@ Very hands-on polyglot developer with experience in mobile OS such as Android an
 
 ## Careers
 
-1. NHN, Mobile Platform SDK Development Team
+### NHN, Mobile Platform SDK Development Team
 - 2016.01 ~ Present
 - Software Developer
 
@@ -48,7 +48,7 @@ Very hands-on polyglot developer with experience in mobile OS such as Android an
 ```
 
 
-2. Gabia, Infrastructure Team
+### Gabia, Infrastructure Team
 - 2015.07 ~ 2015.12
 - Software Developer
 
@@ -59,7 +59,7 @@ Very hands-on polyglot developer with experience in mobile OS such as Android an
 ```
 
 
-3. SimpleFit
+### SimpleFit
 - 2014.07 ~ 2015.06
 - Co-founder, Developer
 - http://www.simplefit.co.kr
@@ -75,7 +75,7 @@ Very hands-on polyglot developer with experience in mobile OS such as Android an
 ```
 
 
-4. Kakao Page
+### Kakao Page
 - 2013.06 ~ 2013.09
 - Internship
 
@@ -95,5 +95,5 @@ Very hands-on polyglot developer with experience in mobile OS such as Android an
 ```
 
 
-5. Handong Global University
+### Handong Global University
 
