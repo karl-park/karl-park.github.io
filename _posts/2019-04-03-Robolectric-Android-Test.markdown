@@ -17,8 +17,6 @@ categories: devstory
 - Reference
 ```
 
-
-
 # 서론
 
 안녕하세요. 이번 시간에는 **Android Test Framework** 인 **Robolectric** 에 대해서 다뤄보도록 하겠습니다.
@@ -32,13 +30,18 @@ Android 개발을 하다보면, 자연스레 "테스트"에 눈이 가게 되는
 - **Unit Test**
 - **Instrumentation Test**
 
-<font style="color:red">**Unit Test**</font> 는 말 그대로 "단위 테스트"를 의미합니다. 흔히 TDD로 개발하게 되면, 매 "기능 단위별"로 테스트 코드를 구성하게 되고, 그 테스트 코드를 통과하는 실제 코드를 작성하곤 하지요. 혹은 그 반대도 가능하구요. 이때 사용되는 테스트 코드가 Unit Test 입니다. 
-해당 테스트를 수행하기 위해서는 <font style="color:gray">***module-name/src/test/java/*** </font> 하위에 테스트 코드를 작성하면 됩니다.
+##### Unit Test
+<b style="color:red">Unit Test</b> 는 말 그대로 "단위 테스트"를 의미합니다. 흔히 TDD로 개발하게 되면, 매 "기능 단위별"로 테스트 코드를 구성하게 되고, 그 테스트 코드를 통과하는 실제 코드를 작성하곤 하지요. 혹은 그 반대도 가능하구요. 이때 사용되는 테스트 코드가 Unit Test 입니다.
+해당 테스트를 수행하기 위해서는 <b style="color:gray"><i>module-name/src/test/java/</i></b> 하위에 테스트 코드를 작성하면 됩니다.
 
-<font style="color:red">**Instrumentation Test**</font> 는 실제 하드웨어 기기나 에뮬레이터에서 실행되는 테스트입니다. 안드로이드 환경에서 테스트하기 때문에 실제 [Instrumentation API](https://developer.android.com/reference/android/app/Instrumentation)에 접근 가능합니다. Android 환경에서 실행되는 **AndroidJUnitRunner**를 통해서 실행됩니다. 
-해당 테스트는 <font style="color:gray">***module-name/src/androidTest/java//*** </font> 하위에 테스트 코드를 작성합니다. Instrumentation Test 는 Unit Test에 비해서, 그 속도가 느린 것이 단점입니다. 실제로 앱을 <font style="color:blue">***빌드*** </font> 하고, <font style="color:blue">***배포*** </font> 하며, <font style="color:blue">***실행*** </font> 시키는 과정이 매 테스트마다 포함되기에 그렇습니다.
+<br/>
 
-그렇다면, `이렇게 느린 "Instrumentation Test"를 굳이 사용해야만 할까요?` 
+##### Instrumentation Test
+<b style="color:red">Instrumentation Test</b> 는 실제 하드웨어 기기나 에뮬레이터에서 실행되는 테스트입니다. 안드로이드 환경에서 테스트하기 때문에 실제 [Instrumentation API](https://developer.android.com/reference/android/app/Instrumentation) 에 접근 가능합니다. Android 환경에서 실행되는 **AndroidJUnitRunner**를 통해서 실행됩니다.
+
+해당 테스트는 <b style="color:gray"><i>module-name/src/androidTest/java/</i></b> 하위에 테스트 코드를 작성합니다. Instrumentation Test 는 Unit Test에 비해서, 그 속도가 느린 것이 단점입니다. 실제로 앱을 <b style="color:blue">빌드</b> 하고, <b style="color:blue">배포 </b> 하며, <b style="color:blue">실행</b> 시키는 과정이 매 테스트마다 포함되기에 그렇습니다.
+
+그렇다면, `이렇게 느린 "Instrumentation Test"를 굳이 사용해야만 할까요?`
 유닛 테스트에서 [Instrumentation API](https://developer.android.com/reference/android/app/Instrumentation)에 접근 할 수 있다면(해당 API를 Mocking할 수 있는 프레임워크가 있다면), 유닛 테스트만으로 충분하지 않을까요?
 
 
@@ -48,8 +51,10 @@ Android 개발을 하다보면, 자연스레 "테스트"에 눈이 가게 되는
 **즉, Robolectric은 자체적으로 `android.jar`의 행동을 Shadowing합니다. 일반적으로 유닛 테스트에서 Android 코드가 있을때, 참조하는 `android-stubs-src.jar`를 참조하지 않습니다.**
 
 ```
-조금 더 자세히 설명하면 Robolectric을 이용한 Unit Test 실행시, 밑에서 설명할 RobolectricTestRunner가 JVM을 후킹하여, 
-Class Loader가 Android Component를 로드하는 것이 아니라, Robolectric의 Shadow 객체를 로딩하도록 합니다.
+조금 더 자세히 설명하면 Robolectric을 이용한 Unit Test 실행시,
+밑에서 설명할 RobolectricTestRunner가 JVM을 후킹하여,
+Class Loader가 Android Component를 로드하는 것이 아니라, 
+Robolectric의 Shadow 객체를 로딩하도록 합니다.
 ```
 
 Robolectric은 실제 디바이스의 센서 동작이나 에러 상황 등을 핸들링해주기 때문에,  해당 기능들에 대해서 충분한 단위 테스트가 가능하도록 해줍니다. *<b style="color: #ff0000">(아니 ! 센서까지?)</b>*
@@ -73,7 +78,7 @@ class ButtonActivityTest {
 
         // Button Click
         button.performClick() // 버튼을 클릭합니다. 즉, 사용자의 행동을 시뮬레이팅합니다.
-   
+
         // Test Code
         val expectedText = "Hello, Robolectric!" 
         val actualText = textView.text.toString() // 실제 TextView의 text를 가져옵니다.
@@ -91,7 +96,8 @@ class ButtonActivityTest {
 # 1. Robolectric 시작하기
 Robolectric은 Gradle 및 Bazel에서 매우 잘 동작합니다. Bazel 같은 경우는 제가 경험이 없어서, 공식 홈페이지에 있는 내용으로 대체하겠습니다.
 
-- Bazel 설정 살펴보기 : [Robolectric - Building with Bazel](http://robolectric.org/getting-started/#building-with-bazel)
+- Bazel 설정 살펴보기
+    - [Robolectric - Building with Bazel](http://robolectric.org/getting-started/#building-with-bazel)
 - 그외 빌드 시스템에 적용하기
     - [Robolectric - Building with Buck](https://buckbuild.com/rule/robolectric_test.html)
     - [Robolectric - Building with Older Android Studio/Gradle Versions](http://robolectric.org/other-environments/#android-studio--gradle-agp--30)
