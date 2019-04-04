@@ -248,3 +248,12 @@ input[type="checkbox"]:checked ~ ul{
   width: 100%;
   height: 100%;
 }
+
+/* Custom Css (panki park) */
+h1 {
+    margin-top: 70px;
+}
+
+.highlight {
+    margin-left: 0px;
+}
