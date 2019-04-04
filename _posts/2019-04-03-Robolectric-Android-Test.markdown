@@ -5,7 +5,6 @@ date:   2019-04-03 09:00:00
 tags: android kotlin java robolectric test coverage testcoverage
 categories: devstory
 ---
-
 ## TOC
 ```
 - 서론
@@ -16,6 +15,8 @@ categories: devstory
 - 맺으며
 - Reference
 ```
+
+---
 
 # 서론
 
@@ -30,17 +31,16 @@ Android 개발을 하다보면, 자연스레 "테스트"에 눈이 가게 되는
 - **Unit Test**
 - **Instrumentation Test**
 
-##### Unit Test
+### Unit Test
 <b style="color:red">Unit Test</b> 는 말 그대로 "단위 테스트"를 의미합니다. 흔히 TDD로 개발하게 되면, 매 "기능 단위별"로 테스트 코드를 구성하게 되고, 그 테스트 코드를 통과하는 실제 코드를 작성하곤 하지요. 혹은 그 반대도 가능하구요. 이때 사용되는 테스트 코드가 Unit Test 입니다.
 해당 테스트를 수행하기 위해서는 <b style="color:gray"><i>module-name/src/test/java/</i></b> 하위에 테스트 코드를 작성하면 됩니다.
 
-<br/>
-
-##### Instrumentation Test
+### Instrumentation Test
 <b style="color:red">Instrumentation Test</b> 는 실제 하드웨어 기기나 에뮬레이터에서 실행되는 테스트입니다. 안드로이드 환경에서 테스트하기 때문에 실제 [Instrumentation API](https://developer.android.com/reference/android/app/Instrumentation) 에 접근 가능합니다. Android 환경에서 실행되는 **AndroidJUnitRunner**를 통해서 실행됩니다.
 
 해당 테스트는 <b style="color:gray"><i>module-name/src/androidTest/java/</i></b> 하위에 테스트 코드를 작성합니다. Instrumentation Test 는 Unit Test에 비해서, 그 속도가 느린 것이 단점입니다. 실제로 앱을 <b style="color:blue">빌드</b> 하고, <b style="color:blue">배포 </b> 하며, <b style="color:blue">실행</b> 시키는 과정이 매 테스트마다 포함되기에 그렇습니다.
 
+<br/>
 그렇다면, `이렇게 느린 "Instrumentation Test"를 굳이 사용해야만 할까요?`
 유닛 테스트에서 [Instrumentation API](https://developer.android.com/reference/android/app/Instrumentation)에 접근 할 수 있다면(해당 API를 Mocking할 수 있는 프레임워크가 있다면), 유닛 테스트만으로 충분하지 않을까요?
 
