@@ -7,6 +7,7 @@ categories: devstory
 ---
 
 ## TOC
+```
 - 서론
 - 1. Robolectric 시작하기
 - 2. Configuration 변경
@@ -14,9 +15,9 @@ categories: devstory
 - 4. Best Practice
 - 맺으며
 - Reference
+```
 
 
----
 
 # 서론
 
