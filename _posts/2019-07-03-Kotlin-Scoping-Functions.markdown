@@ -26,7 +26,7 @@ Kotlin에서는 스코프를 제어하기 위한 함수들이 몇가지 제공�
 
 자, 이제 거두절미하고 ! 하나하나씩 살펴봅시다.
 
-# apply
+# 1. apply
 `lambda with receiver`(수신 객체 지정 람다)에서 `receiver`(수신 객체)의 함수를 사용하지 않고, 수신 객체 자신을 다시 반환하려는 경우에 **apply**를 사용합니다.
 
 즉, receiver 객체의 "프로퍼티"만을 사용하고, 다른 메소드는 호출하지 않는 경우에 사용합니다. 대표적인 예로 객체 초기화때 주로 사용됩니다.
@@ -59,7 +59,7 @@ val student1 = Student().apply {
 ```
 
 
-# run
+# 2. run
 run은 apply와 비슷한 사용새를 가집니다.  다만, 반환값이 "receiver" 자기자신이 아니라 람다 호출의 결과인 점이 다릅니다.
 그래서, 주로 어떤 값을 계산하는데 사용합니다.
 
@@ -91,7 +91,7 @@ fun printAge(user: User) = user.run {
 ```
 
 
-# let
+# 3. let
 
 **let** 은 주로, "local variable"의 스코프를 제한하는 경우에 사용됩니다.
 
@@ -150,8 +150,7 @@ getUserDao().let { dao ->
 ```
 
 
-
-# also
+# 4. also
 `lambda with receiver`(수신 객체 지정 람다) 내부에서 전달된 `receiver`(수신 객체) 자체를 사용하지 않거나, 프로퍼티를 변경하지 않고 사용만 하려는 경우에 **also**를 사용합니다.
 
 주로, 객체 프로퍼티 유효성 검사 등에 사용됩니다.
@@ -190,7 +189,7 @@ class User(characters: List<Character>) {
 
 
 
-# with
+# 5. with
 NonNull `receiver`(수신객체)이고, 그 결과가 필요하지 않은 경우에 사용됩니다.
 
 `반환 값은 람다 블록의 호출 결과입니다.`
