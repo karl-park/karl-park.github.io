@@ -65,6 +65,14 @@ run은 apply와 비슷한 사용새를 가집니다.  다만, 반환값이 "rece
 
 `반환 값은 람다 블록의 호출 결과입니다.`
 
+### Definition
+```kotlin
+// T: receiver
+inlin fun <T, R> T.run(block: T.() -> R): R {
+    return block()
+}
+```
+
 ### AS-IS
 
 ```kotlin
