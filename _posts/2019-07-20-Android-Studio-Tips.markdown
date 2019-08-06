@@ -5,7 +5,6 @@ date:   2019-07-20 12:00:00
 tags: android androidstudio ide tips intellij
 categories: devstory
 ---
-
 # Android Studio Tips
 
 현재 7월 20일 기준, Android Studio는 3.4.2 (macOS) 까지 출시되었습니다.

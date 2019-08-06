@@ -5,7 +5,6 @@ date:   2019-01-17 09:00:00
 tags: kotlin java android safetynet google security verifyApps
 categories: devstory
 ---
-
 ##### 다른 세션들
 [[Android] SafetyNet Overview : 기기/앱 위변조 검사](/devstory/2019/01/17/Android-SafetyNet-Overview/) <br/>
 [[Android] SafetyNet Attestation API : 기기/앱 위변조 검사](/devstory/2019/01/17/Android-SafetyNet-Attestation/) <br/>

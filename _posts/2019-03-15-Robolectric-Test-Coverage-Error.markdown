@@ -5,7 +5,6 @@ date:   2019-03-15 09:00:00
 tags: android kotlin java robolectric test coverage testcoverage
 categories: devstory
 ---
-
 안녕하세요. 이번 시간에는 Robolectric 사용 및 테스트 커버리지 측정시 생기는 에러에 대해서 짧게 다뤄보겠습니다.
 
 많이들 아시다 시피, Robolectric Framework는 Android Unit test 코드를 빠르고 신뢰할 만하게 수행할 수 있도록 도와주는 Framework 입니다.

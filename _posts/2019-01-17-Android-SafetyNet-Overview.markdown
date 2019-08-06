@@ -5,14 +5,12 @@ date:   2019-01-17 09:00:00
 tags: kotlin java android safetynet google security
 categories: devstory
 ---
-
 안녕하세요. 이번 시간에는 Google에서 제공하고 있는 SafetyNet 에 대해서 알아보는 시간을 가져보겠습니다.
 아래의 각각의 SafetyNet 기능들을 살펴보고, 사용할 기능들의 문서를 읽어보시길 바랍니다. 
 
 (영문 가이드를 의역하여 적었으므로, 다소 이해하기 힘든 부분이 있으실 수 있습니다.)
 
 SafetyNet은 다음의 역할들을 합니다. (자세한 구현, 기능은 각 기능별 링크를 참조해주세요.)
-
 
 ### 1. 기기의 변조(루팅 등) 여부, 앱의 변조 여부를 확인 할 수 있습니다.
 - `SafeNet Attestation API`

@@ -5,7 +5,6 @@ date:   2019-03-09 09:00:00
 tags: kotlin java android memory leak memoryleak sam lambda anonymous anonymousclass
 categories: devstory
 ---
-
 안녕하세요.
 이번 시간에는 제가 사랑하는 **Kotlin**과 **Lambda/SAM**가 제공하는 수많은 장점 중, **`memory leak`** 을 회피하는 것에 대해서 살펴보고자 합니다.
 

@@ -5,15 +5,13 @@ date:   2019-03-05 09:00:00
 tags: java cache integercache integer byte character short long
 categories: devstory
 ---
-
 안녕하세요. 이번시간에는 Naresh Joshi의 [[Java Integer Cache — Why Integer.valueOf\(127\) == Integer.valueOf\(127\) Is True]](https://medium.com/@njnareshjoshi/java-integer-cache-why-integer-valueof-127-integer-valueof-127-is-true-e5076824a3d5) 블로그 글을 옮겨보며, Java Integer Cache에 대해서 짧게 살펴보는 시간을 가져보겠습니다.
 
-
-- - -
+---
 
 인터뷰에서, 내 친구가 다음과 같은 질문을 받았습니다.
 ```java
-Integer a = 127; 
+Integer a = 127;
 Integer b = 127;
 ```
 위와 같은 2개의 Integer 객체가 있습니다.

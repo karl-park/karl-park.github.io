@@ -5,7 +5,6 @@ date:   2018-11-12 09:00:00
 tags: android seminar naver navertechconcert techconcert java kotlin
 categories: devstory
 ---
-
 안녕하세요. 이번시간에는 11월 9일에 있었던 **Naver Tech Concert** 참석 후기를 다뤄보겠습니다. 사실 Tech Concert(이하 테콘)는 이틀에 걸쳐서 진행이 되었었습니다. (11/9, 11/10) 참가 신청 및 추첨으로 진행이 되었으며, 저는 둘째날에 당첨이 되어서 둘째날만 다녀올 수 있었기에 둘째날 후기로만 작성을 하겠습니다.
 
 발표내용들도 알차고, 추가 조사한 내용들을 보강하여 적다보니, 세번에 걸쳐서 글을 작성해야할 것 같습니다. 아래 링크를 통해 보고싶은 글들을 선택해봐주세요.

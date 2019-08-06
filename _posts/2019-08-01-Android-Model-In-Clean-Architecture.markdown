@@ -1,11 +1,10 @@
 ---
 layout: post
-title:  "[Android] Breaking Model in Clean Architecture"
+title:  "[Android] Android Model in Clean Architecture"
 date:   2019-08-01 12:00:00
-tags: android model mvvm mvp mvc clean cleanarchitecture
+tags: android model mvvm mvp mvc clean cleanarchitecture viper
 categories: devstory
 ---
-
 # Android Model in Clean Architecture
  
 Android App 개발 뿐만 아니라, iOS가 되었든, Spring으로 웹 서비스를 구축하든, VueJs든 React든 Model의 개념은 항상(대개) 존재합니다.

@@ -5,13 +5,10 @@ date:   2018-11-12 09:00:00
 tags: android seminar naver navertechconcert techconcert java kotlin
 categories: devstory
 ---
-
-
 ##### 다른 세션들
 [Naver Tech Concert 2018 (Day2) - Part1](/devstory/2018/11/12/Naver-Tech-Concert-Part1/) <br/>
 [Naver Tech Concert 2018 (Day2) - Part2](/devstory/2018/11/12/Naver-Tech-Concert-Part2/) <br/>
 [Naver Tech Concert 2018 (Day2) - Part3](/devstory/2018/11/12/Naver-Tech-Concert-Part3/) <br/>
-
 
 # 3. 내가 사랑했던 개발자들
 부제: 더 나은 협업을 위한 디자이너, 기획자 이해하기

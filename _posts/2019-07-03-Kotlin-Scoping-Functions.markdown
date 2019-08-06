@@ -5,7 +5,6 @@ date:   2019-07-03 09:00:00
 tags: android kotlin scoping function apply run let also with
 categories: devstory
 ---
-
 안녕하세요. 오랜만에 블로그 글을 쓰는 것 같네요.
 요새 코틀린을 현업 프로젝트에 적용하며 역시 "기초"가 중요하다는 사실을
 계속해서 깨닫고 있습니다.

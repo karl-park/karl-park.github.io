@@ -5,13 +5,10 @@ date:   2018-11-12 09:00:00
 tags: android seminar naver navertechconcert techconcert java kotlin
 categories: devstory
 ---
-
-
 ##### 다른 세션들
 [Naver Tech Concert 2018 (Day2) - Part1](/devstory/2018/11/12/Naver-Tech-Concert-Part1/) <br/>
 [Naver Tech Concert 2018 (Day2) - Part2](/devstory/2018/11/12/Naver-Tech-Concert-Part2/) <br/>
 [Naver Tech Concert 2018 (Day2) - Part3](/devstory/2018/11/12/Naver-Tech-Concert-Part3/) <br/>
-
 
 # 5. 안드로이드에서 코루틴은 어떻게 적용할 수 있을까?
 부제 : 코루틴 적용 및 ReactiveX(RxJava/RxKotlin)와 비교한다면?

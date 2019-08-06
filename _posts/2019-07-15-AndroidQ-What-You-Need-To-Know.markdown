@@ -5,7 +5,6 @@ date:   2019-07-15 12:00:00
 tags: android androidq version androido api29
 categories: devstory
 ---
-
 # Android Q
 안녕하세요. 이번 시간에는 성큼 다가온 Android Q의 주요 대응점들을 살펴보고, Android 개발자로서 어떤 점들을 주의깊게 살펴봐야하는지를 다뤄보겠습니다.
 

@@ -5,14 +5,12 @@ date:   2019-01-17 09:00:00
 tags: kotlin java android safetynet google security attestation
 categories: devstory
 ---
-
 ##### 다른 세션들
 [[Android] SafetyNet Overview : 기기/앱 위변조 검사](/devstory/2019/01/17/Android-SafetyNet-Overview/) <br/>
 [[Android] SafetyNet Attestation API : 기기/앱 위변조 검사](/devstory/2019/01/17/Android-SafetyNet-Attestation/) <br/>
 [[Android] SafetyNet Safe Browsing API : 위험한 URL인지 체크하기](/devstory/2019/01/17/Android-SafetyNet-SafeBrowsing/) <br/>
 [[Android] SafetyNet reCAPTCHA API : reCAPTCHA 사용하여 봇인지 체크하기](/devstory/2019/01/17/Android-SafetyNet-reCAPTCHA/)  <br/>
 [[Android] SafetyNet Verify Apps API : 설치된 악성앱들 목록 받기](/devstory/2019/01/17/Android-SafetyNet-VerifyApps/)
-
 
 # SafetyNet Attestation API
 SafetyNet Attestation API를 통해서, 앱이 설치되는 기기를 분석할 수 있습니다. 앱이 실행되는 안드로이드 환경의 보안 정보와 호환성 정보를 획득 할 수 있습니다.
