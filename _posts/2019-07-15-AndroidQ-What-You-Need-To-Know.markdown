@@ -266,7 +266,7 @@ Android Q 에서는 Dark 테마를 공식적으로 지원합니다.
 
 
 # 마치며
-이 외에도, Android Q에서는 많은 변경 사항이 있었습니다. (항상 그래왔듯이)
+이 외에도, Android Q에서는 많은 변경 byyy사항이 있었습니다. (항상 그래왔듯이)
 [Bubbles](https://developer.android.com/preview/features/bubbles) 등과 같은 신규기능이나, [Foldable Devices에 따른 지원](https://developer.android.com/preview/features/foldables) 등 눈여겨볼만한 피쳐들이 여러개 있습니다.
 
 이 외에도, Non-SDK restrictions 등 legacy 코드들이 가질 수 있는 수정사항등을 서비스에 즉각적으로 반영해야할 수도 있습니다.
