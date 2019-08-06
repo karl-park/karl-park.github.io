@@ -47,13 +47,7 @@ Wikipedia에서는 아래와 같이 설명이 되어있습니다. (MVC 패턴의
 > `[Note]`
 > 중간 중간 아래의 **`MVP`** 패턴 아키텍쳐가 **`변화되는 모양`** 에 주목하세요 !
 
-![](http://www.plantuml.com/plantuml/png/SoWkIImgAStDuOeEoqmjZzMD3YXABKxDAqajYkL2i87YllafgJcn2bmEgNafGFK0)
-<!--
-```uml
-[View]-[Presenter]
-[Presenter]-[Model]
-```
--->
+![](/static/assets/img/posts/androidmodel/android-model-1.png)
 
 
 # 1. 완벽하지만, 허접한 MVP
@@ -82,27 +76,11 @@ class HotplacePresenter(view: HotplaceView) : Presenter<HotplaceView>(view) {
 
 ### 현재 Presenter 구조
 
-![](http://www.plantuml.com/plantuml/png/SoWkIImgAStDuKfCAYufIamkKKZEIImkLWWeIYrEpIj9BLAevb800cs5iipKSWKhXJ0WnLNBnGLHvf5VKf2Jc9oAK9vQKPAQbuBDWEJyFA0LfSab-KKQ8CEiuBf1Pce23NK0wWIw1G00)
-<!-- 
-```uml
-abstract class Presenter {
-    + view : View
-}
-
-class HotplacePresenter extends Presenter {
-    + constructor(view: HotplaceView)
-}
-``` -->
+![](/static/assets/img/posts/androidmodel/android-model-2.png)
 
 ## 현재 아키텍쳐
 
-![](http://www.plantuml.com/plantuml/png/SoWkIImgAStDuOeEoqmjZzMD3YXABKxDAqajYkL2i87YllafgJcn2bmEgNafGFK0)
-<!-- 
-```uml
-[View]-[Presenter]
-[Presenter]-[Model]
-``` 
--->
+![](/static/assets/img/posts/androidmodel/android-model-3.png)
 
 완벽하네요.
 HotplacePresenter에서는 식당 이름 및 우편번호를 받아서, HotplaceModel에게 넘겨주고, hotplace를 얻어옵니다. HotplaceModel로 부터 얻은 hotplace 객체를 이용하여 HotplaceView를 업데이트 시켜줍니다.
@@ -142,46 +120,14 @@ class HotplacePresenter(
 
 ### 현재 Presenter 및 Repository 구조
 
-![](http://www.plantuml.com/plantuml/png/XOwzie8m44RxFCMMS7zUW8hotiwni8zXSJAJ7sPtWpgExsuO5GeoGa5Id7pdj2oQ97cdR12aNXk4loY3ovSz3f6jHBh2JK7-lg5F0KueRwAgcvbMTwMCqyo5z_z-S63p3pq6uK-6E2AHxN1BfOyif8t0qxaZv3oDD0-D5i_Gm24VwxG5nujWw4e3DCSrXU0NP69WeMGaKZKP5tGI_soCr5FPgkdhjw1hSsNoxW40)
-<!-- 
-```uml
-interface HotplaceRepository {
-    + fun getHotplace(): Hotplace
-}
-
-class HotplaceRepositoryImpl implements HotplaceRepository {
-    + override fun getHotplace(): Hotplace
-}
-
-abstract class Presenter {
-    + view : View
-}
-
-class HotplacePresenter extends Presenter {
-    + repository: HotplaceRepository
-    + constructor(view: HotplaceView, repository: HotplaceRepository)
-}
-
-HotplacePresenter*-HotplaceRepository
-``` 
--->
+![](/static/assets/img/posts/androidmodel/android-model-4.png)
 
 이렇게 작성해놓고 보니, HotplaceRepository는 Model의 역할을 **`Data`** 의 관점에서 충실히 잘 수행해내고 있는 것 같습니다.
 
 
 ## 현재 아키텍쳐
 
-![](http://www.plantuml.com/plantuml/png/SoWkIImgAStDuIf8JCvEJ4zLKFBDJqdDKLAevb80WcYNn9B4M0MkMYwkwB3CrF9OtUY0ejJYrBoIrA9OBYIsBaobGsfU2j0y0000)
-<!-- 
-```uml
-package "Model" {
-    [Data] 
-}
-
-[View]-[Presenter]
-[Presenter]-[Data] 
-``` 
--->
+![](/static/assets/img/posts/androidmodel/android-model-5.png)
 
 
 ## 문제..점?
@@ -231,59 +177,14 @@ class HotplaceRepositoryImpl(
 
 ### 현재 Presenter 및 Repository 구조
 
-![](http://www.plantuml.com/plantuml/png/ZPB1JhH03CVlFCKSb-_RVG5EQoH64sEC9jxBq7Kd3bFIAOl6-Ev2H4Ptgy813lDhVwN_sKO1bgxncGk2l0EBvfAazM3n3bkAJeXVp6jcXkU_sNN1FA9y4XTCpLdhLdan5_qCbjKtxYtBh8SO5TrLqthZXXSs62J-Dj1-EXgcIBrlK7hYfn84xgbZYqVmETWz9loQBFYo-e9FlAKGXJihnAjbelLYHpuvw83ChiQbgqqLotOCLHG6A-PZsRUC4SUavmqU7FQcC0_3vpIJXEEpOAYr1ZodKYX9AQiSZGaTnUi_ckJZP2Sp_TlKr8UDuan_eSTqTAvS0FrI9gFUTr6PejjYgBl6lmC0)
-<!-- 
-```uml
-interface HotplaceRepository {
-    + fun getHotplaceFromApi(): Hotplace
-    + fun getHotplaceFromDb(): Hotplace
-}
-
-class HotplaceRepositoryImpl implements HotplaceRepository {
-    + hotplaceApi: HotplaceNetworkDataSource
-    + hotplaceCache: HotplaceLocalDbDataSource
-
-    + constructor(hotplaceApi: HotplaceNetworkDataSource, hotplaceCache: HotplaceLocalDbDataSource)
-    + override fun getHotplaceFromApi(): Hotplace
-    + override fun getHotplaceFromDb(): Hotplace
-}
-
-abstract class Presenter {
-    + view : View
-}
-
-class HotplacePresenter extends Presenter {
-    + repository: HotplaceRepository
-    + constructor(view: HotplaceView, repository: HotplaceRepository)
-}
-
-HotplacePresenter*-down-HotplaceRepository
-
-class HotplaceNetworkDataSource
-class HotplaceLocalDbDataSource
-
-HotplaceRepositoryImpl*-down-HotplaceNetworkDataSource
-HotplaceRepositoryImpl*-down-HotplaceLocalDbDataSource
-``` 
--->
+![](/static/assets/img/posts/androidmodel/android-model-6.png)
 
 
 
 ## 현재 아키텍쳐
 
-![](http://www.plantuml.com/plantuml/png/SoWkIImgAStDuIf8JCvEJ4zLKFBDJqdDKLAevb80WcYNn9B4M0K8EpY_j2WvDPQhbeihEYmpjJnMDpgWABKuDQyajIYM2ucj2zC6eNNXEXrIyrA0bW40)
-<!-- 
-```uml
-package "Model" {
-    [Data] 
-    [Source]
-}
+![](/static/assets/img/posts/androidmodel/android-model-7.png)
 
-[View]-[Presenter]
-[Presenter]-[Data] 
-[Data]-[Source]
-```
--->
 
 ## 문제..점?
 완벽합니다 : ) 각종 **Data Source**(데이터가 위치하는 곳, 데이터를 불러올 수 있는 통로)에 대해 대응할 수 있음은 물론, 예전에 가졌던 문제들도 모두 해결이 되었네요 !!
@@ -345,78 +246,8 @@ class HotplacePresenter(
 
 ### 현재 Presenter 및 Repository 구조
 
-![](http://www.plantuml.com/plantuml/png/bLJHhjem37tlL-HntSeFe6bY0asRD24qfEqvf8P6QvFASM6xwFxxRKKXuAGYbmSUd6EVO_lK2qSIgMlgJDNIEV7TKbjB1Ll0erOWpfdeVvy4mb73QOpERx1Vz-4HMjtUMkiqMVplyJusWfKrZh1JVUX32aS-vkqx8mv0LymVJTK5rrTn93kKXjQoWKAyw7PfIyZdOYCrVhvc5Ap-b-mr6sV0YDaageVNf2P7iQF0dBSsC6j3WFi-5AaYpl6clw5jlhRwlk0qSBLxm0NDUheVJLiBtVz10uPYY60MlGfVUmrqilXt9KbkROU1BvPILU3XFwsIzMft1uzO8useIEJmDh97GDGb98sMPoJCcA-LsoQ-N8zZElp3ioGlnSUd79wmUeQR-1XwfPmpRWQUoDPr2RxB6Ea2YdJkTCCahejdf-zDxXoXL2Gk2zmWE1YyTTl401HpyJkwPm-7VmIcZ1Lm_Exwgyw7Fd1vt41PJARdWvf0nyTPQKzcngao5l2my227MDI7YcQHAnpDvtZkyOmFCN0IUu_uDNvSMLT1tRIqa2xwSJzJFVcjFGBYKfumfPUObB40KtPD_GO0)
-<!--
-```uml
-class HotplaceService {
-    + reviewService: HotplaceReviewService
-    + hotplaceRepository: HotplaceRepository
-    + constructor(reviewService: HotplaceReviewService)
-    + fun getHotplaceWithReview(restaurantName, zipCode): Pair<Hotplace, HotplaceReview>
-}
+![](/static/assets/img/posts/androidmodel/android-model-8.png)
 
-class HotplaceReviewService {
-    + hotplaceReviewRepository: HotplaceRepository
-    + fun getReview(): HotplaceReview
-}
-
-interface HotplaceRepository {
-    + fun getHotplaceFromApi(): Hotplace
-    + fun getHotplaceFromDb(): Hotplace
-}
-
-class HotplaceRepositoryImpl implements HotplaceRepository {
-    + hotplaceApi: HotplaceNetworkDataSource
-    + hotplaceCache: HotplaceLocalDbDataSource
-
-    + constructor(hotplaceApi: HotplaceNetworkDataSource, hotplaceCache: HotplaceLocalDbDataSource)
-    + override fun getHotplaceFromApi(): Hotplace
-    + override fun getHotplaceFromDb(): Hotplace
-}
-
-interface HotplaceReviewRepository {
-    + fun getHotplaceReviewFromApi(): HotplaceReview
-    + fun getHotplaceReviewFromDb(): HotplaceReview
-}
-
-class HotplaceReviewRepositoryImpl implements HotplaceReviewRepository {
-    + hotplaceReviewApi: HotplaceReviewNetworkDataSource
-    + hotplaceReviewCache: HotplaceReviewLocalDbDataSource
-
-    + constructor(hotplaceReviewApi: HotplaceReviewNetworkDataSource, hotplaceReviewCache: HotplaceReviewLocalDbDataSource)
-    + override fun getHotplaceReviewFromApi(): HotplaceReview
-    + override fun getHotplaceReviewFromDb(): HotplaceReview
-}
-
-abstract class Presenter {
-    + view : View
-}
-
-class HotplacePresenter extends Presenter {
-    + service: HotplaceService
-    + constructor(view: HotplaceView, service: HotplaceService)
-}
-
-HotplacePresenter*-down-HotplaceService
-
-HotplaceService*-down-HotplaceReviewService
-HotplaceService*-right-HotplaceRepository
-HotplaceReviewService*-right-HotplaceReviewRepository
-
-
-class HotplaceNetworkDataSource
-class HotplaceLocalDbDataSource
-
-HotplaceRepositoryImpl*-down-HotplaceNetworkDataSource
-HotplaceRepositoryImpl*-down-HotplaceLocalDbDataSource
-
-class HotplaceReviewNetworkDataSource
-class HotplaceReviewLocalDbDataSource
-
-HotplaceReviewRepositoryImpl*-down-HotplaceReviewNetworkDataSource
-HotplaceReviewRepositoryImpl*-down-HotplaceReviewLocalDbDataSource
-```
--->
 
 점점 복잡해지고 있네요 ! 하지만, 아직까지는 그리 복잡한 레이어는 아닙니다.
 Presenter는 단일 HotplaceService를 가지고 있고, HotplaceService를 통해서 Hotplace 및 HotplaceReview 정보들을 가져옵니다.
@@ -457,71 +288,7 @@ class GetHotplaceAndReview (
 )
 ```
 
-![](http://www.plantuml.com/plantuml/png/dLJ1hjem4BpdA_RuQFr-0A4816gfX2fKsfvwCSu2LXCxiXreLVNVcs28KTQDpBiGuPtPcUniFBUE6zTKPSRtrXak78YIMmlVB2wvnTbN1bB1bXjUsJpBVF4ZkhLsTSa5BbJn1SyIBpS2pBPScjczp60ZhUl_UcYUC_YXhhYTCr8T6VXddWF-SgYANX_-P000x-7KTwYrbKwRtrDOapC2xkG8fQyGej3AEjE8zkWbJP6zGMoI_Ss6yzuQjAWSclwDEmvCuNlxwF0UTcyPu7vWiGQD7-5qBAx8UtVLuBsJPqcjhcybEmU7jXePLM_iq2WuXaOVZAuMjNoP1DN_0rVxHrmO39NxLDKboFO7ArGkXY3BrRe8lJ-ZksZpSyKTt-d621o0broSCC0tMl1ojN-0HsQR9iIIDIOt3Nr6OsI1gQCDZ8GParZfJiV33RY83ryO8r4h_fo6xiyJeYUcenT6IAS_8Xb5YOEu_E5JYv5kWALhfozCOboKdPeRlR_UlHRwebv7BwcHsfqV__xJcV4b6YuQIM5GZsGTDnQqutsJQ5Gk_c6Ck1xVKpeQQcLSwVaMrCOSLT5KvJy0)
-<!-- 
-```uml
-abstract class UseCase<T, in Params>
-
-class GetHotplaceAndReviewUseCase <Pair<Hotplace, List<HotplaceReview>>, \nPair<String, String>> extends UseCase {
-    + hotplaceRepository: HotplaceRepository
-    + hotplaceReviewRepository: HotplaceReviewRepository
-    + constructor(hotplaceRepository: HotplaceRepository, hotplaceReviewRepository: HotplaceReviewRepository)
-}
-
-abstract class Presenter {
-    + view : View
-}
-
-class HotplacePresenter extends Presenter {
-    + useCase: GetHotplaceAndReviewUseCase
-    + constructor(view: HotplaceView, useCase: GetHotplaceAndReviewUseCase)
-}
-
-interface HotplaceRepository {
-    + fun getHotplaceFromApi(): Hotplace
-    + fun getHotplaceFromDb(): Hotplace
-}
-
-class HotplaceRepositoryImpl implements HotplaceRepository {
-    + hotplaceApi: HotplaceNetworkDataSource
-    + hotplaceCache: HotplaceLocalDbDataSource
-
-    + constructor(hotplaceApi: HotplaceNetworkDataSource, hotplaceCache: HotplaceLocalDbDataSource)
-    + override fun getHotplaceFromApi(): Hotplace
-    + override fun getHotplaceFromDb(): Hotplace
-}
-
-interface HotplaceReviewRepository {
-    + fun getHotplaceReviewFromApi(): HotplaceReview
-    + fun getHotplaceReviewFromDb(): HotplaceReview
-}
-
-class HotplaceReviewRepositoryImpl implements HotplaceReviewRepository {
-    + hotplaceReviewApi: HotplaceReviewNetworkDataSource
-    + hotplaceReviewCache: HotplaceReviewLocalDbDataSource
-
-    + constructor(hotplaceReviewApi: HotplaceReviewNetworkDataSource, hotplaceReviewCache: HotplaceReviewLocalDbDataSource)
-    + override fun getHotplaceReviewFromApi(): HotplaceReview
-    + override fun getHotplaceReviewFromDb(): HotplaceReview
-}
-
-HotplacePresenter *-down- GetHotplaceAndReviewUseCase
-GetHotplaceAndReviewUseCase *-down-HotplaceRepositoryImpl
-GetHotplaceAndReviewUseCase *-down-HotplaceReviewRepositoryImpl
-
-class HotplaceNetworkDataSource
-class HotplaceLocalDbDataSource
-
-HotplaceRepositoryImpl*-down-HotplaceNetworkDataSource
-HotplaceRepositoryImpl*-down-HotplaceLocalDbDataSource
-
-class HotplaceReviewNetworkDataSource
-class HotplaceReviewLocalDbDataSource
-
-HotplaceReviewRepositoryImpl*-down-HotplaceReviewNetworkDataSource
-HotplaceReviewRepositoryImpl*-down-HotplaceReviewLocalDbDataSource
-```
--->
+![](/static/assets/img/posts/androidmodel/android-model-9.png)
 
 
 ### Presenter Code
@@ -551,16 +318,7 @@ class HotplacePresenter(
 
 VIPER는 다음과 같은 아키텍쳐를 따르고 있습니다.
 
-![](http://www.plantuml.com/plantuml/png/SoWkIImgAStDuOeEoqmjZzKjoapFAD6D3YXABKxDAqajYkL2OkkM5kX6XsSMfQOL9UQc8al1DNg2U8d99Vb0dGWEGjurhoIpf19DBYM_F4ytsYMn954X62YGgk-Rc9UO3hBS8JKl1UWw0000)
-<!-- 
-```uml
-[View]-right-[Presenter]
-[Presenter]-up-[Wireframe]
-[Presenter]-right-[Interactor]
-[Interactor]-right-[Entity]
-[Interactor]-down-[Data Store/Manager]
-```
--->
+![](/static/assets/img/posts/androidmodel/android-model-10.png)
 
 **Interactor** 라는 패턴도 결국은 Data(**Entity**)를 담고 있으며, Entity를 가공하여 Presenter에 "순수한 데이터" 형태로 넘기는 역할을 합니다.
 즉, **Interactor**에 모든 비즈니스 로직이 들어가게 되는 것이죠.
@@ -574,25 +332,11 @@ Presenter에 존재하였던 **비즈니스 로직**을 분리하여 **Domain**(
 
 ## 현재 아키텍쳐
 
-![](http://www.plantuml.com/plantuml/png/SoWkIImgAStDuIf8JCvEJ4zLKFBDJqdDKLAevb80WcYN_Dp4pBnOA2Un935M0S8EpYyjIawDvQhbueeEoqmjZzMD3YXABKxDAqajYkL2Okj2pG1gXB5qOIP1Q5seOK01XzIy5A1h0000)
-<!-- 
-```uml
-package "Model" {
-    [Domain]
-    [Data] 
-    [Source]
-}
-
-[View]-[Presenter]
-[Presenter]-[Domain] 
-[Domain]-[Data] 
-[Data]-[Source] 
-```
--->
+![](/static/assets/img/posts/androidmodel/android-model-11.png)
 
 
 # 5. Exception Handling : Domain Logic
-우리는 없던 문제까지 만들어가며, 훌륭한 구조로 맛집 앱을 개발했습니다. 
+우리는 없던 문제까지 만들어가며, 훌륭한 구조로 맛집 앱을 개발했습니다.
 마지막으로, 한가지만 !! 더 문제를 만들어보고, 이 글을 마무리하도록 합시다 : )
 
 위에서 다룬 많은 레이어들은 "올바른 데이터"를 주고 받는 것을 전제로 짠 것 같습니다.
@@ -620,12 +364,12 @@ class HotplacePresenter(
                     setMap(hotplace.map)
 
                     refreshReview(review)
-                }        
+                }
             },
             onError = ::handleExceptionCase
-        )   
+        )
     }
-    
+
     fun handleExceptionCase(throwable: Throwable) {
         when (throwable) {
             is HttpException -> {
@@ -649,7 +393,7 @@ class HotplacePresenter(
     ...
     fun onCreate(restaurantName: String, zipCode: String) {
         val result = useCase.buildUseCase(restaurantName to zipCode)
-        
+
         when (result) {
             is Left -> handleExceptionCase(result.value)
             is Right -> {
@@ -701,9 +445,9 @@ class GetHotplaceAndReview (
     val hotplaceRepository: HotplaceRepository,
     val hotplaceReviewRepository: HotplaceReviewRepository)
     : UseCase<Either<Throwable, Pair<Hotplace, List<HotplaceReview>>>, Pair<String, String>>() {
-    
+
     override fun buildUseCase(params: Pair<String, String>) : Either<Throwable, Pair<Hotplace, List<HotplaceReview>>> {
-        try 
+        try {
             val hotplace = hotplaceRepository.getHotplace(params.first, params.second)
             val hotplaceReview = hotplaceReviewRepository.getHotplaceReview()
         } catch (e: NetworkException) {
@@ -725,7 +469,7 @@ class HotplacePresenter(
     ...
     fun onCreate(restaurantName: String, zipCode: String) {
         val result = useCase.buildUseCase(restaurantName to zipCode)
-        
+
         when (result) {
             is Left -> handleExceptionCase(result.value)
             is Right -> {
