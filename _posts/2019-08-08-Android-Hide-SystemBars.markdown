@@ -25,9 +25,11 @@ Status bar는 디바이스 상단에 각종 노티피케이션들이 노출되�
 한가지 짚고 넘어갈 점은, **Status bar를 감출 때는 Action bar도 감춰야한다**는 것입니다.
 
 ![](/static/assets/img/posts/android-hide-system-ui/hide-systemui-status-bar-01.png)
+
 <Visible Status bar>
 
 ![](/static/assets/img/posts/android-hide-system-ui/hide-systemui-status-bar-02.png)
+
 <Hidden Status bar + Hidden Action Bar>
 
 ---
@@ -50,6 +52,7 @@ Android 4.0 이하에서는 다음 2가지 방법이 있습니다.
 ```
 
 activity theme을 이용하는 것은 다음과 같은 장점이 있습니다.
+
 1. 코드로 작성하는 것보다 안정적이며, 유지보수가 용이합니다.
 2. activity가 초기화되기 전에 시스템이 UI에 대한 정보를 알고 있으므로, 보다 매끄러운 UI 트랜지션을 보여줍니다.
 
@@ -114,6 +117,7 @@ Android 4.1 이상에서는 status bar 뒤로 컨텐츠를 표시 할 수 있습
 Navigation bar는 Android 4.0(API 14)에 소개된 기능입니다. navigation bar를 감출 때는 status bar도 함께 감추도록 디자인되어야합니다.
 
 ![](/static/assets/img/posts/android-hide-system-ui/hide-systemui-navigation-bar.png)
+
 <Navigation bar>
 
 
