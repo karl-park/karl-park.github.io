@@ -26,11 +26,7 @@ Status bar는 디바이스 상단에 각종 노티피케이션들이 노출되�
 
 ![](/static/assets/img/posts/android-hide-system-ui/hide-systemui-status-bar-01.png)
 
-<Visible Status bar>
-
 ![](/static/assets/img/posts/android-hide-system-ui/hide-systemui-status-bar-02.png)
-
-<Hidden Status bar + Hidden Action Bar>
 
 ---
 
@@ -117,8 +113,6 @@ Android 4.1 이상에서는 status bar 뒤로 컨텐츠를 표시 할 수 있습
 Navigation bar는 Android 4.0(API 14)에 소개된 기능입니다. navigation bar를 감출 때는 status bar도 함께 감추도록 디자인되어야합니다.
 
 ![](/static/assets/img/posts/android-hide-system-ui/hide-systemui-navigation-bar.png)
-
-<Navigation bar>
 
 
 Navigation bar는 다음 API 호출로 쉽게 감출 수 있습니다.
