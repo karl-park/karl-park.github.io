@@ -155,28 +155,28 @@ isTranslucentOrFloating의 경우 R.styleable 을 참조하여 확인하므로, 
 2. AndroidManifest.xml 에서 정의된 activity orientation을 해제한다.
     - orientation 고정을 위해 AndroidManifest.xml의 activity attributes로 screenOrientation 을 사용하였다면 **unspecified** 로 해제해준다.
     - **`이 방법은 모든 API Level에 대하여 화면 회전을 가능케하므로, UI 확인 등 테스트를 꼭 거쳐야한다.`**
-    ```xml
-    <!-- AS-IS -->
-    <activity android:name=".MainActivity"
-        android:screenOrientation="portrait"
-        android:theme="@style/AppTheme.Transparent"/>
-        
-    <!-- TO-BE -->
-    <activity android:name=".MainActivity"
-        android:screenOrientation="unspecified"
-        android:theme="@style/AppTheme.Transparent"/>
-    ```
+    - ```xml
+      <!-- AS-IS -->
+      <activity android:name=".MainActivity"
+          android:screenOrientation="portrait"
+          android:theme="@style/AppTheme.Transparent"/>
+
+      <!-- TO-BE -->
+      <activity android:name=".MainActivity"
+          android:screenOrientation="unspecified"
+          android:theme="@style/AppTheme.Transparent"/>
+      ```
 3. styles.xml 을 Android API Level 별로 분기하도록 조치한다.
     - 결국은 Android O(8.0.0, API 26)에서만 발생하는 문제이다. (이후 바로 수정됨)
     - 그렇기에 API 26에서만 다르게 동작하는 styles.xml을 정의함으로써, 문제를 우회 할 수 있다.
     - values-v27/styles.xml 을 생성하여, API 27 이상부터는 다시 투명 처리가 되도록 선언해야한다.
     - `API 26에서만, "투명" 처리가 되지 않으므로, UI 확인이 필요하다.`
     - ![variation of styles](/static/assets/img/posts/translucentActivity/variationOfStyles.png)
-    ```xml
-    <!-- values-v26/styles.xml -->
-    <style name="MyTheme" parent="@android:style/Theme.DeviceDefault">
-       ...
-         <!-- set it to false -->
-        <item name="android:windowIsTranslucent">false</item>
-    </style>
-    ```
+    - ```xml
+      <!-- values-v26/styles.xml -->
+      <style name="MyTheme" parent="@android:style/Theme.DeviceDefault">
+          ...
+          <!-- set it to false -->
+          <item name="android:windowIsTranslucent">false</item>
+      </style>
+      ```
