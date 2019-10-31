@@ -26,7 +26,7 @@ categories: devstory
 > Q. 아키텍쳐별로 instruction set / structure가 모두 다른데, 어떻게 한 코드로 빌드를 할 수 있는 것일까?
 > A. `LLVM` 덕분 !
 
-[![iOS upport Matrix](https://raw.githubusercontent.com/MrKarl/MrKarl.github.io/57da02b3dc27b70667c820753ff1c5585e543421/assets/images/architecture/21754547448_8c8985d6dc_z.jpg)](http://iossupportmatrix.com/)
+[![iOS upport Matrix](https://raw.githubusercontent.com/karl-park/karl-park.github.io/57da02b3dc27b70667c820753ff1c5585e543421/assets/images/architecture/21754547448_8c8985d6dc_z.jpg)](http://iossupportmatrix.com/)
 
 
 ## LLVM (Low-Level Virtual Machine)
@@ -35,7 +35,7 @@ categories: devstory
 
 IR(Intermediate Representation, 중간코드, 비트코드)를 생성. Frontend에서 비트코드를 생성하고, Backend에서는 비트코드를 받아서 타겟에 맞는 결과물을 생성.
 
-![Compiler Structure](https://raw.githubusercontent.com/MrKarl/MrKarl.github.io/57da02b3dc27b70667c820753ff1c5585e543421/assets/images/objectivec2.0/compiler.PNG)
+![Compiler Structure](https://raw.githubusercontent.com/karl-park/karl-park.github.io/57da02b3dc27b70667c820753ff1c5585e543421/assets/images/objectivec2.0/compiler.PNG)
 
 
 즉, 비트코드만 생성하는 Frontend만 개발하면, 어느 머신/아키텍쳐에 사용되건, 언어의 종류는 상관없다.

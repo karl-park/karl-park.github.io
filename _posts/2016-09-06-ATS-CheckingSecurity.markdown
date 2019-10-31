@@ -51,7 +51,7 @@ ATS 기능을 완전히 끄기 위해서는 Info.plist의 `NSAppTransportSecurit
 <dict>
     <key>NSExceptionDomains</key>
     <dict>
-        <key>mrkarl.github.io</key>
+        <key>karl-park.github.io</key>
         <dict>
             <key>NSExceptionMinimumTLSVersion</key>
             <true/>

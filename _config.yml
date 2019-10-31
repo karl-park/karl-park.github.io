@@ -2,11 +2,11 @@
 #  User configuration
 # -----------------------------------------------------------------------------
 
-title:               MrKarl
+title:               Karl Panki Park
 
 # The unique resource location of your page.
 # Set to `https://<username>.github.io` when hosting on GitHub Pages
-url:                 https://mrkarl.github.io
+url:                 https://karl-park.github.io
 
 # Set to '' when hosting a blog on GitHub Pages, ie on `//<username>.github.io`
 # Set to '/<reponame>' when using the `gh-pages` branch of a repository
@@ -47,10 +47,10 @@ google_fonts:        Lato
 google_analytics:    UA-120522577-1
 
 # Setting a disqus shortname will enable the comment section on pages with `comments: true` in the front matter
-disqus_shortname:    mrkarl
+disqus_shortname:    karl-park
 
 # This text will appear in the footer of every page. Markdown enabled.
-copyright:           '&copy; 2017. by mrkarl'
+copyright:           '&copy; 2017. by karl-park'
 
 # Format of the permalinks
 permalink:           pretty

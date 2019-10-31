@@ -81,7 +81,7 @@ $ npm install
 ### Custom template(TypeScript)
 
 ```shell
-$ git clone https://github.com/MrKarl/phaser-tutorial.git
+$ git clone https://github.com/karl-park/phaser-tutorial.git
 $ cd phaser-tutorial
 $ npm install
 ```

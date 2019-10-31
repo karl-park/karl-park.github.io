@@ -47,7 +47,7 @@ isme2n:
     # pinterest:       <username>
     # foursquare:      <number>
     # yelp:            <string>
-    github:          mrkarl
+    github:          karl-park
     # stackoverflow:   <number/username>
     # npm:             <username>
     # hackernews:      <username>
@@ -59,7 +59,7 @@ isme2n:
     # stumbleupon:     <username>
     # paypal:          <username>
     email:           mailto:karl.panki.park@gmail.com
-    rss:             https://mrkarl.github.io/feed.xml
+    rss:             https://karl-park.github.io/feed.xml
 
 # Another author
 mdo:

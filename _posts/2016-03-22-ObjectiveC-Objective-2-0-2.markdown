@@ -12,7 +12,7 @@ categories: devstory
 - 2편 : [Objective-C-2.0 책요약 02](../ObjectiveC-Objective-2-0-2/)
 - 3편 : [Objective-C-2.0 책요약 03](../ObjectiveC-Objective-2-0-3/)
 
-![](https://raw.githubusercontent.com/MrKarl/MrKarl.github.io/4b664436fed33ae28727acb212ff6127092a3b82/assets/images/objectivec2.0/objectivec2.0.PNG)
+![](https://raw.githubusercontent.com/karl-park/karl-park.github.io/4b664436fed33ae28727acb212ff6127092a3b82/assets/images/objectivec2.0/objectivec2.0.PNG)
 
 # 책 요약 본
 

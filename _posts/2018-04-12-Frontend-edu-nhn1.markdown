@@ -13,7 +13,7 @@ categories: devstory
 ### 관련 포스트
 - [[JavaScript] 웹프론트엔드 개발 개론1](/devstory/2018/04/12/Frontend-edu-nhn1/)
 - [[JavaScript] 웹프론트엔드 개발 개론2](/devstory/2018/04/12/Frontend-edu-nhn2/)
-- [강의자료 git 주소](https://github.com/MrKarl/lesson.javascript.frontend)
+- [강의자료 git 주소](https://github.com/karl-park/lesson.javascript.frontend)
 
 
 ### TOC

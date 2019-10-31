@@ -16,7 +16,7 @@ categories: routine
 ---
 
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- mrkarl ad 001 -->
+<!-- karl-park ad 001 -->
 <ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-5338438534915104"

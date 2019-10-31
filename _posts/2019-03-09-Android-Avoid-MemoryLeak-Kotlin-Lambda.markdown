@@ -13,7 +13,7 @@ categories: devstory
 
 본문에 쓰인 모든 코드는 제 깃헙에 올려두었으니, 받으셔서 직접 테스트 하실 수 있습니다.
 
-- [https://github.com/MrKarl/MemoryLeakTest.git](https://github.com/MrKarl/MemoryLeakTest.git)
+- [https://github.com/karl-park/MemoryLeakTest.git](https://github.com/karl-park/MemoryLeakTest.git)
 
 
 # Java, Anonymous Class and Memory Leak
@@ -455,6 +455,6 @@ public class MyJavaLambdaLeakActivity extends AppCompatActivity {
 
 
 ## 모든 소스 코드
-- [https://github.com/MrKarl/MemoryLeakTest.git](https://github.com/MrKarl/MemoryLeakTest.git)
+- [https://github.com/karl-park/MemoryLeakTest.git](https://github.com/karl-park/MemoryLeakTest.git)
 
 

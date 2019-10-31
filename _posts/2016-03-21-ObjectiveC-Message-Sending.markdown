@@ -67,6 +67,6 @@ IMP method_imp;            // 함수 포인터
 ---
 
 예를 들어보며, 이 포스트를 마치도록 하자.
-![objective c message dispatch](https://raw.githubusercontent.com/MrKarl/MrKarl.github.io/master/assets/images/objectstructure/messageDispatch.png)
+![objective c message dispatch](https://raw.githubusercontent.com/karl-park/karl-park.github.io/master/assets/images/objectstructure/messageDispatch.png)
 
 위 그림에서와 같이, 특정 객체(myInstance)에서는 getAuthor/flip이라는 셀렉터 메시지를 받게 되는데, 그러한 `SEL`들은 Method 구조체 상에서 상응하는 `IMP`를 찾게된다.

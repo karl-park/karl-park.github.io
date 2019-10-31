@@ -230,5 +230,9 @@ Backpressure Strategy는 다음이 있다.
 
 
 ## Reference
-- [Scheduler](http://reactivex.io/documentation/ko/scheduler.html)
-- [RxAndroid and RxKotlin](https://www.raywenderlich.com/2071847-reactive-programming-with-rxandroid-in-kotlin-an-introduction#toc-anchor-001)
+- [reactivex.io| Scheduler](http://reactivex.io/documentation/ko/scheduler.html)
+
+- [감자튀김 Tistory| RxJava 공부 - AsyncSubject, BehaviorSubject, PublishSubject, ReplaySubject](https://gamjatwigim.tistory.com/49)
+- [정승욱 Medium | Android MVVM : Lifecycle 감지하기](https://medium.com/@jsuch2362/android-mvvm-lifecycle-%EA%B0%90%EC%A7%80%ED%95%98%EA%B8%B0-204c4309436)
+- [Jose Angel Zamora Medium | RxJava 공부 - AsyncSubject, BehaviorSubject, PublishSubject, ReplaySubject](https://gamjatwigim.tistory.com/49))
+- [By Kyle Jablonski | RxAndroid and RxKotlin](https://www.raywenderlich.com/2071847-reactive-programming-with-rxandroid-in-kotlin-an-introduction#toc-anchor-001)

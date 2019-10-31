@@ -32,7 +32,7 @@ gzip은 이름만 보아도, 무엇인가를 "압축"하리라는 것을 알 수
 gzip compression 을 적용하기 위해서는 우선, 몇가지 조건사항이 필요한데요, 그것은 다음과 같습니다.
 
 - 클라이언트의 브라우저에서 gzip을 지원하여야합니다. 아래 캡쳐된 사진과 같이, Request Headers의 Accept-Encoding에 gzip이 있으면 됩니다 !
-    - ![](https://raw.githubusercontent.com/MrKarl/MrKarl.github.io/master/assets/images/gzip/gzip%20browser.png)
+    - ![](https://raw.githubusercontent.com/karl-park/karl-park.github.io/master/assets/images/gzip/gzip%20browser.png)
 - 서버단에서 클라이언트에게로 gzip으로 압축하여 보내는 모듈이 필요합니다.
 
 
@@ -42,16 +42,16 @@ gzip compression 을 적용하기 위해서는 우선, 몇가지 조건사항이
 이번 기술공유에서는 apache에 mod_delflate 모듈을 얹어서 gzip을 적용해보도록 할게요 !
 
 1. 서버에 접속하여 apache의 설정파일을 편집합니다. 저는 다음과 같은 경로의 httpd.conf 를 열었네요.
-![](https://raw.githubusercontent.com/MrKarl/MrKarl.github.io/master/assets/images/gzip/vi%20%EC%97%B4%EA%B8%B0.PNG)
+![](https://raw.githubusercontent.com/karl-park/karl-park.github.io/master/assets/images/gzip/vi%20%EC%97%B4%EA%B8%B0.PNG)
 
 2. httpd.conf에서 LoadModule deflate_module modules/mod_deflate.so 를 검색하여, apache에 deflate 모듈이 적용되어있는지를 확인합니다. 만약 모듈이 안올라와있다면, 따로 설치를 해주시겠어요?
-![](https://raw.githubusercontent.com/MrKarl/MrKarl.github.io/master/assets/images/gzip/LoadModule%20deflate.PNG)
+![](https://raw.githubusercontent.com/karl-park/karl-park.github.io/master/assets/images/gzip/LoadModule%20deflate.PNG)
 
-3. httpd.conf 마지막 부분에, 다음과 같이 코드를 입력해줍니다. 
-![](https://raw.githubusercontent.com/MrKarl/MrKarl.github.io/master/assets/images/gzip/IfModule%20mod_deflate.png)
+3. httpd.conf 마지막 부분에, 다음과 같이 코드를 입력해줍니다.
+![](https://raw.githubusercontent.com/karl-park/karl-park.github.io/master/assets/images/gzip/IfModule%20mod_deflate.png)
 
 4. 설정을 적용하셨다면 저장을 하신 후, 아파치를 재시작해 줍니다 !
-![](https://raw.githubusercontent.com/MrKarl/MrKarl.github.io/master/assets/images/gzip/apachectl%20graceful.PNG)
+![](https://raw.githubusercontent.com/karl-park/karl-park.github.io/master/assets/images/gzip/apachectl%20graceful.PNG)
 
 5. 자 이제 브라우저에 들어가서 ! 한번 비교해보실까요?!
 ( compression을 적용하기 전/후 를 비교해보시면 더 좋겠습니다. 만약 비교를 놓치신 분들을 위해 !! 밑에 before/after를 준비했어요 !)
@@ -64,13 +64,13 @@ gzip compression 을 적용하기 위해서는 우선, 몇가지 조건사항이
 
 ### Before
 
-![](https://raw.githubusercontent.com/MrKarl/MrKarl.github.io/master/assets/images/gzip/before_gzip.png)
+![](https://raw.githubusercontent.com/karl-park/karl-park.github.io/master/assets/images/gzip/before_gzip.png)
 
 ### After
 
-![](https://raw.githubusercontent.com/MrKarl/MrKarl.github.io/master/assets/images/gzip/after_gzip1.png)
+![](https://raw.githubusercontent.com/karl-park/karl-park.github.io/master/assets/images/gzip/after_gzip1.png)
 
-![](https://raw.githubusercontent.com/MrKarl/MrKarl.github.io/master/assets/images/gzip/after_gzip.png)
+![](https://raw.githubusercontent.com/karl-park/karl-park.github.io/master/assets/images/gzip/after_gzip.png)
 
 
 

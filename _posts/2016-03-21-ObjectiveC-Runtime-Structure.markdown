@@ -45,7 +45,7 @@ NovelBook *myNovelBook = [[NovelBook alloc] init];
 위 코드로 생성한 `myNovelBook`은 어떻게 생성이 될까?
 
 Class Object인 NovelBook을 이용해서 myNovelBook을 생성하게 되는데, 이 때의 오브젝트 구조는 다음 그림과 같다.
-![objective c object structure](https://raw.githubusercontent.com/MrKarl/MrKarl.github.io/master/assets/images/objectstructure/objectstructure.png)
+![objective c object structure](https://raw.githubusercontent.com/karl-park/karl-park.github.io/master/assets/images/objectstructure/objectstructure.png)
 
 위에서 설명한 `런타임`은 가장 먼저 `myNovelBook의 isa 포인터를 이용`해서 NovelBook 포인터를 얻게 된다. 그 후, NovelBook Class Object 객체에서 alloc 메시지를 보내게 된다. 만약, NovelBook Class에 alloc 메소드가 구현되어 있지 않다면, superclass 포인터를 따라서, 부모 클래스를 재탐색 하게 된다. 이러한 `체이닝`을 통해서, 메시지는 전송되게 되는 것이다.
 
