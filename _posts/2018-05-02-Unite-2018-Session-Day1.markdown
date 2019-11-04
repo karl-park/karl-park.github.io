@@ -301,7 +301,7 @@ Profiling
 - Database
 - Process
 
-{% plantuml %}
+@startuml
 Process->Profiles
 Process->ML : Reinforce
 Profiles->ML
@@ -310,7 +310,7 @@ Server->ML
 Server->Devices : Receive recommendation
 Devices->Server : Request recommendation
 Server->Database: Log
-{% endplantuml %}
+@enduml
 
 
 ## 느낀점

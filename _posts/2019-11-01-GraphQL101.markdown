@@ -86,7 +86,7 @@ SNS 서비스의 메인화면에서 다음을 노출하고 싶다.
 위의 "요구사항"이 3가지(Profile, Post, Follower)이므로, 3번의 request가 필요하다.
 (3가지 resource이기 때문)
 
-{% plantuml %}
+@startuml
 == Request 1 for get Profile ==
 Client->Server: request to <font color=red><b>/users/{id}</b></font> with <b>HTTP <font color=blue>GET</font></b>
     note right of Client
@@ -138,14 +138,14 @@ Server->Client: response with
       }, ... ]
     }
     end note
-{% endplantuml %}
+@enduml
 
 우리가 흔히 생각 할 수 있는 모습이다. 하지만, GraphQL로 위의 요구사항을 구현하면 어떻게 될까?
 
 ### GraphQL
 GraphQL은 **Type System** 및 **Schema** 가 있다 !
 
-{% plantuml %}
+@startuml
 Client->Server: request to <font color=red><b>/users/{id}/followers</b></font> with <b>HTTP <font color=blue>POST</font></b>
     note right of Client
         query {
@@ -180,7 +180,7 @@ Server->Client: response with
       }
     }
     end note
-{% endplantuml %}
+@enduml
 
 > 참 쉽지 아니한가!
 
