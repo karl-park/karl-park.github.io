@@ -32,7 +32,7 @@ Google In-App Billing에는 **Promotion** 과 **Play Points** 라는 서비스�
 ### Google Play Points
 1. 구글 플레이 콘솔에 접속하여, 인앱 상품을 생성한다. 단, Google Play Points 기능은 Google Play 팀과 합의 한 후, 사용 할 수 있도록 한다.
 2. 상품 설정시, Pricing 란에 **"Make this product available only in Google Play Points"** 를 선택한다.
-    - ![image.png](/files/2597756550962533054)
+    - ![googleplaypoints.png](/static/assets/img/posts/googleplaypoints/googleplaypoints.png)
     - Product ID 설정 시, **rew** sufix를 붙여서 Google Play 팀에서 Play Points 용 아이템임을 쉽게 확인 할 수 있도록 한다. (권장)
 
 ## 구현
