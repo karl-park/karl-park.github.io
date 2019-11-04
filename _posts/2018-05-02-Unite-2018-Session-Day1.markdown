@@ -301,7 +301,10 @@ Profiling
 - Database
 - Process
 
-@startuml
+![TutorialManager](http://www.plantuml.com/plantuml/png/NOmn3i8m34Ltdo8Nw0KwT69C9GGd2E4NMQAni4FEJsNQ39tyzVt-kwfac0tJ5XP-mwWtSmnZk87B8ff1E-0FckCmtQ4DIl_ZxH4lQBmvV9x13K6HPLrHdgco5Dg1m-7WvmkhPx0RKqsFP1X3bDSF)
+
+<!---
+```uml
 Process->Profiles
 Process->ML : Reinforce
 Profiles->ML
@@ -310,8 +313,8 @@ Server->ML
 Server->Devices : Receive recommendation
 Devices->Server : Request recommendation
 Server->Database: Log
-@enduml
-
+```
+-->
 
 ## 느낀점
 - 웹서비스등등에서만 A/B 테스트를 고려했었는데, 게임에서도 A/B 테스팅을 한다니 너무너무 신기함.

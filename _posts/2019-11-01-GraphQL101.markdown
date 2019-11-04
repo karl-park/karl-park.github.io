@@ -86,7 +86,10 @@ SNS 서비스의 메인화면에서 다음을 노출하고 싶다.
 위의 "요구사항"이 3가지(Profile, Post, Follower)이므로, 3번의 request가 필요하다.
 (3가지 resource이기 때문)
 
-@startuml
+![REST](http://www.plantuml.com/plantuml/png/rLDBJy904BxtLqnw1YfwQzfU33xYfO5wCXvQEeKDomvCju8X_7UtZxHL8Xw89ivXavbl7j_Eb_5zcEAsm5p3639YMA26a2aJ4i7thLifKEbXC4D-GtQ1csHDu6MaDCn94lkCQU0bWLFaoBbp4EdHSvB0SygK07P2By703r4KVYfBP871_IHg4iiQ2umfqWWi5aiDb47DmOBAHEg2pOR2indrcDfL65LQrLXMpNCOr3KkcCmDgHmh3brlYLdLkawlueTcGFa5j_LE1mvQHCLhD5WOgvM0CEPL7nFpLOFlztOJFbhTsr7kIN3TIK36lMJ_piPqo7zBXJ_GeUBlmiiNASPNnhezQw5bkUJfP1PbXJJmkAT2Gkcx0KUZKIyuf_KQLTtR8F3Q8CT1vvuJwQOLwOwaf1toPK9bJPVytvvC-uDJkUm5nvlbLdvtF4yno_EtyxCw7m00)
+
+<!---
+```uml
 == Request 1 for get Profile ==
 Client->Server: request to <font color=red><b>/users/{id}</b></font> with <b>HTTP <font color=blue>GET</font></b>
     note right of Client
@@ -138,14 +141,17 @@ Server->Client: response with
       }, ... ]
     }
     end note
-@enduml
+-->
 
 우리가 흔히 생각 할 수 있는 모습이다. 하지만, GraphQL로 위의 요구사항을 구현하면 어떻게 될까?
 
 ### GraphQL
 GraphQL은 **Type System** 및 **Schema** 가 있다 !
 
-@startuml
+![graphql](http://www.plantuml.com/plantuml/png/TL71hjem4BpdArO-KGb8KMzHcaj5MzIgJKLwgZWuU0CM9WksAKA8VtzsWW8hyVOIUtPcl9dzOZIsVb8iqVv7cu75umcT1q-GDzHwM9CX-zcYAlAwI4yEhKklMjtIXeoXSxZcQLtaQIGNSDP-2u7ulQfAPb2R4nRbxsLrPqPH0g5QyWXMRxOUg85-d0Jk5MQn5xWcCDHVXtQaLGPYO-LXUpGHM2ZnWR62hTmZ0mxalEEaK5vxmtatTXj-SjHewtm6d_X3iRJY07-RUyOpFs6hkWoIf5_1fEWpYAjm1seTTg4-iZBOT57rz8WF4mablHJPquGYniEGWCNv0YP-I6kWb7Odni_jBgdG_yTKeT659I0elyNi__o4sSSPqzx6C9rEOSNyXWnVU5v1Q2MwRQBqTrinVinONxxADTP4En7SNsltP77UD7eTStiMArhuNtH-N-bqkp4uRrL9caiTpQMxL1Jo4tn_iE8R7Bvydsy0)
+
+<!---
+```uml
 Client->Server: request to <font color=red><b>/users/{id}/followers</b></font> with <b>HTTP <font color=blue>POST</font></b>
     note right of Client
         query {
@@ -180,7 +186,8 @@ Server->Client: response with
       }
     }
     end note
-@enduml
+```
+-->
 
 > 참 쉽지 아니한가!
 
