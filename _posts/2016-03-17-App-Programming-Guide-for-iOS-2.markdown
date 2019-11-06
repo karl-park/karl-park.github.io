@@ -5,7 +5,6 @@ date:   2016-03-17 16:00:00
 tags: objc ios apple guide application architecture translation Summary
 categories: devstory
 ---
-
 첫번째 번역에 이어서 계속되는 내용이다.
 첫번째 iOS 앱구조를 다루는 내용은 [링크](./App-Programming-Guide-for-iOS-1/)를 참조한다.
 

@@ -5,8 +5,6 @@ date:   2018-04-22 09:30:00
 tags: seminar android java DroidKnights DroidKnightsSeoul DroidKnights2018
 categories: devstory
 ---
-
-
 오늘은 4월 22일에 열렸던 Droid Knights 에 대한 참가 후기를 공유를 해볼까 합니다.
 
 

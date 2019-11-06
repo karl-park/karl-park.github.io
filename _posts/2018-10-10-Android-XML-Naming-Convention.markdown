@@ -5,9 +5,6 @@ date:   2018-11-12 09:00:00
 tags: android xml naming convention
 categories: devstory
 ---
-
-
-
 이 글에서는 Android XML Naming Convention에 대해서 다룹니다.
 
 > Jeroen Mols의 블로그를 참고하여 적었습니다. 

@@ -4,9 +4,7 @@ title:  "[Test] Mockito"
 date:   2016-02-08 22:00:00
 tags: java mockito tdd tdd unittest junit spring
 categories: devstory
-
 ---
-
 이번 글에서는 Java 테스트를 위한 Mockito를 알아보자 !
 
 ### Java Test

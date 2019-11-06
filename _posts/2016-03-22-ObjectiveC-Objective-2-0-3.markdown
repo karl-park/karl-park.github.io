@@ -5,7 +5,6 @@ date:   2016-03-22 02:00:00
 tags: objc ios Summary 책요약
 categories: devstory
 ---
-
 이전 편에 걸쳐서 책(Objective-C 2.0)을 요약한 글이다.
 이번편이 마지막이다 ^^
 

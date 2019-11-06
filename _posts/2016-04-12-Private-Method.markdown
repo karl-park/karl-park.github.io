@@ -5,8 +5,6 @@ date:   2016-04-12 03:00:00
 tags: objc ios PrivateMethod OODP ClassContinuation
 categories: devstory
 ---
-
-
 # Objective C 에는 Private Method가 없다?
 뭐니 뭐니해도, Objective C 를 다루면서, 가장 어이없었(다기보다는 당황했던것은)던 것은 `Access Modifier`의 부재였다.
 

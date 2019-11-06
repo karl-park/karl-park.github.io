@@ -5,7 +5,6 @@ date:   2016-09-19 03:00:00
 tags: swift swift3
 categories: devstory
 ---
-
 날이 지날 수록, Swift의 사용성이 증대되고 있다.(물론 처음부터 좋은 언어..)
 Objective C로 예제를 짜던 시대는 갔고, 온갖 사이트들의 예문들이 Swift로 도배되고 있다.
 

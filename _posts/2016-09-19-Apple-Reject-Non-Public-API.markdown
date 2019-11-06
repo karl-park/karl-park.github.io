@@ -5,9 +5,6 @@ date:   2016-09-19 03:00:00
 tags: objc ios AppStore Reject Non-PublicAPI
 categories: devstory
 ---
-
-
-
 # Apple Reject
 iOS10 으로 업데이트되면서 부터, 우리 팀이 개발하는 iOS SDK를 사용하는 게임/앱들이 Apple에서 `리젝`을 당하고 있다는 충격적인 소식을 들었다.
 

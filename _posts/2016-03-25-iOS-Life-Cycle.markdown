@@ -5,7 +5,6 @@ date:   2016-03-25 03:00:00
 tags: objc ios Lifecycle AppDelegate ViewController BuildSetting
 categories: devstory
 ---
-
 무슨 프레임워크를 접하던, 왠만하면 Lifecycle을 짚고넘어가는것이 인지상정 !
 이번시간에는 iOS의 Lifecycle을 살펴보자 !
 

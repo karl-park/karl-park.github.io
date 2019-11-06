@@ -5,7 +5,6 @@ date:   2019-10-25 07:00:00
 tags: android billing iab iap promotion playpoint google googleplay googlestore
 categories: devstory
 ---
-
 Google In-App Billing에는 **Promotion** 과 **Play Points** 라는 서비스가 존재한다.
 본문에서는 각각의 기능을 간략하게 소개하고, 구현 방법을 다룬다.
 

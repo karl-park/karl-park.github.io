@@ -5,7 +5,6 @@ date:   2018-10-25 09:00:00
 tags: etc android ios webview debugging
 categories: devstory
 ---
-
 # [WebView Debugging] Android, iOS
 
 Android, iOS 개발을 하다보면 WebView를 붙일 때가 많습니다. 단순히 앱의 일부 프로세스에 WebView를 사용하거나 웹앱 기반의 하이브리드앱을 개발하기도 합니다. 유니티 등으로 게임을 개발하더라도, "공지사항" 등에는 웹뷰를 연동하는 경우가 많지요.

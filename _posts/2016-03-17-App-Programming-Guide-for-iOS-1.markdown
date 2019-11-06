@@ -5,7 +5,6 @@ date:   2016-03-17 09:00:00
 tags: objc ios apple guide application architecture translation Summary
 categories: devstory
 ---
-
 앞으로 두편에 걸쳐 살펴볼 내용은 Apple 개발자 트이트의 iOS App 구조 가이드이다. 영어로 되어있길래, 번역(이라고 말하면 거창하고, *의역*)을 하며 공부를 한 내용을 올려본다.
 
 

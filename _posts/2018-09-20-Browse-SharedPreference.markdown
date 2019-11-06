@@ -5,8 +5,6 @@ date:   2018-09-20 09:00:00
 tags: android sharedPreference browse security secure
 categories: devstory
 ---
-
-
 Android 개발시에, 외부에 노출되어도 되는 값들은 SharedPreference에 저장을 하게 됩니다. 그렇다면, 이 SharedPreference는 어떻게 관리되며 어디에 저장이 될까요?
 아래와 같이 Preference에 쓰고/읽는 데이터들은 모두 특정 ***파일*** 에 기록되게 됩니다.
 

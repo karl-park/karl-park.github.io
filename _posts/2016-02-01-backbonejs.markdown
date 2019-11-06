@@ -5,7 +5,6 @@ date:   2016-02-01 21:00:00
 tags: javascript BackboneJS framework
 categories: devstory
 ---
-
 이번 글에서는 요새 핫한 프레임워크인 BackboneJS를 다뤄보고자 한다.
 
 #### BackBoneJS

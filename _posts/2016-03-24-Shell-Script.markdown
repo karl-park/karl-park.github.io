@@ -5,7 +5,6 @@ date:   2016-03-24 03:00:00
 tags: linux shell bash sh script
 categories: devstory
 ---
-
 나는 shell을 좋아한다. 뭔가 있어보이는 듯한 허세가 너무 좋다. 그렇다고 쉘이나 vi를 자주 애용은 하지 않지만... 무튼 쉘에서 작업을 할 땐 뭔가 행복하다.
 
 이번 시간에는 이런 "허세감", "관종"감(?)을 이끌어내는 shell을 다뤄보자 !

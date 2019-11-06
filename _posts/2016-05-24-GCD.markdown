@@ -5,7 +5,6 @@ date:   2016-05-24 03:00:00
 tags: objc ios GCD GrandCentralDispatch
 categories: devstory
 ---
-
 # GCD
 GCD는 Grand Central Dispatch의 약자로, C언어로 되어있는 스레드 관리 기술이다. iOS4 부터 Apple은 해당 기술을 지원하고 있으며, NSThread, NSOpertation 과 같은 기존의 Thread 관리 기법보다 쉽게 스레드를 운용할 수 있어서 각광받고 있다.
 

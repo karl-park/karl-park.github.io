@@ -5,7 +5,6 @@ date:   2018-05-03 09:00:00
 tags: java selenium testing test
 categories: devstory
 ---
-
 이번 시간에는 Selenium을 이용한 웹 UI 테스트를 진행해보도록 하겠습니다.
 
 # Selenium

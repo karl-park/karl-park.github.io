@@ -5,7 +5,6 @@ date:   2017-03-28 03:00:00
 tags: java Android AndroidP Android9 Preview1
 categories: devstory
 ---
-
 Android O 대응을 한게 엊그제같은데, 벌써 Android P가 나올 준비를 하고 있다. 조금 있으면, GDC가 열릴터이고 Android P 스펙이 픽스될 터이다.
 
 그 전에, Preview1 상태인 Android P를 알아보고, 큰 변화의 맥락을 짚어보는 시간을 가져보자.

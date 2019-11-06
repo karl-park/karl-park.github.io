@@ -5,7 +5,6 @@ date:   2018-04-12 13:00:00
 tags: javascript html5 frontent es6 es5
 categories: devstory
 ---
-
 지난 시간의 [[JavaScript] 웹프론트엔드 개발 개론1](/devstory/2018/04/12/Frontend-edu-nhn1/) 포스팅에 이어서, 2부를 연재하도록 하겠습니다.
 
 

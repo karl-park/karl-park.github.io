@@ -4,9 +4,7 @@ title:  "[Java] Java8 Lambda"
 date:   2016-03-07 12:00:00
 tags: java java8 modernJava lambda
 categories: devstory
-
 ---
-
 Java8이 나온지 꽤 되었는데도, 실상 Java8을 도입한 서비스는 의외로 많지않다. 레거시 시스템 때문인데... 
 
 거두절미하고 !! 이번 글에서는 Java8의 주요 feature들을 살펴보자 !

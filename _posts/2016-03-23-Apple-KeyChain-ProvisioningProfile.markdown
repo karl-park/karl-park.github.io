@@ -5,7 +5,6 @@ date:   2016-03-23 05:00:00
 tags: objc ios Provisioning Profile KeyChanin Certificate
 categories: devstory
 ---
-
 iOS 개발을 하다보면, 꼬옥 한번씩은 머리를 쥐어짜게 하는 그것. 바로 프로비저닝과 인증서다.
 뭐, 이렇게 한번 정리를 해놓아도 (사실 할때마다 까먹어서, 다시 공부하는게 반복.. 되길래 이렇게 블로그에 남겨놓는다) 계속 까먹기에 !! 자주자주 해보고 머리속에 콩! 박아놔야할 것 같다.
 

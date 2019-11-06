@@ -106,9 +106,12 @@
 </style>
 
 {% capture style_url %}{% link assets/css/hydejack.css %}?v=6.4.0{% endcapture %}
+
 <link rel="preload" href="{{ style_url | absolute_url }}" as="style" onload="this.rel='stylesheet'">
 
 {% include page-style.html %}
+
+{% capture style_url %}{% link assets/css/custom.css %}{% endcapture %}
 
 <noscript>
   <link rel="stylesheet" href="{{ style_url | absolute_url }}">

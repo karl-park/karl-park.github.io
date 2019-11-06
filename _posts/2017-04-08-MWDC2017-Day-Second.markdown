@@ -5,7 +5,6 @@ date:   2017-04-08 03:00:00
 tags: seminar mwdc2017 MWDC MobileWebDevCon Conference
 categories: devstory
 ---
-
 지난 시간에 이어서, MWDC의 2번째 날에 들었던 내용을 정리하는 시간을 가져보겠습니다.
 
 - [MWDC Day1](../MWDC2017-Day-First/)

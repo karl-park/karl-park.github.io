@@ -5,7 +5,6 @@ date:   2018-05-03 09:00:00
 tags: seminar unity unite unite2018
 categories: devstory
 ---
-
 안녕하세요. 지난 포스트에 이어서, 이번에는 Unite 2018 Day2 후기를 올리도록 하겠습니다.
 Day2이자, 마지막 아젠다가 열렸던 날이 되겠네요.
 

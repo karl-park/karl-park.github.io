@@ -5,7 +5,6 @@ date:   2018-10-11 09:00:00
 tags: etc android ios locale time datetime endianness 엔디안
 categories: devstory
 ---
-
 이번 시간에는 국가별 `DateTime Endianness`(국가별 날짜 포멧) 에 대해서 알아보겠습니다.
 많은 서비스들에서 "날짜"를 사용자에게 나타내어야하고, 지역화된 날짜 문자열을 보여주어야하는 이슈가 있습니다.
 

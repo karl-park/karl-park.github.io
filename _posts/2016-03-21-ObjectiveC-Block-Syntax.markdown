@@ -5,8 +5,6 @@ date:   2016-03-21 03:00:00
 tags: objc ios Block Block_Syntax Closure
 categories: devstory
 ---
-
-
 # Objective-C Block Syntax
 
 ## What the Block is?

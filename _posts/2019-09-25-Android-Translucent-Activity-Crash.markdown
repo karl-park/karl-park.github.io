@@ -5,7 +5,6 @@ date:   2019-09-25 07:00:00
 tags: android oreo activity crash issue translucent opaque styles orientation
 categories: devstory
 ---
-
 # Only fullscreen opaque activities can request orientation
 
 ## Problem

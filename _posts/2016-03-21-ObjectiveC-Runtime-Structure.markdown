@@ -5,8 +5,6 @@ date:   2016-03-21 00:00:00
 tags: objc ios Runtime Structure Architecture
 categories: devstory
 ---
-
-
 # Objective-C 런타임 & 오브젝트 구조
 개발자에게 `런타임`이라는 단어를 들려주면, 먼저 무언가 `동적(Dynamic)`이다라는 느낌이 든다고 말을 할 것이다. 
 

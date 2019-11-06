@@ -5,7 +5,6 @@ date:   2017-05-12 03:00:00
 tags: objc ios Location CoreLocation
 categories: devstory
 ---
-
 본문에서는 iOS에서 위치 정보를 가져오는 방법을 설명한다.
 
 # iOS 위치정보 이용하기 !

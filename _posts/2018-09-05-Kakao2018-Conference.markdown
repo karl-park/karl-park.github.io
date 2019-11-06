@@ -5,7 +5,6 @@ date:   2018-09-05 09:00:00
 tags: android seminar kakao conference if2018 developer
 categories: devstory
 ---
-
 안녕하세요. 본문에서는 9월 4일 있었던, 카카오의 (대외) 첫번째 컨퍼런스 **if(kakao)** 를 다녀와서 들은 내용을 정리하여 공유합니다.
 
 

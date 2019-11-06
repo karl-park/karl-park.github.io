@@ -5,7 +5,6 @@ date:   2016-03-23 01:00:00
 tags: objc ios LLVM FAT LIPO Architecture
 categories: devstory
 ---
-
 # Architecture in XCode Build Setting
 
 ## iOS Architecture

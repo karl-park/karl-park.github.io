@@ -5,7 +5,6 @@ date:   2019-10-28 07:00:00
 tags: kotlin reactivex reactiveprogramming functionalprogramming fp rxkotlin rxjava rx
 categories: devstory
 ---
-
 # "Hello Rx"
 학습을 위해 Rx에 대해서 짧게 다뤄본다. Rx 사이트의 내용을 주로 참고하였다.
 

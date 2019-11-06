@@ -5,7 +5,6 @@ date:   2016-06-10 03:00:00
 tags: objc ios GCD GrandCentralDispatch
 categories: devstory
 ---
-
 이전 [Grand Central Dispatch 01](/devstory/2016/05/24/GCD/) 글을 바탕으로, TOAST Meetup에 글을 기고했는데요, 그대로 옮겨놓습니다.
 
 - 원글 링크 : [TOAST Meetup: GCD](http://meetup.toast.com/posts/88)

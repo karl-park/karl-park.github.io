@@ -5,7 +5,6 @@ date:   2018-08-10 05:00:00
 tags: java Android AndroidP Android9 GoogleI/O 2018
 categories: devstory
 ---
-
 # Developer Session
 
 6/25일부터 26일, 양일간 열린 Google for Mobile I/O Recep 2018 Seoul(이하 Google I/O) 참가후기에 대한 글입니다.

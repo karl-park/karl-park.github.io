@@ -5,8 +5,6 @@ date:   2018-05-02 09:00:00
 tags: seminar unity unite unite2018
 categories: devstory
 ---
-
-
 안녕하세요. 이번에는 Unite 2018 Seoul을 다녀온 후기를 2부에 걸쳐서 연재하려고 합니다. 차마 듣지 못한 세션들에 대한 정보는 아래 uniteseoul 링크에서 확인하실 수 있습니다.
 (추후 발표 자료가 올라온다고 합니다.)
 

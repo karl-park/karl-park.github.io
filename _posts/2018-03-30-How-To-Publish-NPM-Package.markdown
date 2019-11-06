@@ -5,7 +5,6 @@ date:   2018-03-30 09:00:00
 tags: javascript nodejs npm publishing package
 categories: devstory
 ---
-
 본 티켓에서는 `npm`에 본인이 만든 `package를 어떻게 배포`하는지에 대해서 다룹니다.
 
 # TOC

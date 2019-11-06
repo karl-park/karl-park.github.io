@@ -5,8 +5,6 @@ date:   2018-03-14 14:30:00
 tags: javascript typescript debug vscode
 categories: devstory
 ---
-
-
 TypeScript로 작성한 웹앱 및 라이브러리는 결국 JavaScript로 컴파일되어 웹페이지에 로딩되기 때문에 디버깅을 할 경우, JavaScript 파일 디버그로 제한되어 original source(TypeScript)의 코드를 확인하기 어렵다.
 
 이에, 본문에서는 TypeScript Debug 방법을 알아보고자 한다.

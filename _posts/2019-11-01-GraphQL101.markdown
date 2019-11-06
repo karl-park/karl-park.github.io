@@ -5,7 +5,6 @@ date:   2019-11-01 07:00:00
 tags: dictionary restapi graphql 
 categories: devstory
 ---
-
 # GraphQL
 오랜만에 Kotlin, Android 외의 기술 포스트를 하는 것 같다.
 사실 GraphQL이 핫한지는 꽤 오래되었고, 그 당시 끄적거려보기도 했으나
@@ -200,7 +199,7 @@ GraphQL은 Type System을 따른다.
 
 String, Int 등의 Primitive 타입으로 필드 타입을 정의하면서 **`!`** 를 이용하여 **해당 필드는 필수**임을 나타 낼 수 있다.
 
-```graphql
+```
 // User Type1
 type User {
     name: String!
@@ -223,7 +222,7 @@ type Post {
 
 아래의 예시를 한개 씩 살펴보며, 의미를 이해해보자.
 
-```graphql
+```
 // Query to get all users, and posts which is written by each of users with "query"
 {
   allUsers {

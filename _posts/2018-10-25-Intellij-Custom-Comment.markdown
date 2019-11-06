@@ -5,7 +5,6 @@ date:   2018-10-25 09:00:00
 tags: kotlin java ide intellij custom commment customcomment 주석 androidstudio
 categories: devstory
 ---
-
 이번 시간에는 인텔리J에서의 `커스텀 주석` 에 대해서 알아보겠습니다.
 정확하게는 Highlighting Custom Comment 라는 문구가 잘 맞겠네요.
 

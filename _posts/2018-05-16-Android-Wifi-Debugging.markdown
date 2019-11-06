@@ -5,7 +5,6 @@ date:   2018-05-16 09:00:00
 tags: java android debug wifi
 categories: devstory
 ---
-
 Android Device를 `디버깅`할 때, usb로 항상 물려서 테스트를 해야해서 여간 번거로웠습니다.
 
 디바이스와 디버그할 기기가 물리적으로 "붙어있어야만"했기 때문이죠.

@@ -5,8 +5,6 @@ date:   2016-03-18 02:00:00
 tags: objc ios ReferenceCounting ARC MRC Memory
 categories: devstory
 ---
-
-
 ## ARC / MRC
 
 > iOS 어플리케이션 개발을 위해서는 반드시 ARC나 MRC 중 한개를 골라서 진행해야 한다.

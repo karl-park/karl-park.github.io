@@ -5,7 +5,6 @@ date:   2016-03-21 00:00:00
 tags: objc ios Message selector SEL IMP
 categories: devstory
 ---
-
 Objective C 는 여러모르 다른 언어, 다른 개념들로 무장한 언어이다. 그 중, 특별한 것이 바로 "메시지"라는 개념이다. 
 
 Java 등에서는 흔히 "메소드"를 호출한다고 표현을 하는데, Objective C에서는 이러한 표현보다, `메시지`를 `전송`한다고 표현한다. 특이하지 않은가?
