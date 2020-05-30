@@ -11,7 +11,7 @@ categories: devstory
 
 
 
-# Observable
+## Observable
 - Observable : Observer 가 구독하는 대상
 Observable이 emit(배출)하는 하나/연속된 항목에 Observer는 구독을 한다.
 
@@ -30,7 +30,7 @@ Observer는 때로는 **subscriber**, **watcher**, **reactor**라고 불리우�
 
 
 
-## onNext, onCompleted, onError
+### onNext, onCompleted, onError
 **subscribe()** 메소드로 **Observable**과 **Observer**를 연결 할 수 있다.
 
 Observer의 주요 method는 다음과 같다.
@@ -45,7 +45,7 @@ Observer의 주요 method는 다음과 같다.
     - 에러가 발생한 상황에 호출된다.
 
 
-## 언제 emit을 할까?
+### 언제 emit을 할까?
 Observable이 onNext로 아이템을 emission 하는 시기는 다음 2가지로 나뉜다.
 
 **Hot Observables** 는 item이 생성되자마자 아이템을 emit 한다. 
@@ -57,7 +57,7 @@ Observable이 onNext로 아이템을 emission 하는 시기는 다음 2가지로
 ReactiveX 구현체 중에는 **Connectable이라는 Observable**이 있다. 이 구현체는 subscription 여부와는 상관없이 connect() 메소드가 호출되기 전까지는 emission을 하지 않는다.
 
 
-## Observable 연산자를 통한 Composition 
+### Observable 연산자를 통한 Composition 
 
 | Usage | Operation |
 | - | - |
@@ -78,22 +78,22 @@ ReactiveX 구현체 중에는 **Connectable이라는 Observable**이 있다. 이
 
 
 
-## Reference
+### Reference
 [Observable](http://reactivex.io/documentation/ko/observable.html)
 
 
 
 
-# Operators
+## Operators
 너무 많으므로 일단 생략. 
 하나씩 살펴보려면, 아래 각 컴포넌트들이나 Observables 의 Composition 부분을 참고하자.
 
-## Reference
+### Reference
 [Operators](http://reactivex.io/documentation/ko/operators.html)
 
 
 
-# Single
+## Single
 Single은 한 가지의 값(onNext, onCompleted 대신에 **onSuccess**) 또는 한 가지의 에러(**onError**)를 가지는 Observable의 한 형태이다.
 (기본적으로 Observable은 0에서 무한대까지의 임의의 연속된 값들을 가진다.)
 
@@ -101,13 +101,13 @@ Single은 한 가지의 값(onNext, onCompleted 대신에 **onSuccess**) 또는 
 
 > Single은 JavaScript에서의 **Promise** 와 비슷한 것 같다. 단 한 개의 Item을 produce하거나 throw error를 하는 Promise와 거의 흡사하게 보인다.
 
-## Reference
+### Reference
 [Single](http://reactivex.io/documentation/ko/single.html)
 
 
 
 
-# Subject
+## Subject
 Subject는 **Observer과 Observable** 둘 다 사용될 수 있는 일종의 프록시이다.
 **Observer** 이기 때문에 Observable를 한개 이상 구독할 수 있다.
 **Observable** 이기도 하므로, 다시 reemit 할 수 있을 뿐만 아니라, 새로운 item을 emit 할 수도 있다.
@@ -120,36 +120,36 @@ Subject에는 다음 4가지 종류가 있다. (각각의 Rx 구현체(ex) RxKot
 - ReplaySubject
 
 
-## AsyncSubject
+### AsyncSubject
 **AsyncSubject** 는 source Observable이 emit하는 가장 나중값을 emit 한다.
 즉, Observable의 동작이 완료된 후에야 동작을 시작한다. 만약 source Observable이 아무런 값도 내뱉지 않으면, 값을 emit하지 않은채 complete 한다. error로 종료된다면, 에러를 그대로 notification 한다.
 
 
-## BehaviorSubject
+### BehaviorSubject
 **BehaviorSubject** 는 Observer가 자기를 구독하기 시작하면, source Observable이 가장 최근에 emit한 item을 emit 한다. 만약, 아무 값도 emit 되지 않은 상태라면, 맨 처음값/기본값을 emit 한다.
 그 이후, 계속해서 source Observable이 emit한 아이템들을 emit 한다.
 
 
-## PublishSubject
+### PublishSubject
 **PublishSubject** 는 Observer가 구독을 시작한 이후의 item만 emit 한다.
 즉, Hot Observable 이기 때문에 구독 전 배출된 아이템을 유실 할 수 있다.
 모든 항목의 배출을 보장해야한다면, **Create**를 사용해서 명시적으로 Cold Observable 을 만들거나, 아래 설명하는 ReplaySubject를 사용하자.
 
 
-## ReplaySubject
+### ReplaySubject
 **ReplaySubject** 는 Observer가 구독한 시점과는 상관없이 emit된 모든 item을 emit 해준다. 
 몇개의 overloaded 된 constructor를 제공하는데, 버퍼의 크기가 특정 이상으로 증가할 경우혹은 특정 시간이 경과된 경우 오래된 항목들을 지우는 것도 제공한다.
 멀티 스레드 환경에서 ReplaySubject를 **Observer**로 사용 할 경우, 어느 항목을 먼저 Replay 해야하는지 모르는 모호함이 발생할 수 있으므로, onNext(or other on) 메소드들을 사용하지 말아야한다. 
 
 
-## Reference
+### Reference
 [Subject](http://reactivex.io/documentation/ko/subject.html)
 
 
 
 
 
-# Scheduler
+## Scheduler
 Observable Operator cascading(Chaining)에 Multithreading을 적용하려면, Scheduler를 사용하여 Operator Chaining(Or Observable)을 구현하면 된다.
 
 일부 Observable Operator들은 사용할 Scheduler를 파라미터로 받는데, 자신의 연산 전부 혹은 일부를 전달된 Scheduler에서 실행시킨다.
@@ -159,11 +159,12 @@ Observable Operator cascading(Chaining)에 Multithreading을 적용하려면, Sc
 **SubscribeOn** Operator는 다른 Scheduler를 지정해서 Observable이 처리해야할 Operator들을 실행시킨다.
 **ObserveOn** Operator는 Observable이 Observer에게 emit을 보낼 때 사용 할 Scheduler를 명시한다.
 
-즉, 아래 Marble Diagram 에서처럼 **subscribeOn** observeOn
-<img src="http://reactivex.io/documentation/operators/images/schedulers.png" width=600/>
+즉, 아래 Marble Diagram 에서처럼 **subscribeOn** observeOn 을 한다.
+
+<img src="http://reactivex.io/documentation/operators/images/schedulers.png" width="600"/>
 
 
-## SubscribeOn
+### SubscribeOn
 - subscribeOn은 Observable 객체가 실행될 쓰레드를 정한다.
 - 예를 들면 
 ```kotlin
@@ -171,7 +172,7 @@ userApi.getUsers().subscribeOn(newThread())
 ```
 으로 사용했다면 getUsers() 가 newThread 안에서 실행됨.
 
-## ObserveOn
+### ObserveOn
 - observeOn은 연쇄되는 연산이 실행될 쓰레드를 정한다.
 
 - 예를 들면 
@@ -199,11 +200,11 @@ myObservable // observable will be subscribed on i/o thread
 
 
 
-# Flowable
+## Flowable
 **Flowable** 은 RxJava2 에 등장한 개념이다. 
 RxJava1에서 고심하였던 여러 문제들을 해결한 버전이 Version2인데, 그 중 정말 중요한 토픽이 바로, **Backpressure**이다.
 
-## Backpressure
+### Backpressure
 **Backpressure** 는 observable이 observer(consumer)가 그것을 handling하는 것보다 더 빠르게 item을 emitting 하는 개념이다.
 
 만약 observable이 observer가 consuming 하기도 전에 계속 emitting을 한다면, buffer overflow나 out of memory 이슈등이 생길 수 있을 것이다. Flowable 은 이러한 것을 고려하여 **BackPressureStrategy** 를 설정하여, 어떻게 Backpressure 상황을 핸들링할지를 결정한다.
@@ -217,21 +218,20 @@ Backpressure Strategy는 다음이 있다.
 
 
 
-# Maybe
+## Maybe
 **Maybe** 는 **Single**과 거의 흡사하다. 위에서 설명하였듯, Single은 단 한개의 emitted item과 error를 반환한다. Maybe는 Single과 거의 흡사하지만, 다른 점은 **"아무 것도 emit 하지 않는 것을 허용한다"** 는 것이다.
 
 
 
 
-# Completable
+## Completable
 **Completable** 는 말 그대로, completion 에만 관심이 있다. 그래서, onNext, onSuccess 등과 같은 콜백이 없고, **onComplete(), onError() 메소드만 존재** 한다.
 
 
 
 ## Reference
-- [reactivex.io| Scheduler](http://reactivex.io/documentation/ko/scheduler.html)
-
-- [감자튀김 Tistory| RxJava 공부 - AsyncSubject, BehaviorSubject, PublishSubject, ReplaySubject](https://gamjatwigim.tistory.com/49)
-- [정승욱 Medium | Android MVVM : Lifecycle 감지하기](https://medium.com/@jsuch2362/android-mvvm-lifecycle-%EA%B0%90%EC%A7%80%ED%95%98%EA%B8%B0-204c4309436)
-- [Jose Angel Zamora Medium | RxJava 공부 - AsyncSubject, BehaviorSubject, PublishSubject, ReplaySubject](https://gamjatwigim.tistory.com/49))
-- [By Kyle Jablonski | RxAndroid and RxKotlin](https://www.raywenderlich.com/2071847-reactive-programming-with-rxandroid-in-kotlin-an-introduction#toc-anchor-001)
+- [reactivex.io|Scheduler](http://reactivex.io/documentation/ko/scheduler.html)
+- [감자튀김 Tistory|RxJava 공부 - AsyncSubject, BehaviorSubject, PublishSubject, ReplaySubject](https://gamjatwigim.tistory.com/49)
+- [정승욱 Medium|Android MVVM : Lifecycle 감지하기](https://medium.com/@jsuch2362/android-mvvm-lifecycle-%EA%B0%90%EC%A7%80%ED%95%98%EA%B8%B0-204c4309436)
+- [Jose Angel Zamora Medium|RxJava 공부 - AsyncSubject, BehaviorSubject, PublishSubject, ReplaySubject](https://gamjatwigim.tistory.com/49))
+- [By Kyle Jablonski|RxAndroid and RxKotlin](https://www.raywenderlich.com/2071847-reactive-programming-with-rxandroid-in-kotlin-an-introduction#toc-anchor-001)

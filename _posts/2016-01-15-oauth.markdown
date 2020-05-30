@@ -88,6 +88,8 @@ reference url : https://en.wikipedia.org/wiki/URL_redirection
 
 ![OAuth Process](https://docs.oracle.com/cd/E39820_01/doc.11121/gateway_docs/content/images/oauth/oauth_web_server_flow.png)
 
+<br/><br/>
+
 <img src="https://docs.oracle.com/cd/E39820_01/doc.11121/gateway_docs/content/images/oauth/oauth_web_server_flow.png" style="width:80%;" alt="OAuth Process"/>
 
 위의 그림을 보면, 사용자가 특정 서비스에 접속해서, 인증 및 권한 획득을 요청할 때, 웹서버(APP)는 PAYCO와 같은 Authorization Server로의 리다이렉트를 브라우저에게 반환하게 된다. 
