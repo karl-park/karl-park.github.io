@@ -125,10 +125,10 @@ Lead Android Developer로서, 여기에서 일한지 오늘로 약 3주가 되�
 애자일 방식의 프로젝트 개발 방법은 예전 카카오페이지에서 일할 때 잠시 겪어봤지만, 사용하는 툴이나 세세한 방법 등에서 큰 차이가 있는 것 같다.
 
 
-현재 나는 Pikachu <img src="/static/assets/img/posts/99co/pikachu.png" alt="pikachu" width="20" style="display:inline-block"> 팀이다. 부동산을 탐색하려는 일반 유저를 포커싱한 서비스를 개발하는 팀이다.<br/>
+현재 나는 Pikachu <img src="/static/assets/img/posts/99co/pikachu.png" alt="pikachu" width="20" style="display:inline-block; margin-bottom:0px;"> 팀이다. 부동산을 탐색하려는 일반 유저를 포커싱한 서비스를 개발하는 팀이다.<br/>
 여기에는 백엔드, 안드로이드, iOS, 웹 프론트엔드, 디자이너, PM 등 열댓명이 있다.
 
-바로 옆팀은 Diglett <img src="/static/assets/img/posts/99co/diglett.png" alt="diglett" width="20" style="display:inline-block"> 팀인데, 부동산 관련 글을 업로드하는 Agent를 대상으로 한 서비스를 만든다.<br/>
+바로 옆팀은 Diglett <img src="/static/assets/img/posts/99co/diglett.png" alt="diglett" width="20" style="display:inline-block;margin-bottom:0px;"> 팀인데, 부동산 관련 글을 업로드하는 Agent를 대상으로 한 서비스를 만든다.<br/>
 여기에도 역시 백엔드, 안드로이드, iOS, 웹 프론트엔드, 디자이너, PM 등 열댓명이 있다.
 
 나는 Pikachu 팀이긴 하지만, 전체 Android 개발 리드로서 Diglett팀의 안드로이드 개발자들도 이끌어야한다.<br/>
