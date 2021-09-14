@@ -1,0 +1,1 @@
+https://github.com/Kotlin/kotlinx.serialization/blob/master/docs/serialization-guide.md

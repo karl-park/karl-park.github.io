@@ -273,7 +273,7 @@ abstract class UseCase<T, in Params> {
     protected abstract fun buildUseCase(params: Params): T
 }
 
-class GetHotplaceAndReview (
+class GetHotplaceAndReviewUseCase (
     val hotplaceRepository: HotplaceRepository,
     val hotplaceReviewRepository: HotplaceReviewRepository)
     : UseCase<Pair<Hotplace, List<HotplaceReview>>, Pair<String, String>>() {

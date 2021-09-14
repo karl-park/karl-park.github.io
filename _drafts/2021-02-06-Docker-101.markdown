@@ -1,0 +1,110 @@
+# install docker
+to Linux
+```
+$ curl -fsSL https://get.docker.com/ | sudo sh
+```
+
+## install docker w/o sudo
+docker는 기본적으로 root권한이 필요합니다. root가 아닌 사용자가 sudo없이 사용하려면 해당 사용자를 docker그룹에 추가합니다.
+```
+sudo usermod -aG docker $USER # 현재 접속중인 사용자에게 권한주기
+sudo usermod -aG docker your-user # your-user 사용자에게 권한주기
+```
+
+
+
+# execute container
+```
+docker run [options] image[:tag|@digest] [command] [arg...]
+```
+
+| option | description |
+| - | - |
+| -d | detached mode, background mode |
+| -p | forwarding (connect port between host ~ container) |
+| -v | mount (connect directory between host ~ container) |
+| -e | environment setting |
+| -name | container name |
+| -rm | remove the container when terminates process |
+| -it | -i + -t : for terminal innput |
+| -link | connect container |
+
+
+# exercise
+
+## Ubuntu
+```
+$ docker run ubuntu:16.04
+```
+
+if there is no image on the local, it will try to download the image and create it and start it.
+
+
+Regarding to the above command, it will start the container, but there is no further command, so it will just terminate the process right away.
+
+```
+$ docker run --rm -it ubuntu:16.04 /bin/bash
+```
+
+
+## Redis
+
+```
+$ docker run -d -p 1234:6379 redis
+```
+
+```
+# redis test
+$ telnet localhost 1234
+set mykey hello
++OK
+get mykey
+
+$5
+hello
+```
+
+
+## MySQL
+
+```
+$ docker run -d -p 3306:3306 \
+  -e MYSQL_ALLOW_EMPTY_PASSWORD=true \
+  --name mysql \
+  mysql:5.7
+
+```
+
+
+```
+# MySQL test
+$ mysql -h127.0.0.1 -uroot
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+4 rows in set (0.00 sec)
+
+mysql> quit
+```
+
+## NodeJs
+
+
+```
+
+
+```
+
+https://donochi.tistory.com/208
+https://www.daleseo.com/docker-nodejs/
+
+
+# Reference
+- https://subicura.com/2017/01/19/docker-guide-for-beginners-1.html
