@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[근황] 지난 2년동안 무슨 일이 있었나"
-date:   2022-08-22 09:00:00
+title:  "[근황] 퇴사, 이직, 실패, 멘탈관리"
+date:   2022-08-21 09:00:00
 tags: farewell 이직 퇴사 입사 비자문제
-categories: etc
+categories: routine
 ---
 
 싱가포르로 이직/이민을 한지 어언 3년이 되어가고 있는데, 그 동안 제가 어떻게 살아왔는지, 
