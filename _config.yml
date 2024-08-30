@@ -2,7 +2,7 @@
 #  User configuration
 # -----------------------------------------------------------------------------
 
-title:               Karl Panki Park
+title:               Karl Park
 
 # The unique resource location of your page.
 # Set to `https://<username>.github.io` when hosting on GitHub Pages
@@ -13,7 +13,7 @@ url:                 https://karl-park.github.io
 baseurl:             ""
 
 # A very short description of your page
-tagline:             감성 개발자
+tagline:             Software Engineer Karl's Blog
 
 # A short description of the page, used in the sidebar and as fallback for the meta description tag.
 # Markdown enabled, but don't use more than one paragraph (enforced by `>`)
@@ -22,12 +22,12 @@ description:         >
 
 # This should be the same author as first entry in `_data/authors.yml`
 author:
-  name:              panki park
+  name:              Karl Park
   email:             karl.panki.park@gmail.com
 
 # Fallback image and color
-image:               /static/assets/img/main/london-couple.jpg
-color:               '#4f86aa'
+# image:               /static/assets/img/main/london-couple.jpg
+# color:               '#4f86aa'
 
 
 font:         Noto Sans, Helvetica, Arial, sans-serif
