@@ -26,8 +26,8 @@ author:
   email:             karl.panki.park@gmail.com
 
 # Fallback image and color
-# image:               /static/assets/img/main/london-couple.jpg
-# color:               '#4f86aa'
+image:               /static/assets/img/main/nyc-library.jpg
+color:               '#4f86aa'
 
 
 font:         Noto Sans, Helvetica, Arial, sans-serif
